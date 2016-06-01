@@ -56,7 +56,7 @@ body {
     line-height: @line-height-base;
     font-weight: @font-weight-light;
     color: #1d1d1d;
-    background: #fff;
+    background: #f7f7f7;
 }
 
 .container-fluid {max-width: 1240px;}
@@ -130,4 +130,152 @@ p {
     }
   }
 }
+
+.page {
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  padding: 15px 0;
+  background: #fff;
+}
+.header-menu {
+  font-size: 15px;
+  margin: 0 -25px;
+  margin-top: 30px;
+  float: right;
+  &-item {
+    float: left;
+    margin: 0 25px;
+  }
+  &-link {
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    color: #676767;
+  }
+}
+.logo {
+  display: block;
+  width: 101px;
+  height: 70px;
+  background: url('@{images}logo.png') no-repeat;
+}
+
+.home-hero {
+  margin-bottom: 30px;
+}
+
+// .home-hero {
+//   position: relative;
+//   width: 100%;
+//   min-height: 400px;
+//   max-height: 800px;
+//   background: url('@{images}bg-player2.jpg') center center no-repeat;
+
+//   overflow: hidden;
+// }
+
+.function-list {
+  border: 1px solid #e0e2e5;
+  background: #fff;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  overflow: hidden;
+  [class^="col-"] {
+    padding: 0;
+  }
+  &-item {
+    padding: 25px 20px;
+    // border-right: 1px solid #e0e2e5;
+    // &:last-child {border-right: none;}
+    &-title {
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+    &-body {
+      margin-left: 80px;
+      padding-top: 10px;
+    }
+    &-desc {
+      margin-bottom: 0;
+      font-size: 15px;
+      font-weight: normal;
+      color: #999;
+    }
+  }
+  .row {
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: 1px solid #e0e2e5;
+    &:last-child {
+      border: none;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.function-list-item [class^="icon-function-"] {
+  float: left;
+}
+
+[class^="icon-function-"],
+[class*=" icon-function-"] {
+  display: inline-block;
+  vertical-align: top;
+  width: 70px;
+  height: 70px;
+  margin-top: 4px;
+  background: url("@{images}spr-home.png");
+  background-position: 0 0;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.icon-function-home {
+ background-position: -144px 0; 
+}
+.icon-function-business {
+  background-position: 0 0;
+}
+.icon-function-cloud {
+  background-position: -72px 0;
+}
+.icon-function-mobile {
+  background-position: -216px 0;
+}
+
+.footer {
+  border-top: 1px solid #e0e2e5;
+  padding: 20px 0;
+  background: #fff;
+}
+
+
+/*----------- begin sticky footer -----------*/
+.page {
+    position: relative;
+    min-height: 100%;
+    overflow: hidden;
+}
+.content {
+    padding-bottom: 100px;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+}
+/*----------- end sticky footer -----------*/
+
+
+
+
+
+
 
