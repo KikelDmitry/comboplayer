@@ -30,7 +30,7 @@
 h1, h2, .h1, .h2 {margin-bottom: 50px;}
 
 h1 {
-  margin-top: 30px;
+  margin-top: 30px; 
   margin-bottom: 40px;
 }
 h2 {
@@ -61,7 +61,7 @@ body {
     line-height: @line-height-base;
     font-weight: @font-weight-light;
     color: #1d1d1d;
-    background: #f7f7f7;
+    /*background: #f7f7f7;*/
 }
 
 .container-fluid {max-width: 1240px;}
@@ -147,6 +147,13 @@ p {
 }
 .navbar-header {
   padding-bottom: 0;
+    .slogan {
+        float: left;
+        margin-left: 85px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        color: #C0C0C0;
+    } 
 }
 .header-menu {
   font-size: 15px;
@@ -212,7 +219,6 @@ p {
   background: url('@{images}logo.png') no-repeat;
 }
 
-
 .home-hero-video {
   position: relative;
   display: block;
@@ -251,7 +257,8 @@ p {
   }
   &-text {
     position: absolute;
-    top: 28%;
+    /*top: 23%;*/
+    top: 14%;
     width: 100%;
     max-width: 1210px;
     text-align: center;
@@ -264,9 +271,36 @@ p {
     margin-bottom: 15px;
   }
   &-p {
-    margin-bottom: 30px;
-    font-size: 16px;
-    color: #fff;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #eee;
+      span {
+          color: #9ed62a;
+      }
+      &.small { 
+          font-size: 13px; 
+          margin: 0 auto;
+          color: #eee;
+      }
+      &.download-count {
+        margin-top: 10px;
+        strong {
+          display: inline-block;
+          font-weight: 500;
+          padding: 2px 10px;
+          background: rgb(0, 162, 195);
+          background: -moz-linear-gradient(90deg, rgb(0, 162, 195) 30%, rgb(0, 144, 200) 70%);
+          background: -webkit-linear-gradient(90deg, rgb(0, 162, 195) 30%, rgb(0, 144, 200) 70%);
+          background: -o-linear-gradient(90deg, rgb(0, 162, 195) 30%, rgb(0, 144, 200) 70%);
+          background: -ms-linear-gradient(90deg, rgb(0, 162, 195) 30%, rgb(0, 144, 200) 70%);
+          background: linear-gradient(180deg, rgb(0, 162, 195) 30%, rgb(0, 144, 200) 70%);
+          border-radius: 4px;
+          -moz-border-radius: 4px;
+          -webkit-border-radius: 4px;
+          font-size: 15px;
+          margin: 0 4px;
+        }
+      }
   }
   &-btn {
     font-size: 28px;
@@ -279,6 +313,7 @@ p {
     border-radius: 20px 0 20px 0;
     -moz-border-radius: 20px 0 20px 0;
     -webkit-border-radius: 20px 0 20px 0;
+    margin-bottom: 15px;
     &:hover{
       color: #fff;
       text-decoration: none;
@@ -519,8 +554,6 @@ textarea.form-control {
   }
 }
 
-
-
 /*----------- begin sticky footer -----------*/
 .page {
     position: relative;
@@ -541,19 +574,31 @@ textarea.form-control {
 
 .mb-30 {margin-bottom: 30px;}
 
+@media (min-width: 1400px) {
+    .home-hero-video {
+        &-text { top: 25%; }
+    }
+}
+
 @media (max-width: @screen-md-max) {
   .home-hero-video {
     &-text {
-      top: 25%;
+      /*top: 25%;*/
+      top: 12%;
     }
     &-title {
       font-size: 35px;
       margin-bottom: 10px;
     }
+    &-btn {
+      margin-bottom: 10px;
+    }
     &-p {
-      margin-bottom: 25px;
+        margin-bottom: 0;
+        font-size: 13px;
     }
   }
+    .home-hero-video-p.small { font-size: 12px; }
 }
 @media (max-width: @screen-sm-max) {
   .home-hero-video {
@@ -569,6 +614,8 @@ textarea.form-control {
       float: none;
     }
   }
+    .header .navbar-header .slogan { margin-left: 30px; }
+    .home-hero-video-p.small { display: none; }
 }
 
 @media (max-width: @screen-xs-max) {
@@ -625,7 +672,6 @@ textarea.form-control {
   .navbar-header {
     padding-bottom: 15px;
   }
-  
   .navbar-form {
     border: 0;
     box-shadow: none;
@@ -649,6 +695,15 @@ textarea.form-control {
       padding-left: 0;
     }
   }
+    .header .navbar-header .slogan {
+        margin-left: 15px;
+        clear: both;
+    }
+    .home-hero-video {
+        &-text {
+          top: 30%;
+        }
+    }
 }
 
 @media (max-width: 400px) {
@@ -678,11 +733,3 @@ textarea.form-control {
     }
   }
 }
-
-
-
-
-
-
-
-
