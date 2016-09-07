@@ -7318,14 +7318,31 @@ textarea.form-control {
   padding-top: 40px;
   text-align: center;
 }
-.download-link-bottom a {
-  font-size: 16px;
+.download-link-bottom p {
   font-weight: 500;
-  border: 1px solid #E0E2E5;
-  padding: 10px 15px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+}
+.download-link-bottom a {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  background: #75a01c;
+  padding: 10px 25px;
+  border-radius: 15px;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  margin-bottom: 15px;
+}
+.download-link-bottom a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #658a18;
+}
+.download-link-bottom a:active,
+.download-link-bottom a:focus {
+  color: #fff;
+  text-decoration: none;
 }
 /*----------- begin sticky footer -----------*/
 .page {
