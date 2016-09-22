@@ -6913,6 +6913,12 @@ p {
 }
 .header-menu-item {
   float: left;
+  padding: 28px 15px;
+  margin: -15px 20px;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 .header-menu-item.active .header-menu-link {
   color: #fff;
@@ -6923,12 +6929,6 @@ p {
   text-decoration: none;
   font-weight: 500;
   color: #fff;
-  padding: 28px 15px;
-  margin: -15px 20px;
-  display: block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .navbar {
   min-height: inherit;
@@ -6941,11 +6941,6 @@ p {
 }
 .navbar-form {
   padding: 0;
-  margin: 0;
-}
-.navbar .log-off {
-  display: inline;
-  padding: 0 5px;
   margin: 0;
 }
 .navbar > .container-fluid .navbar-brand {
