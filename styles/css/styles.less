@@ -192,6 +192,11 @@ p {
     padding: 0;
     margin: 0;
   }
+  .log-off {
+    display: inline;
+    padding: 0 5px;
+    margin: 0;
+  }
 }
 .navbar > .container-fluid .navbar-brand {
   margin-left: 0;
@@ -714,7 +719,8 @@ textarea.form-control {
       float: none;
     }
   }
-    .header .navbar-header .slogan { margin-left: 30px; }
+    .header .navbar-header .slogan { margin-left: 30px; 
+    display: none;}
     .home-hero-video-p.small { display: none; }
 }
 
@@ -832,4 +838,13 @@ textarea.form-control {
       font-size: 18px;
     }
   }
+}
+
+@media (min-width: 768px) {
+    .article-page {
+        > div.container-fluid {
+            font-size: 17px;   
+            padding-right: 20%;
+        }
+    }
 }
