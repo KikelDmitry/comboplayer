@@ -621,6 +621,37 @@ textarea.form-control {
     }
 }
 
+/* articles */
+
+.article-page {
+    > div {
+        ul, ol { 
+            margin-bottom: 20px; 
+            color: #1d1d1d;
+        }
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "\2013";
+                color: #67DDF4;
+                font-weight: bold;
+            }
+        }
+        ol {
+            padding-left: 15px;
+            li { list-style-type: decimal; }
+        }
+        blockquote { color: #1d1d1d; }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
 /*----------- begin sticky footer -----------*/
 .page {
     position: relative;
