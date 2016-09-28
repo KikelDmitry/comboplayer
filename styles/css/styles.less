@@ -340,8 +340,6 @@ p {
   }
   &-item {
     padding: 25px 20px;
-    // border-right: 1px solid #e0e2e5;
-    // &:last-child {border-right: none;}
     &-title {
       margin-top: 0;
       margin-bottom: 5px;
@@ -479,7 +477,6 @@ textarea.form-control {
   background: #75a01c;
   border-color: #75a01c;
 }
-
 
 .contacts {
   &-vcard {
@@ -649,6 +646,78 @@ textarea.form-control {
         img {
             max-width: 100%;
         }
+    }
+}
+
+/* download page */
+
+.download-page {
+    margin-top: 40px;
+    .block {
+        margin-bottom: 40px;
+        &.info {        
+            padding: 25px 30px;
+            border: 2px solid #40d7f2;    
+            font-size: 15px;
+            font-weight: 400;
+            p { margin-bottom: 0; }
+        }    
+        &.features {
+            border-top: 1px solid #e0e2e5;
+            padding-top: 30px;
+            li {
+                margin-bottom: 15px;
+                padding-left: 50px;
+                position: relative;
+                min-height: 32px;
+                padding-top: 5px;
+                font-size: 13px;
+                font-weight: 400;
+                > i {
+                    width: 32px;
+                    height: 32px;
+                    margin-right: 15px;
+                    background: url("@{images}icons-features-small.png") no-repeat; 
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+                em { 
+                    font-style: normal; 
+                    color: #999;
+                    display: block;
+                    margin-top: 5px;
+                }
+            }
+            .icon {
+                &-1 { background-position: 0 0; }
+                &-2 { background-position: 0 -32px; }
+                &-3 { background-position: -32px 0; }
+                &-4 { background-position: -64px 0; }
+                &-5 { background-position: -96px 0; } 
+                &-6 { background-position: -64px -32px; }
+                &-7 { background-position: -96px 0; }
+                &-8 { background-position: -96px -32px; }
+            }
+        }
+    }
+    .browser-preview {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 480px;
+        height: 340px;
+        max-width: 100%;
+        background-position: 0 0;
+        background-size: contain;
+        &.opera { background-image: url("@{images}browser-opera.jpg"); }
+        &.yandex { background-image: url("@{images}browser-yandex.jpg"); }
+        &.chrome { background-image: url("@{images}browser-chrome.jpg"); }
+        &.rambler { background-image: url("@{images}browser-rambler.jpg"); }
+        &.amigo { background-image: url("@{images}browser-amigo.jpg"); }
+        &.safari { background-image: url("@{images}browser-safari.jpg"); }
+        &.firefox { background-image: url("@{images}browser-firefox.jpg"); }
+        &.ie { background-image: url("@{images}browser-ie.jpg"); }
     }
 }
 
