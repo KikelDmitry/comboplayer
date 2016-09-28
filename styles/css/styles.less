@@ -651,7 +651,8 @@ textarea.form-control {
 
 /* download page */
 
-.download-page {
+.download-page,
+.thanks_for_reg-page {
     margin-top: 40px;
     .block {
         margin-bottom: 40px;
@@ -718,6 +719,20 @@ textarea.form-control {
         &.safari { background-image: url("@{images}browser-safari.jpg"); }
         &.firefox { background-image: url("@{images}browser-firefox.jpg"); }
         &.ie { background-image: url("@{images}browser-ie.jpg"); }
+    }
+}
+.thanks_for_reg-page {
+    .input-group { margin-bottom: 15px; }
+    .btn {
+        border-color: #75A01C;
+        color: #75A01C;
+        &:hover {
+            color: #444;
+            border-color: #444;
+        }
+    }
+    .download-link-bottom {
+        padding-top: 10px;
     }
 }
 

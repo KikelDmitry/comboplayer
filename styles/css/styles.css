@@ -7375,26 +7375,32 @@ textarea.form-control {
   max-width: 100%;
 }
 /* download page */
-.download-page {
+.download-page,
+.thanks_for_reg-page {
   margin-top: 40px;
 }
-.download-page .block {
+.download-page .block,
+.thanks_for_reg-page .block {
   margin-bottom: 40px;
 }
-.download-page .block.info {
+.download-page .block.info,
+.thanks_for_reg-page .block.info {
   padding: 25px 30px;
   border: 2px solid #40d7f2;
   font-size: 15px;
   font-weight: 400;
 }
-.download-page .block.info p {
+.download-page .block.info p,
+.thanks_for_reg-page .block.info p {
   margin-bottom: 0;
 }
-.download-page .block.features {
+.download-page .block.features,
+.thanks_for_reg-page .block.features {
   border-top: 1px solid #e0e2e5;
   padding-top: 30px;
 }
-.download-page .block.features li {
+.download-page .block.features li,
+.thanks_for_reg-page .block.features li {
   margin-bottom: 15px;
   padding-left: 50px;
   position: relative;
@@ -7403,7 +7409,8 @@ textarea.form-control {
   font-size: 13px;
   font-weight: 400;
 }
-.download-page .block.features li > i {
+.download-page .block.features li > i,
+.thanks_for_reg-page .block.features li > i {
   width: 32px;
   height: 32px;
   margin-right: 15px;
@@ -7413,37 +7420,47 @@ textarea.form-control {
   top: 0;
   left: 0;
 }
-.download-page .block.features li em {
+.download-page .block.features li em,
+.thanks_for_reg-page .block.features li em {
   font-style: normal;
   color: #999;
   display: block;
   margin-top: 5px;
 }
-.download-page .block.features .icon-1 {
+.download-page .block.features .icon-1,
+.thanks_for_reg-page .block.features .icon-1 {
   background-position: 0 0;
 }
-.download-page .block.features .icon-2 {
+.download-page .block.features .icon-2,
+.thanks_for_reg-page .block.features .icon-2 {
   background-position: 0 -32px;
 }
-.download-page .block.features .icon-3 {
+.download-page .block.features .icon-3,
+.thanks_for_reg-page .block.features .icon-3 {
   background-position: -32px 0;
 }
-.download-page .block.features .icon-4 {
+.download-page .block.features .icon-4,
+.thanks_for_reg-page .block.features .icon-4 {
   background-position: -64px 0;
 }
-.download-page .block.features .icon-5 {
+.download-page .block.features .icon-5,
+.thanks_for_reg-page .block.features .icon-5 {
   background-position: -96px 0;
 }
-.download-page .block.features .icon-6 {
+.download-page .block.features .icon-6,
+.thanks_for_reg-page .block.features .icon-6 {
   background-position: -64px -32px;
 }
-.download-page .block.features .icon-7 {
+.download-page .block.features .icon-7,
+.thanks_for_reg-page .block.features .icon-7 {
   background-position: -96px 0;
 }
-.download-page .block.features .icon-8 {
+.download-page .block.features .icon-8,
+.thanks_for_reg-page .block.features .icon-8 {
   background-position: -96px -32px;
 }
-.download-page .browser-preview {
+.download-page .browser-preview,
+.thanks_for_reg-page .browser-preview {
   position: relative;
   background-repeat: no-repeat;
   width: 480px;
@@ -7452,29 +7469,51 @@ textarea.form-control {
   background-position: 0 0;
   background-size: contain;
 }
-.download-page .browser-preview.opera {
+.download-page .browser-preview.opera,
+.thanks_for_reg-page .browser-preview.opera {
   background-image: url("../../images/browser-opera.jpg");
 }
-.download-page .browser-preview.yandex {
+.download-page .browser-preview.yandex,
+.thanks_for_reg-page .browser-preview.yandex {
   background-image: url("../../images/browser-yandex.jpg");
 }
-.download-page .browser-preview.chrome {
+.download-page .browser-preview.chrome,
+.thanks_for_reg-page .browser-preview.chrome {
   background-image: url("../../images/browser-chrome.jpg");
 }
-.download-page .browser-preview.rambler {
+.download-page .browser-preview.rambler,
+.thanks_for_reg-page .browser-preview.rambler {
   background-image: url("../../images/browser-rambler.jpg");
 }
-.download-page .browser-preview.amigo {
+.download-page .browser-preview.amigo,
+.thanks_for_reg-page .browser-preview.amigo {
   background-image: url("../../images/browser-amigo.jpg");
 }
-.download-page .browser-preview.safari {
+.download-page .browser-preview.safari,
+.thanks_for_reg-page .browser-preview.safari {
   background-image: url("../../images/browser-safari.jpg");
 }
-.download-page .browser-preview.firefox {
+.download-page .browser-preview.firefox,
+.thanks_for_reg-page .browser-preview.firefox {
   background-image: url("../../images/browser-firefox.jpg");
 }
-.download-page .browser-preview.ie {
+.download-page .browser-preview.ie,
+.thanks_for_reg-page .browser-preview.ie {
   background-image: url("../../images/browser-ie.jpg");
+}
+.thanks_for_reg-page .input-group {
+  margin-bottom: 15px;
+}
+.thanks_for_reg-page .btn {
+  border-color: #75A01C;
+  color: #75A01C;
+}
+.thanks_for_reg-page .btn:hover {
+  color: #444;
+  border-color: #444;
+}
+.thanks_for_reg-page .download-link-bottom {
+  padding-top: 10px;
 }
 /*----------- begin sticky footer -----------*/
 .page {
