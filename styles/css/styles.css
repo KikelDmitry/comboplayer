@@ -7515,6 +7515,21 @@ textarea.form-control {
 .thanks_for_reg-page .download-link-bottom {
   padding-top: 10px;
 }
+/* screenshots list */
+.screenshots-list h3 {
+  color: #75A01C;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+@media (min-width: 992px) {
+  #screenModal .modal-dialog {
+    width: 900px;
+  }
+  #screenModal .thumbnail {
+    margin-bottom: 6px;
+  }
+}
 /*----------- begin sticky footer -----------*/
 .page {
   position: relative;
