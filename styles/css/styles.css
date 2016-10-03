@@ -7469,37 +7469,93 @@ textarea.form-control {
   background-position: 0 0;
   background-size: contain;
 }
+.download-page .browser-preview span,
+.thanks_for_reg-page .browser-preview span {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: url("../../images//browser-pointer.png") no-repeat center;
+  width: 288px;
+  height: 188px;
+  padding-top: 90px;
+  padding-left: 20px;
+  padding-right: 75px;
+  font-size: 13px;
+  font-weight: 400;
+}
 .download-page .browser-preview.opera,
 .thanks_for_reg-page .browser-preview.opera {
-  background-image: url("../../images/browser-opera.jpg");
+  background-image: url("../../images/browsers/browser-opera.jpg");
+}
+.download-page .browser-preview.opera span,
+.thanks_for_reg-page .browser-preview.opera span {
+  top: 92px;
+  right: 40px;
 }
 .download-page .browser-preview.yandex,
 .thanks_for_reg-page .browser-preview.yandex {
-  background-image: url("../../images/browser-yandex.jpg");
+  background-image: url("../../images/browsers/browser-yandex.jpg");
+}
+.download-page .browser-preview.yandex span,
+.thanks_for_reg-page .browser-preview.yandex span {
+  top: 76px;
+  right: 41px;
 }
 .download-page .browser-preview.chrome,
 .thanks_for_reg-page .browser-preview.chrome {
-  background-image: url("../../images/browser-chrome.jpg");
+  background-image: url("../../images/browsers/browser-chrome.jpg");
+}
+.download-page .browser-preview.chrome span,
+.thanks_for_reg-page .browser-preview.chrome span {
+  top: 90px;
+  right: 29px;
 }
 .download-page .browser-preview.rambler,
 .thanks_for_reg-page .browser-preview.rambler {
-  background-image: url("../../images/browser-rambler.jpg");
+  background-image: url("../../images/browsers/browser-rambler.jpg");
+}
+.download-page .browser-preview.rambler span,
+.thanks_for_reg-page .browser-preview.rambler span {
+  top: 93px;
+  right: 40px;
 }
 .download-page .browser-preview.amigo,
 .thanks_for_reg-page .browser-preview.amigo {
-  background-image: url("../../images/browser-amigo.jpg");
+  background-image: url("../../images/browsers/browser-amigo.jpg");
+}
+.download-page .browser-preview.amigo span,
+.thanks_for_reg-page .browser-preview.amigo span {
+  top: 89px;
+  right: 41px;
 }
 .download-page .browser-preview.safari,
 .thanks_for_reg-page .browser-preview.safari {
-  background-image: url("../../images/browser-safari.jpg");
+  background-image: url("../../images/browsers/browser-safari.jpg");
+}
+.download-page .browser-preview.safari span,
+.thanks_for_reg-page .browser-preview.safari span {
+  top: 35px;
+  right: 129px;
 }
 .download-page .browser-preview.firefox,
 .thanks_for_reg-page .browser-preview.firefox {
-  background-image: url("../../images/browser-firefox.jpg");
+  background-image: url("../../images/browsers/browser-firefox.jpg");
+}
+.download-page .browser-preview.firefox span,
+.thanks_for_reg-page .browser-preview.firefox span {
+  top: 90px;
+  right: 142px;
 }
 .download-page .browser-preview.ie,
 .thanks_for_reg-page .browser-preview.ie {
-  background-image: url("../../images/browser-ie.jpg");
+  background-image: url("../../images/browsers/browser-ie.jpg");
+}
+.download-page .browser-preview.ie span,
+.thanks_for_reg-page .browser-preview.ie span {
+  top: 58px;
+  right: 30px;
 }
 .thanks_for_reg-page .input-group {
   margin-bottom: 15px;
