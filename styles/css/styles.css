@@ -7419,6 +7419,7 @@ textarea.form-control {
   position: absolute;
   top: 0;
   left: 0;
+  margin-top: 0;
 }
 .download-page .block.features li em,
 .thanks_for_reg-page .block.features li em {
@@ -7427,36 +7428,36 @@ textarea.form-control {
   display: block;
   margin-top: 5px;
 }
-.download-page .block.features .icon-1,
-.thanks_for_reg-page .block.features .icon-1 {
+.download-page .block.features .icon-function-4,
+.thanks_for_reg-page .block.features .icon-function-4 {
   background-position: 0 0;
 }
-.download-page .block.features .icon-2,
-.thanks_for_reg-page .block.features .icon-2 {
+.download-page .block.features .icon-function-1,
+.thanks_for_reg-page .block.features .icon-function-1 {
   background-position: 0 -32px;
 }
-.download-page .block.features .icon-3,
-.thanks_for_reg-page .block.features .icon-3 {
+.download-page .block.features .icon-function-6,
+.thanks_for_reg-page .block.features .icon-function-6 {
   background-position: -32px 0;
 }
-.download-page .block.features .icon-4,
-.thanks_for_reg-page .block.features .icon-4 {
+.download-page .block.features .icon-function-3,
+.thanks_for_reg-page .block.features .icon-function-3 {
   background-position: -64px 0;
 }
-.download-page .block.features .icon-5,
-.thanks_for_reg-page .block.features .icon-5 {
-  background-position: -96px 0;
+.download-page .block.features .icon-function-8,
+.thanks_for_reg-page .block.features .icon-function-8 {
+  background-position: -32px -32px;
 }
-.download-page .block.features .icon-6,
-.thanks_for_reg-page .block.features .icon-6 {
+.download-page .block.features .icon-function-5,
+.thanks_for_reg-page .block.features .icon-function-5 {
   background-position: -64px -32px;
 }
-.download-page .block.features .icon-7,
-.thanks_for_reg-page .block.features .icon-7 {
+.download-page .block.features .icon-function-7,
+.thanks_for_reg-page .block.features .icon-function-7 {
   background-position: -96px 0;
 }
-.download-page .block.features .icon-8,
-.thanks_for_reg-page .block.features .icon-8 {
+.download-page .block.features .icon-function-2,
+.thanks_for_reg-page .block.features .icon-function-2 {
   background-position: -96px -32px;
 }
 .download-page .browser-preview,
