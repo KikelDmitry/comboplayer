@@ -7588,6 +7588,9 @@ textarea.form-control {
     margin-bottom: 6px;
   }
 }
+.fancybox-wrap a {
+  text-decoration: none !important;
+}
 /*----------- begin sticky footer -----------*/
 .page {
   position: relative;
