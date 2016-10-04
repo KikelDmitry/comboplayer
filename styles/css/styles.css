@@ -6930,6 +6930,13 @@ p {
   font-weight: 500;
   color: #fff;
 }
+.header-menu-link.external {
+  padding: 5px 10px;
+  border: 1px solid #79AE0B;
+}
+.header-menu-link.external:hover {
+  border-color: #187ca7;
+}
 .navbar {
   min-height: inherit;
   margin-bottom: 0;
