@@ -7595,7 +7595,10 @@ textarea.form-control {
     margin-bottom: 6px;
   }
 }
-.fancybox-wrap a { text-decoration: none !important; }
+.fancybox-wrap a {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
 .ext-widget {
   padding: 15px 0;
 }
