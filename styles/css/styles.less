@@ -426,22 +426,44 @@ p {
   border-top: 1px solid #e0e2e5;
   padding: 20px 0;
   background: #fff;
+    p { 
+        margin-bottom: 10px; 
+        strong { font-weight: 600; }
+    }
+    i.fa { 
+        color: #75A01C; 
+        padding-right: 5px;
+    }
 }
 .footer-menu {
-  font-size: 15px;
-  margin: 0 -25px;
-  float: right;
-  &-item {
-    float: left;
-    margin: 0 25px;
-  }
-  &-link {
-    text-decoration: none;
-    &:active,
-    &:focus {
-      text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    
+    &-link {
+        border-bottom: 1px solid #e3e3e3;
+        &:hover {
+            text-decoration: none;
+            border: none;
+        }
     }
-  }
+    &.social {
+        .footer-menu-link {
+            border: none;
+            font-size: 20px;
+            color: #75A01C;
+            i {
+                padding: 4px 5px;
+                border: 1px solid #75A01C;
+            }
+            &:hover { 
+                i { 
+                    background-color: #75A01C; 
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
 }
 
 .contact-map {
@@ -806,24 +828,6 @@ textarea.form-control {
     > iframe { width: 100% !important; }
 }
 
-/*----------- begin sticky footer -----------*/
-.page {
-    position: relative;
-    min-height: 100%;
-    overflow: hidden;
-}
-.content {
-    padding-bottom: 100px;
-}
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 75px;
-}
-/*----------- end sticky footer -----------*/
-
-
 .mb-30 {margin-bottom: 30px;}
 
 @media (min-width: 1400px) {
@@ -871,6 +875,13 @@ textarea.form-control {
     .header .navbar-header .slogan { margin-left: 30px; 
     display: none;}
     .home-hero-video-p.small { display: none; }
+    
+    .footer {
+        .row > div:first-child {
+            padding-bottom: 15px;
+        }
+    }    
+    
 }
 
 @media (max-width: @screen-xs-max) {
@@ -959,6 +970,13 @@ textarea.form-control {
           top: 30%;
         }
     }
+    
+    .footer {
+        .row > div {
+            padding-bottom: 15px;
+        }
+    } 
+    
 }
 
 @media (max-width: 400px) {
