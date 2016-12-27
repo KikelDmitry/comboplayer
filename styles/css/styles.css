@@ -7218,6 +7218,9 @@ p {
   box-shadow: none;
   -webkit-appearance: none;
 }
+.form-control.default-cursor {
+  cursor: default;
+}
 textarea.form-control {
   height: auto;
   min-height: 170px;
