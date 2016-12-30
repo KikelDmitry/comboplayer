@@ -815,6 +815,7 @@ h6 {
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -577px -556px;
+  display: inline-block;
 }
 .content .page-content .part-sub .av-avg {
   width: 268px;
@@ -823,6 +824,7 @@ h6 {
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -577px -693px;
+  display: inline-block;
 }
 /* // footer */
 .footer {
