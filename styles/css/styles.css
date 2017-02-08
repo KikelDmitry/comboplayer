@@ -6810,7 +6810,6 @@ select {
 }
 a {
   outline: none;
-  text-decoration: none;
   /*border-bottom: 1px solid @brand-info;*/
   text-decoration: underline;
 }
@@ -6871,6 +6870,7 @@ p {
 }
 .ul-list {
   margin-bottom: 25px;
+  font-weight: 400;
 }
 .ul-list li {
   position: relative;
@@ -6908,6 +6908,7 @@ p {
   padding-top: 15px;
   margin-bottom: 0;
   color: #C0C0C0;
+  font-weight: 400;
 }
 .header-menu {
   font-size: 15px;
@@ -7112,7 +7113,8 @@ p {
   margin-bottom: 0;
   font-size: 15px;
   font-weight: normal;
-  color: #999;
+  /*color: #999;*/
+  color: #333;
 }
 .function-list .row {
   margin-left: 0;
@@ -7172,6 +7174,7 @@ p {
   border-top: 1px solid #e0e2e5;
   padding: 20px 0;
   background: #fff;
+  font-weight: 400;
 }
 .footer p {
   margin-bottom: 10px;
@@ -7212,12 +7215,12 @@ p {
 }
 .form-control {
   font-size: 14px;
-  font-weight: 300;
   height: 47px;
   border-radius: 0;
   border-color: #D5D5D5;
   box-shadow: none;
   -webkit-appearance: none;
+  font-weight: 400;
 }
 .form-control.default-cursor {
   cursor: default;
@@ -7225,14 +7228,6 @@ p {
 textarea.form-control {
   height: auto;
   min-height: 170px;
-}
-.form-control {
-  font-size: 14px;
-  font-weight: 300;
-  height: 47px;
-  border-radius: 0;
-  border-color: #D5D5D5;
-  box-shadow: none;
 }
 .btn-primary {
   color: #fff;
@@ -7299,7 +7294,7 @@ textarea.form-control {
 }
 .signin-form-networks-title {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
   color: #787878;
   margin-bottom: 10px;
 }
@@ -7311,6 +7306,9 @@ textarea.form-control {
 }
 .signin-form .ul-list li {
   margin-bottom: 12px;
+}
+.signin-form .ul-list li label.news-subscribe {
+  font-weight: normal;
 }
 .overlay-link {
   display: block;
@@ -7411,6 +7409,7 @@ textarea.form-control {
 .download-page .block,
 .thanks_for_reg-page .block {
   margin-bottom: 40px;
+  font-weight: 400;
 }
 .download-page .block.info,
 .thanks_for_reg-page .block.info {
@@ -7601,6 +7600,9 @@ textarea.form-control {
 }
 .thanks_for_reg-page .download-link-bottom {
   padding-top: 10px;
+}
+.contacts-vcard {
+  font-weight: 400;
 }
 /* screenshots list */
 .screenshots-list h3 {

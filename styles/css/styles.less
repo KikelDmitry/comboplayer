@@ -9,14 +9,11 @@
 @font-weight-bold: 700;
 @font-size-smaller: ceil((@font-size-base * 0.85)); // ~12px
 
-
 @black-base: #000;
 @white-base: #fff;
 
-
 @images: "../../images/";
 @images-sprites: "@{images}sprites/";
-
 
 .no-outline {outline: none;}
 .no-text-dec {text-decoration: none;}
@@ -72,7 +69,6 @@ textarea, input {.no-outline;resize: none;margin-left: 0px;}
 select {.no-outline;}
 a {
   .no-outline;
-  text-decoration: none;
   /*border-bottom: 1px solid @brand-info;*/
     text-decoration: underline;
   
@@ -117,6 +113,7 @@ p {
 
 .ul-list {
   margin-bottom: 25px;
+  font-weight: 400;
   li {
     position: relative;
     margin-bottom: 8px;
@@ -154,6 +151,7 @@ p {
         padding-top: 15px;
         margin-bottom: 0;
         color: #C0C0C0;
+        font-weight: 400;
     } 
 }
 .header-menu {
@@ -361,7 +359,8 @@ p {
       margin-bottom: 0;
       font-size: 15px;
       font-weight: normal;
-      color: #999;
+      /*color: #999;*/
+        color: #333;
     }
   }
   .row {
@@ -427,6 +426,7 @@ p {
   border-top: 1px solid #e0e2e5;
   padding: 20px 0;
   background: #fff;
+    font-weight: 400;
     p { 
         margin-bottom: 10px; 
         strong { font-weight: 600; }
@@ -473,25 +473,17 @@ p {
 
 .form-control {
     font-size: 14px;
-    font-weight: 300;
     height: 47px;
     border-radius: 0;
     border-color: #D5D5D5;
     box-shadow: none;
     -webkit-appearance: none;
     &.default-cursor { cursor: default; }
+    font-weight: 400;
 }
 textarea.form-control {
   height: auto;
   min-height: 170px;
-}
-.form-control {
-    font-size: 14px;
-    font-weight: 300;
-    height: 47px;
-    border-radius: 0;
-    border-color: #D5D5D5;
-    box-shadow: none;
 }
 .btn-primary {
   color: #fff;
@@ -565,7 +557,7 @@ textarea.form-control {
     margin-bottom: 25px;
     &-title {
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 400;
       color: #787878;
       margin-bottom: 10px;
     }
@@ -578,6 +570,7 @@ textarea.form-control {
   }
   .ul-list li {
     margin-bottom: 12px;
+    label.news-subscribe { font-weight: normal; }
   }
 }
 
@@ -685,6 +678,7 @@ textarea.form-control {
     margin-top: 40px;
     .block {
         margin-bottom: 40px;
+        font-weight: 400;
         &.info {        
             padding: 25px 30px;
             border: 2px solid #40d7f2;    
@@ -805,6 +799,8 @@ textarea.form-control {
         padding-top: 10px;
     }
 }
+
+.contacts-vcard { font-weight: 400; }
 
 /* screenshots list */
 
