@@ -7632,6 +7632,39 @@ textarea.form-control {
 .mb-30 {
   margin-bottom: 30px;
 }
+/* form css anim */
+.form-css-label {
+  position: relative;
+  /*.form-group { position: relative; }*/
+}
+.form-css-label input {
+  line-height: 1;
+  outline: 0;
+  appearance: none;
+  transition: all 0.2s ease-in-out;
+}
+.form-css-label input[data-empty="false"],
+.form-css-label input:focus {
+  padding: 22px 8px 10px;
+}
+.form-css-label input:focus {
+  outline: 0;
+  background: #ffffff;
+}
+.form-css-label input[data-empty="false"] + label,
+.form-css-label input:focus + label {
+  font-size: 12px;
+  transform: translate3d(0, -10px, 0);
+}
+.form-css-label input + label {
+  position: absolute;
+  top: 15px;
+  left: 8px;
+  font-weight: normal;
+  color: #99999C;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease-in-out;
+}
 /* media q */
 @media (max-width: 1200px) {
   main.content {
