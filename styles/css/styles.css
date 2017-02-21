@@ -7668,7 +7668,8 @@ textarea.form-control {
 }
 /* media q */
 @media (max-width: 1280px) {
-  main.content {
+  main.content,
+  .footer-contain {
     padding: 0 20px;
   }
 }
