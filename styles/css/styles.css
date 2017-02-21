@@ -7349,6 +7349,7 @@ textarea.form-control {
   font-weight: 500;
 }
 .download-link-bottom a {
+  display: inline-block;
   cursor: pointer;
   font-weight: 500;
   font-size: 18px;
@@ -7666,7 +7667,7 @@ textarea.form-control {
   transition: all 0.2s ease-in-out;
 }
 /* media q */
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   main.content {
     padding: 0 20px;
   }
