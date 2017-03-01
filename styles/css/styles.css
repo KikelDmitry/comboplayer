@@ -7636,7 +7636,6 @@ textarea.form-control {
 /* form css anim */
 .form-css-label {
   position: relative;
-  /*.form-group { position: relative; }*/
 }
 .form-css-label input {
   line-height: 1;
@@ -7645,6 +7644,7 @@ textarea.form-control {
   transition: all 0.2s ease-in-out;
 }
 .form-css-label input[data-empty="false"],
+.form-css-label input:valid,
 .form-css-label input:focus {
   padding: 22px 8px 10px;
 }
@@ -7653,6 +7653,7 @@ textarea.form-control {
   background: #ffffff;
 }
 .form-css-label input[data-empty="false"] + label,
+.form-css-label input:valid + label,
 .form-css-label input:focus + label {
   font-size: 12px;
   transform: translate3d(0, -10px, 0);

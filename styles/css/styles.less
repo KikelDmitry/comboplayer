@@ -833,21 +833,20 @@ textarea.form-control {
 
 .form-css-label {
     position: relative;
-    /*.form-group { position: relative; }*/
     input {
         line-height: 1;
         outline: 0;
         appearance: none;
         transition: all 0.2s ease-in-out;
         &[data-empty="false"],
-        /*&:valid,*/
+        &:valid,
         &:focus { padding: 22px 8px 10px; }
         &:focus {
             outline: 0;
             background: rgba(255, 255, 255, 1);
         }
         &[data-empty="false"] + label,
-        /*&:valid + label,*/
+        &:valid + label,
         &:focus + label {
             font-size: 12px;
             transform: translate3d(0, -10px, 0);
