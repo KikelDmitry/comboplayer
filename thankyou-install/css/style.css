@@ -526,6 +526,8 @@ body .page {
 }
 .content .container .block-reviews .block-reviews-item .block-reviews-text {
   font-size: 14px;
+  padding-left: 124px;
+  margin-bottom: 8px;
 }
 .content .container .block-reviews .block-reviews-item .block-reviews-text em {
   color: #2faee6;
@@ -590,9 +592,11 @@ body .page {
   }
   .content .container .block-reviews .block-reviews-item img {
     margin-bottom: 50px;
+    width: 90px;
   }
   .content .container .block-reviews .block-reviews-item .block-reviews-text {
     font-size: 13px;
+    padding-left: 100px;
   }
 }
 @media (max-width: 992px) {
