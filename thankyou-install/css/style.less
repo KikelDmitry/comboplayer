@@ -194,7 +194,8 @@ ul li { list-style-type: none; }
 	.font-base;
     color: @color-steel-dark;
 	font-weight: 600; 
-    font-size: 40px;
+    /*font-size: 40px;*/
+    font-size: 35px;
     .font-head;
 }
 .header2 {
@@ -261,7 +262,8 @@ h3 { .header3; }
     .sprite(-720px -325px);
 }
 .icon-tv-empty {
-    width: 65px;
+    /*width: 65px;*/
+    width: 55px;
     height: 58px;
     .sprite(-26px -129px);
 }
@@ -323,12 +325,13 @@ body .page {
 /* // header */
 
 .header {
-    padding-top: 15px;
+    /*padding-top: 15px;*/
     .logo {
         .icon-logo;
         position: relative;
         left: -35px;
-        margin-bottom: 15px;
+        /*margin-bottom: 15px;*/
+        margin-bottom: 5px;
     }
     .header1 { margin-top: 45px; }
 }
@@ -349,7 +352,8 @@ body .page {
                 color: @color-steel;
                 position: absolute;
                 top: 0;
-                left: 0;
+                /*left: 0;*/
+                left: 15px;
             }
             .col {
                 text-align: center;
@@ -419,20 +423,44 @@ body .page {
                     }
                 }
             }
+            position: relative;
+            .link-register {
+                position: absolute;
+                background-color: transparent;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2000;
+            }
+            
+            &:hover .header2  {
+                color: @color-blue;
+                .trans();
+            }
+            
         }
         .block-tv {
-            border-top: 1px solid @color-blue-light;
-            padding-top: 15px;
+            /*border-top: 1px solid @color-blue-light;*/
+            /*padding-top: 15px;*/
+            padding-top: 25px;
             margin-bottom: 15px;
             .header2 {
                 .icon { vertical-align: bottom; }
                 margin-bottom: 15px;
+                a {
+                    color: @color-steel-dark; 
+                    cursor: pointer;
+                    &:hover,
+                    &:active {
+                        color: @color-blue;
+                    }
+                }
             }
             .block-tv-free-body {
-                padding-left: 72px;
-                p {
-                    margin-bottom: 15px;
-                }
+                /*padding-left: 72px;*/
+                padding-left: 62px;
+                p { margin-bottom: 15px; }
             }
             .block-tv-pay-body {
                 padding-left: 72px;
@@ -542,6 +570,11 @@ body .page {
                         left: 0;
                     }
                 }
+            }
+            li a {
+                color: @color-base;
+                &:active,
+                &:hover { color: @color-brand; }
             }
         }
         
