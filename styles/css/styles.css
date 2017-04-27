@@ -7840,6 +7840,19 @@ textarea.form-control {
 .content-tv-head .programm-header {
   border-bottom: 1px solid #DEE6EB;
 }
+.content-tv-head .channel-header-top {
+  margin-top: 20px;
+}
+.content-tv-head .channel-header-top i > img {
+  width: 62px;
+  height: 62px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-right: 15px;
+}
+.content-tv-head .channel-header-top .tv-content-header {
+  display: inline-block;
+}
 .content-tv-table-wrap {
   margin-top: 30px;
 }
@@ -8044,6 +8057,9 @@ textarea.form-control {
   display: inline-block;
   vertical-align: baseline;
   margin-right: 10px;
+}
+.content-tv-channel .channel-stream {
+  margin-top: 30px;
 }
 .content-tv-channel .channel-stream ul {
   margin-bottom: 30px;
@@ -8460,6 +8476,30 @@ textarea.form-control {
   }
   .footer .row > div {
     padding-bottom: 15px;
+  }
+  .tv-content-header {
+    font-size: 24px;
+  }
+  .content-tv-head .tv-table-time {
+    padding: 0;
+  }
+  .content-tv-head .tv-table-week ul {
+    border-bottom: 0;
+  }
+  .content-tv-head .tv-table-week ul li {
+    margin-bottom: 10px;
+  }
+  .content-tv-head .tv-table-week ul li.active {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  .content-tv-head .tv-table-week ul li.active a {
+    margin: 0;
+  }
+  .content-tv-head .tv-table-week ul li a {
+    padding: 0 ;
+    margin-right: 10px;
   }
 }
 @media (max-width: 400px) {

@@ -1047,6 +1047,17 @@ textarea.form-control {
         .programm-header {
             border-bottom: 1px solid #DEE6EB;
         }
+        .channel-header-top {
+            margin-top: 20px;
+            i > img {
+                width: 62px;
+                height: 62px;
+                display: inline-block;
+                vertical-align: baseline;
+                margin-right: 15px;
+            }
+            .tv-content-header {  display: inline-block; }
+        }
     }
     &-table {
         &-wrap { margin-top: 30px; }
@@ -1260,6 +1271,7 @@ textarea.form-control {
                 }
             }
             &-stream {
+                margin-top: 30px;
                 ul {
                     margin-bottom: 30px;
                     li {
@@ -1697,6 +1709,27 @@ textarea.form-control {
             padding-bottom: 15px;
         }
     } 
+    
+    .tv-content-header { font-size: 24px; }
+    .content-tv-head .tv-table-time { padding: 0; }
+    
+    .content-tv-head .tv-table-week {
+        ul {
+            border-bottom: 0;
+            li {
+                margin-bottom: 10px;
+                &.active {
+                    .radius(3px);
+                    margin-right: 10px;
+                    a { margin: 0; }
+                }
+                a { 
+                    padding: 0 ;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
     
 }
 
