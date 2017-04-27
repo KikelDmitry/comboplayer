@@ -6945,6 +6945,9 @@ p {
 .header-menu-link.external:hover {
   border-color: #187ca7;
 }
+.header-menu .extra-item {
+  display: none;
+}
 .navbar {
   min-height: inherit;
   margin-bottom: 0;
@@ -7674,7 +7677,14 @@ textarea.form-control {
   transition: all 0.2s ease-in-out;
 }
 /* tv content */
+.tv-content-header {
+  color: #3C4C54;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
 .content-tv-nav {
+  margin: 0 -20px;
   background-color: #E4EBEE;
   background-color: #f7f7f8;
   background: -webkit-gradient(linear, left top, left bottom, from(#f7f7f8), to(#e4ebee));
@@ -7757,10 +7767,11 @@ textarea.form-control {
   border-radius: 16px;
   background-color: #79ae0b;
   text-align: center;
-  line-height: 40px;
+  /*line-height: 40px;*/
   display: inline-block;
   color: #fff;
-  padding: 0 20px;
+  /*padding: 0 20px;*/
+  padding: 10px 20px;
   font-size: 16px;
 }
 .content-tv-nav .download-link a:hover,
@@ -7771,6 +7782,7 @@ textarea.form-control {
 }
 .content-tv-head .tv-table-week {
   margin: 15px 0 30px;
+  margin-bottom: 0;
 }
 .content-tv-head .tv-table-week ul {
   border-bottom: 2px solid #79ae0b;
@@ -7812,7 +7824,8 @@ textarea.form-control {
   padding-right: 0;
 }
 .content-tv-head .tv-table-time {
-  margin-top: 15px;
+  /*margin-top: 15px;*/
+  margin-top: 20px;
   padding: 15px 0;
 }
 .content-tv-head .tv-table-time span {
@@ -7824,8 +7837,44 @@ textarea.form-control {
   color: #97b4c5;
   font-size: 22px;
 }
+.content-tv-head .programm-header {
+  border-bottom: 1px solid #DEE6EB;
+}
+.content-tv-table-wrap {
+  margin-top: 30px;
+}
+.content-tv-table-channel_cats {
+  margin-bottom: 30px;
+}
+.content-tv-table-channel_cats .btn-group > .btn {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+.content-tv-table-channel_cats .btn-group > .btn .caret {
+  color: #2aaae1;
+  margin-left: 5px;
+}
+.content-tv-table-channel_cats .dropdown-menu {
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.content-tv-table-channel_cats .dropdown-menu li > a {
+  text-decoration: none;
+}
+.content-tv-table-channel_cats .dropdown-menu li > a:hover,
+.content-tv-table-channel_cats .dropdown-menu li > a:active,
+.content-tv-table-channel_cats .dropdown-menu li > a:focus {
+  background-color: #2aaae1;
+  color: #fff;
+}
 .content-tv-table-categories {
   margin-bottom: 15px;
+}
+.content-tv-table-categories-title {
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 .content-tv-table-categories span {
   padding: 3px 7px;
@@ -7967,12 +8016,27 @@ textarea.form-control {
 .content-tv-table-channel .channel-body ul li .channel-time.active {
   border-bottom: 2px solid #79ae0b;
 }
-.content-tv-channel .channel-header h1 {
+.content-tv-channel .channel-header {
+  padding-left: 62px;
+}
+.content-tv-channel .channel-header h1,
+.content-tv-channel .channel-header .channel-header-text {
   color: #25292b;
-  font-size: 32px;
+  /*font-size: 32px;*/
+  font-size: 26px;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 20px;
+  width: 97%;
+  padding-left: 10px;
+}
+.content-tv-channel .channel-header i {
+  display: inline-block;
+  width: 62px;
+  height: 62px;
+  position: relative;
+  margin-left: -62px;
+  vertical-align: top;
 }
 .content-tv-channel .channel-header i > img {
   height: 62px;
@@ -8062,11 +8126,17 @@ textarea.form-control {
 }
 .content-tv-channel .programm-header {
   margin-bottom: 15px;
+  margin-top: 15px;
 }
-.content-tv-channel .programm-header h1 {
+.content-tv-channel .programm-header h1,
+.content-tv-channel .programm-header .channel-header-text {
   font-size: 32px;
   font-weight: 600;
   margin: 0;
+}
+.content-tv-channel .programm-header i img {
+  border: 1px solid #DEE6EB;
+  padding: 2px;
 }
 .content-tv-channel .programm-header .channel-header i img {
   vertical-align: middle;
@@ -8279,6 +8349,9 @@ textarea.form-control {
   .footer .row > div:first-child {
     padding-bottom: 15px;
   }
+  .content-tv-nav > .container-fluid > .row > .col:first-child {
+    background-color: #d4dfe4;
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -8318,14 +8391,35 @@ textarea.form-control {
     overflow-y: hidden;
     margin: 5px -15px;
     border: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
   .header-menu-item {
     float: none;
+    padding: 15px;
+    margin: 0px 20px;
+    border-bottom: 1px solid #444;
+    padding: 12px;
+  }
+  .header-menu-item:last-child {
+    border-bottom: 0;
   }
   .header-menu-link {
-    padding: 15px 15px;
+    padding: 15px;
     margin: 0;
     height: auto;
+  }
+  .header-menu-link.external {
+    position: relative;
+    margin-left: 15px;
+  }
+  .header-menu .extra-item {
+    display: block;
+  }
+  .header-menu .extra-item a {
+    /*padding: 5px 10px;
+                border: 1px solid #2aaae1;
+                margin-left: 15px;*/
   }
   .header {
     padding-bottom: 0;

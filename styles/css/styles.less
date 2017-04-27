@@ -212,6 +212,9 @@ p {
           &:hover { border-color: #187ca7; }
       }
   }
+    .extra-item {
+        display: none;
+    }
 }
 .navbar {
   min-height: inherit;
@@ -894,8 +897,16 @@ textarea.form-control {
 
 /* tv content */
 
+.tv-content-header {
+    color: #3C4C54;
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
 .content-tv {
     &-nav {
+        margin: 0 -20px;
         background-color: #E4EBEE;
         .gradient (#f7f7f8, #e4ebee);
         //padding: 22px 0;
@@ -960,10 +971,11 @@ textarea.form-control {
                 .radius(16px);
                 background-color: #79ae0b;
                 text-align: center;
-                line-height: 40px;
+                /*line-height: 40px;*/
                 display: inline-block;
                 color: #fff;
-                padding: 0 20px;    
+                /*padding: 0 20px;*/    
+                padding: 10px 20px;
                 font-size: 16px;
                 &:hover,
                 &:active,
@@ -977,6 +989,7 @@ textarea.form-control {
     &-head {
         .tv-table-week {
             margin: 15px 0 30px;
+            margin-bottom: 0;
             ul {
                 border-bottom: 2px solid #79ae0b
             }
@@ -1018,7 +1031,8 @@ textarea.form-control {
             }
         }
         .tv-table-time {
-            margin-top: 15px;
+            /*margin-top: 15px;*/
+            margin-top: 20px;
             padding: 15px 0;
             span {
                 font-size: 24px;
@@ -1030,9 +1044,41 @@ textarea.form-control {
                 }
             }
         }
+        .programm-header {
+            border-bottom: 1px solid #DEE6EB;
+        }
     }
     &-table {
+        &-wrap { margin-top: 30px; }
+        &-channel_cats {
+            .btn-group > .btn {
+                .radius(4px);
+                .caret { 
+                    color: #2aaae1; 
+                    margin-left: 5px;
+                }
+            }
+            margin-bottom: 30px;
+            .dropdown-menu {
+                .radius(4px);
+                padding-top: 15px;
+                padding-bottom: 15px;
+                li > a {
+                    text-decoration: none;
+                    &:hover,
+                    &:active,
+                    &:focus { 
+                        background-color: #2aaae1; 
+                        color: #fff;
+                    } 
+                }
+            }
+        }
         &-categories {
+            &-title {
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
             margin-bottom: 15px;
             span {
                 padding: 3px 7px;
@@ -1179,23 +1225,38 @@ textarea.form-control {
             }
         }
     }
-    
     &-channel {
         .channel {
             &-header {
-                h1 {
+                padding-left: 62px; 
+                h1, .channel-header-text {
                     color: #25292b;
-                    font-size: 32px;
+                    /*font-size: 32px;*/
+                    font-size: 26px;
                     font-weight: 600;
                     display: inline-block;
                     margin-bottom: 20px;
+                    width: 97%;
+                    padding-left: 10px;                    
                 }
-                i > img {
-                    height: 62px;
-                    width: 62px;
+                i {
+                    position: relative;
+                    margin-left: -62px;
+                    vertical-align: top;
                     display: inline-block;
-                    vertical-align: baseline;
-                    margin-right: 10px;
+                    width: 62px;
+                    height: 62px;
+                    position: relative;
+                    margin-left: -62px;
+                    vertical-align: top;
+                    > img {
+                        height: 62px;
+                        width: 62px;
+                        display: inline-block;
+                        vertical-align: baseline;
+                        margin-right: 10px;
+                        
+                    }
                 }
             }
             &-stream {
@@ -1283,10 +1344,17 @@ textarea.form-control {
         .programm {
             &-header {
                 margin-bottom: 15px;
-                h1 {
+                margin-top: 15px;
+                h1, .channel-header-text {
                     font-size: 32px;
                     font-weight: 600;
                     margin: 0;
+                }
+                i {
+                    img {
+                        border: 1px solid #DEE6EB;
+                        padding: 2px;    
+                    }
                 }
                 .channel-header {
                     i {
@@ -1364,7 +1432,7 @@ textarea.form-control {
     }
     .tooltip-arrow { display: none; }
 }
-.prog-info { //zz
+.prog-info {
     .trans();
     z-index: 5000;
     background-color: #fff;
@@ -1442,7 +1510,6 @@ textarea.form-control {
     }
 }
 
-
 /* media q */
 
 @media (max-width: 1280px) {
@@ -1477,7 +1544,7 @@ textarea.form-control {
   }
     .home-hero-video-p.small { 
         font-size: 12px; 
-    }
+    }    
 }
 @media (max-width: @screen-sm-max) {
   .home-hero-video {
@@ -1502,7 +1569,15 @@ textarea.form-control {
             padding-bottom: 15px;
         }
     }    
-    
+    .content-tv {
+        &-nav {
+            > .container-fluid > .row {
+                > .col:first-child {
+                    background-color: darken(#E4EBEE, 5%);
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: @screen-xs-max) {
@@ -1539,19 +1614,44 @@ textarea.form-control {
       width: 100%;
     }
   }
+    
   .header-menu {
     overflow-y: hidden;
     margin: 5px -15px;
     border: none;
+    padding-bottom: 10px;
+    padding-top: 10px;
     &-item {
       float: none;
+        padding: 15px;
+        
+        margin: 0px 20px;
+        border-bottom: 1px solid #444;
+        padding: 12px;
+        &:last-child { border-bottom: 0; }
+        
     }
     &-link {
-      padding: 15px 15px;
+      padding: 15px;
       margin: 0;
       height: auto;
+        &.external {
+            position: relative;
+            margin-left: 15px;
+        }
     }
+      .extra-item {
+        display: block;
+          a {
+                /*padding: 5px 10px;
+                border: 1px solid #2aaae1;
+                margin-left: 15px;*/
+          }  
+          
+          
+      }
   }
+    
   .header {
     padding-bottom: 0;
     border: none;
