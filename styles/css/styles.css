@@ -7918,12 +7918,25 @@ textarea.form-control {
 .content-tv-table-channel .channel-title a {
   text-decoration: none;
   display: inline-block;
+  /*display: block;
+                    .ellipsis;*/
 }
 .content-tv-table-channel .channel-title .channel-icon img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
   vertical-align: bottom;
+}
+.content-tv-table-channel .channel-title .channel-icon.noimage {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 10px;
+  background: url('../../images/content-sprites.png') no-repeat 0 -40px;
+}
+.content-tv-table-channel .channel-title .channel-icon.noimage img {
+  display: none;
 }
 .content-tv-table-channel .channel-title-text {
   text-decoration: none;

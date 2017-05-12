@@ -1118,6 +1118,8 @@ textarea.form-control {
                 a {
                     text-decoration: none;
                     display: inline-block;
+                    /*display: block;
+                    .ellipsis;*/
                 }
                 .channel-icon {
                     img {
@@ -1125,6 +1127,15 @@ textarea.form-control {
                         height: 30px;
                         margin-right: 10px;
                         vertical-align: bottom;
+                    }
+                    &.noimage {
+                        img { display: none; }
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        vertical-align: bottom;
+                        margin-right: 10px;
+                        background: url('@{images}content-sprites.png') no-repeat 0 -40px;
                     }
                 }
                 &-text {
