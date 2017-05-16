@@ -7811,7 +7811,7 @@ textarea.form-control {
   border-top-right-radius: 3px;
 }
 .content-tv-head .tv-table-week ul li.active a {
-  padding: 10px 15px;
+  padding: 10px 15px !important;
   text-align: center;
   min-width: 100px;
   color: #fff;
