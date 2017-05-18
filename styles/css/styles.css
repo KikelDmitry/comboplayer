@@ -8303,7 +8303,7 @@ textarea.form-control {
   width: auto;
 }
 .prog-info .prog-info-wrap {
-  padding-bottom: 15px;
+  /*padding-bottom: 15px;*/
   position: relative;
 }
 .prog-info .prog-info-body {
@@ -8325,7 +8325,8 @@ textarea.form-control {
   background-color: red;
   position: absolute;
   width: 100%;
-  bottom: -15px;
+  /*bottom: -15px;*/
+  bottom: 0;
   height: 94px;
   margin-left: -25px;
   z-index: 2;
