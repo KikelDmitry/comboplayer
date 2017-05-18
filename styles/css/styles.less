@@ -1222,14 +1222,14 @@ textarea.form-control {
                 ul li {
                     margin-bottom: 5px;
                     position: relative;
-                    font-size: 14px;
+                    font-size: 14px;                    
                     > a {
                         /*display: block;*/
                         display: inline-block;
                         padding-left: 45px;
                         color: #25292b;
                         text-decoration: none;
-                        font-weight: 500;
+                        font-weight: 500;                        
                         &:hover,
                         &:active,
                         &:focus { color: #208ebd; }
@@ -1442,20 +1442,14 @@ textarea.form-control {
     }
 }
 
-.tooltip { //nb! удалить
-    opacity: 1 !important;
-    > .tooltip-inner { 
-        padding: 0; 
-        font-size: 14px; 
-        text-align: left; 
-        width: 325px;
-        color: #333;
-        background-color: #fff;
-        .radius(0);
-    }
-    .tooltip-arrow { display: none; }
-}
 .prog-info {
+    display: none;
+    &.active {
+        display: block;
+        position: absolute;
+        left: 150px;
+        top: -200px;
+    }
     .trans();
     z-index: 5000;
     background-color: #fff;
@@ -1506,11 +1500,19 @@ textarea.form-control {
         }
     }
     .prog-info-image {
+        background-color: #EBF0F3;
+        width: 325px;
+        max-height: 245px;
+        overflow: hidden;
+        text-align: center;
         img {
-            max-width: 100%;
-            height: auto;
-            max-height: 330px;
+            height: 245px;
+            width: auto;
         }
+    }
+    .prog-info-wrap {
+        padding-bottom: 15px;
+        position: relative;
     }
     .prog-info-body {
         padding: 25px 25px 0;
@@ -1518,6 +1520,31 @@ textarea.form-control {
         font-size: 14px;
         position: relative;
         padding-bottom: 50px;
+        
+        height: 200px;
+        position: relative;
+        overflow: hidden;
+        
+        p { 
+            margin-bottom: 5px; 
+            z-index: 1;
+        }
+        
+        &:after {
+            content: "";
+            display: block;
+            background-color: red;
+            position: absolute;
+            width: 100%;
+            bottom: -15px;
+            height: 94px;
+            margin-left: -25px;
+            z-index: 2;
+            background: -moz-linear-gradient(top, rgba(255,255,255,0) 1%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top, rgba(255,255,255,0) 1%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 1%,rgba(255,255,255,1) 50%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        }
     }
     .age-rate {
         background-color: #ebf0f3;
@@ -1530,6 +1557,8 @@ textarea.form-control {
         line-height: 50px;
         text-align: center;
         .ellipsis;
+        z-index: 3;
+        /*bottom: -15px;*/
     }
 }
 

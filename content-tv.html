@@ -266,48 +266,32 @@
                                         <div class="channel-body">
                                             <ul>
 <li><a href="#"><span class="channel-time">14:55</span> Тайны следствия-11 ("Треугольная история", 1-я и 2-я серии)</a></li>
-<li>
-    <a title="
-<div class='prog-info'>
-    <div class='prog-info-head'>
-        <div class='prog-info-title'>Вести</div>
-        <div class='prog-info-cat'>
-            <span href='#'>Инфо</span>
-        </div>    
-    </div>
-    <div class='prog-info-image'>
-        <img src='images/prog-vesti.jpg' alt=''>
-    </div>
-    <div class='prog-info-body'>
-        <p>
-            В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
-        </p>
-        <div class='age-rate'>16+</div>
-    </div>
-</div>
-    " href="#" data-placement="right" data-html="true" rel="tooltip">
-        <span class="channel-time category-active">17:00</span> Вести
-    </a>
-
-
-<!--    <div class="prog-info">
-        <div class="prog-info-head">
-            <div class="prog-info-title">Вести</div>
-            <div class="prog-info-cat">
-                <a href="#">Инфо</a>
+<li class="ass">
+    
+    <div class='prog-info'>
+        <div class='prog-info-head'>
+            <div class='prog-info-title'>Вести</div>
+            <div class='prog-info-cat'>
+                <span href='#'>Инфо</span>
             </div>    
         </div>
-        <div class="prog-info-image">
-            <img src="images/prog-vesti.jpg" alt="">
-        </div>
-        <div class="prog-info-body">
-            <p>
-                В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
-            </p>
-            <div class="age-rate">16+</div>
-        </div>
-    </div>-->
+        <div class='prog-info-image'>
+            <img src='images/prog-vesti.jpg' alt=''>
 
+        </div>
+        <div class='prog-info-wrap'>
+            <div class='prog-info-body'>
+                <p>
+                    В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
+                </p>
+            </div>
+            <div class='age-rate'>16+</div>
+        </div>
+    </div>
+    
+    <a href="#">
+        <span class="channel-time category-active">17:00</span> Вести
+    </a>
     
 </li>
 <li><a href="#"><span class="channel-time category-active">17:20</span> Местное время. Вести. Дон</a></li>
@@ -531,7 +515,27 @@
         $('.channel-body ul li').tooltip({    
             selector: "a[rel=tooltip]"
         })
+        
+        //
+        
+        $('li.ass').on('mouseover', function() {
+            var progInfo = $(this).find('.prog-info');
+            var timer = setTimeout(function() {
+                progInfo.addClass('active');
+            });
+            $(this).data('timer', timer);
+        });
 
+        $('li.ass').on('mouseout', function() {
+            var progInfo = $(this).find('.prog-info');
+            if ($(this).data('timer')) {
+                clearTimeout($(this).data('timer'))
+                $(this).data('timer', null);
+            }
+
+            progInfo.removeClass('active');
+        });
+        
     </script>
     
 </body>
