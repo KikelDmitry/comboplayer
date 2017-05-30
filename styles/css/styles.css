@@ -8141,6 +8141,18 @@ textarea.form-control {
 .content-tv-channel .channel-stream ul li span {
   margin-right: 5px;
 }
+.content-tv-channel .channel-stream-brief {
+  padding-top: 30px;
+}
+.content-tv-channel .channel-stream-brief ul {
+  margin-left: 0;
+}
+.content-tv-channel .channel-stream-brief ul li a {
+  font-weight: 500;
+}
+.content-tv-channel .channel-stream-brief ul li a span {
+  font-weight: 600;
+}
 .content-tv-channel .channel-time {
   font-size: 15px;
   font-weight: 600;
