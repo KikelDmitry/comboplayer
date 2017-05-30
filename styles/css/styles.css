@@ -7909,6 +7909,21 @@ textarea.form-control {
   background-color: #79ae0b;
   color: #fff;
 }
+.content-tv-table-categories span:nth-child(2).active {
+  background-color: #1aafd0;
+}
+.content-tv-table-categories span:nth-child(3).active {
+  background-color: #fc636b;
+}
+.content-tv-table-categories span:nth-child(4).active {
+  background-color: #1dd398;
+}
+.content-tv-table-categories span:nth-child(5).active {
+  background-color: #6a67ce;
+}
+.content-tv-table-categories span:nth-child(6).active {
+  background-color: #fab500;
+}
 .content-tv-table-channel {
   margin-bottom: 30px;
 }
@@ -7953,6 +7968,7 @@ textarea.form-control {
 }
 .content-tv-table-channel .channel-title .channel-action {
   display: inline-block;
+  cursor: pointer;
 }
 .content-tv-table-channel .channel-title .channel-action i {
   font-size: 18px;
@@ -8023,7 +8039,8 @@ textarea.form-control {
 .content-tv-table-channel .channel-body ul li > a {
   /*display: block;*/
   display: inline-block;
-  padding-left: 45px;
+  /*padding-left: 45px;*/
+  padding-left: 50px;
   color: #25292b;
   text-decoration: none;
   font-weight: 500;
@@ -8033,14 +8050,46 @@ textarea.form-control {
 .content-tv-table-channel .channel-body ul li > a:focus {
   color: #208ebd;
 }
+.content-tv-table-channel .channel-body ul li > a:hover .channel-time.active,
+.content-tv-table-channel .channel-body ul li > a:active .channel-time.active,
+.content-tv-table-channel .channel-body ul li > a:focus .channel-time.active {
+  background-color: #E9EFF2;
+  color: #2aaae1;
+}
+.content-tv-table-channel .channel-body ul li > a.text-muted {
+  color: #8aa7b9;
+}
 .content-tv-table-channel .channel-body ul li .channel-time {
   position: absolute;
   top: 0;
   left: 0;
   font-weight: 600;
+  padding-left: 4px;
+  padding-right: 4px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 .content-tv-table-channel .channel-body ul li .channel-time.active {
-  border-bottom: 2px solid #79ae0b;
+  /*border-bottom: 2px solid #79ae0b;*/
+  color: #fff;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-blue {
+  background-color: #1aafd0;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-red {
+  background-color: #fc636b;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-cyan {
+  background-color: #1dd398;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-violet {
+  background-color: #6a67ce;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-yellow {
+  background-color: #fab500;
+}
+.content-tv-channel .channel {
+  /*.channel-time*/
 }
 .content-tv-channel .channel-header {
   padding-left: 62px;
@@ -8072,39 +8121,40 @@ textarea.form-control {
   margin-right: 10px;
 }
 .content-tv-channel .channel-stream {
-  margin-top: 30px;
+  margin: 0;
+}
+.content-tv-channel .channel-stream .channel-epg {
+  /*margin-bottom: 0;
+                    &:first-child { margin-top: 30px; }*/
 }
 .content-tv-channel .channel-stream ul {
   margin-bottom: 30px;
+  margin-left: 75px;
 }
 .content-tv-channel .channel-stream ul li {
+  font-weight: 400;
   margin-bottom: 8px;
 }
 .content-tv-channel .channel-stream ul li a {
   text-decoration: none;
 }
-.content-tv-channel .channel-stream ul li a span {
+.content-tv-channel .channel-stream ul li span {
   margin-right: 5px;
 }
 .content-tv-channel .channel-time {
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   color: #25292b;
-}
-.content-tv-channel .channel-time:hover,
-.content-tv-channel .channel-time:active,
-.content-tv-channel .channel-time:focus {
-  color: #2aaae1;
 }
 .content-tv-channel .channel-time-past {
   color: #8aa7b9;
   text-decoration: none;
 }
-.content-tv-channel .channel-time-past:hover,
-.content-tv-channel .channel-time-past:active,
-.content-tv-channel .channel-time-past:focus {
+.content-tv-channel .channel-time-past .channel-time {
   color: #8aa7b9;
-  cursor: default;
+}
+.content-tv-channel .channel-time-current {
+  color: #2aaae1;
 }
 .content-tv-channel .channel-time-current span {
   border-bottom: 2px solid #2aaae1;
@@ -8177,6 +8227,54 @@ textarea.form-control {
   position: relative;
   top: 3px;
 }
+.content-tv-channel .programm-header .channel-header-text .channel-action {
+  display: inline-block;
+  cursor: pointer;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-action i {
+  font-size: 18px;
+  color: #2aaae1;
+  padding: 4px 0;
+  width: 30px;
+  text-align: center;
+  display: block;
+  margin-left: 0;
+  height: auto;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-action span {
+  display: none;
+  background: magenta;
+  color: #fff;
+  position: absolute;
+  font-size: 13px;
+  padding: 5px 10px;
+  z-index: 1000;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-action:hover span {
+  display: block;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-buy i {
+  font-size: 18px;
+  color: #79ae0b;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-buy:hover i {
+  background-color: #659306;
+  color: #fff;
+}
+.content-tv-channel .programm-header .channel-header-text .channel-buy:hover span {
+  background-color: #79ae0b;
+  -webkit-box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.3);
+  box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.3);
+}
 .content-tv-channel .programm-header a {
   color: #25292b;
   text-decoration: none;
@@ -8186,7 +8284,8 @@ textarea.form-control {
   color: #2aaae1;
 }
 .content-tv-channel .programm-rate {
-  margin-bottom: 30px;
+  margin-top: 15px !important;
+  margin-bottom: 15px;
 }
 .content-tv-channel .programm-rate span {
   display: inline-block;
@@ -8223,6 +8322,14 @@ textarea.form-control {
 .content-tv-channel .programm-cast ul li a:hover,
 .content-tv-channel .programm-cast ul li a:focus {
   color: #2aaae1;
+}
+.hr-block-top {
+  border-top: 1px solid #E0E2E5;
+  padding-top: 30px;
+}
+.hr-block-bottom {
+  border-bottom: 1px solid #E0E2E5;
+  padding-bottom: 30px;
 }
 .prog-info {
   display: none;
