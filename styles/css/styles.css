@@ -7840,6 +7840,24 @@ textarea.form-control {
 .content-tv-head .programm-header {
   border-bottom: 1px solid #DEE6EB;
 }
+.content-tv-head .programm-header h1 > a {
+  color: #3C4C54;
+  border-bottom: 2px solid #29A7DD;
+  text-decoration: none !important;
+}
+.content-tv-head .programm-header h1 > a:hover,
+.content-tv-head .programm-header h1 > a:focus {
+  color: #29A7DD;
+}
+.content-tv-head .programm-header .sub-header {
+  display: block;
+  margin-top: 15px;
+  font-size: 24px;
+}
+.content-tv-head .programm-header .sub-header i {
+  color: #88A4B6;
+  margin-right: 5px;
+}
 .content-tv-head .channel-header-top {
   margin-top: 20px;
 }
@@ -8473,6 +8491,44 @@ textarea.form-control {
   overflow: hidden;
   z-index: 3;
   /*bottom: -15px;*/
+}
+.programm-series {
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.programm-series-header {
+  cursor: pointer;
+  font-size: 24px;
+  color: #3C4C54;
+  margin-bottom: 15px;
+}
+.programm-series-header > span {
+  display: inline-block;
+}
+.programm-series-header > span:after {
+  font-family: 'FontAwesome';
+  display: inline-block;
+  /*color: #3C4C54;*/
+  color: #79AE0B;
+  margin-left: 10px;
+}
+.programm-series-header > span[aria-expanded='true']:after {
+  content: "\f106";
+}
+.programm-series-header > span[aria-expanded='false']:after {
+  content: "\f107";
+}
+.programm-series-body li {
+  margin-bottom: 8px;
+}
+.programm-series-body li:before {
+  font-family: "FontAwesome";
+  content: "\f008";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 14px;
+  vertical-align: middle;
+  color: #8AA6B9;
 }
 /* media q */
 @media (max-width: 1280px) {

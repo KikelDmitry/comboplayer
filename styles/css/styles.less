@@ -1052,6 +1052,23 @@ textarea.form-control {
         }
         .programm-header {
             border-bottom: 1px solid #DEE6EB;
+            h1 > a {
+                color: #3C4C54;
+                border-bottom: 2px solid #29A7DD;
+                text-decoration: none !important;
+                &:hover, &:focus {
+                    color: #29A7DD;
+                }
+            }
+            .sub-header {
+                display: block;
+                margin-top: 15px;
+                font-size: 24px;
+                i {
+                    color: #88A4B6;
+                    margin-right: 5px;
+                }
+            }
         }
         .channel-header-top {
             margin-top: 20px;
@@ -1672,6 +1689,54 @@ textarea.form-control {
         /*bottom: -15px;*/
     }
 }
+
+.programm-series {
+    padding-top: 15px;
+    margin-top: 15px;
+    &-header {
+        cursor: pointer;
+        font-size: 24px;
+        color: #3C4C54;
+        > span { 
+            display: inline-block; 
+            &:after {
+                font-family: 'FontAwesome'; 
+                display: inline-block;
+                /*color: #3C4C54;*/
+                color: #79AE0B;
+                margin-left: 10px;
+            }
+            &[aria-expanded='true'] {
+                &:after {
+                    content: "\f106";
+                }
+            }
+            &[aria-expanded='false'] {
+                &:after {
+                    content: "\f107";
+                }
+            }
+        }
+        margin-bottom: 15px;
+    }
+    &-body {
+        li {
+            margin-bottom: 8px;
+            &:before {
+                font-family: "FontAwesome";
+                content: "\f008";
+                display: inline-block;
+                margin-right: 10px;     
+                font-size: 14px;
+                vertical-align: middle;
+                color: #8AA6B9;
+            }
+            
+        }
+    }
+}
+
+
 
 /* media q */
 
