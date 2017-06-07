@@ -13,10 +13,16 @@
 @white-base: #fff;
 
 @color-blue: #1AAFD0;
-@color-red: #FC636B;
+@color-red: #fc636b;
 @color-cyan: #1DD398;
 @color-violet: #6A67CE;
 @color-yellow: #FAB500;
+@color-orange: #fa6a00;
+@color-red-dark: #fa353f;
+@color-green: #5f8f31;
+@color-purple: #c161c5;
+@color-blue-dark: #2077e2;
+@color-brown: #9e633b;
 
 @images: "../../images/";
 /*@images-sprites: "@{images}sprites/";*/
@@ -1137,7 +1143,12 @@ textarea.form-control {
                 &:nth-child(4).active { background-color: @color-cyan; }
                 &:nth-child(5).active { background-color: @color-violet; }
                 &:nth-child(6).active { background-color: @color-yellow; }
-
+                &:nth-child(7).active { background-color: @color-orange; }
+                &:nth-child(8).active { background-color: @color-red-dark; }
+                &:nth-child(9).active { background-color: @color-green; }
+                &:nth-child(10).active { background-color: @color-purple; }
+                &:nth-child(11).active { background-color: @color-blue-dark; }
+                &:nth-child(12).active { background-color: @color-brown; }
             }
         }
         &-channel {
@@ -1271,6 +1282,10 @@ textarea.form-control {
                             }
                         }
                         &.text-muted { color: #8aa7b9; }
+                        em {
+                            font-weight: 500;
+                            color: #4b5b65;
+                        }
                     }
                     .channel-time {
                         position: absolute;
@@ -1359,8 +1374,6 @@ textarea.form-control {
                 }
             }
             
-            /*.channel-time*/
-            
             &-time {
                 font-size: 15px;
                 font-weight: 600;
@@ -1430,6 +1443,14 @@ textarea.form-control {
             &-header {
                 margin-bottom: 15px;
                 margin-top: 15px;
+                .channel-icon.noimage {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: bottom;
+                    margin-right: 0;
+                    background: url(../../images/content-sprites.png) no-repeat 0 -40px;
+                }
                 h1, .channel-header-text {
                     font-size: 32px;
                     font-weight: 600;
@@ -1442,18 +1463,18 @@ textarea.form-control {
                     }
                 }
                 .channel-header {
+                    
                     i {
                         img {
                             vertical-align: middle;
                         }
-                    }
+                    }                    
                     &-text {
                         font-size: 24px;
                         font-weight: 600;
                         display: inline-block;
                         position: relative;
                         top: 3px;
-                        
                         .channel-action {
                             display: inline-block;
                             cursor: pointer;

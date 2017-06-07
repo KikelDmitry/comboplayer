@@ -7942,6 +7942,24 @@ textarea.form-control {
 .content-tv-table-categories span:nth-child(6).active {
   background-color: #fab500;
 }
+.content-tv-table-categories span:nth-child(7).active {
+  background-color: #fa6a00;
+}
+.content-tv-table-categories span:nth-child(8).active {
+  background-color: #fa353f;
+}
+.content-tv-table-categories span:nth-child(9).active {
+  background-color: #5f8f31;
+}
+.content-tv-table-categories span:nth-child(10).active {
+  background-color: #c161c5;
+}
+.content-tv-table-categories span:nth-child(11).active {
+  background-color: #2077e2;
+}
+.content-tv-table-categories span:nth-child(12).active {
+  background-color: #9e633b;
+}
 .content-tv-table-channel {
   margin-bottom: 30px;
 }
@@ -8077,6 +8095,10 @@ textarea.form-control {
 .content-tv-table-channel .channel-body ul li > a.text-muted {
   color: #8aa7b9;
 }
+.content-tv-table-channel .channel-body ul li > a em {
+  font-weight: 500;
+  color: #4b5b65;
+}
 .content-tv-table-channel .channel-body ul li .channel-time {
   position: absolute;
   top: 0;
@@ -8105,9 +8127,6 @@ textarea.form-control {
 }
 .content-tv-table-channel .channel-body ul li .channel-time.active.col-yellow {
   background-color: #fab500;
-}
-.content-tv-channel .channel {
-  /*.channel-time*/
 }
 .content-tv-channel .channel-header {
   padding-left: 62px;
@@ -8236,6 +8255,14 @@ textarea.form-control {
 .content-tv-channel .programm-header {
   margin-bottom: 15px;
   margin-top: 15px;
+}
+.content-tv-channel .programm-header .channel-icon.noimage {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 0;
+  background: url(../../images/content-sprites.png) no-repeat 0 -40px;
 }
 .content-tv-channel .programm-header h1,
 .content-tv-channel .programm-header .channel-header-text {
