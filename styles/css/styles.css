@@ -8128,6 +8128,21 @@ textarea.form-control {
 .content-tv-table-channel .channel-body ul li .channel-time.active.col-yellow {
   background-color: #fab500;
 }
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-orange {
+  background-color: #fa6a00;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-red-dark {
+  background-color: #fa353f;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-green {
+  background-color: #5f8f31;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-blue-dark {
+  background-color: #2077e2;
+}
+.content-tv-table-channel .channel-body ul li .channel-time.active.col-brown {
+  background-color: #9e633b;
+}
 .content-tv-channel .channel-header {
   padding-left: 62px;
 }
