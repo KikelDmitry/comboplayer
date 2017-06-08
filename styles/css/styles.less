@@ -916,6 +916,56 @@ textarea.form-control {
     margin-bottom: 15px;
 }
 
+.tv-datepicker {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #79ae0b;
+    margin-right: 10px;
+    /*vertical-align: bottom;*/
+    vertical-align: baseline;
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: #66910c;
+    }
+    &:before {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "\f073";
+        /*content: "\f133";*/
+        font-size: 16px;
+        color: #fff;
+        font-family: "FontAwesome";
+        z-index: 100;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: normal;
+    }
+    .bootstrap-datetimepicker-widget tr:hover {
+        background-color: #CAD9E2;
+    }
+    input#weeklyDatePicker { 
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border: 0;
+        overflow: hidden;
+        text-indent: -9999px;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: transparent;
+        z-index: 200;
+    }
+}
+
 .content-tv {
     &-nav {
         margin: 0 -20px;
@@ -1002,8 +1052,11 @@ textarea.form-control {
         .tv-table-week {
             margin: 15px 0 30px;
             margin-bottom: 0;
+            border-bottom: 2px solid #79ae0b;
             ul {
-                border-bottom: 2px solid #79ae0b
+                /*border-bottom: 2px solid #79ae0b;*/
+                display: inline-block;
+                vertical-align: bottom;                
             }
             ul li {
                 font-weight: 500;
@@ -1041,10 +1094,25 @@ textarea.form-control {
                     > a { padding-right: 0; }
                 }
             }
+            .week {
+                &-control {
+                    display: inline-block;
+                    i {
+                        color: #79AE0B;
+                        font-size: 22px;
+                        vertical-align: bottom;
+                        font-weight: bold;
+                        cursor: pointer;
+                        &:hover { color: #25292b; }
+                    }
+                }
+                &-prev {}
+                &-next {}
+            }
         }
         .tv-table-time {
-            /*margin-top: 15px;*/
-            margin-top: 20px;
+            /*margin-top: 20px;*/
+            margin-top: 0;
             padding: 15px 0;
             span {
                 font-size: 24px;
@@ -1087,10 +1155,25 @@ textarea.form-control {
             }
             .tv-content-header {  display: inline-block; }
         }
+        &.navbar-fixed-top {
+            background: #fff;
+            border-bottom: 1px solid #BDCCD5;
+            /*top: -15px;*/
+            top: 0px;
+            min-height: 190px;
+            .tv-table-week { 
+                margin-top: 0; 
+                .trans;
+            }
+            .tv-content-header { margin-bottom: 10px; }
+            .content-tv-table-channel_cats { margin-bottom: 10px; }
+        }
     }
     &-table {
         &-wrap { margin-top: 30px; }
         &-channel_cats {
+            margin-top: 30px;
+            margin-bottom: 15px;
             .btn-group > .btn {
                 .radius(4px);
                 .caret { 
@@ -1098,7 +1181,6 @@ textarea.form-control {
                     margin-left: 5px;
                 }
             }
-            margin-bottom: 30px;
             .dropdown-menu {
                 .radius(4px);
                 padding-top: 15px;
@@ -1115,6 +1197,7 @@ textarea.form-control {
             }
         }
         &-categories {
+            margin-top: 15px;
             &-title {
                 font-weight: 500;
                 margin-bottom: 10px;
@@ -1138,17 +1221,17 @@ textarea.form-control {
                     background-color: #79ae0b;
                     color: #fff;
                 }
-                &:nth-child(2).active { background-color: @color-blue; }
-                &:nth-child(3).active { background-color: @color-red; }
-                &:nth-child(4).active { background-color: @color-cyan; }
-                &:nth-child(5).active { background-color: @color-violet; }
-                &:nth-child(6).active { background-color: @color-yellow; }
-                &:nth-child(7).active { background-color: @color-orange; }
-                &:nth-child(8).active { background-color: @color-red-dark; }
-                &:nth-child(9).active { background-color: @color-green; }
-                &:nth-child(10).active { background-color: @color-purple; }
-                &:nth-child(11).active { background-color: @color-blue-dark; }
-                &:nth-child(12).active { background-color: @color-brown; }
+                &:nth-child(1).active { background-color: @color-blue; }
+                &:nth-child(2).active { background-color: @color-red; }
+                &:nth-child(3).active { background-color: @color-cyan; }
+                &:nth-child(4).active { background-color: @color-violet; }
+                &:nth-child(5).active { background-color: @color-yellow; }
+                &:nth-child(6).active { background-color: @color-orange; }
+                &:nth-child(7).active { background-color: @color-red-dark; }
+                &:nth-child(8).active { background-color: @color-green; }
+                &:nth-child(9).active { background-color: @color-purple; }
+                &:nth-child(10).active { background-color: @color-blue-dark; }
+                &:nth-child(11).active { background-color: @color-brown; }
             }
         }
         &-channel {
@@ -1313,6 +1396,7 @@ textarea.form-control {
                 }
             }
         }
+        &.fix-padding { padding-top: 200px; }
     }
     &-channel {
         .channel {
@@ -1797,7 +1881,7 @@ textarea.form-control {
   }
     .home-hero-video-p.small { 
         font-size: 12px; 
-    }    
+    }
 }
 @media (max-width: @screen-sm-max) {
   .home-hero-video {
@@ -1831,6 +1915,7 @@ textarea.form-control {
             }
         }
     }
+    .content-tv-table-categories { margin-bottom: 0; }
 }
 
 @media (max-width: @screen-xs-max) {
@@ -1971,7 +2056,17 @@ textarea.form-control {
             }
         }
     }
-    
+    .content-tv-head {
+        .content-tv-table-categories { margin: 15px 0 15px; }   
+        &.navbar-fixed-top {
+            min-height: inherit;
+            position: static;
+            border: 0;
+            .tv-content-header { margin-bottom: inherit; }
+            .tv-table-week { margin: 15px 0 15px; }
+        }
+    }
+    .content-tv-table.fix-padding { padding: 0; }
 }
 
 @media (max-width: 400px) {

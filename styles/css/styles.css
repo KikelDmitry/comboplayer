@@ -7683,6 +7683,55 @@ textarea.form-control {
   font-weight: 600;
   margin-bottom: 15px;
 }
+.tv-datepicker {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #79ae0b;
+  margin-right: 10px;
+  /*vertical-align: bottom;*/
+  vertical-align: baseline;
+}
+.tv-datepicker:hover,
+.tv-datepicker:focus,
+.tv-datepicker:active {
+  background-color: #66910c;
+}
+.tv-datepicker:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "\f073";
+  /*content: "\f133";*/
+  font-size: 16px;
+  color: #fff;
+  font-family: "FontAwesome";
+  z-index: 100;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  font-weight: normal;
+}
+.tv-datepicker .bootstrap-datetimepicker-widget tr:hover {
+  background-color: #CAD9E2;
+}
+.tv-datepicker input#weeklyDatePicker {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 200;
+}
 .content-tv-nav {
   margin: 0 -20px;
   background-color: #E4EBEE;
@@ -7783,9 +7832,12 @@ textarea.form-control {
 .content-tv-head .tv-table-week {
   margin: 15px 0 30px;
   margin-bottom: 0;
+  border-bottom: 2px solid #79ae0b;
 }
 .content-tv-head .tv-table-week ul {
-  border-bottom: 2px solid #79ae0b;
+  /*border-bottom: 2px solid #79ae0b;*/
+  display: inline-block;
+  vertical-align: bottom;
 }
 .content-tv-head .tv-table-week ul li {
   font-weight: 500;
@@ -7823,9 +7875,22 @@ textarea.form-control {
 .content-tv-head .tv-table-week ul li:last-child > a {
   padding-right: 0;
 }
+.content-tv-head .tv-table-week .week-control {
+  display: inline-block;
+}
+.content-tv-head .tv-table-week .week-control i {
+  color: #79AE0B;
+  font-size: 22px;
+  vertical-align: bottom;
+  font-weight: bold;
+  cursor: pointer;
+}
+.content-tv-head .tv-table-week .week-control i:hover {
+  color: #25292b;
+}
 .content-tv-head .tv-table-time {
-  /*margin-top: 15px;*/
-  margin-top: 20px;
+  /*margin-top: 20px;*/
+  margin-top: 0;
   padding: 15px 0;
 }
 .content-tv-head .tv-table-time span {
@@ -7871,11 +7936,33 @@ textarea.form-control {
 .content-tv-head .channel-header-top .tv-content-header {
   display: inline-block;
 }
+.content-tv-head.navbar-fixed-top {
+  background: #fff;
+  border-bottom: 1px solid #BDCCD5;
+  /*top: -15px;*/
+  top: 0px;
+  min-height: 190px;
+}
+.content-tv-head.navbar-fixed-top .tv-table-week {
+  margin-top: 0;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.content-tv-head.navbar-fixed-top .tv-content-header {
+  margin-bottom: 10px;
+}
+.content-tv-head.navbar-fixed-top .content-tv-table-channel_cats {
+  margin-bottom: 10px;
+}
 .content-tv-table-wrap {
   margin-top: 30px;
 }
 .content-tv-table-channel_cats {
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 15px;
 }
 .content-tv-table-channel_cats .btn-group > .btn {
   -webkit-border-radius: 4px;
@@ -7901,6 +7988,7 @@ textarea.form-control {
   color: #fff;
 }
 .content-tv-table-categories {
+  margin-top: 15px;
   margin-bottom: 15px;
 }
 .content-tv-table-categories-title {
@@ -7927,37 +8015,37 @@ textarea.form-control {
   background-color: #79ae0b;
   color: #fff;
 }
-.content-tv-table-categories span:nth-child(2).active {
+.content-tv-table-categories span:nth-child(1).active {
   background-color: #1aafd0;
 }
-.content-tv-table-categories span:nth-child(3).active {
+.content-tv-table-categories span:nth-child(2).active {
   background-color: #fc636b;
 }
-.content-tv-table-categories span:nth-child(4).active {
+.content-tv-table-categories span:nth-child(3).active {
   background-color: #1dd398;
 }
-.content-tv-table-categories span:nth-child(5).active {
+.content-tv-table-categories span:nth-child(4).active {
   background-color: #6a67ce;
 }
-.content-tv-table-categories span:nth-child(6).active {
+.content-tv-table-categories span:nth-child(5).active {
   background-color: #fab500;
 }
-.content-tv-table-categories span:nth-child(7).active {
+.content-tv-table-categories span:nth-child(6).active {
   background-color: #fa6a00;
 }
-.content-tv-table-categories span:nth-child(8).active {
+.content-tv-table-categories span:nth-child(7).active {
   background-color: #fa353f;
 }
-.content-tv-table-categories span:nth-child(9).active {
+.content-tv-table-categories span:nth-child(8).active {
   background-color: #5f8f31;
 }
-.content-tv-table-categories span:nth-child(10).active {
+.content-tv-table-categories span:nth-child(9).active {
   background-color: #c161c5;
 }
-.content-tv-table-categories span:nth-child(11).active {
+.content-tv-table-categories span:nth-child(10).active {
   background-color: #2077e2;
 }
-.content-tv-table-categories span:nth-child(12).active {
+.content-tv-table-categories span:nth-child(11).active {
   background-color: #9e633b;
 }
 .content-tv-table-channel {
@@ -8142,6 +8230,9 @@ textarea.form-control {
 }
 .content-tv-table-channel .channel-body ul li .channel-time.active.col-brown {
   background-color: #9e633b;
+}
+.content-tv-table.fix-padding {
+  padding-top: 200px;
 }
 .content-tv-channel .channel-header {
   padding-left: 62px;
@@ -8627,6 +8718,9 @@ textarea.form-control {
   .content-tv-nav > .container-fluid > .row > .col:first-child {
     background-color: #d4dfe4;
   }
+  .content-tv-table-categories {
+    margin-bottom: 0;
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -8759,6 +8853,23 @@ textarea.form-control {
   .content-tv-head .tv-table-week ul li a {
     padding: 0 ;
     margin-right: 10px;
+  }
+  .content-tv-head .content-tv-table-categories {
+    margin: 15px 0 15px;
+  }
+  .content-tv-head.navbar-fixed-top {
+    min-height: inherit;
+    position: static;
+    border: 0;
+  }
+  .content-tv-head.navbar-fixed-top .tv-content-header {
+    margin-bottom: inherit;
+  }
+  .content-tv-head.navbar-fixed-top .tv-table-week {
+    margin: 15px 0 15px;
+  }
+  .content-tv-table.fix-padding {
+    padding: 0;
   }
 }
 @media (max-width: 400px) {

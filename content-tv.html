@@ -22,6 +22,12 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    
+    <!-- date picker -->
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
+    <link rel="stylesheet" href="styles/css/bootstrap-datetimepicker.css" />
+    
 </head>
 <body>
    
@@ -120,26 +126,55 @@
                 
             </div>
             
-            <div class="content-tv-head">
+            <div class="content-tv-head navbar">
                 
                 <div class="container-fluid">
                  
                 <div class="row">
-                    <div class="col col-md-9">
-                        <h1 class="content-tv-head-title tv-content-header">Программа передач &mdash; все каналы</h1>
+                    <div class="col col-sm-9">
+                        <h1 class="content-tv-head-title tv-content-header">Программа передач</h1>
                     </div> 
-                    <div class="col col-md-3">
-                        <div class="tv-table-time">
-                                <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
+                    <div class="col col-sm-3">
+                       
+                        <!--<div class="tv-table-time">
+                            <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
+                        </div>-->
+                        
+                        <div class="content-tv-table-channel_cats">                            
+                            <div class="btn-group show-on-hover">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Все каналы <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Фильмы и сериалы</a></li>
+                                    <li><a href="#">Познавательные</a></li>
+                                    <li><a href="#">Спорт</a></li>
+                                    <li><a href="#">Детям</a></li>
+                                    <li><a href="#">Информация</a></li>
+                                    <li><a href="#">Музыка</a></li>
+                                    <li><a href="#">Увлечения</a></li>
+                                </ul>
                             </div>
+                        </div>
+                        
                     </div> 
                 </div>
 
                     <div class="row">
                         <div class="col col-md-9">
+                          
+                            
                            
                             <div class="nav tv-table-week">
+                               
+                                <div class="tv-datepicker">
+                                    <div class="input-group" id="DatePicker">
+                                        <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
+                                    </div>
+                                </div>
+                               
                                 <ul>
+                                    <li class="week-control week-prev"><i class="fa fa-angle-left"></i></li>
                                     <li><a href="#">ВC</a></li>
                                     <li><a href="#">Вчера, ПН</a></li>
                                     <li class="active"><a href="#">Сегодня</a></li>
@@ -147,15 +182,31 @@
                                     <li><a href="#">ЧТ</a></li>
                                     <li><a href="#">ПТ</a></li>
                                     <li><a href="#">СБ</a></li>
-                                </ul>
+                                    <li class="week-control week-next"><i class="fa fa-angle-right"></i></li>
+                                </ul>    
+                            </div>
+                            
+                            <div class="content-tv-table-categories">
+                                <!--<div class="content-tv-table-categories-title"><strong>Передачи</strong></div>-->
+                                <span class="active">Познавательное</span>
+                                <span class="active">Фильм</span>
+                                <span class="active">Спорт</span>
+                                <span class="active">Сериалы</span>
+                                <span class="active">Детям</span>
+                                <span class="active">Крейзи</span>
+                                <span class="active">Миднайд</span>
+                                <span class="active">Дисплей</span>
+                                <span class="active">Спейшл</span>
+                                <span class="active">Вэйпинг</span>
+                                <span>Досуг</span>
                             </div>
                             
                         </div>
                         <div class="col col-md-3">
                            
-                            <!--<div class="tv-table-time">
+                            <div class="tv-table-time">
                                 <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
-                            </div>-->
+                            </div>
                             
                         </div>
                     </div>
@@ -170,253 +221,495 @@
                         <div class="col col-md-9">
                           
                             <div class="content-tv-table-wrap">
-                           
-                            <div class="row">
-                                <div class="col col-md-4">
-                                
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon">
-                                                    <img src="https://www.comboplayer.ru/static/channels/281/172/2811723f323fa0a06b12b42982003e10f5244b31.png" alt="">
-                                                </i>
-                                                <span class="channel-title-text">Первый</span>
-                                                <div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    
-                                                <div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a class="text-muted" href="#"><span class="channel-time">15:15</span> Время покажет</a></li>
-<li><a href="#"><span class="channel-time active col-violet">16:00</span> Мужское / Женское (Испанская Лолита)</a></li>
-<li><a href="#"><span class="channel-time">17:00</span> Давай поженимся! (Бизнесмен-иллюзионист)</a></li>
-<li><a href="#"><span class="channel-time">18:00</span> Прямой информационный канал "Первая Студия"</a></li>
-<li><a href="#"><span class="channel-time">20:00</span> "Пусть говорят" с Андреем Малаховым</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
-                                </div>
-                                <div class="col col-md-4">
-                                    
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon">
-                                                    <img src="https://www.comboplayer.ru/static/channels/07e/a82/07ea826f1acfcbae6799c1090ee312372ee6c93d.png" alt="">
-                                                </i>
-                                                <span class="channel-title-text">НТВ</span>
-                                                <div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    
-                                                <div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>
-                                            </a>
+                                <div class="row">
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/281/172/2811723f323fa0a06b12b42982003e10f5244b31.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Первый</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a class="text-muted" href="#"><span class="channel-time">15:15</span> Время покажет</a></li>
+    <li><a href="#"><span class="channel-time active col-violet">16:00</span> Мужское / Женское (Испанская Лолита)</a></li>
+    <li><a href="#"><span class="channel-time">17:00</span> Давай поженимся! (Бизнесмен-иллюзионист)</a></li>
+    <li><a href="#"><span class="channel-time">18:00</span> Прямой информационный канал "Первая Студия"</a></li>
+    <li><a href="#"><span class="channel-time">20:00</span> "Пусть говорят" с Андреем Малаховым</a></li>
+                                                </ul>
+                                            </div>
                                         </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a href="#"><span class="channel-time">14:00</span> Место встречи</a></li>
-<li class="ass">
-    
-<div class="prog-info">
-    <noindex>
-        <div class="prog-info-head">
-            <div class="prog-info-title">Сегодня</div>
-            <div class="prog-info-cat"></div>
-        </div>
-        <div class="prog-info-image">
-        </div>
-        <div class="prog-info-wrap">
-            <div class="prog-info-body">
-                <p>
-                    Нет информации.
-                </p>
-                <!--<div class="age-rate">12+</div>-->
+
+                                    </div>
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/07e/a82/07ea826f1acfcbae6799c1090ee312372ee6c93d.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">НТВ</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">14:00</span> Место встречи</a></li>
+    <li class="ass">
+
+    <div class="prog-info">
+        <noindex>
+            <div class="prog-info-head">
+                <div class="prog-info-title">Сегодня</div>
+                <div class="prog-info-cat"></div>
             </div>
-        </div>
-    </noindex>
-</div>
-
-    <a href="#"><span class="channel-time">16:00</span> Сегодня</a>
-
-</li>
-<li><a href="#"><span class="channel-time active col-violet">16:30</span> Улицы разбитых фонарей-13. "Семейный подряд". "Честь мундира"</a></li>
-<li><a href="#"><span class="channel-time">18:30</span> Обзор. Чрезвычайное происшествие</a></li>
-<li><a href="#"><span class="channel-time">19:00</span> Сегодня</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col col-md-4">
-                                    
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon">
-                                                    <img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt="">
-                                                </i>
-                                                <span class="channel-title-text">Пятый канал</span>
-                                                <!--<div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    -->
-                                                <div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a href="#"><span class="channel-time">15:10</span> Дальнобойщики. Самосуд</a></li>
-<li><a href="#"><span class="channel-time active col-blue">16:05</span> Дальнобойщики. Свой бизнес</a></li>
-<li><a href="#"><span class="channel-time">17:00</span> Сейчас</a></li>
-<li><a href="#"><span class="channel-time">17:30</span> Детективы. Охотничий салат</a></li>
-<li><a href="#"><span class="channel-time">18:00</span> Детективы. Пропащий</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    
-                                    
-                                    
-                                </div>
-                            </div>
-                                                       
-                            </div>
-                                                        
-                            <div class="row">
-                                <div class="col col-md-4">
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon">
-                                                    <img src="https://www.comboplayer.ru/static/channels/059/fb7/059fb73c5a72b1789226bfd68a548a0e8b4cb8a0.png" alt="">
-                                                </i>
-                                                <span class="channel-title-text">Россия-1</span>
-                                                <div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    
-                                                <!--<div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>-->
-                                            </a>
-                                        </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a href="#"><span class="channel-time">14:55</span> Тайны следствия-11 ("Треугольная история", 1-я и 2-я серии)</a></li>
-<li class="ass">
-    
-    <div class='prog-info'>
-        <div class='prog-info-head'>
-            <div class='prog-info-title'>Вести</div>
-            <div class='prog-info-cat'>
-                <span href='#'>Инфо</span>
-            </div>    
-        </div>
-        <div class='prog-info-image'>
-            <img src='images/prog-vesti.jpg' alt=''>
-
-        </div>
-        <div class='prog-info-wrap'>
-            <div class='prog-info-body'>
-                <p>
-                    В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
-                </p>
+            <div class="prog-info-image">
             </div>
-            <div class='age-rate'>16+</div>
-        </div>
+            <div class="prog-info-wrap">
+                <div class="prog-info-body">
+                    <p>
+                        Нет информации.
+                    </p>
+                    <!--<div class="age-rate">12+</div>-->
+                </div>
+            </div>
+        </noindex>
     </div>
+
+        <a href="#"><span class="channel-time">16:00</span> Сегодня</a>
+
+    </li>
+    <li><a href="#"><span class="channel-time active col-violet">16:30</span> Улицы разбитых фонарей-13. "Семейный подряд". "Честь мундира"</a></li>
+    <li><a href="#"><span class="channel-time">18:30</span> Обзор. Чрезвычайное происшествие</a></li>
+    <li><a href="#"><span class="channel-time">19:00</span> Сегодня</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Пятый канал</span>
+                                                    <!--<div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    -->
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">15:10</span> Дальнобойщики. Самосуд</a></li>
+    <li><a href="#"><span class="channel-time active col-blue">16:05</span> Дальнобойщики. Свой бизнес</a></li>
+    <li><a href="#"><span class="channel-time">17:00</span> Сейчас</a></li>
+    <li><a href="#"><span class="channel-time">17:30</span> Детективы. Охотничий салат</a></li>
+    <li><a href="#"><span class="channel-time">18:00</span> Детективы. Пропащий</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/059/fb7/059fb73c5a72b1789226bfd68a548a0e8b4cb8a0.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Россия-1</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <!--<div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>-->
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">14:55</span> Тайны следствия-11 ("Треугольная история", 1-я и 2-я серии)</a></li>
+    <li class="ass">
+
+        <div class='prog-info'>
+            <div class='prog-info-head'>
+                <div class='prog-info-title'>Вести</div>
+                <div class='prog-info-cat'>
+                    <span href='#'>Инфо</span>
+                </div>    
+            </div>
+            <div class='prog-info-image'>
+                <img src='images/prog-vesti.jpg' alt=''>
+
+            </div>
+            <div class='prog-info-wrap'>
+                <div class='prog-info-body'>
+                    <p>
+                        В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
+                    </p>
+                </div>
+                <div class='age-rate'>16+</div>
+            </div>
+        </div>
+
+        <a href="#">
+            <span class="channel-time">17:00</span> Вести
+        </a>
+
+    </li>
+    <li><a href="#"><span class="channel-time">17:20</span> Местное время. Вести. Дон</a></li>
+    <li><a href="#"><span class="channel-time">17:40</span> Прямой эфир</a></li>
+    <li><a href="#"><span class="channel-time active col-blue">18:50</span> 60 минут</a></li>                                           
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/1de/566/1de566c050696618132b6bb53611fe97c27dbedc.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Матч!</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <!--<div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>-->
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time active col-cyan">15:05</span> Все на "Матч"!</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">15:30</span> Специальный репортаж. Почему "Лестер" заиграл без Раньери?</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">15:50</span> Футбол. Лига чемпионов. 1/4 финала. "Лестер" (Англия) - "Атлетико" (Испания)
+    Десятка!</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">17:50</span> Футбол. Лига чемпионов. 1/4 финала. "Ювентус" (Италия) - "Барселона" (Испания)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon noimage">
+                                                        <!--<img src="https://www.comboplayer.ru/static/channels/5c0/c16/5c0c165cbfd80fd07c3a98fa8e3b67ab99b2fcb5.png" alt="">-->
+                                                    </i>
+                                                    <span class="channel-title-text">Длинное название канала</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">13:00</span> Восьмидесятые</a></li>
+    <li><a href="#"><span class="channel-time active col-violet">15:30</span> Воронины <em>(Серия 15. Сезон 5)</em></a></li>
+    <li><a href="#"><span class="channel-time active col-violet">19:00</span> Воронины <em>(Серия 16. Сезон 5)</em></a></li>
+    <li><a href="#"><span class="channel-time">20:00</span> Премьера! "Молодёжка"</a></li>
+    <li><a href="#"><span class="channel-time">21:00</span> Кухня в Париже</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- copy -->
+                                
+<div class="row">
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/281/172/2811723f323fa0a06b12b42982003e10f5244b31.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Первый</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a class="text-muted" href="#"><span class="channel-time">15:15</span> Время покажет</a></li>
+    <li><a href="#"><span class="channel-time active col-violet">16:00</span> Мужское / Женское (Испанская Лолита)</a></li>
+    <li><a href="#"><span class="channel-time">17:00</span> Давай поженимся! (Бизнесмен-иллюзионист)</a></li>
+    <li><a href="#"><span class="channel-time">18:00</span> Прямой информационный канал "Первая Студия"</a></li>
+    <li><a href="#"><span class="channel-time">20:00</span> "Пусть говорят" с Андреем Малаховым</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/07e/a82/07ea826f1acfcbae6799c1090ee312372ee6c93d.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">НТВ</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">14:00</span> Место встречи</a></li>
+    <li class="ass">
+
+    <div class="prog-info">
+        <noindex>
+            <div class="prog-info-head">
+                <div class="prog-info-title">Сегодня</div>
+                <div class="prog-info-cat"></div>
+            </div>
+            <div class="prog-info-image">
+            </div>
+            <div class="prog-info-wrap">
+                <div class="prog-info-body">
+                    <p>
+                        Нет информации.
+                    </p>
+                    <!--<div class="age-rate">12+</div>-->
+                </div>
+            </div>
+        </noindex>
+    </div>
+
+        <a href="#"><span class="channel-time">16:00</span> Сегодня</a>
+
+    </li>
+    <li><a href="#"><span class="channel-time active col-violet">16:30</span> Улицы разбитых фонарей-13. "Семейный подряд". "Честь мундира"</a></li>
+    <li><a href="#"><span class="channel-time">18:30</span> Обзор. Чрезвычайное происшествие</a></li>
+    <li><a href="#"><span class="channel-time">19:00</span> Сегодня</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col col-md-4">
+
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Пятый канал</span>
+                                                    <!--<div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    -->
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">15:10</span> Дальнобойщики. Самосуд</a></li>
+    <li><a href="#"><span class="channel-time active col-blue">16:05</span> Дальнобойщики. Свой бизнес</a></li>
+    <li><a href="#"><span class="channel-time">17:00</span> Сейчас</a></li>
+    <li><a href="#"><span class="channel-time">17:30</span> Детективы. Охотничий салат</a></li>
+    <li><a href="#"><span class="channel-time">18:00</span> Детективы. Пропащий</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/059/fb7/059fb73c5a72b1789226bfd68a548a0e8b4cb8a0.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Россия-1</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <!--<div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>-->
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">14:55</span> Тайны следствия-11 ("Треугольная история", 1-я и 2-я серии)</a></li>
+    <li class="ass">
+
+        <div class='prog-info'>
+            <div class='prog-info-head'>
+                <div class='prog-info-title'>Вести</div>
+                <div class='prog-info-cat'>
+                    <span href='#'>Инфо</span>
+                </div>    
+            </div>
+            <div class='prog-info-image'>
+                <img src='images/prog-vesti.jpg' alt=''>
+
+            </div>
+            <div class='prog-info-wrap'>
+                <div class='prog-info-body'>
+                    <p>
+                        В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
+                    </p>
+                </div>
+                <div class='age-rate'>16+</div>
+            </div>
+        </div>
+
+        <a href="#">
+            <span class="channel-time">17:00</span> Вести
+        </a>
+
+    </li>
+    <li><a href="#"><span class="channel-time">17:20</span> Местное время. Вести. Дон</a></li>
+    <li><a href="#"><span class="channel-time">17:40</span> Прямой эфир</a></li>
+    <li><a href="#"><span class="channel-time active col-blue">18:50</span> 60 минут</a></li>                                           
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon">
+                                                        <img src="https://www.comboplayer.ru/static/channels/1de/566/1de566c050696618132b6bb53611fe97c27dbedc.png" alt="">
+                                                    </i>
+                                                    <span class="channel-title-text">Матч!</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <!--<div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>-->
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time active col-cyan">15:05</span> Все на "Матч"!</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">15:30</span> Специальный репортаж. Почему "Лестер" заиграл без Раньери?</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">15:50</span> Футбол. Лига чемпионов. 1/4 финала. "Лестер" (Англия) - "Атлетико" (Испания)
+    Десятка!</a></li>
+    <li><a href="#"><span class="channel-time active col-cyan">17:50</span> Футбол. Лига чемпионов. 1/4 финала. "Ювентус" (Италия) - "Барселона" (Испания)</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col col-md-4">
+                                        <div class="content-tv-table-channel">
+                                            <div class="channel-title">
+                                                <a href="#">
+                                                    <i class="channel-icon noimage">
+                                                        <!--<img src="https://www.comboplayer.ru/static/channels/5c0/c16/5c0c165cbfd80fd07c3a98fa8e3b67ab99b2fcb5.png" alt="">-->
+                                                    </i>
+                                                    <span class="channel-title-text">Длинное название канала</span>
+                                                    <div class="channel-action channel-watch">
+                                                        <i class="fa fa-play-circle"></i>
+                                                        <span>Смотреть</span>
+                                                    </div>    
+                                                    <div class="channel-action channel-buy">
+                                                        <i class="fa fa-credit-card"></i>
+                                                        <span>Купить подписку</span>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="channel-body">
+                                                <ul>
+    <li><a href="#"><span class="channel-time">13:00</span> Восьмидесятые</a></li>
+    <li><a href="#"><span class="channel-time active col-violet">15:30</span> Воронины <em>(Серия 15. Сезон 5)</em></a></li>
+    <li><a href="#"><span class="channel-time active col-violet">19:00</span> Воронины <em>(Серия 16. Сезон 5)</em></a></li>
+    <li><a href="#"><span class="channel-time">20:00</span> Премьера! "Молодёжка"</a></li>
+    <li><a href="#"><span class="channel-time">21:00</span> Кухня в Париже</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- /copy -->
     
-    <a href="#">
-        <span class="channel-time">17:00</span> Вести
-    </a>
-    
-</li>
-<li><a href="#"><span class="channel-time">17:20</span> Местное время. Вести. Дон</a></li>
-<li><a href="#"><span class="channel-time">17:40</span> Прямой эфир</a></li>
-<li><a href="#"><span class="channel-time active col-blue">18:50</span> 60 минут</a></li>                                           
-                                            </ul>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                                <div class="col col-md-4">
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon">
-                                                    <img src="https://www.comboplayer.ru/static/channels/1de/566/1de566c050696618132b6bb53611fe97c27dbedc.png" alt="">
-                                                </i>
-                                                <span class="channel-title-text">Матч!</span>
-                                                <div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    
-                                                <!--<div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>-->
-                                            </a>
-                                        </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a href="#"><span class="channel-time active col-cyan">15:05</span> Все на "Матч"!</a></li>
-<li><a href="#"><span class="channel-time active col-cyan">15:30</span> Специальный репортаж. Почему "Лестер" заиграл без Раньери?</a></li>
-<li><a href="#"><span class="channel-time active col-cyan">15:50</span> Футбол. Лига чемпионов. 1/4 финала. "Лестер" (Англия) - "Атлетико" (Испания)
-Десятка!</a></li>
-<li><a href="#"><span class="channel-time active col-cyan">17:50</span> Футбол. Лига чемпионов. 1/4 финала. "Ювентус" (Италия) - "Барселона" (Испания)</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col col-md-4">
-                                    <div class="content-tv-table-channel">
-                                        <div class="channel-title">
-                                            <a href="#">
-                                                <i class="channel-icon noimage">
-                                                    <!--<img src="https://www.comboplayer.ru/static/channels/5c0/c16/5c0c165cbfd80fd07c3a98fa8e3b67ab99b2fcb5.png" alt="">-->
-                                                </i>
-                                                <span class="channel-title-text">Длинное название канала</span>
-                                                <div class="channel-action channel-watch">
-                                                    <i class="fa fa-play-circle"></i>
-                                                    <span>Смотреть</span>
-                                                </div>    
-                                                <div class="channel-action channel-buy">
-                                                    <i class="fa fa-credit-card"></i>
-                                                    <span>Купить подписку</span>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div class="channel-body">
-                                            <ul>
-<li><a href="#"><span class="channel-time">13:00</span> Восьмидесятые</a></li>
-<li><a href="#"><span class="channel-time active col-violet">15:30</span> Воронины <em>(Серия 15. Сезон 5)</em></a></li>
-<li><a href="#"><span class="channel-time active col-violet">19:00</span> Воронины <em>(Серия 16. Сезон 5)</em></a></li>
-<li><a href="#"><span class="channel-time">20:00</span> Премьера! "Молодёжка"</a></li>
-<li><a href="#"><span class="channel-time">21:00</span> Кухня в Париже</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                             
                         </div>
                         <div class="col col-md-3">
                           
-                            <div class="content-tv-table-channel_cats">
-                            
+                            <!--<div class="content-tv-table-channel_cats">                            
                                 <div class="btn-group show-on-hover">
                                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                         Все каналы <span class="caret"></span>
@@ -431,34 +724,24 @@
                                         <li><a href="#">Увлечения</a></li>
                                     </ul>
                                 </div>
-                                
-                            </div>
+                            </div>-->
                            
-                            <div class="content-tv-table-categories">
+                            <!--<div class="content-tv-table-categories">
                                 <div class="content-tv-table-categories-title"><strong>Передачи</strong></div>
-                                
-                                <!--<span class="active">развлечения</span> 
-                                <span class="active">новости</span> 
-                                <span>спорт</span>  
-                                <span>сериалы</span> 
-                                <span>познавательное</span>
-                                <span>фильмы</span>-->
-                                
                                 <span class="active">Познавательное</span>
                                 <span class="active">Фильм</span>
                                 <span class="active">Спорт</span>
                                 <span class="active">Сериалы</span>
                                 <span class="active">Детям</span>
-                                
                                 <span class="active">Крейзи</span>
                                 <span class="active">Миднайд</span>
                                 <span class="active">Дисплей</span>
                                 <span class="active">Спейшл</span>
                                 <span class="active">Вэйпинг</span>
-                                
                                 <span>Досуг</span>
-
-                            </div>
+                            </div>-->
+                            
+                            <!-- adds -->
                             
                         </div>
                     </div>
@@ -573,20 +856,7 @@
     </div>
     
     <script type="text/javascript">
-        
-        $('.thumbnail').click(function(){
-            $('.modal-body').empty();
-            var title = $(this).parent('a').attr("title");
-            $('.modal-title').html(title);
-            $($(this).parents('div').html()).appendTo('.modal-body');
-            $('#screenModal').modal({show:true});
-        });
-        
-        $('.channel-body ul li').tooltip({    
-            selector: "a[rel=tooltip]"
-        })
-        
-        //
+        // programm popup
         
         $('li.ass').on('mouseover', function() {
             var progInfo = $(this).find('.prog-info');
@@ -605,7 +875,35 @@
             progInfo.removeClass('active');
         });
         
+        // fixed week-bar
+        
+        $(document).ready(function () {
+            var menu = $('.content-tv-head');
+            var origOffsetY = menu.offset().top;
+            function scroll() {
+                if ($(window).scrollTop() >= origOffsetY) {
+                    $('.content-tv-head').addClass('navbar-fixed-top');
+                    $('.content-tv-table').addClass('fix-padding');
+                } else {
+                    $('.content-tv-head').removeClass('navbar-fixed-top');
+                    $('.content-tv-table').removeClass('fix-padding');
+                }
+            }
+            document.onscroll = scroll;
+        });
+        
+        // datepicker
+        
+        $("#weeklyDatePicker").datetimepicker({
+            format: 'MM-DD-YYYY'
+        });
+        $('#weeklyDatePicker').on('dp.change', function (e) {
+            var value = $("#weeklyDatePicker").val();
+            var firstDate = moment(value, "MM-DD-YYYY").day(0).format("MM-DD-YYYY");
+            var lastDate =  moment(value, "MM-DD-YYYY").day(6).format("MM-DD-YYYY");
+            $("#weeklyDatePicker").val(firstDate + " - " + lastDate);
+        });
+        
     </script>
-    
 </body>
 </html>
