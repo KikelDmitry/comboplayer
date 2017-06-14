@@ -172,9 +172,67 @@
                                         <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
                                     </div>
                                 </div>
-                               
+                                
+                                <!--<div class="week-control-wrap">
+                                   
+                                   <a class="week-control week-prev"><i class="fa fa-angle-left"></i></a>
+                                   
+                                    <ul>
+                                        <li><a href="#">Вчера</a></li>
+                                        <li><a href="#">Вчера</a></li>
+                                        <li><a href="#">Вчера</a></li>
+                                        <li class="active"><a href="#">Сегодня</a></li>
+                                        <li><a href="#">Вчера</a></li>
+                                        <li><a href="#">Вчера</a></li>
+                                        <li><a href="#">Вчера</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">ВC</a></li>
+                                        <li><a href="#">Вчера, ПН</a></li>
+                                        <li class="active"><a href="#">Сегодня</a></li>
+                                        <li><a href="#">Завтра, СР</a></li>
+                                        <li><a href="#">ЧТ</a></li>
+                                        <li><a href="#">ПТ</a></li>
+                                        <li><a href="#">СБ</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                        <li><a href="#">Завтра</a></li>
+                                    </ul>
+                                    
+                                    <a class="week-control week-next"><i class="fa fa-angle-right"></i></a>
+                                    
+                                </div>-->
+
+<div class="week-control-wrap">
+    <div class='row'>
+        <div class='col-md-7'>
+            <div class="carousel slide" id="weekslide">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col col-md-4">
                                 <ul>
-                                    <li class="week-control week-prev"><i class="fa fa-angle-left"></i></li>
+                                    <li><a href="#">02, ПН</a></li>
+                                    <li><a href="#">03, ВТ</a></li>
+                                    <li><a href="#">04, СР</a></li>
+                                    <li><a href="#">05, ЧТ</a></li>
+                                    <li><a href="#">06, ПТ</a></li>
+                                    <li><a href="#">07, СБ</a></li>
+                                    <li><a href="#">08, ВС</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <ul>
                                     <li><a href="#">ВC</a></li>
                                     <li><a href="#">Вчера, ПН</a></li>
                                     <li class="active"><a href="#">Сегодня</a></li>
@@ -182,8 +240,33 @@
                                     <li><a href="#">ЧТ</a></li>
                                     <li><a href="#">ПТ</a></li>
                                     <li><a href="#">СБ</a></li>
-                                    <li class="week-control week-next"><i class="fa fa-angle-right"></i></li>
-                                </ul>    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <ul>
+                                    <li><a href="#">15, ПН</a></li>
+                                    <li><a href="#">16, ВТ</a></li>
+                                    <li><a href="#">17, СР</a></li>
+                                    <li><a href="#">18, ЧТ</a></li>
+                                    <li><a href="#">19, ПТ</a></li>
+                                    <li><a href="#">20, СБ</a></li>
+                                    <li><a href="#">21, ВС</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
+                <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
                             </div>
                             
                             <div class="content-tv-table-categories">
@@ -902,6 +985,13 @@
             var firstDate = moment(value, "MM-DD-YYYY").day(0).format("MM-DD-YYYY");
             var lastDate =  moment(value, "MM-DD-YYYY").day(6).format("MM-DD-YYYY");
             $("#weeklyDatePicker").val(firstDate + " - " + lastDate);
+        });
+        
+        // slide weeks
+            
+        $('#weekslide').carousel({
+            pause: true,
+            interval: false,
         });
         
     </script>

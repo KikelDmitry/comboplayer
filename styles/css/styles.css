@@ -7690,8 +7690,9 @@ textarea.form-control {
   height: 30px;
   background-color: #79ae0b;
   margin-right: 10px;
-  /*vertical-align: bottom;*/
   vertical-align: baseline;
+  top: 0;
+  position: absolute;
 }
 .tv-datepicker:hover,
 .tv-datepicker:focus,
@@ -7833,11 +7834,13 @@ textarea.form-control {
   margin: 15px 0 30px;
   margin-bottom: 0;
   border-bottom: 2px solid #79ae0b;
+  position: relative;
 }
 .content-tv-head .tv-table-week ul {
   /*border-bottom: 2px solid #79ae0b;*/
   display: inline-block;
   vertical-align: bottom;
+  max-width: 100%;
 }
 .content-tv-head .tv-table-week ul li {
   font-weight: 500;
@@ -7884,9 +7887,39 @@ textarea.form-control {
   vertical-align: bottom;
   font-weight: bold;
   cursor: pointer;
+  padding: 10px 5px;
 }
 .content-tv-head .tv-table-week .week-control i:hover {
   color: #25292b;
+}
+.content-tv-head .tv-table-week .week-control-wrap {
+  margin-left: 40px;
+}
+.content-tv-head .tv-table-week .week-control-wrap .carousel {
+  width: 100%;
+}
+.content-tv-head .tv-table-week .week-control-wrap .carousel .col {
+  width: 100%;
+}
+.content-tv-head .tv-table-week .week-control-wrap .carousel-inner {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.content-tv-head .tv-table-week .week-prev {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.content-tv-head .tv-table-week .week-prev i {
+  margin-right: 3px;
+}
+.content-tv-head .tv-table-week .week-next {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.content-tv-head .tv-table-week .week-next i {
+  margin-left: 3px;
 }
 .content-tv-head .tv-table-time {
   /*margin-top: 20px;*/
