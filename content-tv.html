@@ -131,7 +131,7 @@
                 <div class="container-fluid">
                  
                 <div class="row">
-                    <div class="col col-sm-9">
+                    <div class="col col-md-9 col-sm-9 col-sm-8">
                         
                         <div class="row">
                             <div class="col col-md-8">
@@ -142,37 +142,40 @@
 <div class="tv-search form-group-md">
     <span class="twitter-typeahead">
        
+        <!-- для демо, убрать -->
+        <style> .tv-search .input-group-btn input:focus + div { display: block !important;}</style>
+       
         <span class="input-group-btn">
             <input type="text" class="form-control input-lg" placeholder="Поиск" spellcheck="false">
+            <div class="tt-menu" style="display: none">
+                <div class="tt-dataset tt-dataset-channels">
+                    <div class="tt-header">Каналы</div>
+                    <div title="Тайны галактики" class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name"><strong class="tt-highlight">Тайны галактики</strong><!--, <span class="tt-suggestion-subname"></span>--></div>
+                        <!--<div class="tt-suggestion-note"></div>-->
+                    </div>
+                </div>
+                <div class="tt-dataset tt-dataset-programms">
+                    <div class="tt-header">Передачи</div>
+                    <div title="Дом кино, Тайны следствия" class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">Дом кино, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия</strong></span></div>
+                        <div class="tt-suggestion-note">Сегодня, 14:00</div>
+                    </div>
+                    <div title="Мир сериала, Тайны следствия" class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">Мир сериала, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия-9. Фильм 6-й - "Попутчик", 1-я серия</strong></span></div>
+                        <div class="tt-suggestion-note">Cегодня, 15:00</div>
+                    </div>
+                    <div title="Россия 1-Дон, Тайны следствия" class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">Россия 1-Дон, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия-9. "Товар - деньги - товар", 2-я серия</strong></span></div>
+                        <div class="tt-suggestion-note">Завтра, 13:00</div>
+                    </div>
+                </div>
+            </div>
             <button class="btn btn-info btn-lg" type="button">
                 <i class="glyphicon glyphicon-search"></i>
             </button>
         </span>
         
-        <div class="tt-menu" style="display: block">
-            <div class="tt-dataset tt-dataset-channels">
-                <div class="tt-header">Каналы</div>
-                <div title="Тайны галактики" class="tt-suggestion tt-selectable">
-                    <div class="tt-suggestion-name"><strong class="tt-highlight">Тайны галактики</strong><!--, <span class="tt-suggestion-subname"></span>--></div>
-                    <!--<div class="tt-suggestion-note"></div>-->
-                </div>
-            </div>
-            <div class="tt-dataset tt-dataset-programms">
-                <div class="tt-header">Передачи</div>
-                <div title="Дом кино, Тайны следствия" class="tt-suggestion tt-selectable">
-                    <div class="tt-suggestion-name">Дом кино, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия</strong></span></div>
-                    <div class="tt-suggestion-note">Сегодня, 14:00</div>
-                </div>
-                <div title="Мир сериала, Тайны следствия" class="tt-suggestion tt-selectable">
-                    <div class="tt-suggestion-name">Мир сериала, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия-9. Фильм 6-й - "Попутчик", 1-я серия</strong></span></div>
-                    <div class="tt-suggestion-note">Cегодня, 15:00</div>
-                </div>
-                <div title="Россия 1-Дон, Тайны следствия" class="tt-suggestion tt-selectable">
-                    <div class="tt-suggestion-name">Россия 1-Дон, <span class="tt-suggestion-subname"><strong class="tt-highlight">Тайны следствия-9. "Товар - деньги - товар", 2-я серия</strong></span></div>
-                    <div class="tt-suggestion-note">Завтра, 13:00</div>
-                </div>
-            </div>
-        </div>
     </span>
 </div>
 
@@ -180,7 +183,7 @@
                         </div>
 
                     </div> 
-                    <div class="col col-sm-3">
+                    <div class="col col-md-3 col-sm-4">
                        
                         <!--<div class="tv-table-time">
                             <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>

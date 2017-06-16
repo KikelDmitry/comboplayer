@@ -7682,6 +7682,7 @@ textarea.form-control {
   font-size: 32px;
   font-weight: 600;
   margin-bottom: 15px;
+  margin-top: 25px;
 }
 .tv-datepicker {
   position: relative;
@@ -7887,7 +7888,7 @@ textarea.form-control {
   vertical-align: bottom;
   font-weight: bold;
   cursor: pointer;
-  padding: 10px 5px;
+  padding: 8px 5px;
 }
 .content-tv-head .tv-table-week .week-control i:hover {
   color: #25292b;
@@ -8758,7 +8759,7 @@ textarea.form-control {
   display: block;
   width: 100% !important;
   z-index: 1000;
-  min-width: 450px;
+  min-width: 430px;
 }
 .twitter-typeahead {
   width: 100%;
@@ -8920,6 +8921,13 @@ textarea.form-control {
   .content-tv-table-categories {
     margin-bottom: 0;
   }
+  .content-tv-table-channel_cats {
+    text-align: right;
+  }
+  .content-tv-table-channel_cats .dropdown-menu {
+    left: inherit;
+    right: 0;
+  }
 }
 @media (max-width: 767px) {
   h1 {
@@ -9072,6 +9080,9 @@ textarea.form-control {
   }
   .tt-menu {
     min-width: inherit;
+  }
+  .content-tv-table-channel_cats {
+    margin-top: 15px;
   }
 }
 @media (max-width: 400px) {
