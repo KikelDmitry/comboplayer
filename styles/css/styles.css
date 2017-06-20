@@ -8332,6 +8332,31 @@ textarea.form-control {
   -webkit-box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
   box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
 }
+.content-tv-channel .channel-stream ul li > ul {
+  margin-bottom: 0;
+}
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control {
+  background-color: #dee6eb;
+  padding: 5px 10px;
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #3c4c54;
+}
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control:after {
+  content: "\f106";
+  display: inline-block;
+  font-weight: bold;
+  color: #8ba7ba;
+  padding-left: 5px;
+  font-family: "FontAwesome";
+  font-size: 16px;
+}
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control[aria-expanded="false"]:after {
+  content: "\f107";
+}
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control[aria-expanded="true"]:after {
+  content: "\f106";
+}
 .content-tv-channel .channel-stream-brief {
   padding-top: 30px;
 }
