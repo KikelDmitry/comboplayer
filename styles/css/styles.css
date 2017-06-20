@@ -7924,8 +7924,8 @@ textarea.form-control {
   margin-left: 3px;
 }
 .content-tv-head .tv-table-time {
-  /*margin-top: 20px;*/
-  margin-top: 0;
+  /*margin-top: 0;*/
+  margin-top: 10px;
   padding: 15px 0;
 }
 .content-tv-head .tv-table-time span {
@@ -8319,6 +8319,15 @@ textarea.form-control {
 .content-tv-channel .channel-stream ul li span {
   margin-right: 5px;
 }
+.content-tv-channel .channel-stream ul li > img {
+  margin: 10px 0;
+  max-width: 50%;
+  padding: 4px;
+  display: block;
+  background: #2AAAE1;
+  -webkit-box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
+  box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
+}
 .content-tv-channel .channel-stream-brief {
   padding-top: 30px;
 }
@@ -8382,6 +8391,52 @@ textarea.form-control {
 .content-tv-channel .channel-actions a.channel-buy:active,
 .content-tv-channel .channel-actions a.channel-buy:focus {
   background-color: #587e08;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn {
+  border: 2px solid #2aaae1;
+  color: #fff;
+  font-weight: 600;
+  background-color: #2aaae1;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:first-child {
+  border-right: 2px solid;
+  border-right-color: #1b8cbd;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child {
+  border-left: 0;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child > i {
+  margin-right: 2px;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:hover,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:active,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:focus {
+  border-right-color: #1b8cbd;
+  color: #fff;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:hover > i,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:active > i,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:last-child:focus > i {
+  color: #fff;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:nth-child(2) {
+  border-left: 2px solid #83ceee;
+  border-right: 1px solid #1b8cbd;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn.btn-info {
+  background-color: transparent;
+  color: #3c4c54;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn.btn-info > i {
+  color: #2aaae1;
+}
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:hover,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:active,
+.content-tv-channel .channel-actions .try-buy.btn-group .btn:focus {
+  background-color: #1986b4;
+  border-color: #1986b4;
+  -webkit-box-shadow: 0 2px 17px -1px rgba(42, 170, 225, 0.3);
+  box-shadow: 0 2px 17px -1px rgba(42, 170, 225, 0.3);
 }
 .content-tv-channel .channel-descr {
   margin: 30px 0 15px;
