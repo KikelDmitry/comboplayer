@@ -6910,7 +6910,8 @@ p {
 }
 .navbar-header .slogan {
   float: left;
-  margin-left: 85px;
+  /*margin-left: 85px;*/
+  margin-left: 50px;
   padding-top: 15px;
   margin-bottom: 0;
   color: #C0C0C0;
@@ -6921,8 +6922,10 @@ p {
 }
 .header-menu-item {
   float: left;
-  padding: 28px 15px;
-  margin: -15px 20px;
+  /*padding: 28px 15px;
+    margin: -15px 20px;*/
+  padding: 28px 0px;
+  margin: -15px 16px;
   display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6945,8 +6948,9 @@ p {
 .header-menu-link.external:hover {
   border-color: #187ca7;
 }
-.header-menu .extra-item {
-  display: none;
+.header-menu-link > i {
+  padding-right: 5px;
+  color: #79ae0b;
 }
 .navbar {
   min-height: inherit;
