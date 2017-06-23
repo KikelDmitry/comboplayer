@@ -8661,62 +8661,25 @@ textarea.form-control {
 .content-video-table {
   background-color: #eef2f5;
 }
-.content-video-main .video-bar.video-bar-poster .carousel .item {
-  min-height: 400px;
-  /*max-height: 400px;*/
-  /*overflow: hidden;*/
-}
-.content-video-main .video-bar-title {
+.content-video .video-bar-title {
   color: #3c4c54;
   text-transform: uppercase;
   font-weight: 600;
 }
-.content-video-main .video-bar .carousel-inner.onebyone-carosel {
-  margin: auto;
-  width: 98%;
-}
-.content-video-main .video-bar .slider-control {
-  text-decoration: none;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 3px;
-  /*background-color: @color-link;*/
-  background-color: #8ba7ba;
-  color: #fff;
-  min-width: 35px;
-  min-height: 35px;
-  display: inline-block;
-  text-align: center;
-}
-.content-video-main .video-bar .slider-control:hover,
-.content-video-main .video-bar .slider-control:active {
-  /*background-color: darken(@color-link, 10%);*/
-  background-color: #6b8fa7;
-}
-.content-video-main .video-bar .slider-control.left {
-  position: absolute;
-  top: 110px;
-  left: 0;
-}
-.content-video-main .video-bar .slider-control.right {
-  position: absolute;
-  top: 110px;
-  right: 0;
-}
-.content-video-main .video-bar-item {
+.content-video .video-bar-item {
   background-color: #fff;
-  min-height: 390px;
+  min-height: 400px;
 }
-.content-video-main .video-bar-item img {
+.content-video .video-bar-item img {
   max-width: 100%;
 }
-.content-video-main .video-bar-item > a {
+.content-video .video-bar-item > a {
   text-decoration: none;
   border: 0;
   display: block;
-  min-height: 390px;
+  min-height: 400px;
 }
-.content-video-main .video-bar-item > a:after {
+.content-video .video-bar-item > a:after {
   display: none;
   content: "\f04b";
   background-color: #2aaae1;
@@ -8736,27 +8699,73 @@ textarea.form-control {
   left: 50%;
   top: 33%;
 }
-.content-video-main .video-bar-item > a:hover:after {
+.content-video .video-bar-item > a:hover:after {
   display: block;
 }
-.content-video-main .video-bar-item:hover {
+.content-video .video-bar-item:hover {
   background-color: #2aaae1;
 }
-.content-video-main .video-bar-item:hover .video-bar-item-title,
-.content-video-main .video-bar-item:hover .video-bar-text {
+.content-video .video-bar-item:hover .video-bar-item-title,
+.content-video .video-bar-item:hover .video-bar-text {
   color: #fff;
 }
-.content-video-main .video-bar-descr {
+.content-video .video-bar-descr {
   /*background-color: #fff;*/
   padding: 15px;
   color: #3c4c54;
   font-weight: 500;
   font-size: 13px;
 }
-.content-video-main .video-bar-item-title {
+.content-video .video-bar-item-title {
   color: #333;
   font-weight: bold;
   font-size: 14px;
+}
+.content-video-main {
+  padding: 20px 0 15px;
+}
+.content-video-main .video-bar .row {
+  margin-bottom: 15px;
+}
+.content-video-type {
+  padding: 0 0 30px;
+}
+.content-video-type .video-bar.video-bar-poster .carousel .item {
+  min-height: 400px;
+  /*max-height: 400px;*/
+  /*overflow: hidden;*/
+}
+.content-video-type .video-bar .carousel-inner.onebyone-carosel {
+  margin: auto;
+  width: 98%;
+}
+.content-video-type .video-bar .slider-control {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 3px;
+  /*background-color: @color-link;*/
+  background-color: #8ba7ba;
+  color: #fff;
+  min-width: 35px;
+  min-height: 35px;
+  display: inline-block;
+  text-align: center;
+}
+.content-video-type .video-bar .slider-control:hover,
+.content-video-type .video-bar .slider-control:active {
+  /*background-color: darken(@color-link, 10%);*/
+  background-color: #6b8fa7;
+}
+.content-video-type .video-bar .slider-control.left {
+  position: absolute;
+  top: 110px;
+  left: 0;
+}
+.content-video-type .video-bar .slider-control.right {
+  position: absolute;
+  top: 110px;
+  right: 0;
 }
 .video-filters {
   margin-top: 30px;
@@ -9198,6 +9207,11 @@ textarea.form-control {
   .footer-contain {
     padding: 0 20px;
   }
+  .content-video-type .video-bar.video-bar-poster .carousel .item,
+  .content-video .video-bar-item,
+  .content-video .video-bar-item > a {
+    min-height: inherit;
+  }
 }
 @media (min-width: 1400px) {
   .home-hero-video-text {
@@ -9318,8 +9332,11 @@ textarea.form-control {
   .video-bar .carousel-inner > .item {
     display: block;
   }
-  .content-video-main .video-bar .slider-control {
+  .content-video-type .video-bar .slider-control {
     display: none;
+  }
+  .content-video .video-bar-item-title {
+    font-size: 18px;
   }
 }
 @media (max-width: 767px) {
