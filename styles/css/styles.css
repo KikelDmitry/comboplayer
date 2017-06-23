@@ -8742,7 +8742,7 @@ textarea.form-control {
 .content-video-main .video-bar-item:hover {
   background-color: #2aaae1;
 }
-.content-video-main .video-bar-item:hover .video-bar-title,
+.content-video-main .video-bar-item:hover .video-bar-item-title,
 .content-video-main .video-bar-item:hover .video-bar-text {
   color: #fff;
 }
