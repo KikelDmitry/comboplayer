@@ -1892,14 +1892,14 @@ textarea.form-control {
         &-text {}
     } 
     
-    &-main {
+    &-type {
         padding: 20px 0 15px;
         .video-bar {
             .row { margin-bottom: 15px; }
         }
     }
     
-    &-type {
+    &-main {
         padding: 0 0 30px;
         .video-bar {
             &.video-bar-poster {
@@ -1934,13 +1934,17 @@ textarea.form-control {
                 }
                 &.left {
                     position: absolute;
-                    top: 110px;
-                    left: 0;                    
+                    /*top: 110px;*/
+                    top: 45%;
+                    left: 0;
+                    margin-top: -35px;
                 }
                 &.right {
                     position: absolute;
-                    top: 110px;
-                    right: 0;                    
+                    /*top: 110px;*/
+                    top: 45%;
+                    right: 0;
+                    margin-top: -35px;
                 }
             }
         }
@@ -2260,6 +2264,7 @@ textarea.form-control {
         left: -40px;
         /*color: #2AAAE1;*/
         color: #88A4B6;
+        vertical-align: top;
     }
     .input-group-btn button {
         &:hover,
@@ -2528,7 +2533,7 @@ textarea.form-control {
     }
     
     .video-bar .carousel-inner > .item { display: block; }
-    .content-video-type .video-bar .slider-control { display: none; }
+    .content-video-main .video-bar .slider-control { display: none; }
     
     .content-video .video-bar-item-title { font-size: 18px; }
     

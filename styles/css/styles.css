@@ -8721,25 +8721,25 @@ textarea.form-control {
   font-weight: bold;
   font-size: 14px;
 }
-.content-video-main {
+.content-video-type {
   padding: 20px 0 15px;
 }
-.content-video-main .video-bar .row {
+.content-video-type .video-bar .row {
   margin-bottom: 15px;
 }
-.content-video-type {
+.content-video-main {
   padding: 0 0 30px;
 }
-.content-video-type .video-bar.video-bar-poster .carousel .item {
+.content-video-main .video-bar.video-bar-poster .carousel .item {
   min-height: 400px;
   /*max-height: 400px;*/
   /*overflow: hidden;*/
 }
-.content-video-type .video-bar .carousel-inner.onebyone-carosel {
+.content-video-main .video-bar .carousel-inner.onebyone-carosel {
   margin: auto;
   width: 98%;
 }
-.content-video-type .video-bar .slider-control {
+.content-video-main .video-bar .slider-control {
   text-decoration: none;
   font-size: 20px;
   font-weight: 600;
@@ -8752,20 +8752,24 @@ textarea.form-control {
   display: inline-block;
   text-align: center;
 }
-.content-video-type .video-bar .slider-control:hover,
-.content-video-type .video-bar .slider-control:active {
+.content-video-main .video-bar .slider-control:hover,
+.content-video-main .video-bar .slider-control:active {
   /*background-color: darken(@color-link, 10%);*/
   background-color: #6b8fa7;
 }
-.content-video-type .video-bar .slider-control.left {
+.content-video-main .video-bar .slider-control.left {
   position: absolute;
-  top: 110px;
+  /*top: 110px;*/
+  top: 45%;
   left: 0;
+  margin-top: -35px;
 }
-.content-video-type .video-bar .slider-control.right {
+.content-video-main .video-bar .slider-control.right {
   position: absolute;
-  top: 110px;
+  /*top: 110px;*/
+  top: 45%;
   right: 0;
+  margin-top: -35px;
 }
 .video-filters {
   margin-top: 30px;
@@ -9071,6 +9075,7 @@ textarea.form-control {
   left: -40px;
   /*color: #2AAAE1;*/
   color: #88A4B6;
+  vertical-align: top;
 }
 .tv-search .input-group-btn button:hover,
 .tv-search .input-group-btn button:focus,
@@ -9332,7 +9337,7 @@ textarea.form-control {
   .video-bar .carousel-inner > .item {
     display: block;
   }
-  .content-video-type .video-bar .slider-control {
+  .content-video-main .video-bar .slider-control {
     display: none;
   }
   .content-video .video-bar-item-title {
