@@ -1963,9 +1963,7 @@ textarea.form-control {
             font-size: 14px;
             font-weight: 600;
             padding: 10px 12px;
-            > i {
-                padding-right: 5px;
-            }
+            > i { padding-right: 5px; }
             &:after {
                 position: absolute;
                 content: "\f0d7";
@@ -2001,6 +1999,7 @@ textarea.form-control {
                     border-color: #fff;
                 }
             }
+            .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
         }
         ul {
             margin-top: 10px;
@@ -2016,32 +2015,56 @@ textarea.form-control {
                 text-overflow: ellipsis;
                 overflow: hidden;
                 cursor: pointer;
+                .trans();
+                .radius(2px);
                 span {
+                    padding-left: 11px;
                     cursor: pointer;
                     position: relative;
                     &:hover {
                         color: @color-brand;
-                        /*padding-left: 17px;
-                        &:after {
+                        &:before {
                             display: inline-block;
                             font-family: "FontAwesome";
-                            content: "\f055";
+                            content: "\f067";
                             color: @color-brand;
-                            font-size: 16px;
-                            padding-left: 5px;
+                            font-size: 11px;
+                            padding-right: 3px;
                             position: absolute;
                             left: 0;
-                            top: 2px;
-                        }*/
+                            top: 5px;
+                        }
                     }
-                    &.active {
-                        padding: 1px 6px;
-                        background: @color-brand;
-                        color: #fff;
-                    }
-                    
                 }
-                
+                &.active {
+                    background: @color-brand;
+                    color: #fff;
+                    span {
+                        padding: 1px 6px;
+                        /*padding-left: 0;*/
+                        &:before {
+                            display: inline-block;
+                            font-family: "FontAwesome";
+                            content: "\f00d";
+                            color: #fff;
+                            font-size: 11px;
+                            padding-right: 3px;
+                            position: relative;
+                            top: -1px;
+                        }
+                        &:hover { color: #fff; }
+                    }
+                    &:hover {
+                        background-color: lighten(@color-steel, 15%);
+                    }
+                }
+                &.default {
+                    background-color: lighten(@color-steel, 10%);
+                    padding-left: 5px;
+                    span:before { 
+                        display: none; 
+                    }
+                }
             }
         }
     }

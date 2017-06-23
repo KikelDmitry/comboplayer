@@ -8784,6 +8784,8 @@ textarea.form-control {
   font-size: 14px;
   font-weight: 600;
   padding: 10px 12px;
+  -webkit-box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
+  box-shadow: 0 2px 17px -1px rgba(60, 70, 84, 0.2);
 }
 .video-filters-block .block-category-control > i {
   padding-right: 5px;
@@ -8838,30 +8840,63 @@ textarea.form-control {
   text-overflow: ellipsis;
   overflow: hidden;
   cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 .video-filters-block ul li span {
+  padding-left: 11px;
   cursor: pointer;
   position: relative;
 }
 .video-filters-block ul li span:hover {
   color: #79ae0b;
-  /*padding-left: 17px;
-                        &:after {
-                            display: inline-block;
-                            font-family: "FontAwesome";
-                            content: "\f055";
-                            color: @color-brand;
-                            font-size: 16px;
-                            padding-left: 5px;
-                            position: absolute;
-                            left: 0;
-                            top: 2px;
-                        }*/
 }
-.video-filters-block ul li span.active {
-  padding: 1px 6px;
+.video-filters-block ul li span:hover:before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  content: "\f067";
+  color: #79ae0b;
+  font-size: 11px;
+  padding-right: 3px;
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.video-filters-block ul li.active {
   background: #79ae0b;
   color: #fff;
+}
+.video-filters-block ul li.active span {
+  padding: 1px 6px;
+  /*padding-left: 0;*/
+}
+.video-filters-block ul li.active span:before {
+  display: inline-block;
+  font-family: "FontAwesome";
+  content: "\f00d";
+  color: #fff;
+  font-size: 11px;
+  padding-right: 3px;
+  position: relative;
+  top: -1px;
+}
+.video-filters-block ul li.active span:hover {
+  color: #fff;
+}
+.video-filters-block ul li.active:hover {
+  background-color: #bbcbd7;
+}
+.video-filters-block ul li.default {
+  background-color: #abbfcd;
+  padding-left: 5px;
+}
+.video-filters-block ul li.default span:before {
+  display: none;
 }
 .hr-block-top {
   border-top: 1px solid #E0E2E5;
