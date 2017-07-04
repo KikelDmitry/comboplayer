@@ -83,9 +83,21 @@
                                 <li class="header-menu-item">
                                     <a href="http://tv.comboplayer.ru" class="header-menu-link external">Combo TV</a>
                                 </li>
+                                
                                 <li class="header-menu-item extra-item">
-                                    <a href="#" class="header-menu-link"><i class="fa fa-tv"></i>ТВ-программа</a>
+                                    <a href="#" class="header-menu-link"><i class="icon-tv"></i>ТВ-программа</a>
                                 </li>
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-video"></i>Видео</a>
+                                </li>
+                                <li class="header-menu-item extra-item">    
+                                    <a href="#" class="header-menu-link"><i class="icon-radio"></i>Радио</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="http://www.comboplayer.ru.vm" onclick="Reformal.widgetOpen();return false;" class="header-menu-link">Отзывы и предложения</a>
+                                </li>
+                                
                                 <!--<li class="header-menu-item extra-item">
                                     <a href="#" class="header-menu-link">Видео</a>
                                 </li>
@@ -109,7 +121,7 @@
                         <div class="col col-md-6">
                             <div class="nav content-menu">
                                 <ul>
-                                    <li class="active"><a href="#"><i class="icon-tv"></i>ТВ</a></li>
+                                    <li class="active"><a href="#"><i class="icon-tv"></i>ТВ-программа</a></li>
                                     <li><a href="#"><i class="icon-video"></i>Видео</a></li>
                                     <li><a href="#"><i class="icon-radio"></i>Радио</a></li>
                                 </ul>
@@ -259,7 +271,8 @@
 
 <div class="week-control-wrap">
     <div class='row'>
-        <div class='col-md-7'>
+        <!--<div class='col-md-7'>-->
+        <div class='col-md-12'>
             <div class="carousel slide" id="weekslide">
                 <div class="carousel-inner">
                     <div class="item active">
@@ -309,7 +322,7 @@
                     </div>
                 </div>
                 <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
-                <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
+                <a data-slide="next" href="#weekslide" class="week-control week-next right disabled"><i class="fa fa-angle-right"></i></a>
             </div>
         </div>
     </div>

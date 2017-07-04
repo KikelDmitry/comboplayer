@@ -224,6 +224,26 @@ p {
         
       }
     }
+      
+    &.extra-item {
+        display: none;
+        a {
+            i {
+                &:before {    
+                    content: "";
+                    display: inline-block;
+                    width: 20px;
+                    height: 20px;
+                    vertical-align: sub;
+                    background: url('@{images}content-sprites.png') no-repeat transparent;
+                }
+                &.icon-tv:before { background-position: -4px -75px; }
+                &.icon-video:before { background-position: -25px -75px; }
+                &.icon-radio:before { background-position: -46px -75px; }
+            }
+        }  
+    }  
+      
   }
   &-link {
     border: none;
@@ -239,6 +259,10 @@ p {
           padding-right: 5px;
           color: @color-brand;
       }
+      
+    
+      
+      
   }
 }
 .navbar {
@@ -1062,6 +1086,7 @@ textarea.form-control {
                 }
             }
         }
+
     }
     &-head {
         .tv-table-week {
@@ -1134,6 +1159,11 @@ textarea.form-control {
                         padding-left: 25px;
                         padding-right: 25px;
                         min-height: 40px;
+                        /*#14239*/
+                        float: left;
+                        width: auto;
+                        padding-right: 5px;
+                        /*/*/
                     }
                 }
                 &-prev {
@@ -1141,12 +1171,24 @@ textarea.form-control {
                     left: 0;
                     top: 0;
                     i { margin-right: 3px; }
+                    &.disabled > i:before { 
+                        color: #BFCED6; 
+                        cursor: default;
+                    }
                 }
                 &-next {
                     position: absolute;
                     right: 0;
                     top: 0;
                     i { margin-left: 3px; }
+                    &.disabled > i:before { 
+                        color: #BFCED6; 
+                        cursor: default;
+                    }
+                    /*#14239*/
+                    position: relative;
+                    float: left;
+                    /*/*/
                 }
                 
             }
@@ -1485,7 +1527,10 @@ textarea.form-control {
                     li {
                         font-weight: 400;
                         margin-bottom: 8px;
-                        a { text-decoration: none; }
+                        a { 
+                            text-decoration: none; 
+                            &:hover, &:focus { color: @color-blue; }
+                        }
                         span { margin-right: 5px; }
                         > img {
                             margin: 10px 0;
@@ -1950,6 +1995,10 @@ textarea.form-control {
         }
     }
     
+    &-single {
+        //zz1
+    }
+    
 }
 
 .video-filters {
@@ -2073,6 +2122,10 @@ textarea.form-control {
     #block-video-category {}
     #block-video-year {}
     #block-video-country {}
+}
+
+.video-single-sidebar {
+    //zz2
 }
 
 
@@ -2560,6 +2613,8 @@ textarea.form-control {
     
     .content-video .video-bar-item-title { font-size: 18px; }
     
+    .prog-info { display: none !important; }
+    
 }
 
 @media (max-width: @screen-xs-max) {
@@ -2622,17 +2677,15 @@ textarea.form-control {
             margin-left: 15px;
         }
     }
-      .extra-item {
+    .extra-item {
         display: block;
-          a {
-                /*padding: 5px 10px;
-                border: 1px solid #2aaae1;
-                margin-left: 15px;*/
-          }  
-          
-          
-      }
-  }
+        a {
+            /*padding: 5px 10px;
+            border: 1px solid #2aaae1;
+            margin-left: 15px;*/
+        }  
+    }
+}
     
   .header {
     padding-bottom: 0;
@@ -2714,7 +2767,19 @@ textarea.form-control {
     .tt-menu { min-width: inherit; }
     .content-tv-table-channel_cats { margin-top: 15px; }
 
-    
+    #reformal_tab { display: none !important; }
+    .content-tv-nav .container-fluid .row .col:first-child { display: none; }
+
+    /*#14239*/
+    .content-tv-head .tv-table-week .week-control-wrap .carousel-inner {
+        padding-top: 10px;
+    }
+    .content-tv-head .tv-table-week .week-next {
+        position: absolute;
+        float: none;
+    }
+    /*/*/
+
 }
 
 @media (max-width: 400px) {

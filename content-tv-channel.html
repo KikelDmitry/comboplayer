@@ -89,18 +89,12 @@
                     <div class="row">
                         <div class="col col-md-9">
                           
-                        <div class="channel-header  channel-header-top">
-                           <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
-                            <h1 class="content-tv-head-title tv-content-header">Пятый канал &mdash; программа передач</h1>
-                        </div>
-                        
-<!--<div class="channel-header">
-    <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
-    <h1 class="channel-header-text">Пятый канал &mdash; программа передач</h1>
-</div>-->
+                            <div class="channel-header  channel-header-top">
+                               <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
+                                <h1 class="content-tv-head-title tv-content-header">Пятый канал &mdash; программа передач</h1>
+                            </div>
                     
-                           
-                            <div class="nav tv-table-week">
+                            <!--<div class="nav tv-table-week">
                                 <ul>
                                     <li><a href="#">ВC</a></li>
                                     <li><a href="#">Вчера, ПН</a></li>
@@ -110,7 +104,75 @@
                                     <li><a href="#">ПТ</a></li>
                                     <li><a href="#">СБ</a></li>
                                 </ul>
+                            </div>-->
+                            
+<div class="nav tv-table-week">
+                            
+    <div class="tv-datepicker">
+        <div class="input-group" id="DatePicker">
+            <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
+        </div>
+    </div>
+
+    <div class="week-control-wrap">
+        <div class='row'>
+            <div class='col-md-12'>
+                <div class="carousel slide" id="weekslide">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                    <ul>
+                                        <li><a href="#">02, ПН</a></li>
+                                        <li><a href="#">03, ВТ</a></li>
+                                        <li><a href="#">04, СР</a></li>
+                                        <li><a href="#">05, ЧТ</a></li>
+                                        <li><a href="#">06, ПТ</a></li>
+                                        <li><a href="#">07, СБ</a></li>
+                                        <li><a href="#">08, ВС</a></li>
+                                    </ul>
+                                </div>
                             </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                    <ul>
+                                        <li><a href="#">ВC</a></li>
+                                        <li><a href="#">Вчера, ПН</a></li>
+                                        <li class="active"><a href="#">Сегодня</a></li>
+                                        <li><a href="#">Завтра, СР</a></li>
+                                        <li><a href="#">ЧТ</a></li>
+                                        <li><a href="#">ПТ</a></li>
+                                        <li><a href="#">СБ</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col col-md-4">
+                                    <ul>
+                                        <li><a href="#">15, ПН</a></li>
+                                        <li><a href="#">16, ВТ</a></li>
+                                        <li><a href="#">17, СР</a></li>
+                                        <li><a href="#">18, ЧТ</a></li>
+                                        <li><a href="#">19, ПТ</a></li>
+                                        <li><a href="#">20, СБ</a></li>
+                                        <li><a href="#">21, ВС</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
+                    <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+                           
+</div>
                             
                         </div>
                         <div class="col col-md-3">
