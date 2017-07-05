@@ -1532,7 +1532,15 @@ textarea.form-control {
                             &:hover, &:focus { color: @color-blue; }
                         }
                         span { margin-right: 5px; }
-                        > img {
+                        /*> img {
+                            margin: 10px 0;
+                            max-width: 50%;
+                            padding: 4px;
+                            display: block;
+                            background: #2AAAE1;
+                            .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
+                        }*/
+                        .channel-time-current > img {
                             margin: 10px 0;
                             max-width: 50%;
                             padding: 4px;
@@ -1563,6 +1571,9 @@ textarea.form-control {
                                 &[aria-expanded="true"] {
                                     &:after { content: "\f106"; }
                                 }
+                                &:hover, &:focus {
+                                    background-color: lighten(@color-steel, 30%);
+                                }
                             }
                         }
                     }
@@ -1574,6 +1585,10 @@ textarea.form-control {
                         li {
                             a { font-weight: 500; 
                                 span { font-weight: 600; }
+                                em {
+                                    font-weight: 500;
+                                    color: #4b5b65;
+                                }
                             }
                         }
                     }
@@ -1682,6 +1697,83 @@ textarea.form-control {
                 margin: 30px 0 15px;
                 font-weight: 400;
                 font-size: 15px;
+                
+                .channel-promo-tabs { 
+                    margin-bottom: 30px;
+                    .badge {}
+                    .tabs-left { position: relative; }
+                    .nav-tabs {
+                        float: left;
+                        border-bottom: 0;
+                        padding-top: 10px;
+                        text-align: center;
+                        li {
+                            float: none;
+                            margin: 0;
+                            a {
+                                margin-right: 0;
+                                border: 0;
+                                background-color: transparent;
+                                &:hover {}
+                            }
+                        }
+                        .fa { 
+                            color: #333; 
+                            cursor: pointer;                            
+                        }
+                        .active .fa { color: @color-blue; }
+                    }
+                    .nav-tabs > li {
+                        width: 36px;
+                        a {
+                            padding: 10px;
+                            background: #fff;
+                            position: relative;
+                            
+                        }
+                        &.active {
+                            a {
+                                border: 1px solid @color-steel !important;
+                                border-right-width: 0 !important;
+                                right: -1px;
+                                z-index: 1000;
+                                .radius(0px);
+                                -webkit-border-radius: 3px 0px 0px 3px;
+                                -moz-border-radius: 3px 0px 0px 3px;
+                                border-radius: 3px 0px 0px 3px;
+                                -webkit-box-shadow: 0px 0px 0px #000000;
+                                -moz-box-shadow: 0px 0px 0px #000000;
+                                box-shadow: 0px 0px 0px #000000;
+                                -webkit-box-sizing: content-box;
+                                -moz-box-sizing: content-box;
+                                box-sizing: content-box;
+                            }
+                        }
+                    }
+                    
+                    .nav-tabs>li.active>a,
+                    .nav-tabs>li.active>a:hover,
+                    .nav-tabs>li.active>a:focus { border: 0; }
+                    .tab-content {
+                        margin-left: 35px;
+                        .tab-pane {
+                            display: none;
+                            background-color: #fff;
+                            /*padding: 1.6rem;*/
+                            overflow-y: auto;
+                        }
+                        .active { 
+                            display: block;
+                            border-left: 1px solid @color-steel;
+                            padding-left: 10px;
+                            min-height: 92px;
+                        }
+                    }
+                    .channel-images img {
+                        margin-bottom: 0;
+                    }
+                }
+                    
             }
             &-images {
                 img {

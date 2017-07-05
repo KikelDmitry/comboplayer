@@ -8362,6 +8362,14 @@ textarea.form-control {
 .content-tv-channel .channel-stream ul li {
   font-weight: 400;
   margin-bottom: 8px;
+  /*> img {
+                            margin: 10px 0;
+                            max-width: 50%;
+                            padding: 4px;
+                            display: block;
+                            background: #2AAAE1;
+                            .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
+                        }*/
 }
 .content-tv-channel .channel-stream ul li a {
   text-decoration: none;
@@ -8373,7 +8381,7 @@ textarea.form-control {
 .content-tv-channel .channel-stream ul li span {
   margin-right: 5px;
 }
-.content-tv-channel .channel-stream ul li > img {
+.content-tv-channel .channel-stream ul li .channel-time-current > img {
   margin: 10px 0;
   max-width: 50%;
   padding: 4px;
@@ -8407,6 +8415,10 @@ textarea.form-control {
 .content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control[aria-expanded="true"]:after {
   content: "\f106";
 }
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control:hover,
+.content-tv-channel .channel-stream ul li.channel-stream-past .channel-stream-past-control:focus {
+  background-color: #ebf0f3;
+}
 .content-tv-channel .channel-stream-brief {
   padding-top: 30px;
 }
@@ -8418,6 +8430,10 @@ textarea.form-control {
 }
 .content-tv-channel .channel-stream-brief ul li a span {
   font-weight: 600;
+}
+.content-tv-channel .channel-stream-brief ul li a em {
+  font-weight: 500;
+  color: #4b5b65;
 }
 .content-tv-channel .channel-time {
   font-size: 15px;
@@ -8526,6 +8542,82 @@ textarea.form-control {
   margin: 30px 0 15px;
   font-weight: 400;
   font-size: 15px;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs {
+  margin-bottom: 30px;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .tabs-left {
+  position: relative;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs {
+  float: left;
+  border-bottom: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs li {
+  float: none;
+  margin: 0;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs li a {
+  margin-right: 0;
+  border: 0;
+  background-color: transparent;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs .fa {
+  color: #333;
+  cursor: pointer;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs .active .fa {
+  color: #1aafd0;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li {
+  width: 36px;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li a {
+  padding: 10px;
+  background: #fff;
+  position: relative;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li.active a {
+  border: 1px solid #8ba7ba !important;
+  border-right-width: 0 !important;
+  right: -1px;
+  z-index: 1000;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-border-radius: 3px 0px 0px 3px;
+  -moz-border-radius: 3px 0px 0px 3px;
+  border-radius: 3px 0px 0px 3px;
+  -webkit-box-shadow: 0px 0px 0px #000000;
+  -moz-box-shadow: 0px 0px 0px #000000;
+  box-shadow: 0px 0px 0px #000000;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li.active > a,
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li.active > a:hover,
+.content-tv-channel .channel-descr .channel-promo-tabs .nav-tabs > li.active > a:focus {
+  border: 0;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .tab-content {
+  margin-left: 35px;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .tab-content .tab-pane {
+  display: none;
+  background-color: #fff;
+  /*padding: 1.6rem;*/
+  overflow-y: auto;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .tab-content .active {
+  display: block;
+  border-left: 1px solid #8ba7ba;
+  padding-left: 10px;
+  min-height: 92px;
+}
+.content-tv-channel .channel-descr .channel-promo-tabs .channel-images img {
+  margin-bottom: 0;
 }
 .content-tv-channel .channel-images img {
   max-width: 100%;
