@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Styles -->
+    <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
+    <link rel="stylesheet" href="/css/app.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand logo">Project name</span>
+                        <p class="slogan">Бесплатный плеер видео и аудио</p>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div class="navbar-form navbar-right">
+                            <ul class="header-menu clearfix">
+                                <li class="header-menu-item">
+                                    <a href="#" class="header-menu-link">Авторизация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="contacts.html" class="header-menu-link">Регистрация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="http://tv.comboplayer.ru" class="header-menu-link external">Combo TV</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </div>
+        </header>
+        <section class="home-hero-video">
+           
+            <a class="overlay-link" href="#"></a>
+           
+            <div class="home-hero-video-content">
+                <div class="container-fluid">
+                    <div class="home-hero-video-text">
+                        <h1 class="home-hero-video-title hidden-xs">Смотрите бесплатно ТВ онлайн</h1>
+                        <a href="#" class="home-hero-video-btn">Скачать плеер бесплатно</a>
+                        <p class="home-hero-video-p hidden-xs">Версия: <span>1.2.2</span>. Размер: <span>80,9 Mb</span>.</p>
+                        <p class="home-hero-video-p small hidden-xs">Cистемные требования: <span><br>ОС Windows XP SP2 и выше, 1024 Мб ОЗУ, 350* Мб свободного пространства HDD</span> <br><em>* - для просмотра torrent видео потребуется свободное место на диске равное размеру просматриваемого видео)</em></p>
+                        <p class="home-hero-video-p small download-count hidden-xs">Скачали <strong>9653</strong> раз</p>
+                    </div>
+                </div>
+            </div>
+            <img src="/images/bg-player2.jpg" height="auto" width="100%" alt=""><!-- Удалить данную картинку, когда будет видео. Код ниже для видео, его раскомментировать -->
+            <!-- <video class="home-hero-video-item hidden-xs" autoplay="autoplay" loop="loop" poster="http://www.bravart.ru/images/poster.png"><source src="http://www.bravart.ru/images/videos/bravart_bg.mp4" type="video/mp4"></video>
+            <div class="home-hero-video-item visible-xs"><img src="/images/bg-player2.jpg" width="100%"></div> -->
+        </section>
+        <main class="content">
+            <div class="container-fluid">
+               
+                <div class="screenshots-list container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2 col-sm-2 col-6">
+                            <h3>Снимки экрана</h3>
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-6 col-6">
+                            <a href="#" title="Combo Player"><img src="/images/comboplayer-screenshot-01.jpg" class="thumbnail img-responsive"></a>
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-6 col-6">
+                            <a href="#" title="Combo Player"><img src="/images/comboplayer-screenshot-02.jpg" class="thumbnail img-responsive"></a>
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-6 col-6">
+                            <a href="#" title="Combo Player"><img src="/images/comboplayer-screenshot-03.jpg" class="thumbnail img-responsive"></a>
+                        </div>
+                        <div class="col-lg-2 col-sm-2 col-xs-6 col-6">
+                            <a href="#" title="Combo Player"><img src="/images/comboplayer-screenshot-04.jpg" class="thumbnail img-responsive"></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="function-list">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-4"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/watch-tv-online">Программа для просмотра онлайн ТВ</a></h2>
+                                    <p class="function-list-item-desc">ComboPlayer — программа, которая поможет вам смотреть ТВ онлайн в любом удобном месте и в любое удобное время.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-6"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/subtitles">Поддержка субтитров</a></h2>
+                                    <p class="function-list-item-desc">Субтитры — очень полезная и востребованная функция, необходимая как людям со слабым слухом, так и тем, кто изучает иностранные языки. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-8"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/watch-torrent-video">Просмотр Torrent-видео без ожидания загрузки</a></h2>
+                                    <p class="function-list-item-desc">Чтобы посмотреть сериал, фильм, мультфильм или любимое шоу, зачастую необходимо установить торрент-клиент и долго ждать скачивания контента.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-7"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/personal-account">Доступ к личной медиатеке с разных устройств</a></h2>
+                                    <p class="function-list-item-desc">Одно из главных удобств ComboPlayer — доступ к личной медиатеке с разных устройств: ноутбука, компьютера и моноблока на Windows.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-1"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/audio-video-support">Поддержка всех популярных аудио- и видеоформатов</a></h2>
+                                    <p class="function-list-item-desc">Для комфортной работы и экономии времени пользователей ComboPlayer уже включает в себя все необходимые и актуальные аудио- и видеокодеки.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-3"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/video-streaming">Воспроизведение потокового видео: веб-камеры, ТВ, видеонаблюдение</a></h2>
+                                    <p class="function-list-item-desc">Благодаря программе ComboPlayer компьютер без труда сможет заменить телевизор. </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-5"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/internet-radio">Прослушивание интернет-радио</a></h2>
+                                    <p class="function-list-item-desc">Слушать радио в ComboPlayer очень удобно — вы можете заниматься своими делами, работать и читать новости, а радио будет играть в фоновом режиме.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <div class="function-list-item clearfix">
+                                <i class="icon-function-2"></i>
+                                <div class="function-list-item-body">
+                                    <h2 class="function-list-item-title"><a href="http://www.comboplayer.ru/article/interface">Удобный интерфейс</a></h2>
+                                    <p class="function-list-item-desc">ComboPlayer настроен и оптимизирован таким образом, чтобы пользователь мог приступить к работе с программой без лишних настроек.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="container-fluid">
+              <div class="row">
+                  <div class="col-md-6">
+                        <div class="download-link-bottom">
+                            <p><a href="#">Cкачать плеер бесплатно!</a></p>
+                            <p>Чтобы скачать плеер нажмите на кнопку выше.</p>
+                        </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="ext-widget">
+                           
+                            <!-- код виджета -->
+                            <!--<script type="text/javascript" src="//vk.com/js/api/openapi.js?130"></script>
+                            <div id="vk_groups"></div>
+                            <script type="text/javascript">
+                            VK.Widgets.Group("vk_groups", {mode: 3, width: "385", height: "400", color1: 'FFFFFF', color2: '888888', color3: '#75A01C'}, 129805008);
+                            </script>-->
+                           
+                            <!-- пример расположения -->
+                            <iframe name="fXD9a535" frameborder="0" src="https://vk.com/widget_community.php?app=0&amp;width=385px&amp;_ver=1&amp;gid=129805008&amp;mode=3&amp;color1=FFFFFF&amp;color2=888888&amp;color3=%2375A01C&amp;class_name=&amp;url=https%3A%2F%2Fvk.com%2Fdev%2FCommunity%3Fheight%3D400%26link%3Dhttp%253A%252F%252Fvk.com%252Fcomboplayer%26mode%3D3%26oid%3D-129805008%26wide%3D%26width%3D385&amp;referrer=http%3A%2F%2Frm.ekance.com%2Fissues%2F13415&amp;title=%D0%92%D0%B8%D0%B4%D0%B6%D0%B5%D1%82%20%D0%B4%D0%BB%D1%8F%20%D1%81%D0%BE%D0%BE%D0%B1%D1%89%D0%B5%D1%81%D1%82%D0%B2%20%7C%20%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0%D0%BC%20%7C%20%D0%92%D0%9A%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D0%B5&amp;15794ae0e01" width="590" height="182" scrolling="no" id="vkwidget15" style="overflow: hidden; height: 222px;"></iframe>
+                      </div>
+                  </div>
+              </div>
+            </div>   
+            
+        </main>
+        <footer class="footer">
+            <div class="container-fluid">
+               
+                <!--<div class="row">
+                    <div class="col-sm-6 col-xs-12">
+                        <span>©&nbsp;OOO «РОСТПЭЙ» | <i class="fa fa-envelope-o"></i> <a onclick="yaCounter38016245.reachGoal('email'); return true;" href="mailto:info@comboplayer.ru">info@comboplayer.ru</a></span>
+                    </div>
+                </div>-->
+                
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <p>
+                            <a href="http://www.rudorogi.ru/go/?url=http%3A%2F%2Fwww.rostpay.ru%2F&amp;hash=862124ed4de23f7db193e79e37d4bd83" target="_blank" rel="nofollow"><strong>ООО &copy; &laquo;РОСТПЭЙ&raquo;, 2016</strong></a><br>
+                            344011, г. Ростов-на-Дону, пер. Доломановский, <br>
+                            д. 70Д, оф. 1 (10 этаж) <br>
+                            ОГРН: 1086168004669 <br>
+                            ИНН/КПП: 6168024612 / 616401001 <br>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i>&nbsp;+7 (863) 280-00-12 <br>
+                            <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@comboplayer.ru">info@comboplayer.ru</a>
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Партнерам</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Интеграторам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Сайтам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Магазинам</a>
+                            </li>
+                            <!--<li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Приведи друга</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Продукты</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://comboplayer.ru">Бесплатный медиаплеер</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://tv.comboplayer.ru">IP ТВ</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="#">Радио</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Мы с соцсетях</strong></p>
+                        <ul class="footer-menu social">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="https://vk.com/comboplayer"><i class="fa fa-vk"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Помощь</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Добавить канал</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Правообладателям</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+    
+    <div id="screenModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">×</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $('.thumbnail').click(function(){
+            $('.modal-body').empty();
+            var title = $(this).parent('a').attr("title");
+            $('.modal-title').html(title);
+            $($(this).parents('div').html()).appendTo('.modal-body');
+            $('#screenModal').modal({show:true});
+        });
+    </script>
+    
+</body>
+</html>
