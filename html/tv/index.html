@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- Styles -->
+    <!--<link rel="stylesheet/less" href="/css/tv.css" />-->
+    <link rel="stylesheet" href="/css/tv.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <style type="text/css">
+        #reformal_tab {
+            display: block;
+            font-size: 0;
+            background-color: #f95c29 !important;
+            line-height: 0;
+            cursor: pointer;
+            z-index: 100001;
+            left: 0;
+            margin-top: -117.5px;
+            position: fixed;
+            top: 50%;
+            border: 2px solid #f95c29;
+            padding: 10px 4px 10px 4px;
+            border-left: 0;
+            background: #f95c29 url(https://media.reformal.ru/widgets/v3/gl.png) 0 0 repeat-y;
+            -webkit-border-radius: 0 5px 5px 0;
+            -moz-border-radius: 0 5px 5px 0;
+            border-radius: 0 5px 5px 0;
+            -moz-box-shadow: 1px 0 2px #888;
+            -webkit-box-shadow: 1px 0 2px #888;
+            box-shadow: 1px 0 2px #888;
+        }
+    </style>
+    <a id="reformal_tab" href="http://www.comboplayer.ru" onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();" onmouseout="Reformal.widgetAbortPreload();"><img src="https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/2a94cfe6511106e7a48d0af3904e3090/left/1/tab.png" alt=""></a>
+   
+    <div class="page">
+        <header class="header">
+            <div class="container-fluid">
+                <div class="row">
+                   
+                    <div class="col-xs-12">
+                        <h1><a class="logo" href="#">COMBO TV</a></h1>
+                    </div>
+                    
+                    <!--<div class="col-md-3 col-sm-6 col-xs-12">
+                        <a class="logo" href="#">COMBO TV</a>
+                    </div>-->
+                    
+                    <!--<div class="col-md-3 col-sm-6 col-xs-12">
+                        <span class="header-phone">8 (900) 436-22-12</span>
+                    </div>-->
+                    
+                    <!--<div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="header-link-ext">
+                            <a href="http://www.comboplayer.ru/">Combo Player</a>
+                        </div>
+                    </div>-->
+                    
+                    <!--<div class="col-md-3 col-sm-12 col-xs-12">
+                        <div class="log-reg">
+                            <a href="http://www.comboplayer.ru/login" class="btn btn-default btn-sm">Вход</a>
+                            <a href="http://www.comboplayer.ru/register" class="btn btn-primary btn-sm">Регистрация</a>
+                            <div class="username pull-right">
+                                <span>user</span><a class="log-off btn btn-default btn-sm" href="http://www.comboplayer.ru/logout">Выйти</a>
+                            </div>
+                        </div>
+                    </div>-->
+                    
+                </div>
+            </div>
+        </header>
+        
+        <div class="tariffs-choice">
+            <a name="choose-tariff"></a>
+                <div class="container-fluid">
+                    <div class="contain">
+                        <h2 class="mb-10">Тарифы Онлайн-ТВ Comboplayer</h2>
+                        <p>Для просмотра онлайн-ТВ необходимо оформить подписку на один тарифов.</p>
+                        <div class="row">
+                            <div class="col-lg-4 col-lg-offset-2 col-md-5 col-sm-6 col-xs-12 col-md-offset-1">
+                               
+                                <div class="tariffs-choice-block first">
+                                    <h3>
+                                        <span class="tariffs-choice-block-title">Тариф <strong>&laquo;Основной&raquo;</strong></span>
+                                    </h3>
+                                    
+                                    <div class="tariffs-choice-price">
+                                        <span class="tariffs-choice-price-num">450<sup><i class="fa fa-rub" aria-hidden="true"></i></sup></span>
+                                        
+                                        <!--<span class="tariffs-choice-price-period">/ в&nbsp;месяц</span>-->
+                                        
+                                        <div class="trial-switch">
+                                           
+                                            <!--<div class="btn-group btn-toggle">
+                                                <button class="btn btn-xs btn-primary active">в месяц</button>
+                                                <button class="btn btn-xs btn-default">в день</button>
+                                            </div>-->
+                                            
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-primary active btn-xs">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>месяц
+                                                </label>
+                                                <label class="btn btn-primary btn-xs">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">день
+                                                </label>
+                                            </div>      
+                                            
+                                        </div>
+                                        
+                                        <div class="tariffs-choice-payment">
+                                            <span class="visa"></span>
+                                            <span class="visa-ver"></span>
+                                            <span class="mc"></span>
+                                            <span class="mc-ver"></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <!--<div class="tariffs-choice-payment">
+                                        <span class="visa"></span>
+                                        <span class="visa-ver"></span>
+                                        <span class="mc"></span>
+                                        <span class="mc-ver"></span>
+                                    </div>-->
+                                    
+                                    <ul class="tariffs-choice-list">
+                                       
+                                        <!--<li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Каналов в тарифе</span>
+                                            <span class="tariffs-choice-item-num">93</span>
+                                        </li>-->
+                                        
+                                        <li class="tariffs-choice-item">                                      
+                                            <span class="tariffs-choice-item-name">
+                                                <span class="tariffs-choice-item additional" data-toggle="collapse" data-target="#demo1">Каналов в тарифе<i class="fa fa-question-circle-o" data-toggle="tooltip" data-placement="top" title="" data-original-title="Сколько базовых каналов доступно в тарифе"></i></span></span>
+                                            <span class="tariffs-choice-item-num" data-toggle="collapse" data-target="#demo1">119</span>
+                                            <p class="additional-list collapse" id="demo1">Эти каналы доступны сразу при оформлении тарифного плана</p>
+                                        </li>
+                                        
+                                        <!--<li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Пакеты <i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="В пакете представлены каналы одной тематики"></i></span>
+                                            <span class="tariffs-choice-item-num">10</span>
+                                        </li>-->
+                                        
+                                        <li class="tariffs-choice-item">                                      
+                                            <span class="tariffs-choice-item-name">
+                                                <span class="tariffs-choice-item additional" data-toggle="collapse" data-target="#demo2">Можно подключить дополнительно<i class="fa fa-question-circle-o" data-toggle="tooltip" data-placement="top" title="" data-original-title="Сколько еще каналов можно подключить дополнительно к базовым в тарифе"></i></span></span>
+                                            <span class="tariffs-choice-item-num" data-toggle="collapse" data-target="#demo2">14</span>
+                                            
+                                            <ul class="additional-list collapse" id="demo2">
+                                                <li>Можно добавить при оформлении</li>
+                                                <li>
+                                                    Пакет "НТВ+ Наш Футбол - <strong>1 канал (+100 руб)</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "AMEDIA PREMIUM - <strong>1 канал (+200 руб)</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "Для взрослых - <strong>4 канала (+200 руб)</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "НТВ+ ФУТБОЛ HD - <strong>3 канала (+200 руб)</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "НАСТРОЙ КИНО - <strong>5 каналов (+200 руб)</strong>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Можно смотреть на <span class="tariffs-choice-item-num pos-stat">5</span> разных устройствах одновременно </span>
+                                        </li>
+                                        
+                                        <!--<li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Можно смотреть на <span class="tariffs-choice-item-num pos-stat">5</span> разных устройствах одновременно</span>
+                                        </li>-->
+                                        
+                                    </ul>
+                                    
+                                    <a href="#" class="btn btn-primary btn-md">Оформить подписку</a>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-4 col-md-5 col-sm-6 col-xs-12">
+                               
+                                <!--<div class="tariffs-choice-block">
+                                    <span class="tariffs-choice-block-title">Тариф <strong>&laquo;Ваш выбор&raquo;</strong></span>
+                                    <div class="tariffs-choice-price">
+                                        <span class="tariffs-choice-price-num">150<sup><i class="fa fa-rub" aria-hidden="true"></i></sup></span>
+                                        <span class="tariffs-choice-price-period">/ в&nbsp;месяц</span>
+                                    </div>
+                                    <ul class="tariffs-choice-list">
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Каналы</span>
+                                            <span class="tariffs-choice-item-num">68</span>
+                                        </li>
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Пакеты <i class="fa fa-question-circle-o" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="В пакете представлены каналы одной тематики"></i></span>
+                                            <span class="tariffs-choice-item-num">7</span>
+                                        </li>
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name"><span class="tariffs-choice-item additional">Дополнительные пакеты</span><i class="fa fa-question-circle-o" data-toggle="tooltip" data-placement="top" title="" data-original-title="Могут быть подключены дополнительно"></i></span>
+                                            <span class="tariffs-choice-item-num">8</span>
+                                        </li>
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Устройства</span>
+                                            <span class="tariffs-choice-item-num">3</span>
+                                        </li>
+                                    </ul>
+                                    <a href="#" class="btn btn-primary btn-md">Выбрать</a>
+                                </div>-->
+                                
+                                <div class="tariffs-choice-block">
+                                   
+                                    <h3>
+                                        <span class="tariffs-choice-block-title">Тариф <strong>&laquo;Ваш выбор&raquo;</strong></span>
+                                    </h3>
+                                    
+                                    <div class="tariffs-choice-price">
+                                        <span class="tariffs-choice-price-num">150<sup><i class="fa fa-rub" aria-hidden="true"></i></sup></span>
+                                        
+                                        <!--<span class="tariffs-choice-price-period">/ в&nbsp;месяц</span>-->
+                                        
+                                        <div class="trial-switch">
+                                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                                <label class="btn btn-primary active btn-xs">
+                                                    <input type="radio" name="options" id="option1" autocomplete="off" checked>месяц
+                                                </label>
+                                                <label class="btn btn-primary btn-xs">
+                                                    <input type="radio" name="options" id="option2" autocomplete="off">день
+                                                </label>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="tariffs-choice-payment">
+                                            <span class="visa"></span>
+                                            <span class="visa-ver"></span>
+                                            <span class="mc"></span>
+                                            <span class="mc-ver"></span>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <!--<div class="tariffs-choice-payment">
+                                        <span class="visa"></span>
+                                        <span class="visa-ver"></span>
+                                        <span class="mc"></span>
+                                        <span class="mc-ver"></span>
+                                    </div>-->
+                                    
+                                    <ul class="tariffs-choice-list">
+                                        
+                                        <li class="tariffs-choice-item">                                      
+                                            <span class="tariffs-choice-item-name">
+                                                <span class="tariffs-choice-item additional" data-toggle="collapse" data-target="#demo3">Каналов в тарифе<i class="fa fa-question-circle-o" data-toggle="tooltip" data-placement="top" title="" data-original-title="Сколько базовых каналов доступно в тарифе"></i></span></span>
+                                            <span class="tariffs-choice-item-num" data-toggle="collapse" data-target="#demo3">93</span>
+                                            <p class="additional-list collapse" id="demo3">Эти каналы доступны сразу при оформлении тарифного плана</p>
+                                        </li>
+                                        
+                                        <li class="tariffs-choice-item">                                      
+                                            <span class="tariffs-choice-item-name">
+                                                <span class="tariffs-choice-item additional" data-toggle="collapse" data-target="#demo4">Можно подключить дополнительно<i class="fa fa-question-circle-o" data-toggle="tooltip" data-placement="top" title="" data-original-title="Сколько еще каналов можно подключить дополнительно к базовым в тарифе"></i></span></span>
+                                            <span class="tariffs-choice-item-num" data-toggle="collapse" data-target="#demo4">40</span>
+                                            
+                                            <ul class="additional-list collapse" id="demo4">
+                                                <li>
+                                                    Пакет "Спорт" - <strong>7 каналов</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "НТВ+ Наш Футбол" - <strong>1 канал</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "AMEDIA PREMIUM" - <strong>1 канал</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "Мир вокруг нас" - <strong>8 каналов</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "Для взрослых" - <strong>4 канала</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "Киномир" - <strong>11 каналов</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "НТВ+ ФУТБОЛ HD" - <strong>3 канала</strong>
+                                                </li>
+                                                <li>
+                                                    Пакет "НАСТРОЙ КИНО" - <strong>5 каналов</strong>
+                                                </li>
+                                            </ul>
+                                            
+                                        </li>
+                                        
+                                        <li class="tariffs-choice-item">
+                                            <span class="tariffs-choice-item-name">Можно смотреть на <span class="tariffs-choice-item-num pos-stat">3</span> разных устройствах одновременно </span>
+                                        </li>
+
+                                    </ul>
+                                    
+                                    <a href="#" class="btn btn-primary btn-md">Оформить подписку</a>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <!--<section class="home-hero">
+            <div class="container-fluid">
+                <div class="contain">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-10 col-xs-12">
+                            <h1 class="title-br">Онлайн-ТВ:<br> новая эра телевидения</h1>
+                            <p class="home-hero-text">&laquo;COMBO TV&raquo;&nbsp;&mdash; не&nbsp;просто онлайн-телевизор, но&nbsp;и&nbsp;большое количество преимуществ, которые сделают просмотр любимых телепередач максимально удобным и&nbsp;комфортным.</p>
+                            <a href="#choose-tariff" class="btn btn-lg btn-primary">Выбрать тариф</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+        
+        <main class="content">
+            <section class="different-devices">
+                <div class="container-fluid">
+                    <div class="contain">
+                        <div class="row">
+                            <div class="col-sm-10 col-xs-12 col-sm-offset-1">
+                                <h2 class="title-br center">20 бесплатных каналов из 133</h2>
+                                <p class="different-devices-text">Если вы используете приложение ComboPlayer, то вам доступно 20 бесплатных каналов в SD качестве. Необходим интернет со скоростью не менее 3 Мбит/сек.</p>
+                            </div>
+                        </div>
+                        <!--<div class="row">
+                            <div class="col-sm-3 col-xs-12 different-devices-item">
+                                <div class="iconbg-wh">
+                                    <i class="fa fa-television" aria-hidden="true"></i>
+                                </div>
+                                <span class="different-devices-title">Приложение для&nbsp;Smart&nbsp;TV</span>
+                            </div>
+                            <div class="col-sm-3 col-xs-12 different-devices-item">
+                                <div class="iconbg-wh">
+                                    <i class="fa fa-tablet" aria-hidden="true"></i>
+                                </div>
+                                <span class="different-devices-title">Приложение для&nbsp;IOS (смартфоны и&nbsp;планшеты)</span>
+                            </div>
+                            <div class="col-sm-3 col-xs-12 different-devices-item">
+                                <div class="iconbg-wh">
+                                    <i class="fa fa-building-o" aria-hidden="true"></i>
+                                </div>
+                                <span class="different-devices-title">Приставка для&nbsp;просмотра</span>
+                            </div>
+                            <div class="col-sm-3 col-xs-12 different-devices-item">
+                                <div class="iconbg-wh">
+                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                </div>
+                                <span class="different-devices-title">Приложение для&nbsp;PC</span>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
+            </section>
+            <section class="paid-version">
+                <div class="container-fluid">
+                    <div class="contain">
+                        <div class="row">
+                            <div class="col-sm-10 col-xs-12 col-sm-offset-1">
+                                <p class="lead">Хотите смотреть больше?  Оформите платную подписку на онлайн-ТВ и получите возможность расширить количество каналов и улучшить и качество.</p>
+                            </div>
+                        </div>
+                        <h2 class="h3 mb-60 title-orange-br"><span>Платная подписка дает преимущества</span></h2>
+                        <div class="row">
+                            <div class="col-sm-6 col-xs-12 paid-version-item">
+                                <div class="paid-version-icon">
+                                    <!--<i class="fa fa-picture-o" aria-hidden="true"></i>-->
+                                    <i class="img-picture-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="paid-version-item-desc">Изображение в формате высокой четкости (HD), которое обеспечивает отличную картинку как на гаджете, так и на большом экране.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 paid-version-item">
+                                <div class="paid-version-icon">
+                                    <!--<i class="fa fa-building-o" aria-hidden="true"></i>-->
+                                    <i class="img-building-o" aria-hidden="true"></i>
+                                </div>
+                                <p class="paid-version-item-desc">Поддержка всех современных устройств: ТВ-приставок, IPhone, телевизоров Samsung с функцией Smart TV, компьютеров Windows 7 и выше, а также планшетов под управлением Windows10 и Mac OS.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 paid-version-item">
+                                <div class="paid-version-icon">
+                                    <!--<i class="fa fa-laptop" aria-hidden="true"></i>-->
+                                    <i class="img-laptop" aria-hidden="true"></i>
+                                </div>
+                                <p class="paid-version-item-desc">Одновременный просмотр ТВ на разных устройствах в разных комнатах. Вам сериалы и футбол, детям — мультфильмы.</p>
+                            </div>
+                            <div class="col-sm-6 col-xs-12 paid-version-item">
+                                <div class="paid-version-icon">
+                                    <!--<i class="fa fa-list-alt" aria-hidden="true"></i>-->
+                                    <i class="img-list-alt" aria-hidden="true"></i>
+                                </div>
+                                <p class="paid-version-item-desc">Вы также можете купить одну подписку на несколько семей и экономить на оплате онлайн-ТВ.</p>
+                            </div>
+                        </div>
+                        
+                        <!--<div class="row">
+                            <div class="col-sm-10 col-sm-offset-1 col-xs-12">
+                                <div class="paid-version-total">
+                                    Оплаченный тариф или пакет будет доступен на&nbsp;любом устройстве, включая Smart&nbsp;TV, приставку, планшет и&nbsp;даже смартфон. Для подключения достаточно ввести логин и&nbsp;пароль, которые вы&nbsp;получите после оплаты.
+                                </div>
+                            </div>
+                        </div>-->
+                        
+                    </div>
+                </div>
+            </section>
+                        
+        </main>
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="footer-contain">
+                    <div class="row">
+                        <div class="col-sm-6 col-xs-12">
+                            <span class="footer-copyright">&copy;&nbsp;Combo TV, 2016-2017</span>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                            <ul class="footer-menu clearfix">
+                                <li class="footer-menu-item">
+                                    <a href="#" class="footer-menu-link">О компании</a>
+                                </li>
+                                <li class="footer-menu-item">
+                                    <a href="#" class="footer-menu-link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+       
+    <script type="text/javascript">
+        $('.btn-toggle').click(function() {
+            $(this).find('.btn').toggleClass('active');  
+            if ($(this).find('.btn-primary').size()>0) {
+                $(this).find('.btn').toggleClass('btn-primary');
+            }
+            $(this).find('.btn').toggleClass('btn-default');
+        });
+    </script>
+        
+</body>
+</html>
