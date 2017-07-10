@@ -2155,45 +2155,40 @@ textarea.form-control {
         cursor: pointer;
         .trans();
         .radius(2px);
-        span {
-          padding-left: 11px;
-          cursor: pointer;
-          position: relative;
-          &:hover {
-            color: @color-brand;
-            &:before {
-              display: inline-block;
-              font-family: "FontAwesome";
-              content: "\f067";
+
+        input[type="checkbox"] {
+          display: none;
+
+          & + label {
+            padding-left: 26px;
+            display: inline;
+            font-weight: normal;
+            cursor: pointer;
+            position: relative;
+            &:hover {
               color: @color-brand;
-              font-size: 11px;
-              padding-right: 3px;
-              position: absolute;
-              left: 0;
-              top: 5px;
             }
-          }
-        }
-        &.active {
-          background: @color-brand;
-          color: #fff;
-          span {
-            padding: 1px 6px;
-            /*padding-left: 0;*/
+
             &:before {
+              border: solid 1px #d8d8d8;
+              border-radius: 2px;
+              content: ' ';
               display: inline-block;
+              background: #fff;
+              height: 16px;
+              left: 0;
+              position: absolute;
+              top: 2px;
+              width: 16px;
               font-family: "FontAwesome";
-              content: "\f00d";
-              color: #fff;
-              font-size: 11px;
-              padding-right: 3px;
-              position: relative;
-              top: -1px;
+              color: @color-brand;
+              padding: 2px 2px;
+              font-size: 8pt;
             }
-            &:hover { color: #fff; }
           }
-          &:hover {
-            background-color: lighten(@color-steel, 15%);
+
+          &:checked + label:before {
+            content: '\f00c';
           }
         }
         &.default {
