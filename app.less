@@ -27,9 +27,10 @@
 @color-green: #5f8f31;
 @color-purple: #c161c5;
 @color-blue-dark: #2077e2;
-@color-brown: #9e633b;
+@color-brown: #9e633b; 
 
-@images: "/images/";
+/*@images: "/images/";*/
+@images: "../images/";
 /*@images-sprites: "@{images}sprites/";*/
 
 .no-outline {outline: none;}
@@ -259,9 +260,6 @@ p {
       padding-right: 5px;
       color: @color-brand;
     }
-
-
-
 
   }
 }
@@ -2087,10 +2085,9 @@ textarea.form-control {
     }
   }
 
-  &-single {
-    //zz1
+&-single {
+        //zz1
   }
-
 }
 
 .video-filters {
@@ -2215,6 +2212,33 @@ textarea.form-control {
   #block-video-category {}
   #block-video-year {}
   #block-video-country {}
+    
+    #filter-submit {
+        width: 100%;
+        position: static;
+        margin-top: 5px;
+        button {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        button:first-child {
+            background-color: @color-blue;
+            border-color: @color-blue;
+            max-width: 74%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            &:hover,
+            &:active { background-color: darken(@color-blue, 5%); }
+        }
+        button:nth-child(2) { 
+            margin-left: 5px;
+            span { font-size: 17px; }
+            background-color: lighten(@color-steel-dark, 10%);
+            border-color: lighten(@color-steel-dark, 10%);
+            &:hover,
+            &:active { background-color: darken(@color-steel-dark, 5%); }
+        }
+    }
 }
 
 .video-single-sidebar {
