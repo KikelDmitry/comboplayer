@@ -2222,10 +2222,11 @@ textarea.form-control {
         }
         &-title {
             display: inline-block;
-            + p {
-                display: inline-block;
+            span {
+                /*display: inline-block;*/
                 font-size: 20px;
                 margin-left: 15px;
+                font-weight: 400;
             }
         }
         
@@ -2281,11 +2282,6 @@ textarea.form-control {
             background-color: #d8e1e7;
             padding-left: 30px;
             padding-right: 30px;
-            .channel-epg {
-                .channel-header programm-header {
-                    margin-bottom: 15px;
-                }
-            }
             .video-sub-header { 
                 margin-top: 0; 
                 padding-top: 20px;
@@ -2295,6 +2291,9 @@ textarea.form-control {
                 font-size: 22px;
                 font-weight: 600;
                 margin-bottom: 20px;
+            }
+            .channel-header-text {
+                a { border-bottom: 2px solid @color-link; }
             }
         }
         
@@ -2328,22 +2327,153 @@ textarea.form-control {
             }
         }
         
-        &.sidebar {
-            .video-single-sidebar {
-                &-rate {}
-                &-info {}
-                &-related {
-                    .video-related {
-                        &-also {}
-                        &-regia {}
+    }
+}
+
+.video-single-sidebar {
+    padding-top: 30px;
+    .video-single-sidebar {
+        &-rate {
+            .sidebar-poster {
+                > img { width: 100%; }
+            }
+            .db-rate {
+                border-top: 2px solid #79ae0b;  
+                /*padding-top: 15px;*/
+                font-weight: 400; 
+                div {
+                    position: relative;
+                    text-align: center;
+                    strong {
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: @color-steel-dark;
+                        display: block;
+                    }
+                    span {
+                        color: @color-steel-dark;
+                        font-size: 11px;
+                        display: block;
+                        /*margin-top: 40px;*/
+                    }
+                    &:before {
+                        content: "";
+                        /*position: absolute;*/
+                        position: relative;
+                        background: url('@{images}content-sprites.png') no-repeat transparent;
+                        /*display: block;*/
+                        display: inline-block;
+                        /*top: 0;
+                        left: 0;*/
+                    }
+                    &.kinopoisk {
+                        &:before {
+                            width: 32px;
+                            height: 32px;
+                            background-position: -4px -99px;
+                            /*top: 30px;
+                            left: 24px;*/
+                        }
+                    }
+                    &.imdb {
+                        &:before {
+                            width: 60px;
+                            height: 31px;
+                            background-position: -40px -100px;
+                            /*top: 30px;
+                            left: 8px;*/
+                        } 
                     }
                 }
+                .col {
+                    padding: 0;
+                    position: relative;
+                }
+            }
+            .db-cash {
+                border-top: 2px solid #cdd7dd;
+                padding-top: 15px;
+                margin-top: 15px;
+                dl {
+                    font-size: 14px;
+                    color: @color-steel-dark;
+                    dt {
+                        font-weight: 400;
+                    }
+                    dd {
+                        font-weight: 600;
+                    }
+                    margin-bottom: 5px;
+                }
+            }
+        }
+        &-info {
+            border-top: 2px solid #cdd7dd;
+            padding-top: 15px;
+            margin-top: 10px;
+            ul {
+                font-size: 14px;
+                color: @color-steel-dark;
+                li {
+                    font-weight: 600;
+                    span { font-weight: 400; }
+                } 
+            }
+        }
+        &-related {
+           .video-related-header {
+               font-size: 20px;
+               font-weight: 600;
+               padding-top: 15px;
+               position: relative;
+               line-height: normal;
+               color: @color-steel-dark;
+               &:before {
+                   content: "";
+                   position: absolute;
+                   display: block;
+                   width: 64px;
+                   height: 2px;
+                   background-color: #79ae0b;
+                   top: 0;
+                   left: 0;
+               }
+           }
+            
+            .video-related-slider {
+                .carousel {
+                    overflow: hidden;
+                    position: relative;
+                    width: 100%;
+                    /*height: 400px;*/
+                    height: 300px;
+                    perspective: 500px;
+                    transform-style: preserve-3d;
+                    transform-origin: 0% 50%;
+                    .carousel-item {
+                        display: none;
+                        width: 200px;
+                        height: 200px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        margin-top: -50px;
+                        & > img {
+                            width: 100%;
+                        }
+                    }
+                    &.scrolling .carousel-item .materialboxed,
+                    .carousel-item:not(.active) .materialboxed {
+                        pointer-events: none;
+                    }
+                }
+                    
             }
             
+            > div { margin-bottom: 15px; }
+           &-also {}
+           &-regia {}
         }
-        
-        //zz1
-        
     }
 }
 
@@ -2534,11 +2664,6 @@ textarea.form-control {
         
     }
 }
-
-.video-single-sidebar {
-  //zz2
-}
-
 
 .hr-block {
   &-top {
