@@ -13,7 +13,6 @@
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <!-- Styles -->
-    <!--<link rel="stylesheet" href="styles/css/styles.css" />-->
     <link rel="stylesheet" href="../../less/app.css" />
 
     <!-- Scripts -->
@@ -21,7 +20,9 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!--<script type="text/javascript" src="js/script.js"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    
 </head>
 <body>
    
@@ -101,7 +102,7 @@
                 
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col col-md-6">
+                        <div class="col col-md-7">
                             <div class="nav content-menu">
                                 <ul>
                                     <li><a href="#"><i class="icon-tv"></i>ТВ-программа</a></li>
@@ -110,7 +111,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col col-md-6">
+                        <div class="col col-md-5">
                             <div class="download-link">
                                 <a href="btn btn-primary">Скачать плеер бесплатно!</a>
                             </div>
@@ -126,14 +127,13 @@
                  
                     <div class="row">
                        
-                        <div class="col col-md-9">
-                            <h1 class="content-video-single-title content-video-head-title">Девушка из Монако / The girl from Monaco</h1>
-                            <p>2008, Франция</p>
+                        <div class="col col-md-12">
+                            <h1 class="content-video-single-title content-video-head-title">Девушка из Монако / The girl from Monaco <span>2008, Франция</span></h1>
                         </div> 
                         
                         <div class="col col-md-3 col-sm-4">
 
-                            <div class="tv-search form-group-md">
+                            <!--<div class="tv-search form-group-md">
                                 <span class="twitter-typeahead">
                                     <span class="input-group-btn">
                                         <input type="text" class="form-control input-lg" placeholder="Поиск" spellcheck="false">
@@ -142,7 +142,7 @@
                                         </button>
                                     </span>
                                 </span>
-                            </div>
+                            </div>-->
 
                         </div>
 
@@ -162,20 +162,26 @@
                             
                                 <div class="video-single-sidebar-rate">
                                     <div class="row">
-                                        <div class="col col-md-6">
+                                        <div class="col col-lg-6 col-md-12">
                                             <div class="sidebar-poster">
                                                 <img src="http://s8.vcdn.biz/static/f/851977221/image.jpg" alt="">    
                                             </div>
                                         </div>
-                                        <div class="col col-md-6">
+                                        <div class="col col-lg-6 col-md-12">
                                             <div class="db-rate">
-                                                <div class="kinopoisk">
-                                                    5.8
-                                                    Кинопоиск
-                                                </div>
-                                                <div class="imdb">
-                                                    6.006
-                                                    International Movie Database
+                                                <div class="row">
+                                                    <div class="col col-xs-5">
+                                                        <div class="kinopoisk">
+                                                            <strong>5.8</strong>
+                                                            <span>Кинопоиск</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xs-7">
+                                                        <div class="imdb">
+                                                            <strong>6.006</strong>
+                                                            <span>IMDB</span>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="db-cash">
@@ -195,7 +201,7 @@
                                 <div class="video-single-sidebar-info">
                                 
                                     <ul>
-                                        <li><span>Категория:</span> Фильмы</li>
+                                        <li><span>Категория:</span> <a href="#">Фильмы</a></li>
                                         <li><span>Жанр:</span> Комедии, Драмы, Зарубежные</li>
                                         <li><span>Год:</span> 2008</li>
                                         <li><span>Дата премьера:</span> 10 августа 2008</li>
@@ -208,9 +214,32 @@
                                 <div class="video-single-sidebar-related">
                                     <div class="video-related-also">
                                         <h3 class="video-related-header">С этим фильмом также смотрят</h3>
+                                        
+<div class="video-related-slider">   
+    <div id="videoRelatedSlider1" class="carousel">
+        <a class="carousel-item" href="#"><img src="../../images/poster-m01.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m02.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m03.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m04.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m05.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m06.jpg" alt=""></a>
+    </div>
+</div> 
+                                        
                                     </div>
                                     <div class="video-related-regia">
                                         <h3 class="video-related-header">Фильмы этого режиссера</h3>
+
+<div class="video-related-slider">   
+    <div id="videoRelatedSlider2" class="carousel">
+        <a class="carousel-item" href="#"><img src="../../images/poster-m05.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m06.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m07.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m08.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m04.jpg" alt=""></a>
+        <a class="carousel-item" href="#"><img src="../../images/poster-m03.jpg" alt=""></a>
+    </div>
+</div> 
                                     </div>
                                 </div>
                                 
@@ -525,12 +554,17 @@
             progInfo.removeClass('active');
         });
         
-        // disable carousel auto
+        // carousel
         
          $('.carousel').carousel ({
-           interval:false
+           interval:false,
+            dist:-100,
+            shift:-15,
+            padding:0,
+            indicators:false,
+            full_width:0
          });
-        
+
     </script>
     
 </body>
