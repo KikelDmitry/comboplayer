@@ -2092,6 +2092,7 @@ textarea.form-control {
 
   &-table {
     background-color: #eef2f5;
+    padding-bottom: 40px;
   }
 
   .video-bar {
@@ -2228,6 +2229,10 @@ textarea.form-control {
                 margin-left: 15px;
                 font-weight: 400;
             }
+        }
+
+        .channel-epg {
+          padding-bottom: 30px;
         }
         
         .video-single-player {
@@ -2544,10 +2549,15 @@ textarea.form-control {
         .trans();
         .radius(2px);
 
+        &.text-muted {
+          color: lighten(@text-muted, 30%);
+        }
+
         input[type="checkbox"] {
           display: none;
 
           & + label {
+            user-select: none;
             padding-left: 26px;
             display: inline;
             font-weight: normal;
