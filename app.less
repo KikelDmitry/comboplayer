@@ -2250,6 +2250,7 @@ textarea.form-control {
             margin-right: -30px;
             margin-top: -30px;
             &.panel {
+                margin-bottom: 0;
                 -webkit-box-shadow: inhrerit;
                 box-shadow: inhrerit;
                 border: none; 
@@ -2314,6 +2315,7 @@ textarea.form-control {
         
         .video-single-text {
             font-weight: 400;
+            padding-top: 20px;
         }
         .video-single-images {
             > img { width: 100%; }
@@ -2891,6 +2893,98 @@ textarea.form-control {
   }
 }
 
+.video-episodes { //zz3
+    background-color: #3C4C54;
+    margin-top: 0;
+    margin-left: -30px;
+    margin-right: -30px;
+    &-title {
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 0;   
+    }
+    &-nav {
+        padding-top: 15px;
+        padding-left: 60px;
+        padding-right: 60px;   
+    }
+    &-navlink {
+        color: lighten(#88A4B6, 15%);
+        &:hover,
+        &:active {
+            color: lighten(#88A4B6, 25%);
+        }
+    }
+    .media-carousel {
+        margin-bottom: 0;
+        /*padding: 0 40px 30px 40px;*/
+        padding: 0 50px 10px 50px;
+        /*margin-top: 30px;*/
+        margin-top: 15px;
+    }
+    .entry {
+        color: #fff;
+        display: block;
+        padding: 0px;
+        margin-bottom: 10px;
+        line-height: 1.42857143;
+        background-color: #ffffff;
+        border: none;
+        background-color: transparent; 
+        .radius(0px);
+        text-align: center;        
+        img {
+            margin-bottom: 10px;
+            .boxShadow(0, 2px, 17px, -1px, rgba(0, 0, 0, 0.7));
+        }
+    }
+    .carousel-control {
+        line-height: 40px;
+        font-size: 17px;
+        background-image: none;
+        height: 40px;
+        width: 40px;
+        .radius(23px);
+        margin-top: 30px;
+        text-decoration: none;
+    }
+    /* Previous button  */
+    .media-carousel .carousel-control.left {
+        left: 5px;
+        background: none repeat scroll 0 0 #222222;
+    }
+    /* Next button  */
+    .media-carousel .carousel-control.right {
+        right: 5px !important;
+        background: none repeat scroll 0 0 #222222;
+    }
+    /* Changes the position of the indicators */
+    .media-carousel .carousel-indicators {
+        right: 50%;
+        top: auto;
+        bottom: 0px;
+        margin-right: -19px;
+    }
+    /* Changes the colour of the indicators */
+    .media-carousel .carousel-indicators li {
+        background: #c0c0c0;
+    }
+    .media-carousel .carousel-indicators .active {
+        background: #333333;
+    }
+    .media-carousel img {
+        width: 250px;
+        /*height: 100px*/
+        border: 1px solid #2B373C;
+    }
+    .media-carousel .entry:hover {
+        color: #88A4B6;
+        img { border-color: #88A4B6; }
+    }
+    
+}
+
 /* tv-search form */
 
 .tv-search {
@@ -2898,7 +2992,7 @@ textarea.form-control {
   .form-control {
     /*height: 36px;*/
     height: 32px;
-    .radius(4px);
+    .radius(4px); 
     float: left;
     width: 100%;
   }
@@ -2961,7 +3055,7 @@ textarea.form-control {
         min-width: inherit!important;
         .tt-suggestion-name {
             padding-right: 0;
-        }
+        } 
     }
 }
 .twitter-typeahead { width: 100%; }
