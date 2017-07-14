@@ -21,7 +21,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!--<script type="text/javascript" src="js/script.js"></script>-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>-->
     
 </head>
 <body>
@@ -283,7 +283,105 @@
         </div>
     </div>
 </div>
-                                      
+
+<div class="video-episodes">
+   
+    <div class="row video-episodes-nav">
+        <div class="pull-left">
+            <div class="video-episodes-title">
+                Список эпизодов
+            </div>              
+        </div>
+        <div class="pull-right">
+            <a class="video-episodes-navlink" href="#"><i class="fa fa-caret-left"></i>&nbsp;Назад</a>
+        </div>
+    </div>
+   
+    
+    <div class='row'>
+        <div class='col-md-12'>
+            <div class="carousel slide media-carousel video-episodes-carousel" id="video-episodes-carousel">
+                <div class="carousel-inner">      
+                    <div class="item active">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675370741/10.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675379061/10.jpg">
+                                    <span>Серии 20-30</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675380331/10.jpg">
+                                    <span>Серии 30-40</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675381601/10.jpg">
+                                    <span>Серии 50-60</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/674106651/24.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/674106221/18.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/674106811/3.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/674105751/11.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675370741/10.jpg">
+                                    <span>Серии 1-20</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675379061/10.jpg">
+                                    <span>Серии 20-30</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675380331/10.jpg">
+                                    <span>Серии 30-40</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3">
+                                <a class="entry thumbnail" href="#"><img alt="" src="http://c2.mggcdn.net/71/675381601/10.jpg">
+                                    <span>Серии 5-60</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a data-slide="prev" href="#video-episodes-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+                <a data-slide="next" href="#video-episodes-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="video-single-text">
     <p>Успешный адвокат прибывает в Монако для защиты клиента в суде. Он влюбляется в прекрасную девушку и уже не в силах думать о работе. Роковая женщина отбирает все время Бертрана, поэтому его телохранитель Кристоф решает действовать. Он пытается вернуть рассудительность босу, но что будет делать сам Бертран?</p>
     
@@ -624,6 +722,13 @@
             indicators:false,
             full_width:0
          });
+        
+        // video episodes carousel
+
+        $('#video-episodes-carousel').carousel({
+            pause: true,
+            interval: false,
+        });
 
     </script>
     
