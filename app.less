@@ -2053,13 +2053,27 @@ textarea.form-control {
 .content-video {
 
   &-head {
+    .container-fluid {
+        padding: 0 30px;
+    }
+
     .content-video-head-title {
       color: #3C4C54;
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 20px;
       margin-top: 25px;
+
+      &.video-title {
+        margin: 10px auto;
+      }
     }
+
+    .breadcrumbs {
+        color: @text-muted;
+        padding: 10px 0;
+    }
+
     .content-video-menu {
       padding: 0;
       margin: 0;
@@ -2224,7 +2238,6 @@ textarea.form-control {
         &-title {
             display: inline-block;
             span {
-                margin-left: 15px;
                 &.title-local {
                     display: block;
                     margin-bottom: 10px;
