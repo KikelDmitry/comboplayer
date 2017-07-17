@@ -2934,9 +2934,16 @@ textarea.form-control {
         background-color: transparent; 
         .radius(0px);
         text-align: center;        
+        text-decoration: none;
+        span { border-bottom: 2px solid @color-link; }
         img {
             margin-bottom: 10px;
             .boxShadow(0, 2px, 17px, -1px, rgba(0, 0, 0, 0.7));
+        }
+        &:hover, &:active {
+            span { border-color: transparent; }
+            color: lighten(#88A4B6, 15%);
+            img { border-color: #88A4B6; }
         }
     }
     .carousel-control {
@@ -2977,12 +2984,7 @@ textarea.form-control {
         width: 250px;
         /*height: 100px*/
         border: 1px solid #2B373C;
-    }
-    .media-carousel .entry:hover {
-        color: #88A4B6;
-        img { border-color: #88A4B6; }
-    }
-    
+    }    
 }
 
 /* tv-search form */
