@@ -2310,6 +2310,18 @@ textarea.form-control {
                 }
                 .panel-body {
                     padding: 0;
+                    .alert {
+                        font-weight: 400;
+                        margin-bottom: 0;
+                        border-color: #ffaeb2;
+                        .gradient(#ffc3c6, #ffd9db);
+                        .radius(0px);
+                        .fa {
+                            font-size: 18px;
+                            vertical-align: middle;
+                            margin-right: 5px;
+                        }
+                    }
                     .tab-content {
                         .tab-pane {
                             @frame-height: 480px;
@@ -2987,9 +2999,17 @@ textarea.form-control {
         background-color: transparent;
         .radius(0px);
         text-align: center;
+        text-align: center;
+        text-decoration: none;
+        span { border-bottom: 2px solid @color-link; }
         img {
             margin-bottom: 10px;
             .boxShadow(0, 2px, 17px, -1px, rgba(0, 0, 0, 0.7));
+        }
+        &:hover, &:active {
+            span { border-color: transparent; }
+            color: lighten(#88A4B6, 15%);
+            img { border-color: #88A4B6; }
         }
     }
     .carousel-control {
