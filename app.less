@@ -2612,7 +2612,10 @@ textarea.form-control {
                 }
                 .panel-body {
                     padding: 0;
+                    position: relative;
                     .alert {
+                        position: absolute;
+                        width: 100%;
                         font-weight: 400;
                         margin-bottom: 0;
                         border-color: #ffaeb2;
@@ -2622,6 +2625,12 @@ textarea.form-control {
                             font-size: 18px;
                             vertical-align: middle;
                             margin-right: 5px;
+                        }
+                        .close {
+                            cursor: pointer;
+                            &:hover {
+                                color: darken(@alert-danger-text, 20%);
+                            }
                         }
                     }
                     .tab-content {
