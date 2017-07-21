@@ -2493,9 +2493,9 @@ textarea.form-control {
             li {
                 font-weight: 400;
                 position: relative;
-                padding-right: 27px;
+                padding-right: 10px;
                 margin-bottom: 10px;
-                a {
+                .sort-prop {
                     .radius(0px);
                     padding: 4px 10px;
                     background-color: #fff;
@@ -2503,47 +2503,38 @@ textarea.form-control {
                     text-decoration: none;
                     color: @color-steel-dark;
                     &:hover,
-                    &:active { 
+                    &:active,
+                    &:focus { 
                         background-color: @color-link;
                         color: #fff;
+                        &:after { color: #fff; }
                     }
-                }
-                .sort-control {
-                    cursor: pointer;
-                    position: absolute;
-                    background-color: transparent;
-                    color: @color-steel;
-                    display: block;
-                    width: 20px;
-                    text-align: center;
-                    &:hover,
-                    &:active {
-                        background-color: @color-link;
-                        color: #fff;
+                    &:after {
+                        font-family: "FontAwesome";
+                        cursor: pointer;
+                        display: inline-block;
+                        background-color: transparent;
+                        color: @color-steel;
+                        width: 20px;
+                        text-align: center;
+                        margin-left: 5px;
+                        display: none;
                     }
-                    &-up {
-                        top: 0;
-                        right: 12px;
+                    &.sort-up {
+                        &:after { content: "\f0d8"; }
                     }
-                    &-down {
-                        top: 14px;
-                        right: 12px;
+                    &.sort-down { 
+                        &:after { content: "\f0d7"; }
                     }
                 }
                 &.active { 
-                    a { background-color: #75A01C; }
-                    .sort-control {
-                        &:hover,
-                        &:active {
-                            color: #fff;
-                            background-color: @color-green;
-                        }
-                        &.active { 
-                            color: #3C4C54;
-                            &.active:hover,
-                            &.active:active {
-                                color: #fff;
-                            }
+                    .sort-prop { 
+                        padding-right: 5px;
+                        color: #fff;
+                        background-color: #75A01C; 
+                        &:after { 
+                            display: inline-block;
+                            color: #fff; 
                         }
                     }
                 }
