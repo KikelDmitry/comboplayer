@@ -2365,11 +2365,11 @@ textarea.form-control {
             font-size: 32px;
             font-weight: 600;
             margin-bottom: 20px;
-            margin-top: 25px;
-
-            &.video-title {
-                margin: 10px auto;
-            }
+            margin-top: 20px;
+            &.video-title { 
+                margin: 10px auto; 
+                margin-top: 15px;
+            }//zz
         }
 
         .breadcrumbs {
@@ -2481,6 +2481,13 @@ textarea.form-control {
         .video-bar {
             .row { margin-bottom: 15px; }
         }
+        > h1 {
+            font-size: 32px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 20px;
+            color: #3C4C54;
+        } //zz
     }
     
     &-sort {
@@ -2544,7 +2551,6 @@ textarea.form-control {
             }
         }
     }
-    //zz
 
     &-main {
         padding: 0 0 30px;
@@ -2606,12 +2612,16 @@ textarea.form-control {
             padding: 30px;
         }
         &-title {
-            display: inline-block;
+            margin-top: 20px;
+            > h1 { 
+                display: inline-block; 
+                margin-bottom: 10px;
+                font-size: 32px;
+                font-weight: 600;
+                margin-top: 0;
+                color: #3C4C54;
+            }
             span {
-                &.title-local {
-                    display: block;
-                    margin-bottom: 10px;
-                }
                 &.title-origin {
                     display: block;
                     font-size: 20px;
@@ -2626,7 +2636,7 @@ textarea.form-control {
                     color: darken(@color-steel, 10%);
                 }
             }
-        }
+        }//zz
         
         .video-single-player {
             /*margin-left: -30px;
@@ -2667,10 +2677,7 @@ textarea.form-control {
                 }
                 .panel-body {
                     padding: 0;
-                    position: relative;
                     .alert {
-                        position: absolute;
-                        width: 100%;
                         font-weight: 400;
                         margin-bottom: 0;
                         border-color: #ffaeb2;
@@ -2680,12 +2687,6 @@ textarea.form-control {
                             font-size: 18px;
                             vertical-align: middle;
                             margin-right: 5px;
-                        }
-                        .close {
-                            cursor: pointer;
-                            &:hover {
-                                color: darken(@alert-danger-text, 20%);
-                            }
                         }
                     }
                     .tab-content {
@@ -2771,7 +2772,7 @@ textarea.form-control {
                     clear: both;
                 }
             }
-            &-expand { //zz
+            &-expand {
                 display: inline-block;
                 padding: 1px 6px;
                 margin-left: 3px;
