@@ -10,7 +10,8 @@
 
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     
-    <link rel="stylesheet" href="/css/player_install.css" />
+    <!--<link rel="stylesheet" href="/css/player_install.css" />-->
+    <link rel="stylesheet" href="/less/player_install.css" />
     
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -185,13 +186,17 @@
                         </div>
                         
                         <div class="block-steps">
-                            <a class="link-register" href="https://www.comboplayer.ru/register"></a>
+                            <a class="link-register" href="#"></a>
                             <div class="row">
                                 <div class="col col-md-3">
                                    
-                                   <div class="header2">
+                                   <!--<div class="header2">
                                         Зарегистрируйтесь,<br>
                                         чтобы смотреть <strong>ТВ</strong>
+                                    </div>-->
+                                    
+                                    <div class="header2 no-auth">Для просмотра ТВ<br>
+                                        <strong>не требуется</strong> регистрация!
                                     </div>
                                    
                                     <div class="circle-box icon-left-circle">
@@ -212,13 +217,13 @@
                             
                             <div class="block-steps-titles">
                                 <div class="row">
-                                    <div class="col col-md-4"><span>Зарегистрируйтесь на сайте</span>
+                                    <div class="col col-md-4"><span>Запустите приложение</span>
                                         <i class="fa fa-angle-right"></i>
                                     </div>
-                                    <div class="col col-md-3"><span>Запустите приложение, войдите в аккаунт</span>
+                                    <div class="col col-md-3"><span>Выберите канал</span>
                                         <i class="fa fa-angle-right"></i>
                                     </div>
-                                    <div class="col col-md-4"><span>Смотрите ТВ каналы!</span></div>
+                                    <div class="col col-md-4"><span>Смотрите ТВ!</span></div>
                                 </div>
                             </div>
                             
@@ -230,8 +235,120 @@
                     
                         <div class="row">
                             <div class="col-md-10 col-sm-offset-1">
+                                
+                                
+                                <!--<div class="block-no-auth clearfix">
+                                    <div class="header2">Для просмотра ТВ<br>
+                                        <strong>не требуется</strong> авторизация!
+                                    </div>
+                                </div>-->
+
+                                <div class="block-video-online clearfix">
+                                    <div class="header2">Смотреть онлайн</div>
+                    
+<div class="video-bar">
+
+    <div class="row">
+        <div id="videoSlider1" class="carousel slide">
+            <div class="carousel slide" id="Slider1EventCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href="#"><img src="/images/poster01.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Мажор</div>
+                                        <div class="video-bar-text">2016, Россия</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster02.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Кухня. Последняя битвал</div>
+                                        <div class="video-bar-text">2017, Россия</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster03.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Дикий Китай</div>
+                                        <div class="video-bar-text">2013, Великобритания</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster04.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Молодежка</div>
+                                        <div class="video-bar-text">2017, Россия</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster05.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Амели</div>
+                                        <div class="video-bar-text">2001, Франция</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster06.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Гольциус и пеликанья компания</div>
+                                        <div class="video-bar-text">2013, Великобритания</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster07.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Макс Стил</div>
+                                        <div class="video-bar-text">2017, Великобритания</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="video-bar-item">
+                                <a href=""><img src="/images/poster08.jpg" alt="">
+                                    <div class="video-bar-descr">
+                                        <div class="video-bar-item-title">Ранг убийцы / Kill Ratio</div>
+                                        <div class="video-bar-text">2016, США</div>
+                                    </div></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left slider-control" href="#Slider1EventCarousel" data-slide="prev">
+                    <i class="fa fa-angle-left "></i>
+                </a>
+                <a class="right slider-control" href="#Slider1EventCarousel" data-slide="next">
+                    <i class="fa fa-angle-right "></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>
+                                   
+<div>
+    <a class="block-btn" href="https://www.comboplayer.ru/videos">Фильмы, сериалы, мультфильмы и тв-передачи</a>
+</div>
+                                    
+                                </div>
 
                                 <div class="block-reviews">
+                                   
                                     <div class="header2">Отзывы</div>
                                     <div class="row">
                                         <div class="col col-sm-12 col-md-4">
