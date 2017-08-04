@@ -1025,6 +1025,43 @@ textarea.form-control {
             }
         }
     }
+
+    
+    .block-steps {
+        margin-bottom: 30px;
+        ul li {
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: inline-block;
+            margin-right: 10px;
+            &:after {
+                content: "\f054";
+                font-family: "FontAwesome";
+                display: inline-block;
+                vertical-align: middle;
+                color: #79B05F;
+                font-size: 16px;
+                margin-left: 10px;
+            }
+            &:last-child:after { display: none; }
+            span { 
+                color: #fff; 
+                background-color: #79B05F;
+                /*background-color: #269FCC;*/
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                vertical-align: middle;
+                .radius(20px);
+                text-align: center;
+                font-weight: bold;
+                line-height: 20px;
+            }
+        }
+        .img-full { max-width: 100%; }
+    }
+
+    
 }
 
 .thanks_for_reg-page {
@@ -2369,7 +2406,7 @@ textarea.form-control {
             &.video-title { 
                 margin: 10px auto; 
                 margin-top: 15px;
-            }//zz
+            }
         }
 
         .breadcrumbs {
@@ -2487,7 +2524,7 @@ textarea.form-control {
             margin-top: 0;
             margin-bottom: 20px;
             color: #3C4C54;
-        } //zz
+        }
     }
     
     &-sort {
@@ -2636,7 +2673,7 @@ textarea.form-control {
                     color: darken(@color-steel, 10%);
                 }
             }
-        }//zz
+        }
         
         .video-single-player {
             /*margin-left: -30px;
@@ -2849,9 +2886,7 @@ textarea.form-control {
     .video-single-sidebar {
         &-rate {
             .sidebar-poster {
-                > img {
-                    width: 100%;
-                }
+                > img { width: 100%; }
             }
             .db-rate {
                 border-top: 2px solid #79ae0b;
@@ -2880,7 +2915,7 @@ textarea.form-control {
                         /*display: block;*/
                         display: inline-block;
                         /*top: 0;
-            left: 0;*/
+                        left: 0;*/
                     }
                     &.kinopoisk {
                         &:before {
@@ -2888,16 +2923,19 @@ textarea.form-control {
                             height: 32px;
                             background-position: -4px -99px;
                             /*top: 30px;
-              left: 24px;*/
+                            left: 24px;*/
                         }
                     }
                     &.imdb {
                         &:before {
-                            width: 60px;
+                            /*width: 60px;
                             height: 31px;
-                            background-position: -40px -100px;
+                            background-position: -40px -100px;*/
+                            width: 32px;
+                            height: 32px;
+                            background-position: -40px -99px;
                             /*top: 30px;
-              left: 8px;*/
+                            left: 8px;*/
                         }
                     }
                 }
