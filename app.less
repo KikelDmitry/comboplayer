@@ -1802,11 +1802,12 @@ textarea.form-control {
           &:first-child { margin-top: 30px; }*/
                 }
                 ul {
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     margin-left: 75px;
                     li {
                         font-weight: 400;
                         margin-bottom: 8px;
+                        &:last-child { margin-bottom: 0; }
                         a {
                             text-decoration: none;
                             &:hover, &:focus {
@@ -1992,7 +1993,8 @@ textarea.form-control {
             }
 
             &-descr {
-                margin: 30px 0 15px;
+                /*margin: 30px 0 15px;*/
+                margin: 20px 0 15px;
                 font-weight: 400;
                 font-size: 15px;
 
@@ -2235,7 +2237,6 @@ textarea.form-control {
                 ul {
                     font-weight: 400;
                     li {
-                        border: 1px solid red;
                         a {
                             color: #6e7d85;
                             text-decoration: none;
@@ -2251,6 +2252,57 @@ textarea.form-control {
         }
     }
 }
+
+.content-links {
+    .radius(8px);
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    margin: 10px 0;
+    .col:last-child { border-left: 1px solid #ddd; }
+    .col:only-child { border: none; }
+    a {
+        font-size: 13px;
+        color: #333;
+        display: inline-block;
+        text-decoration: none; 
+        padding-left: 40px;
+        position: relative;
+        min-height: 30px;
+        font-weight: 600;
+        vertical-align: sub;
+        span { border-bottom: 1px solid @color-link; }
+        &:hover,
+        &:active {
+            color: @color-link;
+            span { border: none; } 
+        }
+        &:before { 
+            position: absolute;
+            top: 0px;
+            left: 0;
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+            background: url('@{images}content-sprites.png') no-repeat transparent;
+        }
+    }
+    .content-links-play:before {
+        width: 27px;
+        height: 22px;
+        background-position: -36px -135px;
+    }
+    .content-links-download:before {
+        width: 32px;
+        height: 23px;
+        background-position: -2px -135px;
+    }
+    .content-links-googleplay:before {
+        width: 23px;
+        height: 26px;
+        background-position: -65px -135px;
+    }
+} 
 
 .content-tv-table-channel .channel-title,
 .content-video-single-sub .channel-header {
@@ -2931,9 +2983,9 @@ textarea.form-control {
                             /*width: 60px;
                             height: 31px;
                             background-position: -40px -100px;*/
-                            width: 32px;
-                            height: 32px;
-                            background-position: -40px -99px;
+                            width: 35px;
+                            height: 35px;
+                            background-position: -40px -98px;
                             /*top: 30px;
                             left: 8px;*/
                         }
@@ -3343,7 +3395,6 @@ textarea.form-control {
         &:after {
             content: "";
             display: block;
-            background-color: red;
             position: absolute;
             width: 100%;
             /*bottom: -15px;*/
@@ -3447,6 +3498,7 @@ textarea.form-control {
         }
     }
     .media-carousel {
+        position: relative;
         margin-bottom: 0;
         /*padding: 0 40px 30px 40px;*/
         padding: 0 50px 10px 50px;
@@ -3887,6 +3939,12 @@ textarea.form-control {
     .video-episodes .media-carousel .carousel-control.left { left: 15px !important; }
     
     .content-video-sort ul li .sort-prop { background-color: #E4EBEE; }
+    
+    .content-links {
+        display: inline-block !important;
+        a { margin-bottom: 5px; }
+        .col:last-child a { margin-bottom: 0; }
+    }
 
 }
 
