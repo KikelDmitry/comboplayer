@@ -34,6 +34,51 @@
 @images: "/images/";
 @images-sprites: "@{images}sprites/";
 
+.m {
+    &-0 { margin: 0 !important; }
+    &-10 { margin: 10px !important; }
+    &-15 { margin: 15px !important; }
+    &-30 { margin: 30px !important; }
+    &r-0 { margin-right: 0px !important; }
+    &l-0 { margin-left: 0px !important; }
+    &r-10 { margin-right: 10px !important; }
+    &l-10 { margin-left: 10px !important; }
+    &r-15 { margin-right: 15px !important; }
+    &l-15 { margin-left: 15px !important; }
+    &r-30 { margin-right: 30px !important; }
+    &l-30 { margin-left: 30px !important; }
+    &t-0 { margin-top: 0px !important; }
+    &b-0 { margin-bottom: 0px !important; }
+    &t-10 { margin-top: 10px !important; }
+    &b-10 { margin-bottom: 10px !important; }
+    &t-15 { margin-top: 15px !important; }
+    &b-15 { margin-bottom: 15px !important; }
+    &t-30 { margin-top: 30px !important; }
+    &b-30 { margin-bottom: 30px !important; }
+}
+.p {
+    &-0 { padding: 0 !important; }
+    &-10 { padding: 10px !important; }
+    &-15 { padding: 15px !important; }
+    &-30 { padding: 30px !important; }
+    &r-0 { padding-right: 0px !important; }
+    &l-0 { padding-left: 0px !important; }
+    &r-10 { padding-right: 10px !important; }
+    &l-10 { padding-left: 10px !important; }
+    &r-15 { padding-right: 15px !important; }
+    &l-15 { padding-left: 15px !important; }
+    &r-30 { padding-right: 30px !important; }
+    &l-30 { padding-left: 30px !important; }
+    &t-0 { padding-top: 0px !important; }
+    &b-0 { padding-bottom: 0px !important; }
+    &t-10 { padding-top: 10px !important; }
+    &b-10 { padding-bottom: 10px !important; }
+    &t-15 { padding-top: 15px !important; }
+    &b-15 { padding-bottom: 15px !important; }
+    &t-30 { padding-top: 30px !important; }
+    &b-30 { padding-bottom: 30px !important; }  
+}
+
 .no-outline {
     outline: none;
 }
@@ -2302,6 +2347,63 @@ textarea.form-control {
         height: 26px;
         background-position: -65px -135px;
     }
+    &.download-ver {
+        background: url('@{images}cl-bnr-bg.jpg') no-repeat transparent bottom right;
+        background-size: cover;
+        padding: 0;
+        border: none;
+        > a {
+            line-height: 60px;
+            display: block;
+            height: 60px;
+            position: relative;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 500;
+            vertical-align: inherit;
+            padding-left: 75px; 
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            span { border-bottom: 2px solid @color-link; }
+            &:before {
+                position: absolute;
+                width: 55px;
+                height: 60px;
+                top: 0px;
+                left: 0;
+                content: "";
+                display: block;
+                .gradient (#2baadd, #78ae0d);
+                -moz-border-radius-topleft: 8px;
+                -webkit-border-top-left-radius: 8px;
+                 border-top-left-radius: 8px;
+                -moz-border-radius-bottomleft: 8px;
+                -webkit-border-bottom-left-radius: 8px;
+                border-bottom-left-radius: 8px;
+            }
+            &:after {
+                background: url('@{images}content-sprites.png') no-repeat transparent;
+                background-position: -2px -160px; 
+                width: 32px;
+                height: 23px;
+                content: "";
+                position: absolute;
+                top: 18px;
+                left: 13px;
+                display: block;
+            }
+            &:hover,
+            &:active {
+                span { border-color: transparent; }
+                color: lighten(@color-blue, 25%); 
+                &:before { 
+                    /*background-color: @color-blue; */
+                    .gradient (@color-blue, @color-blue);
+                }
+            }
+        }
+    }
 } 
 
 .content-tv-table-channel .channel-title,
@@ -3941,9 +4043,14 @@ textarea.form-control {
     .content-video-sort ul li .sort-prop { background-color: #E4EBEE; }
     
     .content-links {
-        display: inline-block !important;
         a { margin-bottom: 5px; }
         .col:last-child a { margin-bottom: 0; }
+    }
+    .content-links:not(.download-ver) {
+        display: inline-block !important;
+    }
+    .content-links.download-ver a {
+        font-size: 16px;
     }
 
 }
