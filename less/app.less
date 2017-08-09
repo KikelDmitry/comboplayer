@@ -340,22 +340,22 @@ p {
     font-size: 15px;
     &-item {
         float: left;
-        /*padding: 28px 15px;
-    margin: -15px 20px;*/
         padding: 28px 0;
         margin: -15px 16px;
         display: block;
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        a {
+            &:hover,
+            &:active { color: #79AE0B; }
+        }
         &.active {
             .header-menu-link {
                 color: #fff;
                 background: #3a4a52;
-
             }
         }
-
         &.extra-item {
             display: none;
             a {
@@ -2382,28 +2382,6 @@ textarea.form-control {
                 -webkit-border-bottom-left-radius: 8px;
                 border-bottom-left-radius: 8px;
             }
-            /*&:after {
-                background: url('@{images}content-sprites.png') no-repeat transparent;
-                background-position: -2px -160px; 
-                width: 32px;
-                height: 23px;
-                content: "";
-                position: absolute;
-                top: 18px;
-                left: 13px;
-                display: block;
-            }*/
-            &:after {
-                background: url('@{images}content-sprites.png') no-repeat transparent;
-                background-position: -91px -135px; 
-                width: 23px;
-                height: 26px;
-                content: "";
-                position: absolute;                
-                top: 17px;
-                left: 19px;
-                display: block;
-            }
             &:hover,
             &:active {
                 span { border-color: transparent; }
@@ -2411,6 +2389,32 @@ textarea.form-control {
                 &:before { 
                     /*background-color: @color-blue; */
                     .gradient (@color-blue, @color-blue);
+                }
+            }
+             &.desktop {
+                &:after {
+                    background: url('@{images}content-sprites.png') no-repeat transparent;
+                    background-position: -2px -160px; 
+                    width: 32px;
+                    height: 23px;
+                    content: "";
+                    position: absolute;
+                    top: 18px;
+                    left: 13px;
+                    display: block;
+                }
+            }
+            &.googleplay {
+                &:after {
+                    background: url('@{images}content-sprites.png') no-repeat transparent;
+                    background-position: -91px -135px; 
+                    width: 23px;
+                    height: 26px;
+                    content: "";
+                    position: absolute;                
+                    top: 17px;
+                    left: 19px;
+                    display: block; 
                 }
             }
         }
