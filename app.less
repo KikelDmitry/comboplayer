@@ -1378,6 +1378,11 @@ textarea.form-control {
                     &:focus {
                         color: #25292b;
                     }
+                    &.disabled {
+                        .text-muted();
+                        text-decoration: none;
+                        cursor: default;
+                    }
                 }
                 &.active {
                     background-color: #79ae0b;
