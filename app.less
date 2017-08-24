@@ -1437,11 +1437,9 @@ textarea.form-control {
                     .carousel-inner {
                         padding-left: 25px;
                         min-height: 40px;
-                        /*#14239*/
                         float: left;
                         width: auto;
                         padding-right: 5px;
-                        /*/*/
                     }
                 }
                 &-prev {
@@ -1466,10 +1464,8 @@ textarea.form-control {
                         color: #BFCED6;
                         cursor: default;
                     }
-                    /*#14239*/
                     position: relative;
                     float: left;
-                    /*/*/
                 }
 
             }
@@ -2424,6 +2420,9 @@ textarea.form-control {
             }
         }
     }
+    &.short-ver {
+        width: 200px;
+    }
 } 
 
 .content-tv-table-channel .channel-title,
@@ -2772,6 +2771,7 @@ textarea.form-control {
                         min-height: 400px;
                         /*max-height: 400px;*/
                         /*overflow: hidden;*/
+                        //zz1
                     }
                 }
             }
@@ -3975,9 +3975,7 @@ textarea.form-control {
 
 @media (max-width: @screen-sm-max) {
 
-    .content-tv-channel .channel-actions {
-        margin-top: 15px;
-    }
+    .content-tv-channel .channel-actions { margin-top: 15px; }
 
     .home-hero-video {
         &-btn {
@@ -4042,8 +4040,23 @@ textarea.form-control {
             border: 1px solid @color-brand;
         }
     }
-
-    .video-bar .carousel-inner > .item { display: block; }
+    
+    .video-bar .carousel-inner > .item { 
+        /*display: block; */
+        display: inline;
+        /*padding: 1px;*/
+    }
+    .video-bar-descr {
+        display: none;
+    }
+    .video-bar-item {
+        min-height: 400px !important;
+        max-height: 400px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        &:hover { background-color: transparent !important; }
+    }
+    //zz2
 
     .content-video-main .video-bar .slider-control { display: none; }
 
@@ -4080,7 +4093,7 @@ textarea.form-control {
         font-size: 32px;
         margin-top: 15px;
         margin-bottom: 20px;
-    }
+    } 
 
     h2 {
         font-size: 26px;
@@ -4341,3 +4354,20 @@ textarea.form-control {
         padding-top: 60px;
     }
 }
+
+@media (max-width: 767px) {
+    .video-bar-item { min-height: 320px !important; }
+}
+@media (max-width: 650px) {
+    .video-bar-item { min-height: 280px !important; }
+}
+@media (max-width: 560px) {
+    .video-bar-item { min-height: 220px !important; }
+}
+@media (max-width: 490px) {
+    .video-bar-item { min-height: 185px !important; }
+}
+@media (max-width: 430px) {
+    .video-bar-item { min-height: 150px !important; }
+} 
+ 
