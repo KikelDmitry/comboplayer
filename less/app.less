@@ -380,6 +380,22 @@ p {
                 }
             }
         }
+        
+        &.content-menu-link {
+            background-color: #3a4147;
+            border-bottom-color: #65717b;
+            margin: 0;
+            padding-left: 32px;
+            padding-right: 32px; 
+            a { 
+                color: #fff; 
+                &:hover { 
+                    color: #79AE0B; 
+                    border-bottom-color: transparent;
+                }
+            }
+            &:last-child { border-bottom-color: transparent; }
+        }
 
     }
     &-link {
@@ -389,10 +405,7 @@ p {
         color: #fff;
         &.active {
             padding: 5px 10px;
-            border: 1px solid #79AE0B;
-            &:hover {
-                border-color: #187ca7;
-            }
+            border: 1px solid #79AE0B;  
         }
         > i {
             padding-right: 5px;
@@ -2570,9 +2583,8 @@ textarea.form-control {
 .content-video {
 
     &-head {
-        .container-fluid {
-            padding: 0 30px;
-        }
+        
+        /*.container-fluid { padding: 0 30px; }*/ 
 
         .content-video-head-title {
             color: #3C4C54;
@@ -2620,6 +2632,7 @@ textarea.form-control {
         }
         .tv-search {
             margin-top: 25px;
+            margin-bottom: 15px;
         }
     }
 
@@ -2905,10 +2918,10 @@ textarea.form-control {
                     }
                     .tab-content {
                         .tab-pane {
-                            @frame-height: 480px;
-                            height: @frame-height;
+                            /*@frame-height: 480px;
+                            height: @frame-height;*/
                             iframe {
-                                height: @frame-height;
+                                height: 480px;
                                 width: 100%;
                             }
                         }
@@ -3978,6 +3991,16 @@ textarea.form-control {
     }
 
     .video-filters #filter-submit .row .col:nth-child(2) { padding-left: 3px; }
+    
+    .video-filters {
+        margin-top: 0;
+        &-block { margin-bottom: 1px; }
+        .block-category-control { 
+            border: none !important; 
+            padding: 8px 10px;
+        }
+        #filter-submit { margin-top: 10px; }
+    }
     
 }
 
