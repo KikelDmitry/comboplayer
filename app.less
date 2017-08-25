@@ -1522,11 +1522,22 @@ textarea.form-control {
                 display: inline-block;
                 vertical-align: baseline;
                 margin-right: 15px;
+                border: 2px solid #E4EBEE;
+                padding: 3px;
+                position: absolute;
+                top: 0;
+                left: 0;
             }
             .tv-content-header {
                 /*display: inline-block;*/
-                display: inline;
+                /*display: inline;*/
+                display: block;
+                padding-left: 80px;
+                padding-top: 15px;
+                margin-top: 0;
             }
+            position: relative; 
+            overflow: hidden
         }
         &.navbar-fixed-top {
             background: #fff;
@@ -4126,7 +4137,7 @@ textarea.form-control {
     .content-links.download-ver a {
         font-size: 16px;
     }
-
+    
 }
 
 @media (max-width: @screen-xs-max) {
