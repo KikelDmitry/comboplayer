@@ -183,9 +183,15 @@
                             
                             <div class="video-filters">
                                
-                                <div class="video-filters-block block-category">
-                                    <div data-toggle="collapse" data-target="#block-video-category" class="block-category-control"><i class="fa fa-film"></i>&nbsp;Жанр</div>
-                                    <ul class="collapse clearfix" id="block-video-category" aria-expanded="false">
+                                <div class="video-filters-block block-category selected">
+                                   
+                                    <!--<div data-toggle="collapse" data-target="#block-video-category" class="block-category-control"><i class="fa fa-film"></i>&nbsp;Жанр</div>-->
+                                    
+                                    <div data-toggle="collapse" data-target="#block-video-category" class="block-category-control"><i class="fa fa-film"></i>&nbsp;Жанр (&nbsp;выбрано: <span>2</span>&nbsp;)</div>
+                                    
+                                    <!--<div data-toggle="collapse" data-target="#block-video-category" class="block-category-control"><i class="fa fa-film"></i>&nbsp;Жанр (&nbsp;выбрано: <span>Документальный</span>&nbsp;)</div>-->
+                                    
+                                    <!--<ul class="collapse clearfix" id="block-video-category" aria-expanded="false">
                                         <li><span>Биография</span></li>
                                         <li><span>Боевик</span></li>
                                         <li><span>Вестерн</span></li>
@@ -212,7 +218,209 @@
                                         <li><span>Ужасы</span></li>
                                         <li><span>Фантастика</span></li>
                                         <li><span>Фэнтези</span></li>
-                                    </ul>
+                                    </ul>-->
+                                    
+<ul class="clearfix collapse" id="block-video-category" aria-expanded="true" style="">
+    <li>
+        <input type="checkbox" name="genres[]" value="peredachi-v-3d-1" id="genre174">
+        <label for="genre174" title="3D">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/peredachi-v-3d-1">3D</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="art-haus" id="genre131">
+        <label for="genre131" title="Арт-хаус">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/art-haus">Арт-хаус</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="biografiya" id="genre9">
+        <label for="genre9" title="Биография">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/biografiya">Биография</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="boevik" id="genre16">
+        <label for="genre16" title="Боевик">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/boevik">Боевик</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="vestern" id="genre78">
+        <label for="genre78" title="Вестерн">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/vestern">Вестерн</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="voennyy" id="genre20">
+        <label for="genre20" title="Военный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/voennyy">Военный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="detektiv" id="genre5">
+        <label for="genre5" title="Детектив">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/detektiv">Детектив</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="dlya-vzroslyh" id="genre132">
+        <label for="genre132" title="Для взрослых">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/dlya-vzroslyh">Для взрослых</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="dlya-detey" id="genre137">
+        <label for="genre137" title="Для детей">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/dlya-detey">Для детей</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="dokumentalnyy" id="genre139">
+        <label for="genre139" title="Документальный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/dokumentalnyy">Документальный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="drama" id="genre2">
+        <label for="genre2" title="Драма">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/drama">Драма</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="zarubezhnyy" id="genre129">
+        <label for="genre129" title="Зарубежный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/zarubezhnyy">Зарубежный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="istoricheskiy" id="genre130">
+        <label for="genre130" title="Исторический">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/istoricheskiy">Исторический</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="istoriya" id="genre43">
+        <label for="genre43" title="История">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/istoriya">История</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="komediya" id="genre12">
+        <label for="genre12" title="Комедия">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/komediya">Комедия</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="korotkometrazhnyy" id="genre134">
+        <label for="genre134" title="Короткометражный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/korotkometrazhnyy">Короткометражный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="kriminal" id="genre6">
+        <label for="genre6" title="Криминал">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/kriminal">Криминал</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="melodrama" id="genre10">
+        <label for="genre10" title="Мелодрама">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/melodrama">Мелодрама</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="muzyka" id="genre13">
+        <label for="genre13" title="Музыка">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/muzyka">Музыка</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="muzykalnyy" id="genre138">
+        <label for="genre138" title="Музыкальный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/muzykalnyy">Музыкальный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="multfilm" id="genre117">
+        <label for="genre117" title="Мультфильм">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/multfilm">Мультфильм</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="myuzikl" id="genre53">
+        <label for="genre53" title="Мюзикл">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/myuzikl">Мюзикл</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="nash" id="genre133">
+        <label for="genre133" title="Наш">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/nash">Наш</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="priklyucheniya" id="genre24">
+        <label for="genre24" title="Приключения">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/priklyucheniya">Приключения</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="semeynyy" id="genre48">
+        <label for="genre48" title="Семейный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/semeynyy">Семейный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="socialnyy" id="genre72">
+        <label for="genre72" title="Социальный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/socialnyy">Социальный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="sport" id="genre4">
+        <label for="genre4" title="Спорт">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/sport">Спорт</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="sportivnyy" id="genre136">
+        <label for="genre136" title="Спортивный">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/sportivnyy">Спортивный</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="triller" id="genre35">
+        <label for="genre35" title="Триллер">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/triller">Триллер</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="uzhasy" id="genre76">
+        <label for="genre76" title="Ужасы">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/uzhasy">Ужасы</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="fantastika" id="genre58">
+        <label for="genre58" title="Фантастика">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/fantastika">Фантастика</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="fentezi-1" id="genre161">
+        <label for="genre161" title="Фентези">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/fentezi-1">Фентези</a>
+        </label>
+    </li>
+    <li>
+        <input type="checkbox" name="genres[]" value="fentezi" id="genre63">
+        <label for="genre63" title="Фэнтези">
+            <a class="link-ignore" href="https://www.comboplayer.ru/videos/type/film/genres/fentezi">Фэнтези</a>
+        </label>
+    </li>
+</ul>
+                                    
                                 </div>
                                 
                                 <div class="video-filters-block block-year">
