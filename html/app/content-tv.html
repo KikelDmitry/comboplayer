@@ -80,7 +80,7 @@
                                     <a href="contacts.html" class="header-menu-link">Регистрация</a>
                                 </li>
                                 <li class="header-menu-item">
-                                    <a href="http://tv.comboplayer.ru" class="header-menu-link external">Combo TV</a>
+                                    <a href="http://tv.comboplayer.ru" class="header-menu-link">Combo TV</a>
                                 </li>
                                 
                                 <li class="header-menu-item extra-item">
@@ -199,7 +199,7 @@
                             <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
                         </div>-->
                         
-                        <div class="content-tv-table-channel_cats">                            
+                        <div class="content-tv-table-channel_cats hidden-xs">
                             <div class="btn-group show-on-hover">
                                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                     Все каналы <span class="caret"></span>
@@ -224,7 +224,7 @@
                            
                             <div class="nav tv-table-week">
                                
-                                <div class="tv-datepicker">
+                                <div class="tv-datepicker hidden-xs">
                                     <div class="input-group" id="DatePicker">
                                         <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
                                     </div>
@@ -323,25 +323,93 @@
                 <a data-slide="next" href="#weekslide" class="week-control week-next right disabled"><i class="fa fa-angle-right"></i></a>
             </div>
             
-            <div class="visible-xs" id="week-select">
-                <select class="form-control">
-                    <option><a href="#">06, ПТ</a></option>
-                    <option><a href="#">07, СБ</a></option>
-                    <option><a href="#">08, ВС</a></option>
-                    <option><a href="#">ВC</a></option>
-                    <option><a href="#">Вчера, ПН</a></option>
-                    <option class="active"><a href="#">Сегодня</a></option>
-                    <option><a href="#">Завтра, СР</a></option>
-                    <option><a href="#">ЧТ</a></option>
-                    <option><a href="#">ПТ</a></option>
-                    <option><a href="#">СБ</a></option>
-                    <option><a href="#">15, ПН</a></option>
-                    <option><a href="#">16, ВТ</a></option>
-                    <option><a href="#">17, СР</a></option>
-                </select> 
-                <span class="caret"></span>
+            <div class="row visible-xs">
+                <div class="col-xs-6">
+                    
+                    <!--<div class="visible-xs" id="week-select">
+                        <select class="form-control">
+                            <option><a href="#">06, ПТ</a></option>
+                            <option><a href="#">07, СБ</a></option>
+                            <option><a href="#">08, ВС</a></option>
+                            <option><a href="#">ВC</a></option>
+                            <option><a href="#">Вчера, ПН</a></option>
+                            <option class="active"><a href="#">Сегодня</a></option>
+                            <option><a href="#">Завтра, СР</a></option>
+                            <option><a href="#">ЧТ</a></option>
+                            <option><a href="#">ПТ</a></option>
+                            <option><a href="#">СБ</a></option>
+                            <option><a href="#">15, ПН</a></option>
+                            <option><a href="#">16, ВТ</a></option>
+                            <option><a href="#">17, СР</a></option>
+                        </select> 
+                        <span class="caret"></span>
+                    </div>-->
+                    
+                    <div class="visible-xs" id="week-select">
+                        <!--<select class="form-control">
+                            <option><a href="#">06, ПТ</a></option>
+                            <option><a href="#">07, СБ</a></option>
+                            <option><a href="#">08, ВС</a></option>
+                            <option><a href="#">ВC</a></option>
+                            <option><a href="#">Вчера, ПН</a></option>
+                            <option class="active"><a href="#">Сегодня</a></option>
+                            <option><a href="#">Завтра, СР</a></option>
+                            <option><a href="#">ЧТ</a></option>
+                            <option><a href="#">ПТ</a></option>
+                            <option><a href="#">СБ</a></option>
+                            <option><a href="#">15, ПН</a></option>
+                            <option><a href="#">16, ВТ</a></option>
+                            <option><a href="#">17, СР</a></option>
+                        </select> 
+                        <span class="caret"></span>-->
+                        
+                        <div class="btn-group show-on-hover">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Сегодня <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">06, ПТ</a></li>
+                                <li><a href="#">7, СБ</a></li>
+                                <li><a href="#">08, ВС</a></li>
+                                <li><a href="#">ВC</a></li>
+                                <li><a href="#">Вчера, ПН</a></li>
+                                <li><a class="active" href="#">Сегодня</a></li>
+                                <li><a href="#">Завтра, СР</a></li>
+                                <li><a href="#">ЧТ</a></li>
+                                <li><a href="#">ПТ</a></li>
+                                <li><a href="#">СБ</a></li>
+                                <li><a href="#">15, ПН</a></li>
+                                <li><a href="#">16, ВТ</a></li>
+                                <li><a href="#">17, СР</a></li>
+                            </ul>
+                        </div>
+                        
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-xs-6">
+                    
+                    <div class="content-tv-table-channel_cats visible-xs">
+                        <div class="btn-group show-on-hover">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                Все каналы <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Фильмы и сериалы</a></li>
+                                <li><a href="#">Познавательные</a></li>
+                                <li><a href="#">Спорт</a></li>
+                                <li><a href="#">Детям</a></li>
+                                <li><a href="#">Информация</a></li>
+                                <li><a href="#">Музыка</a></li>
+                                <li><a href="#">Увлечения</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-        
+
         </div>
     </div>
 </div>
@@ -366,12 +434,16 @@
                         </div>
                         <div class="col col-sm-3">
                            
-                            <div class="tv-table-time">
+                            <div class="tv-table-time hidden-xs">
                                 <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
                             </div>
                             
-                            <div class="content-links short-ver">
+                            <div class="content-links short-ver hidden-xs">
                                 <a class="content-links-play" href="#"><span>Смотреть ТВ<br> в Comboplayer</span></a>
+                            </div>
+                            
+                            <div class="content-links short-ver visible-xs">
+                                <a class="content-links-play content-links-googleplay" href="#"><span>Скачать Comboplayer</span></a>
                             </div>
                             
                         </div>

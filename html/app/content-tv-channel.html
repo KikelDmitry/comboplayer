@@ -37,8 +37,7 @@
                         <span class="navbar-brand logo">Project name</span>
                         <p class="slogan">Бесплатный плеер видео и аудио</p>
                     </div>
-                    
-                    <!--<div class="navbar-collapse collapse">
+                    <div class="navbar-collapse collapse">
                         <div class="navbar-form navbar-right">
                             <ul class="header-menu clearfix">
                                 <li class="header-menu-item">
@@ -48,38 +47,33 @@
                                     <a href="contacts.html" class="header-menu-link">Регистрация</a>
                                 </li>
                                 <li class="header-menu-item">
-                                    <a href="http://tv.comboplayer.ru" class="header-menu-link external">Combo TV</a>
+                                    <a href="http://tv.comboplayer.ru" class="header-menu-link">Combo TV</a>
                                 </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-tv"></i>ТВ-программа</a>
+                                </li>
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-video"></i>Видео</a>
+                                </li>
+                                <li class="header-menu-item extra-item">    
+                                    <a href="#" class="header-menu-link"><i class="icon-radio"></i>Радио</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="http://www.comboplayer.ru" onclick="Reformal.widgetOpen();return false;" class="header-menu-link">Отзывы и предложения</a>
+                                </li>
+                                
+                                <!--<li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link">Видео</a>
+                                </li>
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link">Радио</a>
+                                </li>-->
+                                
                             </ul>
                         </div>
-                    </div>-->
-                    
-<div class="navbar-form navbar-right">
-    <ul class="header-menu clearfix">
-        <li class="header-menu-item">
-            <a class="header-menu-link" rel="nofollow" onclick="yaCounter38016245.reachGoal('authorize'); return true;" href="https://www.comboplayer.ru/login">Авторизация</a>
-        </li>
-        <li class="header-menu-item">
-            <a class="header-menu-link" rel="nofollow" onclick="yaCounter38016245.reachGoal('registry'); return true;" href="https://www.comboplayer.ru/register">Регистрация</a>
-        </li>
-        <li class="header-menu-item">
-            <a href="https://www.comboplayer.ru/tv" class="header-menu-link ">
-                <i class="fa fa-tv"></i> Combo-TV
-            </a>
-        </li>
-        <li class="header-menu-item">
-            <a href="https://www.comboplayer.ru/tv-guide" class="header-menu-link ">
-                <i class="fa fa-list"></i> ТВ-программа
-            </a>
-        </li>
-        <li class="header-menu-item">
-            <a href="https://www.comboplayer.ru/videos" class="header-menu-link ">
-                <i class="fa fa-play"></i> Фильмы онлайн
-            </a>
-        </li>
-    </ul>
-</div>
-                    
+                    </div><!--/.navbar-collapse -->
                 </div>
             </div>
         </header>
@@ -135,13 +129,12 @@
                             
 <div class="nav tv-table-week">
                             
-    <div class="tv-datepicker">
+    <div class="tv-datepicker hidden-xs">
         <div class="input-group" id="DatePicker">
             <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
         </div>
     </div>
-
-    <div class="week-control-wrap">
+    <div class="week-control-wrap hidden-xs">
         <div class='row'>
             <div class='col-md-12'>
                 <div class="carousel slide" id="weekslide">
@@ -198,6 +191,42 @@
             </div>
         </div>
     </div>
+             
+    <div class="row visible-xs mb-15">
+        <div class="col col-xs-5">
+            
+            <div id="week-select">
+                <div class="btn-group show-on-hover">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Сегодня <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">06, ПТ</a></li>
+                        <li><a href="#">7, СБ</a></li>
+                        <li><a href="#">08, ВС</a></li>
+                        <li><a href="#">ВC</a></li>
+                        <li><a href="#">Вчера, ПН</a></li>
+                        <li><a class="active" href="#">Сегодня</a></li>
+                        <li><a href="#">Завтра, СР</a></li>
+                        <li><a href="#">ЧТ</a></li>
+                        <li><a href="#">ПТ</a></li>
+                        <li><a href="#">СБ</a></li>
+                        <li><a href="#">15, ПН</a></li>
+                        <li><a href="#">16, ВТ</a></li>
+                        <li><a href="#">17, СР</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        <div class="col col-xs-7">
+            
+            <div class="content-links short-ver visible-xs mt-0">
+                <a class="content-links-play content-links-googleplay" href="#"><span>Скачать Comboplayer</span></a>
+            </div>
+            
+        </div>
+    </div>
                            
 </div>
                             
@@ -219,9 +248,48 @@
                
                <div class="container-fluid">
                     <div class="row">
-                       
                         
-                        <div class="col col-md-6">
+                        <div class="col col-md-3 col-md-push-6">
+                        
+<!--<div class="channel-header">
+    <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
+    <h1 class="channel-header-text">Пятый канал &mdash; программа передач</h1>
+</div>-->
+
+<div class="channel-stream channel-stream-brief">
+    <ul>
+      
+        <li class="channel-stream-past">
+           <ul class="collapse" id="tv-stream-past">
+                <li><a class="channel-time channel-time-past" href="#"><span>16:40</span> Детективы. Небесное тело </a></li>
+                <li><a class="channel-time channel-time-past" href="#"><span>17:20</span> Детективы. Последняя любовь </a></li>
+                <li><a class="channel-time channel-time-past" href="#"><span>18:00</span> Детективы. Певичка</a></li>
+                <li><a class="channel-time channel-time-past" href="#"><span>19:00</span> След. Гарпии </a></li>
+                <li><a class="channel-time channel-time-past" href="#"><span>19:50</span> След. Она по проволоке ходила </a></li>
+            </ul>    
+            <div class="channel-stream-past-control " data-toggle="collapse" data-target="#tv-stream-past" aria-expanded="false">Прошедшие</div>               
+        </li>
+        
+        <li>
+            <a class="channel-time channel-time-current" href="#"><span>20:30</span> Сейчас: Тайны следствия
+                <img src="https://www.comboplayer.ru/static/video_images/928/921/9289213c06bd2769424e5014b37e0cfd023eb426_small.jpg" alt="">   
+            </a>
+        </li>
+        <li><a class="channel-time" href="#"><span>21:15</span> След.
+            <br><em>Безупречный синий</em>
+        </a></li>
+        <li><a class="channel-time" href="#"><span>22:25</span> Следствие любви. <br><em>3-я серия</em></a></li>
+        <li><a class="channel-time" href="#"><span>23:15</span> Следствие любви. <br><em>4-я серия</em></a></li>
+        <li><a class="channel-time" href="#"><span>00:00</span> Когда деревья были большими </a></li>
+        <li><a class="channel-time" href="#"><span>02:00</span> 72 метра. <br><em>1-я серия</em></a></li>
+        <li><a class="channel-time" href="#"><span>03:00</span> 72 метра. <br><em>2-я серия</em></a></li>
+        <li><a class="channel-time" href="#"><span>03:55</span> 72 метра. <br><em>3-я серия</em></a></li>
+    </ul>
+</div>                          
+                       
+                        </div>
+                        
+                        <div class="col col-md-6 col-md-pull-3">
 
 <div class="channel-actions">
     <!--<a class="channel-watch" href="#">
@@ -241,12 +309,8 @@
     
 </div>
 
-
-
 <div class="channel-descr">
-   
     <p>«Пятый канал» - федеральный канал с центром вещания в Санкт-Петербурге. Является преемником старейшего в России (СССР) ленинградского телевидения. В настоящее время канал ориентирован на широкую аудиторию, которой предлагаются как информационно-аналитические, так и развлекательные программы и шоу, документальные и художественные фильмы, сериалы.</p>    
-    
     <div class="content-links">
         <div class="row">
             <div class="col col-sm-7">
@@ -291,49 +355,8 @@
                        
                         </div>
                         
-                        <div class="col col-md-3">
+                        <div class="col col-md-3"></div>
                         
-<!--<div class="channel-header">
-    <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
-    <h1 class="channel-header-text">Пятый канал &mdash; программа передач</h1>
-</div>-->
-
-<div class="channel-stream channel-stream-brief">
-    <ul>
-      
-        <li class="channel-stream-past">
-           <ul class="collapse" id="tv-stream-past">
-                <li><a class="channel-time channel-time-past" href="#"><span>16:40</span> Детективы. Небесное тело </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>17:20</span> Детективы. Последняя любовь </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>18:00</span> Детективы. Певичка</a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>19:00</span> След. Гарпии </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>19:50</span> След. Она по проволоке ходила </a></li>
-            </ul>    
-            <div class="channel-stream-past-control " data-toggle="collapse" data-target="#tv-stream-past" aria-expanded="false">Прошедшие</div>               
-        </li>
-        
-        <li>
-            <a class="channel-time channel-time-current" href="#"><span>20:30</span> Сейчас: Тайны следствия
-                <img src="https://www.comboplayer.ru/static/video_images/928/921/9289213c06bd2769424e5014b37e0cfd023eb426_small.jpg" alt="">   
-            </a>
-        </li>
-        <li><a class="channel-time" href="#"><span>21:15</span> След.
-            <br><em>Безупречный синий</em>
-        </a></li>
-        <li><a class="channel-time" href="#"><span>22:25</span> Следствие любви. <br><em>3-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>23:15</span> Следствие любви. <br><em>4-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>00:00</span> Когда деревья были большими </a></li>
-        <li><a class="channel-time" href="#"><span>02:00</span> 72 метра. <br><em>1-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>03:00</span> 72 метра. <br><em>2-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>03:55</span> 72 метра. <br><em>3-я серия</em></a></li>
-    </ul>
-</div>                          
-                       
-                        </div>
-                        
-                        <div class="col col-md-3">
-                            <!--  -->
-                        </div>
                     </div>
                 </div>
            
