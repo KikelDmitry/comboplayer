@@ -1376,7 +1376,7 @@ textarea.form-control {
             position: relative;
             ul {
                 /*border-bottom: 2px solid #79ae0b;*/
-                display: inline-block;
+                /*display: inline-block;*/ //rr1
                 vertical-align: bottom;
                 max-width: 100%;
             }
@@ -2456,8 +2456,10 @@ textarea.form-control {
         a { 
             font-size: 14px; 
             &:before { top: 3px; }
+            &.content-links-googleplay:before { top: -2px; }
         }
     }
+    //zz2
 } 
 
 .content-tv-table-channel .channel-title,
@@ -3945,9 +3947,8 @@ textarea.form-control {
     display: table-cell;
     vertical-align: top;
 }*/
-//zz1
 
-#week-select { 
+/*#week-select {
     position: relative;
     select {
         height: 30px;
@@ -3956,17 +3957,6 @@ textarea.form-control {
         min-width: 100px;
         padding-left: 25px;
         .radius(4px) !important;
-        /*position: relative;*/
-        /*&:before { 
-            position: absolute;
-            width: 5px;
-            height: 5px;
-            background-color: magenta;
-            display: block;
-            top: 3px;
-            right: 3px;
-            content: " ";
-        }*/
         & + .caret { 
             position: absolute;
             width: 5px;
@@ -3978,7 +3968,26 @@ textarea.form-control {
             color: #2AAAE1;
         }
     }
+}*/
+
+#week-select {
+    margin-bottom: 15px;
+    .btn-group > .btn .caret {
+        color: #2aaae1;
+        margin-left: 5px;
+    }
+    .dropdown-menu {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        .active {
+            background-color: #E4EBEE;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
 }
+//zz1
+
 
 /* media q */
 
@@ -4153,14 +4162,11 @@ textarea.form-control {
         display: none;
     }
     .video-bar-item {
-        
         /*min-height: 400px !important;
         max-height: 400px;*/
         min-height: 580px !important;
         max-height: 580px;
         overflow: hidden;
-        //yy1
-        
         margin-bottom: 10px;
         &:hover { background-color: transparent !important; }
     }
@@ -4187,7 +4193,7 @@ textarea.form-control {
         .col:last-child a { margin-bottom: 0; }
     }
     .content-links:not(.download-ver) {
-        display: inline-block !important;
+        display: inline-block;
     }
     .content-links.download-ver a {
         font-size: 16px;
@@ -4317,30 +4323,30 @@ textarea.form-control {
     }
 
     .home-hero-video {
-        &-text {
-            top: 30%;
-        }
+        &-text { top: 30%; }
     }
 
     .footer {
-        .row > div {
-            padding-bottom: 15px;
-        }
+        .row > div { padding-bottom: 15px; }
     }
 
     .tv-content-header {
         font-size: 24px;
+        margin-top: 15px;
+    }
+    .content-tv-table-wrap {
+        margin-top: 15px;
     }
 
-    .content-tv-head .tv-table-time {
-        padding: 0;
-    }
+    .content-tv-head .tv-table-time { padding: 0; }
 
     .content-tv-head .tv-table-week {
-        ul {
+        ul { 
             border-bottom: 0;
+            max-width: inherit;
             li {
-                margin-bottom: 10px;
+                display: block;
+                margin-bottom: 0;
                 &.active {
                     .radius(3px);
                     margin-right: 10px;
@@ -4349,12 +4355,14 @@ textarea.form-control {
                     }
                 }
                 a {
-                    padding: 0;
-                    margin-right: 10px;
+                    display: block;
+                    padding: 3px 20px !important;
                 }
             }
         }
     }
+    
+
 
     .content-tv-head {
         .content-tv-table-categories {
@@ -4382,7 +4390,8 @@ textarea.form-control {
     }
 
     .content-tv-table-channel_cats {
-        margin-top: 15px;
+        margin-top: 0;
+        
         margin-bottom: 0;
     }
 
@@ -4418,8 +4427,8 @@ textarea.form-control {
     
     .content-links.short-ver {
         width: auto;
-        padding: 10px 15px 5px;
-        border:  1px solid #ddd;
+        /*padding: 10px 15px 5px;*/
+        /*border:  1px solid #ddd;*/
         a {
             margin-bottom: 0;
             br { display: none; }
@@ -4431,7 +4440,8 @@ textarea.form-control {
         padding-left: 2px;
         padding-right: 2px;
     }*/
-    //zz2
+    
+    .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
     
 }
 
@@ -4502,5 +4512,4 @@ textarea.form-control {
 @media (max-width: 365px) {
     .video-bar-item { min-height: 205px !important; }
 }
-//yy2
  
