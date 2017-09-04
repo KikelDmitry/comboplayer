@@ -134,10 +134,12 @@
             <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
         </div>
     </div>
-    <div class="week-control-wrap hidden-xs">
+    
+    <div class="week-control-wrap">
         <div class='row'>
             <div class='col-md-12'>
-                <div class="carousel slide" id="weekslide">
+               
+                <div class="carousel slide hidden-xs" id="weekslide">
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="row">
@@ -188,45 +190,46 @@
                     <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
                     <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
                 </div>
+                
+                <div class="row visible-xs">
+                    <div class="col col-xs-5">
+                       
+                        <div id="week-select">
+                            <div class="btn-group show-on-hover">
+                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                    Сегодня <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">06, ПТ</a></li>
+                                    <li><a href="#">7, СБ</a></li>
+                                    <li><a href="#">08, ВС</a></li>
+                                    <li><a href="#">ВC</a></li>
+                                    <li><a href="#">Вчера, ПН</a></li>
+                                    <li><a class="active" href="#">Сегодня</a></li>
+                                    <li><a href="#">Завтра, СР</a></li>
+                                    <li><a href="#">ЧТ</a></li>
+                                    <li><a href="#">ПТ</a></li>
+                                    <li><a href="#">СБ</a></li>
+                                    <li><a href="#">15, ПН</a></li>
+                                    <li><a href="#">16, ВТ</a></li>
+                                    <li><a href="#">17, СР</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="col col-xs-7">
+                        <div class="content-links short-ver visible-xs mt-0">
+                            <a class="content-links-play content-links-googleplay" href="#"><span>Скачать Comboplayer</span></a>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </div>
              
-    <div class="row visible-xs">
-        <div class="col col-xs-5">
-            
-            <div id="week-select">
-                <div class="btn-group show-on-hover">
-                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                        Сегодня <span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">06, ПТ</a></li>
-                        <li><a href="#">7, СБ</a></li>
-                        <li><a href="#">08, ВС</a></li>
-                        <li><a href="#">ВC</a></li>
-                        <li><a href="#">Вчера, ПН</a></li>
-                        <li><a class="active" href="#">Сегодня</a></li>
-                        <li><a href="#">Завтра, СР</a></li>
-                        <li><a href="#">ЧТ</a></li>
-                        <li><a href="#">ПТ</a></li>
-                        <li><a href="#">СБ</a></li>
-                        <li><a href="#">15, ПН</a></li>
-                        <li><a href="#">16, ВТ</a></li>
-                        <li><a href="#">17, СР</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-        </div>
-        <div class="col col-xs-7">
-            
-            <div class="content-links short-ver visible-xs mt-0">
-                <a class="content-links-play content-links-googleplay" href="#"><span>Скачать Comboplayer</span></a>
-            </div>
-            
-        </div>
-    </div>
+    
                            
 </div>
                             
