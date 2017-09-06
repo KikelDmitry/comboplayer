@@ -1436,7 +1436,7 @@ textarea.form-control {
                     }
                 }
                 &-control-wrap {
-                    margin-left: 40px;
+                    /*margin-left: 40px;*/
                     .carousel {
                         width: 100%;
                         .col {
@@ -1516,6 +1516,7 @@ textarea.form-control {
         }
         .channel-header-top {
             margin-top: 20px;
+            min-height: 64px;
             i > img {
                 width: 62px;
                 height: 62px;
@@ -2454,7 +2455,7 @@ textarea.form-control {
             &.content-links-googleplay:before { top: -2px; }
         }
     }
-    //zz2
+
 } 
 
 .content-tv-table-channel .channel-title,
@@ -3224,20 +3225,12 @@ textarea.form-control {
                         }
                     }
                     &.scrolling .carousel-item .materialboxed,
-                    .carousel-item:not(.active) .materialboxed {
-                        pointer-events: none;
-                    }
+                    .carousel-item:not(.active) .materialboxed { pointer-events: none; }
                 }
-
             }
-
-            > div {
-                margin-bottom: 15px;
-            }
-            &-also {
-            }
-            &-regia {
-            }
+            > div { margin-bottom: 15px; }
+            &-also {}
+            &-regia {}
         }
     }
 }
@@ -3867,7 +3860,8 @@ textarea.form-control {
 }
 
 .tt-suggestion-name {
-    padding-right: 115px;
+    /*padding-right: 115px;*/
+    padding-right: 10px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -3981,22 +3975,100 @@ textarea.form-control {
         }
     }
 }
-//zz1
+
+#mobDatePicker {
+    .btn {
+        display: block; 
+        .caret {
+            color: #2aaae1;
+            margin-left: 5px;
+        }
+    }
+    &.vertical .carousel-inner {
+        border: 1px solid #ccc;
+        margin-bottom: 15px;
+        margin-top: 5px;
+        .radius(4px);
+        height: 100%;
+        width: 150px;
+        padding: 0 !important;
+    }
+    &.carousel.vertical .item {
+        width: 150px;
+        -webkit-transition: 0.6s ease-in-out top;
+        -moz-transition: 0.6s ease-in-out top;
+        -ms-transition: 0.6s ease-in-out top;
+        -o-transition: 0.6s ease-in-out top;
+        transition: 0.6s ease-in-out top;
+    }
+    .c-controls {
+        clear: both;
+        overflow: hidden;
+        background-color: #E4EBEE;
+    }
+    &.carousel.vertical .carousel-control {
+        position: static;
+        background-image: inherit;
+        background: #cddae0;
+        color: #3C4C54;
+        padding: 1px 10px;
+        display: block;
+        text-decoration: none;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        float: left;
+        opacity: 1;
+        text-shadow: inherit;
+        font-weight: 700;
+        font-size: 20px;
+        &.left {
+            -moz-border-radius-bottomleft: 4px;
+            -webkit-border-bottom-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+        }
+        &.right { 
+            float: right; 
+            -moz-border-radius-bottomright: 4px;
+            -webkit-border-bottom-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        &:active {
+            background-color: @color-link;
+            i { color: #fff; }
+            
+        }
+    }    
+    ul {
+        li {
+            &.active { 
+                .radius(0px); 
+                margin: 0 !important;
+            }
+            a {
+                padding:  4px 15px !important;
+                /*text-align: left;*/
+                text-align: center;
+            }
+            &:first-child > a { padding-top: 8px !important; }
+            &:last-child > a { padding-bottom: 8px !important; } 
+        }
+    }
+
+}
+
+
 
 
 /* media q */
 
 @media (max-width: 1280px) {
     main.content,
-    .footer-contain {
-        padding: 0 20px;
-    }
+    .footer-contain { padding: 0 20px; }
 
     .content-video-type .video-bar.video-bar-poster .carousel .item,
     .content-video .video-bar-item,
-    .content-video .video-bar-item > a {
-        min-height: inherit;
-    }
+    .content-video .video-bar-item > a { min-height: inherit; }
 
 }
 
@@ -4220,7 +4292,7 @@ textarea.form-control {
     }
 
     .footer {
-        height: 100px;
+        /*height: 100px;*/
         &-menu {
             float: none;
             margin-top: 13px;
@@ -4326,12 +4398,9 @@ textarea.form-control {
     }
 
     .tv-content-header {
-        font-size: 24px;
         margin-top: 15px;
     }
-    .content-tv-table-wrap {
-        margin-top: 15px;
-    }
+    .content-tv-table-wrap { margin-top: 15px; }
 
     .content-tv-head .tv-table-time { padding: 0; }
 
@@ -4466,6 +4535,17 @@ textarea.form-control {
             font-size: 18px;
         }
     }
+    
+    .tv-content-header { 
+        padding-top: 0;
+        font-size: 18px;
+        margin-top: 15px;
+    }
+    .content-tv-channel .programm-header .channel-header-text {
+        font-size: 18px;
+        vertical-align: bottom;
+    }
+    
 }
 
 @media (min-width: 768px) {
@@ -4503,6 +4583,16 @@ textarea.form-control {
 }
 @media (max-width: 460px) {
     .video-bar-item { min-height: 275px !important; }
+    
+    #week-select {
+        .btn-group > .btn:first-child { padding: 4px 8px; }
+        .dropdown-menu { padding-top: 5px; padding-bottom: 5px; }
+    }
+    .content-tv-head .tv-table-week ul li a { padding: 3px 10px !important; }
+    .content-tv-table-channel_cats .btn-group > .btn { padding: 4px 8px; }
+    .content-tv-head .tv-table-week ul { padding-top: 5px; padding-bottom: 5px; }
+    
+    
 }
 @media (max-width: 365px) {
     .video-bar-item { min-height: 205px !important; }
