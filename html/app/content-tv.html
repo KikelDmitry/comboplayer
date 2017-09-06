@@ -224,17 +224,17 @@
                            
                             <div class="nav tv-table-week">
                                
-                                <div class="tv-datepicker hidden-xs">
+                                <!--<div class="tv-datepicker hidden-xs">
                                     <div class="input-group" id="DatePicker">
                                         <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
                                     </div>
-                                </div>
+                                </div>-->
                                 
 <div class="week-control-wrap">
     <div class='row'>
         <div class='col-md-12'>
            
-            <div class="carousel slide hidden-xs" id="weekslide">
+            <div class="carousel slide hidden-xs" id="weekslide"> 
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
@@ -287,16 +287,17 @@
             </div>
             
             <div class="row visible-xs">
-                <div class="col-xs-6">
+                <div class="col-xs-5">
                     
                     <div class="visible-xs" id="week-select">
                         
-                        <div class="btn-group show-on-hover">
+                        
+                        <!--<div class="btn-group show-on-hover"> //nb!1
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 Сегодня <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">06, ПТ</a></li>
+                                <li><a href="#">06, ПТ</a></li> 
                                 <li><a href="#">7, СБ</a></li>
                                 <li><a href="#">08, ВС</a></li>
                                 <li><a href="#">ВC</a></li>
@@ -310,13 +311,57 @@
                                 <li><a href="#">16, ВТ</a></li>
                                 <li><a href="#">17, СР</a></li>
                             </ul>
+                        </div>-->
+                        
+                        
+                        <div id="mobDatePicker" class="carousel slide vertical">
+                            <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#mobDatePickerSlider">Сегодня <span class="caret"></span></button>
+                            <div id="mobDatePickerSlider" class="collapse carousel-inner" aria-expanded="false">
+                                <div class="active item">
+                                    <ul>
+                                        <li><a href="#">15, ПН</a></li>
+                                        <li><a href="#">16, ВТ</a></li>
+                                        <li><a href="#">17, СР</a></li>
+                                        <li class="active"><a href="#">Сегодня, ЧТ</a></li>
+                                        <li><a href="#">19, ПТ</a></li>
+                                        <li><a href="#">20, СБ</a></li>
+                                        <li><a href="#">21, ВС</a></li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul>
+                                        <li><a href="#">22, ПН</a></li>
+                                        <li><a href="#">23, ВТ</a></li>
+                                        <li><a href="#">24, СР</a></li>
+                                        <li><a href="#">25, ЧТ</a></li>
+                                        <li><a href="#">26, ПТ</a></li>
+                                        <li><a href="#">27, СБ</a></li>
+                                        <li><a href="#">28, ВС</a></li>
+                                    </ul>
+                                </div>
+                                <div class="item">
+                                    <ul>
+                                        <li><a href="#">29, ПН</a></li>
+                                        <li><a href="#">30, ВТ</a></li>
+                                        <li><a href="#">1, СР</a></li>
+                                        <li><a href="#">2, ЧТ</a></li>
+                                        <li><a href="#">3, ПТ</a></li>
+                                        <li><a href="#">4, СБ</a></li>
+                                        <li><a href="#">5, ВС</a></li>
+                                    </ul>
+                                </div>
+                                <div class="c-controls">
+                                    <a class="carousel-control right" href="#mobDatePicker" data-slide="next"><i class="fa fa-angle-right"></i></a>
+                                    <a class="carousel-control left" href="#mobDatePicker" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+                                </div>
+                            </div>
                         </div>
                         
                         
                     </div>
                     
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-7">
                     
                     <div class="content-tv-table-channel_cats visible-xs">
                         <div class="btn-group show-on-hover">
