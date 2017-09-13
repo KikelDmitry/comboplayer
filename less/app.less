@@ -1282,7 +1282,11 @@ textarea.form-control {
     .datepicker-days {
         table {
             td {
-                &.disabled { color: #ccc; }
+                vertical-align: middle;
+                &.disabled { 
+                    color: #ccc; 
+                    &:hover, &:active, &:focus { color: #ccc; }
+                }
                 &.active { background: @color-green !important; } 
             }
         }
