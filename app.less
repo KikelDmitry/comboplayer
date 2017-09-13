@@ -1278,6 +1278,21 @@ textarea.form-control {
     }
 }
 
+.datepicker {
+    .datepicker-days {
+        table {
+            td {
+                vertical-align: middle;
+                &.disabled { 
+                    color: #ccc; 
+                    &:hover, &:active, &:focus { color: #ccc; }
+                }
+                &.active { background: @color-green !important; } 
+            }
+        }
+    }
+}
+
 .content-tv {
     &-nav {
         margin: 0 -20px;
