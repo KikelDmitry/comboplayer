@@ -1694,110 +1694,6 @@ textarea.form-control {
         }
         &-channel {
             margin-bottom: 30px;
-            /*.channel-title {
-        margin-bottom: 15px;
-        a {
-          text-decoration: none;
-          display: inline-block;
-        }
-        .channel-icon {
-          img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            vertical-align: bottom;
-          }
-          &.noimage {
-            img { display: none; }
-            width: 30px;
-            height: 30px;
-            display: inline-block;
-            vertical-align: bottom;
-            margin-right: 10px;
-            background: url('@{images}content-sprites.png') no-repeat 0 -40px;
-          }
-        }
-        &-text {
-          text-decoration: none;
-          font-weight: 600;
-          color: #25292b;
-          font-size: 20px;
-          border-bottom: 2px solid #2aaae1;
-          &:hover,
-          &:active,
-          &:focus {
-            color: #208ebd;
-            border-bottom: 0;
-          }
-        }
-        .channel-action {
-          display: inline-block;
-          cursor: pointer;
-          i {
-            font-size: 18px;
-            color: #2aaae1;
-            padding: 4px 0;
-            width: 30px;
-            text-align: center;
-          }
-          span {
-            display: none;
-            background: magenta;
-            color: #fff;
-            position: absolute;
-            font-size: 13px;
-            padding: 5px 10px;
-            z-index: 1000;
-            -moz-border-radius-bottomleft: 3px;
-            -webkit-border-bottom-left-radius: 3px;
-            border-bottom-left-radius: 3px;
-            -moz-border-radius-bottomright: 3px;
-            -webkit-border-bottom-right-radius: 3px;
-            border-bottom-right-radius: 3px;
-            -moz-border-radius-topright: 3px;
-            -webkit-border-top-right-radius: 3px;
-            border-top-right-radius: 3px;
-          }
-          &:hover {
-            span { display: block; }
-            i { background: blue; }
-          }
-        }
-        .channel-watch {
-          position: relative;
-          margin-right: -5px;
-          i {
-            font-size: 18px;
-            color: #2aaae1;
-          }
-          &:hover {
-            i {
-              background-color: #208ebd;
-              color: #fff;
-            }
-            span {
-              background-color: #2aaae1;
-              .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.3));
-            }
-          }
-        }
-        .channel-buy {
-          i {
-            font-size: 18px;
-            color: #79ae0b;
-          }
-          &:hover {
-            i {
-              background-color: #659306;
-              color: #fff;
-            }
-            span {
-              background-color: #79ae0b;
-              .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.3));
-            }
-          }
-        }
-      }*/
             .channel-body {
                 ul li {
                     margin-bottom: 5px;
@@ -1913,14 +1809,18 @@ textarea.form-control {
                 margin: 0;
                 .channel-epg {
                     /*margin-bottom: 0;
-          &:first-child { margin-top: 30px; }*/
+                      &:first-child { margin-top: 30px; }*/
                 }
                 ul {
-                    margin-bottom: 20px;
+                    margin-bottom: 10px;
                     margin-left: 75px;
                     li {
                         font-weight: 400;
-                        margin-bottom: 8px;
+                        margin-bottom: 5px;
+                        hr {
+                            margin-top: 10px;
+                            margin-bottom: 10px;
+                        }
                         &:last-child { margin-bottom: 0; }
                         a {
                             text-decoration: none;
@@ -1928,17 +1828,7 @@ textarea.form-control {
                                 color: @color-blue;
                             }
                         }
-                        span {
-                            margin-right: 5px;
-                        }
-                        /*> img {
-                margin: 10px 0;
-                max-width: 50%;
-                padding: 4px;
-                display: block;
-                background: #2AAAE1;
-                .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
-            }*/
+                        span { margin-right: 5px; }
                         .channel-time-current > img {
                             margin: 10px 0;
                             max-width: 50%;
@@ -4637,6 +4527,8 @@ textarea.form-control {
     .content-tv-table-channel_cats .btn-group > .btn { padding: 4px 8px; }
     .content-tv-head .tv-table-week ul { padding-top: 5px; padding-bottom: 5px; }
     
+    main.content,
+    .footer-contain { padding: 0; }
     
 }
 @media (max-width: 365px) {
