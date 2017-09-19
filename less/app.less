@@ -1768,11 +1768,40 @@ textarea.form-control {
                         }
                     }
                 }
+                
+                .week-view { 
+                    .trans();
+                    visibility: hidden;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-decoration: none;
+                    span { text-decoration: underline; }
+                    i {
+                        display: inline-block;
+                        background-color: @color-blue;
+                        color: #fff;
+                        font-weight: 600;
+                        padding: 2px;
+                        margin-right: 4px;
+                        vertical-align: bottom;
+                        padding: 3px;
+                        font-size: 12px;
+                    }
+                    &:hover { 
+                        span { text-decoration: none; }
+                        i {
+                            background-color: #EBF0F3;
+                            color: #187ca7; 
+                        } 
+                    }
+                }
+                &:hover {
+                    .week-view { visibility: visible; }
+                }
+                
             }
         }
-        &.fix-padding {
-            padding-top: 200px;
-        }
+        &.fix-padding { padding-top: 200px; }
     }
     &-channel {
         .channel {
