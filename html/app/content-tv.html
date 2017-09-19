@@ -144,7 +144,7 @@
                 <div class="container-fluid">
                  
                 <div class="row">
-                    <div class="col col-md-9 col-sm-9 col-sm-8">
+                    <div class="col col-md-9 col-sm-9">
                         
                         <div class="row">
                             <div class="col col-md-8">
@@ -196,7 +196,7 @@
                         </div>
 
                     </div> 
-                    <div class="col col-md-3 col-sm-4">
+                    <div class="col col-md-3 col-sm-3">
                        
                         <!--<div class="tv-table-time">
                             <span><i class="fa fa-clock-o"></i>&nbsp;14:54:50</span>
@@ -227,22 +227,34 @@
                            
                             <div class="nav tv-table-week">
                                
-                                <div class="tv-datepicker hidden-xs">
+                                <div class="tv-datepicker hidden-sm hidden-xs">
                                     <div class="input-group" id="DatePicker">
                                         <input type="text" id="weeklyDatePicker" placeholder="Выберите неделю" />
                                     </div>
                                 </div>
                                 
+<!--<div class="trial-switch pull-right">
+    <div class="btn-group btn-toggle" data-toggle="buttons">
+        <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option1" autocomplete="off" checked="">месяц
+        </label>
+        <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off">день
+        </label>
+    </div>
+</div>-->
+                                
 <div class="week-control-wrap">
     <div class='row'>
         <div class='col-md-12'>
            
-            <div class="carousel slide hidden-xs" id="weekslide"> 
+            <div class="carousel slide hidden-sm hidden-xs" id="weekslide"> 
                 <div class="carousel-inner">
                     <div class="item active">
                         <div class="row">
                             <div class="col col-md-4">
                                 <ul>
+                                    <li><a href="#">На прошлую неделю</a></li>
                                     <li><a href="#">02, ПН</a></li>
                                     <li><a href="#">03, ВТ</a></li>
                                     <li><a href="#">04, СР</a></li>
@@ -258,6 +270,7 @@
                         <div class="row">
                             <div class="col col-md-4">
                                 <ul>
+                                    <li><a href="#">На эту неделю</a></li>
                                     <li><a href="#">ВC</a></li>
                                     <li><a href="#">Вчера, ПН</a></li>
                                     <li class="active"><a href="#">Сегодня</a></li>
@@ -273,6 +286,7 @@
                         <div class="row">
                             <div class="col col-md-4">
                                 <ul>
+                                    <li><a href="#">На следующую неделю</a></li>
                                     <li><a href="#">15, ПН</a></li>
                                     <li><a class="disabled" href="#">16, ВТ</a></li>
                                     <li><a class="disabled" href="#">17, СР</a></li>
@@ -286,36 +300,13 @@
                     </div>
                 </div>
                 <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
-                <a data-slide="next" href="#weekslide" class="week-control week-next right disabled"><i class="fa fa-angle-right"></i></a>
+                <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
             </div>
             
-            <div class="row visible-xs">
+            <div class="row visible-sm visible-xs">
                 <div class="col-xs-5">
                     
-                    <div class="visible-xs" id="week-select">
-                        
-                        
-                        <!--<div class="btn-group show-on-hover"> //nb!1
-                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                                Сегодня <span class="caret"></span>
-                            </button>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">06, ПТ</a></li> 
-                                <li><a href="#">7, СБ</a></li>
-                                <li><a href="#">08, ВС</a></li>
-                                <li><a href="#">ВC</a></li>
-                                <li><a href="#">Вчера, ПН</a></li>
-                                <li><a class="active" href="#">Сегодня</a></li>
-                                <li><a href="#">Завтра, СР</a></li>
-                                <li><a href="#">ЧТ</a></li>
-                                <li><a href="#">ПТ</a></li>
-                                <li><a href="#">СБ</a></li>
-                                <li><a href="#">15, ПН</a></li>
-                                <li><a href="#">16, ВТ</a></li>
-                                <li><a href="#">17, СР</a></li>
-                            </ul>
-                        </div>-->
-                        
+                    <div class="visible-sm visible-xs" id="week-select">
                         
                         <div id="mobDatePicker" class="carousel slide vertical">
                             <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#mobDatePickerSlider">Сегодня <span class="caret"></span></button>
@@ -360,13 +351,12 @@
                             </div>
                         </div>
                         
-                        
                     </div>
                     
                 </div>
                 <div class="col-xs-7">
                     
-                    <div class="content-tv-table-channel_cats visible-xs">
+                    <div class="content-tv-table-channel_cats visible-sm visible-xs">
                         <div class="btn-group show-on-hover">
                             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                 Все каналы <span class="caret"></span>
@@ -392,7 +382,7 @@
 
                             </div>
                             
-                            <div class="content-tv-table-categories hidden-xs">
+                            <div class="content-tv-table-categories hidden-sm hidden-xs">
                                 <!--<div class="content-tv-table-categories-title"><strong>Передачи</strong></div>-->
                                 <span class="active">Познавательное</span>
                                 <span class="active">Фильм</span>
@@ -1128,7 +1118,7 @@
         
     </script>
     
-    <div class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-top" style="display: block; top: 289px; left: 177px;">
+    <!--<div class="datepicker datepicker-dropdown dropdown-menu datepicker-orient-left datepicker-orient-top" style="display: block; top: 289px; left: 177px;">
         <div class="datepicker-days" style="display: block;">
             <table class="table table-condensed">
                 <thead>
@@ -1261,7 +1251,7 @@
                 </tfoot>
             </table>
         </div>
-    </div>
+    </div>-->
     
     
 </body>
