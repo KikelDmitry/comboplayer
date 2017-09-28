@@ -1586,8 +1586,12 @@ textarea.form-control {
                 }
 
                 .week-view {
-                    .trans();
                     visibility: hidden;
+                    @media (max-width: @screen-xs-max) {
+                        visibility: visible;
+                    }
+
+                    .trans();
                     font-weight: 400;
                     font-size: 14px;
                     text-decoration: none;
@@ -1597,7 +1601,6 @@ textarea.form-control {
                         background-color: @color-blue;
                         color: #fff;
                         font-weight: 600;
-                        padding: 2px;
                         margin-right: 4px;
                         vertical-align: bottom;
                         padding: 3px;
