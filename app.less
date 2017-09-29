@@ -45,7 +45,7 @@
     &-20 { margin: 20px !important; }
     &-30 { margin: 30px !important; }
     &r-0 { margin-right: 0px !important; }
-    &l-0 { margin-left: 0px !important; } 
+    &l-0 { margin-left: 0px !important; }
     &r-5 { margin-right: 5px !important; }
     &l-5 { margin-left: 5px !important; }
     &r-10 { margin-right: 10px !important; }
@@ -1253,16 +1253,6 @@ textarea.form-control {
                             cursor: default;
                         }
                     }
-                    &.disabled { 
-                        color: #ccc; 
-                        text-decoration: none;
-                        &:hover,
-                        &:active,
-                        &:focus { 
-                            color: #ccc; 
-                            cursor: default;
-                        }
-                    }
                 }
                 &.active {
                     background-color: #79ae0b;
@@ -1596,8 +1586,12 @@ textarea.form-control {
                 }
                 
                 .week-view { 
-                    .trans();
                     visibility: hidden;
+                    @media (max-width: @screen-xs-max) {
+                        visibility: visible;
+                    }
+
+                    .trans();
                     font-weight: 400;
                     font-size: 14px;
                     text-decoration: none;
@@ -1608,7 +1602,6 @@ textarea.form-control {
                         background-color: @color-blue;
                         color: #fff;
                         font-weight: 600;
-                        padding: 2px;
                         margin-right: 4px;
                         vertical-align: bottom;
                         padding: 3px;
@@ -3865,16 +3858,16 @@ textarea.form-control {
         color: #25292b;
         font-size: 20px;
         border-bottom:  1px solid #E4EBEE;
-        padding-bottom: 5px; 
+        padding-bottom: 5px;
     }
     &-col {
         margin-bottom: 0;
     }
     &-body {
-        
-    } 
-    .text-muted .channel-time { 
-        color: #8aa7b9; 
+
+    }
+    .text-muted .channel-time {
+        color: #8aa7b9;
     }
 }
 //zz
@@ -4075,9 +4068,9 @@ textarea.form-control {
     .content-links.download-ver a {
         font-size: 16px;
     }
-    
+
     /*.content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }*/
-    
+
     .content-tv-table-channel_cats {
         margin-top: 0;
         margin-bottom: 0;
@@ -4107,6 +4100,7 @@ textarea.form-control {
     .content {
         padding-bottom: 130px;
     }
+
 
 
     .contacts-vcard {
@@ -4249,6 +4243,8 @@ textarea.form-control {
     
     .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
     
+    .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
+
 }
 
 @media (max-width: 400px) {
@@ -4303,6 +4299,43 @@ textarea.form-control {
     .download-link-bottom {
         padding-top: 60px;
     }
+}
+
+@media (max-width: 850px) {
+    .video-bar-item { min-height: 565px !important; }
+}
+@media (max-width: 790px) {
+    .video-bar-item { min-height: 520px !important; }
+}
+@media (max-width: 730px) {
+    .video-bar-item { min-height: 480px !important; }
+}
+@media (max-width: 685px) {
+    .video-bar-item { min-height: 440px !important; }
+}
+@media (max-width: 610px) {
+    .video-bar-item { min-height: 380px !important; }
+}
+@media (max-width: 530px) {
+    .video-bar-item { min-height: 325px !important; }
+}
+@media (max-width: 460px) {
+    .video-bar-item { min-height: 275px !important; }
+
+    #week-select {
+        .btn-group > .btn:first-child { padding: 4px 8px; }
+        .dropdown-menu { padding-top: 5px; padding-bottom: 5px; }
+    }
+    .content-tv-head .tv-table-week ul li a { padding: 3px 10px !important; }
+    .content-tv-table-channel_cats .btn-group > .btn { padding: 4px 8px; }
+    .content-tv-head .tv-table-week ul { padding-top: 5px; padding-bottom: 5px; }
+
+    main.content,
+    .footer-contain { padding: 0; }
+
+}
+@media (max-width: 365px) {
+    .video-bar-item { min-height: 205px !important; }
 }
 
 @media (max-width: 850px) {
