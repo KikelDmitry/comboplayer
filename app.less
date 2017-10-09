@@ -2759,7 +2759,7 @@ textarea.form-control {
 
         .video-single-text {
             font-weight: 400;
-            padding-top: 20px;
+            /*padding-top: 20px;*/
         }
         .video-single-images {
             > img { width: 100%; }
@@ -3870,7 +3870,85 @@ textarea.form-control {
         color: #8aa7b9;
     }
 }
-//zz
+
+/* download help popup */
+
+.modal.in#downloadHelper .modal-dialog {
+    position:fixed;
+    margin:0px;
+}
+#downloadHelper {
+    .modal-dialog { 
+        width: 320px; 
+        .modal-content {
+            .radius(0px);
+            border-color: #E0E2E5;
+        }
+        .modal-header {
+            padding: 5px;
+            border: none;
+        }
+    }
+    .modal-body {
+        font-weight: 400;
+        padding-top: 0;
+        padding-bottom: 25px;
+        .downloadHelper-icon {
+            color: @color-blue;
+            display: block;
+            font-size: 60px;
+            margin-right: 10px;
+            padding: 0 10px;
+            color: #1AAFD0;
+            background: transparent;
+            width: 50px;
+            text-align: center;
+            float: left;
+            height: 60px; 
+            line-height: 60px;
+            &:before { content: "\f175"; }
+        }
+        p { margin-bottom: 10px; }
+    }
+    &.downloadHelper {
+        &-leftdown {
+            .modal-dialog { 
+                bottom:0px;
+                left:0px;
+                .modal-body .downloadHelper-icon {
+                    &:before { content: "\f175"; }
+                }
+            }
+        }
+        &-rightdown {
+            .modal-dialog { 
+                bottom:0px;
+                right:0px;
+                .modal-body .downloadHelper-icon {
+                    &:before { content: "\f175"; }
+                }
+            }
+        }
+        &-leftup {
+            .modal-dialog { 
+                top:0px;
+                left:0px;
+                .modal-body .downloadHelper-icon {
+                    &:before { content: "\f176"; }
+                }
+            }
+        }
+        &-rightup {
+            .modal-dialog { 
+                top:0px;
+                right:0px;
+                .modal-body .downloadHelper-icon {
+                    &:before { content: "\f176"; }
+                }
+            }
+        }
+    }
+}
 
 /* media q */
 
@@ -3985,8 +4063,6 @@ textarea.form-control {
     .home-hero-video-p.small {
         display: none;
     }
-
-
 
     .content-tv {
         &-nav {
@@ -4411,4 +4487,3 @@ textarea.form-control {
 @media (max-width: 365px) {
     .video-bar-item { min-height: 205px !important; }
 }
- 
