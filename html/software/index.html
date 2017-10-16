@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Вы выбрали тариф</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/css/software.css" /> 
+
+    <!-- Scripts -->
+    <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <style type="text/css">
+        /* nb! - стили для демо */
+        body { background-color: #333d44; }
+        .page-container { 
+            max-width: 800px; 
+            background: #fff;
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+        /* nb! - стили для демо - end */
+    </style>
+    
+</head>
+<body>
+    
+    <div class="page-container">
+   
+        <header class="header">
+            
+            <div class="header-login">
+               
+                <!-- Не залогинен -->
+                <div class="header-login-off">
+                    <div class="form-group">
+                        <label for="email">Для оформления заказа укажите <strong>e-mail</strong> / <strong>телефон</strong>:</label>
+                        <input type="text" class="form-control" id="email">
+                    </div>
+                </div>
+                
+                <!-- Залогинен -->
+                <div class="header-login-on">
+                    <p>Заказ оформляется на <span><i class="fa fa-user"></i>&nbsp;mail@mail.ru</span></p>
+                </div>
+                
+            </div>
+            
+        </header>
+        
+        <!-- 1 - Выбор цены -->
+        <main class="content step-first">
+         
+            <div class="content-choice">
+                <div class="container-fluid">
+                    
+                    <h2 class="header2">Вы выбрали:</h2>
+                    
+                    <div class="content-choice-channel">
+                        <img src="https://www.comboplayer.ru/static/channels/059/fb7/059fb73c5a72b1789226bfd68a548a0e8b4cb8a0.png" alt="">
+                        <h3 class="header3">Канал &laquo;Россия 1&raquo;</h3>
+                    </div>
+                    <div class="content-choice-info">
+                        <p>Для его просмотра нужно оформить подписку на тариф <strong>«Ваш выбор»</strong>  <em>(<strong>100</strong> каналов)</em> <br>и пакет каналов <strong>«Открытый»</strong> <em>(+<strong>6</strong> каналов)</em>. <br>Всего: <em><strong>106</strong> каналов</em>.</p>
+                    </div>
+        
+                    <div class="content-choice-buy">
+                        <div class="left-side pull-left">
+                            <span class="header2">Купить на период:</span>
+                        </div>
+                        <div class="trial-switch pull-left">
+                            <div class="btn-group btn-toggle" data-toggle="buttons">
+                                <label class="btn btn-primary active">
+                                    <input type="radio" name="options" id="option1" autocomplete="off" checked="">месяц
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="options" id="option2" autocomplete="off">день
+                                </label>
+                            </div>
+                        </div>
+                    </div>                   
+                    
+                    <div class="content-choice-table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Тариф <strong>«Ваш выбор»</strong></td>
+                                    <td><strong>150 <i class="fa fa-rub" aria-hidden="true"></i></strong>&nbsp;/&nbsp;мес.</td>
+                                </tr>
+                                <tr>
+                                   <td>Пакет <strong>«Открытый»</strong></td>
+                                    <td><strong>200 <i class="fa fa-rub" aria-hidden="true"></i></strong>&nbsp;/&nbsp;мес.</td>
+                                </tr>
+                                <tr>
+                                    <td>Итого</td>
+                                    <td><strong>350 <i class="fa fa-rub" aria-hidden="true"></i></strong>&nbsp;/&nbsp;мес.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="content-choice-buttons">
+                        <a class="btn btn-default btn-choice btn-choice-card">Банковская карта</a>
+                        <a class="btn btn-default btn-choice btn-choice-ya">Яндекс.Кошелек</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="content-thanks"></div>
+            
+            <div class="content-error"></div>
+           
+        </main>
+        
+        <!-- 2 - Фрейм Яндекса -->
+        <main class="content step-second">
+            <iframe style="width: 600px; height: 600px;" src="https://money.yandex.ru/cashdesk/2.0/contract/2171464c-0009-5000-8000-0000271d8e86/iframe/152104/09e7ac54-0f7f-4422-9844-b688c78713ef"></iframe>
+        </main>
+        
+        <!-- Ошибка --> 
+        <main class="content error">
+            <div class="content-choice">
+                <div class="container-fluid">
+                    <h2 class="header2">
+                        <i class="fa fa-times-circle"></i>
+                        Произошла ошибка
+                    </h2>
+                    <div>
+                        <p>Попробуйте снова.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Спасибо -->
+        <main class="content thanks">
+            <div class="content-choice">
+                <div class="container-fluid">
+                    <h2 class="header2">
+                        <i class="fa fa-check-circle"></i>
+                        Спасибо за подписку!
+                    </h2>
+                    <div>
+                        <p>Текст текст текст.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+   
+</body>
+</html>
