@@ -15,6 +15,7 @@
     <!-- Styles -->
     <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
     <link rel="stylesheet" href="/css/app.css" />
+    <link rel="stylesheet" href="/css/download_help.css" />
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
@@ -23,9 +24,9 @@
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     
     <script type="text/javascript">
-        $(window).on('load',function(){
+        /*$(window).on('load',function(){
             $('#downloadHelper').modal('show');
-        });
+        });*/
     </script>
     
 </head>
@@ -146,7 +147,7 @@
         </footer>
     </div>
     
-    <div class="modal downloadHelper-leftdown" id="downloadHelper" tabindex="-1" role="dialog" data-backdrop="false">
+    <!--<div class="modal downloadHelper-leftdown" id="downloadHelper" tabindex="-1" role="dialog" data-backdrop="false">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -160,7 +161,24 @@
                 </div>
             </div>
         </div>
+    </div>-->
+
+    <div class="download_popup_bottom_block download_popup_bottom_help" data-browser="opera" style="display: block;">
+        <div class="download_popup download_popup_bottom">
+            <div class="download_popup_icon">
+                <i class="fa fa-arrow-down animated bounce infinite"></i>
+            </div>
+            <span class="download_popup_text">После загрузки кликните дважды по названию файла.</span>
+            <span class="download_popup_text">Запустите установку программы.</span>
+            <span class="close_btn">
+                <img src="/images/download_close_img.png" width="10" height="10" alt="Close"></span>
+        </div>
     </div>
+    
+<!--<div class="download_popup_top_block download_popup_bottom_help" data-browser="opera" style="">
+    <div class="download_popup download_popup_top">
+        <div class="download_popup_icon"><img src="https://www.carambis.com/images/arrow_move_transparency.gif" width="58" height="65" alt="Arrow"></div><span class="download_popup_text">Double click on&nbsp;file name.</span><span class="download_popup_text">Start the program installation</span><span class="close_btn"><img src="https://www.carambis.com/images/download_close_img.png" width="10" height="10" alt="Close"></span></div>
+</div>-->
     
 </body>
 </html>
