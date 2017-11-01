@@ -11,7 +11,7 @@
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
     <!-- Styles -->
-    <link rel="stylesheet" href="/css/software.css" /> 
+    <link rel="stylesheet" href="/css/software.css" />
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
@@ -102,15 +102,47 @@
                                 </tr>
                                 <tr>
                                     <td>Итого</td>
-                                    <td><strong>350 <i class="fa fa-rub" aria-hidden="true"></i></strong>&nbsp;/&nbsp;мес.</td>
+                                    <td><strong>350 <i class="fa fa-rub" aria-hidden="true"></i></strong><sup><em class="sup-sign">*</em></sup>&nbsp;/&nbsp;мес.</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                     
-                    <div class="content-choice-buttons">
+                    <div class="content-choice-note p-15 align-center">
+                        <p>Вы выбрали пероид на месяц. <a href="#">Подробнее</a>.</p>    
+                        <p><sup><em class="sup-sign">*</em></sup> Cумма <strong>350</strong> будет списываться ежемесячно. <a href="#">Подробнее</a>.</p>
+                        <p class="mb-0"><i class="fa fa-info-circle mr-5"></i><a href="#">Условия публичной аферты</a></p>   
+                    </div>
+                    
+                    <!--<div class="content-choice-buttons">
                         <a class="btn btn-default btn-choice btn-choice-card">Банковская карта</a>
                         <a class="btn btn-default btn-choice btn-choice-ya">Яндекс.Кошелек</a>
+                    </div>-->
+                    
+                    <!--<div class="content-choice-buttons">
+                        <div class="row mb-15">
+                            <div class="col-md-5"><a class="btn btn-default btn-choice btn-choice-card">Банковская карта</a></div>
+                            <div class="col-md-7"><span class="content-choice-buttons-note">Для оплаты вы будете перенаправлены на сайт ООО НКО «Яндекс.Деньги», где в безопасном режиме (SSL) , будет произведена оплата.</span></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5"><a class="btn btn-default btn-choice btn-choice-ya">Яндекс.Кошелек</a></div>
+                            <div class="col-md-6"><span class="content-choice-buttons-note">При платеже через PayPal вы будете переадресованы на сайт paypal.com где вам будет предложено ввести войти в систему PayPal защищенном режиме и подтвердить платеж. </span></div>
+                        </div>
+                    </div>-->
+                    
+                    <div class="content-choice-buttons pb-30 mb-15">
+                        <div class="btn-group">
+                            <a type="button" class="btn btn-default btn-choice btn-choice-card">Банковская карта</a>
+                            <a type="button" href="#" class="btn btn-choice-help" data-toggle="popover" data-title="Банковская карта" data-trigger="hover" data-container="body" data-placement="top" data-content="Для оплаты вы будете перенаправлены на сайт ООО НКО «Яндекс.Деньги», где в безопасном режиме (SSL) , будет произведена оплата." data-original-title="" title="">
+                                <i class="fa fa-question-circle"></i>
+                            </a>
+                        </div>
+                        <div class="btn-group">
+                            <a type="button" class="btn btn-default btn-choice btn-choice-ya">Яндекс.Кошелек</a>
+                            <a type="button" href="#" class="btn btn-choice-help" data-toggle="popover" data-title="Яндекс.Кошелек" data-trigger="hover" data-container="body" data-placement="top" data-content="..." data-original-title="" title="">
+                                <i class="fa fa-question-circle"></i>
+                            </a>
+                        </div>
                     </div>
                     
                 </div>
@@ -123,12 +155,12 @@
         </main>
         
         <!-- 2 - Фрейм Яндекса -->
-        <main class="content step-second">
+        <!--<main class="content step-second">
             <iframe style="width: 600px; height: 600px;" src="https://money.yandex.ru/cashdesk/2.0/contract/2171464c-0009-5000-8000-0000271d8e86/iframe/152104/09e7ac54-0f7f-4422-9844-b688c78713ef"></iframe>
-        </main>
+        </main>-->
         
         <!-- Ошибка --> 
-        <main class="content error">
+        <!--<main class="content error">
             <div class="content-choice">
                 <div class="container-fluid">
                     <h2 class="header2">
@@ -140,10 +172,10 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </main>-->
         
         <!-- Спасибо -->
-        <main class="content thanks">
+        <!--<main class="content thanks">
             <div class="content-choice">
                 <div class="container-fluid">
                     <h2 class="header2">
@@ -155,9 +187,21 @@
                     </div>
                 </div>
             </div>
-        </main>
+        </main>-->
 
     </div>
    
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
+
+   
 </body>
 </html>
+
+
+
+
+
