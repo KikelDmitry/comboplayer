@@ -125,21 +125,29 @@
                 <div class="container-fluid">
                  
                     <div class="row">
-                        <div class="col col-md-3 hidden-sm hidden-xs">
+                      
+                        <div class="col col-md-9 col-sm-8 hidden-xs">
+                           <ul class="content-radio-menu">
+                               <li class="active"><i class="fa fa-star"></i><a href="#">Топ 100</a></li>
+                               <li><a href="#"><i class="fa fa-star"></i>Росссийские поп-радиостанции</a></li>
+                               <li><a href="#"><i class="fa fa-star"></i>Радиостанции Ростова-на-Дону</a></li>
+                           </ul>
+                        </div> 
+                       
+                        <!--<div class="col col-md-3 hidden-sm hidden-xs">
                             <h1 class="content-radio-head-title">Радио</h1>
                         </div> 
                         <div class="col col-md-6 col-sm-8 hidden-xs">
                            <ul class="content-radio-menu">
-                               
                                <li class="active"><i class="fa fa-star"></i><a href="#">Топ 100</a></li>
                                <li><a href="#"><i class="fa fa-star"></i>Росссийские поп-радиостанции</a></li>
                                <li><a href="#"><i class="fa fa-star"></i>Радиостанции Ростова-на-Дону</a></li>
-
                            </ul>
-                        </div> 
+                        </div> -->
+                        
                         <div class="col col-md-3 col-sm-4">
 
-                            <div class="tv-search form-group-md">
+                            <div class="tv-search form-group-md mb-15">
                                 <span class="twitter-typeahead">
                                     <span class="input-group-btn">
                                         <input type="text" class="form-control input-lg" placeholder="Поиск" spellcheck="false">
@@ -165,12 +173,220 @@
                         <div class="col col-md-3 col-md-push-9">
                             
                             <div class="radio-filters">
+                              
+                                <div class="radio-filters-block block-city">
+                                    <div data-toggle="collapse" data-target="#block-radio-city" class="block-category-control" aria-expanded="true"><i class="fa fa-building"></i>&nbsp;Город</div>
+                                    
+<div class="auto-search form-group-md">
+    <span class="twitter-typeahead">
+       
+        <!-- для демо, убрать -->
+        <style> .auto-search .input-group-btn input:focus + div { display: block !important;}</style>
+       
+        <span class="input-group-btn">
+            <input type="text" class="form-control input-lg" placeholder="Введите город" spellcheck="false">
+            <div role="listbox" class="tt-menu" style="position: absolute;top: 100%;left: 0px;z-index: 100;display: none;" aria-expanded="false">
+                <div role="presentation" class="tt-dataset tt-dataset-0"></div>
+                <div role="presentation" class="tt-dataset tt-dataset-1">
+                    <div class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">
+                            Москва
+                        </div>
+                    </div>
+                    <div class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">
+                            Мехико
+                        </div>
+                    </div>
+                    <div class="tt-suggestion tt-selectable">
+                        <div class="tt-suggestion-name">
+                            Могадишо
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="btn btn-info btn-lg" type="button">
+                <i class="glyphicon glyphicon-triangle-right"></i>
+            </button>
+        </span>
+    </span>
+</div>
+
+                                    <ul class="clearfix collapse in" id="block-radio-city" aria-expanded="true" style="">
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AU" id="city1">
+                                            <label for="city1">
+                                                <a class="link-ignore" href="#">Москва</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AT" id="city2">
+                                            <label for="city2">
+                                                <a class="link-ignore" href="#">Санкт-Петербург</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AZ" id="city3" checked="">
+                                            <label for="city3">
+                                                <a class="link-ignore" href="#">Новосибирск</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="DZ" id="city4">
+                                            <label for="city4">
+                                                <a class="link-ignore" href="#">Екатеринбург</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AR" id="city5">
+                                            <label for="city5">
+                                                <a class="link-ignore" href="#">Нижний Новгород</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city6">
+                                                <a class="link-ignore" href="#">Казань</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city7">
+                                                <a class="link-ignore" href="#">Челябинск</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city8">
+                                                <a class="link-ignore" href="#">Омск</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city9">
+                                                <a class="link-ignore" href="#">Самара</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city10">
+                                                <a class="link-ignore" href="#">Ростов-на-Дону</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city11">
+                                                <a class="link-ignore" href="#">Уфа</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city12">
+                                                <a class="link-ignore" href="#">Красноярск</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city13">
+                                                <a class="link-ignore" href="#">Пермь</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city14">
+                                                <a class="link-ignore" href="#">Воронеж</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city15">
+                                                <a class="link-ignore" href="#">Волгоград</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city16">
+                                                <a class="link-ignore" href="#">Краснодар</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city17">
+                                                <a class="link-ignore" href="#">Саратов</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city18">
+                                                <a class="link-ignore" href="#">Тюмень</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city19">
+                                                <a class="link-ignore" href="#">Тольятти</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
+                                            <label for="city20">
+                                                <a class="link-ignore" href="#">Ижевск</a>
+                                            </label>
+                                        </li>
+                                    </ul>
+
+                                    <p class="radio-filters-more"><a href="#">Все города&hellip;</a></p>
+                                    
+                                </div>
+                                
+                                <div class="radio-filters-block block-country">
+                                    <div data-toggle="collapse" data-target="#block-radio-country" class="block-category-control"><i class="fa fa-globe"></i>&nbsp;Страна</div>
+                                    <ul class="clearfix collapse" id="block-radio-country" aria-expanded="true" style="">
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="AU" id="country1">
+                                            <label for="country1">
+                                                <a class="link-ignore" href="#">Австралия</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="AT" id="country2">
+                                            <label for="country2">
+                                                <a class="link-ignore" href="#">Австрия</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="AZ" id="country3">
+                                            <label for="country3">
+                                                <a class="link-ignore" href="#">Азербайджан</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="DZ" id="country5">
+                                            <label for="country5">
+                                                <a class="link-ignore" href="#">Алжир</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="AR" id="country10">
+                                            <label for="country10">
+                                                <a class="link-ignore" href="#">Аргентина</a>
+                                            </label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" name="countries[]" value="AM" id="country11">
+                                            <label for="country11">
+                                                <a class="link-ignore" href="#">Армения</a>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                </div>
                                
                                 <div class="radio-filters-block block-category">
-                                    <div data-toggle="collapse" data-target="#block-radio-category" class="block-category-control"><i class="fa fa-star"></i>&nbsp;Жанр</div>
-                                    <ul class="clearfix collapse" id="block-radio-category" aria-expanded="true" style="">
+                                   
+                                    <div data-toggle="collapse" data-target="#block-radio-category" class="block-category-control" aria-expanded="true"><i class="fa fa-star"></i>&nbsp;Жанр</div>
+                                    <ul class="clearfix collapse in" id="block-radio-category" aria-expanded="true" style="">
                                         <li>
-                                            <input type="checkbox" name="genres[]" value="" id="genre1">
+                                            <input type="checkbox" name="genres[]" value="" checked="" id="genre1">
                                             <label for="genre1" title="">
                                                 <a class="link-ignore" href="#">Танцевальная</a>
                                             </label>
@@ -206,90 +422,6 @@
                                             </label>
                                         </li>
                                     </ul>
-                                </div>
-                                
-                                <div class="radio-filters-block block-city">
-                                    <div data-toggle="collapse" data-target="#block-radio-city" class="block-category-control"><i class="fa fa-building"></i>&nbsp;Город</div>
-                                    <ul class="clearfix collapse" id="block-radio-city" aria-expanded="true" style="">
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AU" id="city1">
-                                            <label for="city1">
-                                                <a class="link-ignore" href="#">Москва</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AT" id="city2">
-                                            <label for="city2">
-                                                <a class="link-ignore" href="#">Санкт-Петербуг</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AZ" id="city3">
-                                            <label for="city3">
-                                                <a class="link-ignore" href="#">Ростов-на-Дону</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="DZ" id="city4">
-                                            <label for="city4">
-                                                <a class="link-ignore" href="#">Воронеж</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AR" id="city5">
-                                            <label for="city5">
-                                                <a class="link-ignore" href="#">Новосибирск</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city6">
-                                                <a class="link-ignore" href="#">Владивосток</a>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-                                <div class="radio-filters-block block-country">
-                                    <div data-toggle="collapse" data-target="#block-radio-country" class="block-category-control"><i class="fa fa-globe"></i>&nbsp;Страна</div>
-                                    <ul class="clearfix collapse" id="block-radio-country" aria-expanded="true" style="">
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="AU" id="country1">
-                                                <label for="country1">
-                                                    <a class="link-ignore" href="#">Австралия</a>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="AT" id="country2">
-                                                <label for="country2">
-                                                    <a class="link-ignore" href="#">Австрия</a>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="AZ" id="country3">
-                                                <label for="country3">
-                                                    <a class="link-ignore" href="#">Азербайджан</a>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="DZ" id="country5">
-                                                <label for="country5">
-                                                    <a class="link-ignore" href="#">Алжир</a>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="AR" id="country10">
-                                                <label for="country10">
-                                                    <a class="link-ignore" href="#">Аргентина</a>
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <input type="checkbox" name="countries[]" value="AM" id="country11">
-                                                <label for="country11">
-                                                    <a class="link-ignore" href="#">Армения</a>
-                                                </label>
-                                            </li>
-                                        </ul>
                                 </div>
                                   
                                 <div class="video-filters-block block-language">
@@ -358,6 +490,8 @@
                             <div class="content-radio">
 
                                 <div class="content-radio-table">
+                                  
+<h1>Танцевальная музыка</h1>
                                    
 <div class="row">
     <div class="col col-md-3 col-sm-12">
@@ -368,6 +502,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li> 
+                            <li><i class="fa fa-microphone"></i> 90,2 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -382,6 +517,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 91,2 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -396,6 +532,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 89,4 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -410,6 +547,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 89,0 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -427,7 +565,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
-                            <li><i class="fa fa-microphone"></i> 73,76 УКВ <span>(Москва)</span></li>
+                            <li><i class="fa fa-microphone"></i> 73,76 УКВ</li>
                         </ul>
                     </div>
                 </div>
@@ -435,14 +573,15 @@
         </div>
     </div>
     <div class="col col-md-3 col-sm-12">
-        <div class="radio-table-item noimage">
+        <div class="radio-table-item noimage col-var-1">
             <a href="#"><!--<img src="../../images/radio06.jpg" alt="">-->
+                <span class="letter">Р</span>
                 <div class="radio-table-descr">
                     <div class="item-title">Радио Маяк</div>
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
-                            <li><i class="fa fa-microphone"></i> 91,8 FM <span>(Москва)</span></li>
+                            <li><i class="fa fa-microphone"></i> 91,8 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -457,7 +596,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
-                            <li><i class="fa fa-microphone"></i> 100,1 FM <span>(Москва)</span></li>
+                            <li><i class="fa fa-microphone"></i> 100,1 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -472,7 +611,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
-                            <li><i class="fa fa-microphone"></i> 100,7 FM <span>(Москва)</span></li>
+                            <li><i class="fa fa-microphone"></i> 100,7 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -483,13 +622,15 @@
   
 <div class="row">
     <div class="col col-md-3 col-sm-12">
-        <div class="radio-table-item">
-            <a href="#"><img src="../../images/radio01.jpg" alt="">
+        <div class="radio-table-item noimage col-var-2">
+            <a href="#"><!--<img src="../../images/radio01.jpg" alt="">-->
+                <span class="letter">В</span>
                 <div class="radio-table-descr">
                     <div class="item-title">Вести FM</div>
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li> 
+                            <li><i class="fa fa-microphone"></i> 90,2 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -500,10 +641,11 @@
         <div class="radio-table-item">
             <a href="#"><img src="../../images/radio02.jpg" alt="">
                 <div class="radio-table-descr">
-                    <div class="item-title">Юмор FM</div>
+                    <div class="item-title">24/7 A State of Trance Sets from Armin van Buuren</div>
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 91,2 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -518,6 +660,7 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 89,4 FM</li>
                         </ul>
                     </div>
                 </div>
@@ -532,6 +675,71 @@
                     <div class="item-text">
                         <ul>
                             <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 89,0 FM</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+  
+<div class="row">
+    <div class="col col-md-3 col-sm-12">
+        <div class="radio-table-item">
+            <a href="#"><img src="../../images/radio05.jpg" alt="">
+                <div class="radio-table-descr">
+                    <div class="item-title">Наше Радио</div>
+                    <div class="item-text">
+                        <ul>
+                            <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 73,76 УКВ</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-md-3 col-sm-12">
+        <div class="radio-table-item noimage col-var-3">
+            <a href="#"><!--<img src="../../images/radio06.jpg" alt="">-->
+                <span class="letter">Р</span>
+                <div class="radio-table-descr">
+                    <div class="item-title">Радио Маяк</div>
+                    <div class="item-text">
+                        <ul>
+                            <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 91,8 FM</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-md-3 col-sm-12">
+        <div class="radio-table-item">
+            <a href="#"><img src="../../images/radio07.jpg" alt="">
+                <div class="radio-table-descr">
+                    <div class="item-title">Комсомольская Правда</div>
+                    <div class="item-text">
+                        <ul>
+                            <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 100,1 FM</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="col col-md-3 col-sm-12">
+        <div class="radio-table-item">
+            <a href="#"><img src="../../images/radio08.jpg" alt="">
+                <div class="radio-table-descr">
+                    <div class="item-title">ФМ-на Дону</div>
+                    <div class="item-text">
+                        <ul>
+                            <li><i class="fa fa-headphones"></i> Язык: русский</li>
+                            <li><i class="fa fa-microphone"></i> 100,7 FM</li>
                         </ul>
                     </div>
                 </div>
