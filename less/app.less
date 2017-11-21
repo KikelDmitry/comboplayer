@@ -16,7 +16,7 @@
 @white-base: #fff;
 
 @color-brand: #79AE0B;
-@color-link: #2aaae1;
+@color-link: #028cc7; 
 @color-steel: #8BA7BA;
 @color-steel-light: #D4DFE4;
 @color-steel-dark: #3C4C54;
@@ -608,8 +608,8 @@ textarea.form-control {
     border-radius: 0;
     -webkit-transition: background .2s;
     transition: background .2s;
-    background: #75a01c;
-    border-color: #75a01c;
+    background: @color-green-light;
+    border-color: @color-green-light;
 }
 
 .contacts {
@@ -634,7 +634,7 @@ textarea.form-control {
                 left: 0;
                 top: 5px;
                 width: 20px;
-                color: #75a01c;
+                color: @color-green-light;
             }
         }
     }
@@ -991,8 +991,8 @@ textarea.form-control {
         margin-bottom: 15px;
     }
     .btn {
-        border-color: #75A01C;
-        color: #75A01C;
+        border-color: @color-green-light;
+        color: @color-green-light;
         &:hover {
             color: #444;
             border-color: #444;
@@ -1011,7 +1011,7 @@ textarea.form-control {
 
 .screenshots-list {
     h3 {
-        color: #75A01C;
+        color: @color-green-light;
         text-align: center;
         margin-bottom: 20px;
         margin-top: 0;
@@ -1184,7 +1184,7 @@ textarea.form-control {
                         width: 43px;
                         text-align: center;
                         display: inline-block;
-                        background: #2AAAE1 url('@{images}content-sprites.png') no-repeat;
+                        background: @color-link url('@{images}content-sprites.png') no-repeat;
                         &.icon-tv {
                             background-position: 0 0;
                         }
@@ -1198,10 +1198,10 @@ textarea.form-control {
                     &:hover,
                     &:active,
                     &:focus {
-                        background-color: #2AAAE1;
+                        background-color: @color-link;
                         color: #fff;
                         i {
-                            background-color: darken(#2AAAE1, 10%);
+                            background-color: darken(@color-link, 10%);
                         }
                     }
                     .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
@@ -1445,7 +1445,7 @@ textarea.form-control {
             .btn-group > .btn {
                 .radius(4px);
                 .caret {
-                    color: #2aaae1;
+                    color: @color-link;
                     margin-left: 5px;
                 }
             }
@@ -1458,7 +1458,7 @@ textarea.form-control {
                     &:hover,
                     &:active,
                     &:focus {
-                        background-color: #2aaae1;
+                        background-color: @color-link;
                         color: #fff;
                     }
                 }
@@ -1544,7 +1544,7 @@ textarea.form-control {
                             color: #208ebd;
                             .channel-time.active {
                                 background-color: #E9EFF2;
-                                color: #2aaae1;
+                                color: @color-link;
                             }
                         }
                         &.text-muted {
@@ -1698,7 +1698,7 @@ textarea.form-control {
                             max-width: 50%;
                             padding: 4px;
                             display: block;
-                            background: #2AAAE1;
+                            background: @color-link;
                             .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.2));
                         }
                         > ul {
@@ -1769,10 +1769,10 @@ textarea.form-control {
                     }
                 }
                 &-current {
-                    color: #2aaae1;
+                    color: @color-link;
                     span {
-                        border-bottom: 2px solid #2aaae1;
-                        color: #2aaae1;
+                        border-bottom: 2px solid @color-link;
+                        color: @color-link;
                     }
                 }
             }
@@ -1791,11 +1791,11 @@ textarea.form-control {
                         margin-right: 5px;
                     }
                     &.channel-watch {
-                        background-color: #2aaae1;
+                        background-color: @color-link;
                         &:hover,
                         &:active,
                         &:focus {
-                            background-color: darken(#2aaae1, 10%);
+                            background-color: darken(@color-link, 10%);
                         }
                     }
                     &.channel-buy {
@@ -2000,7 +2000,7 @@ textarea.form-control {
                             cursor: pointer;
                             i {
                                 font-size: 18px;
-                                color: #2aaae1;
+                                color: @color-link;
                                 padding: 4px 0;
                                 width: 30px;
                                 text-align: center;
@@ -2056,7 +2056,7 @@ textarea.form-control {
                     text-decoration: none;
                     &:active,
                     &:hover {
-                        color: #2aaae1;
+                        color: @color-link;
                     }
                 }
             }
@@ -2071,7 +2071,7 @@ textarea.form-control {
                     font-weight: 500;
                 }
                 .programm-category {
-                    background-color: #2aaae1;
+                    background-color: @color-link;
                     color: #fff;
                 }
                 .programm-age {
@@ -2111,7 +2111,7 @@ textarea.form-control {
                             &:active,
                             &:hover,
                             &:focus {
-                                color: #2aaae1;
+                                color: @color-link;
                             }
                         }
                     }
@@ -2288,7 +2288,7 @@ textarea.form-control {
         font-weight: 600;
         color: @color-dark-main;
         font-size: 20px;
-        border-bottom: 2px solid #2aaae1;
+        border-bottom: 2px solid @color-link;
         &:hover,
         &:active,
         &:focus {
@@ -2301,7 +2301,7 @@ textarea.form-control {
         cursor: pointer;
         i {
             font-size: 18px;
-            color: #2aaae1;
+            color: @color-link;
             padding: 4px 0;
             width: 30px;
             text-align: center;
@@ -2338,7 +2338,7 @@ textarea.form-control {
         margin-right: -5px;
         i {
             font-size: 18px;
-            color: #2aaae1;
+            color: @color-link;
         }
         &:hover {
             i {
@@ -2346,7 +2346,7 @@ textarea.form-control {
                 color: #fff;
             }
             span {
-                background-color: #2aaae1;
+                background-color: @color-link;
                 .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.3));
             }
         }
@@ -2583,7 +2583,7 @@ textarea.form-control {
                     .sort-prop { 
                         padding-right: 5px;
                         color: #fff;
-                        background-color: #75A01C; 
+                        background-color: @color-green-light; 
                         &:after { 
                             display: inline-block;
                             color: #fff; 
@@ -2802,7 +2802,7 @@ textarea.form-control {
                     a {
                         color: #6e7d85;
                         text-decoration: none;
-                        &:hover, &:active { color: #2aaae1; }
+                        &:hover, &:active { color: @color-link; }
                     }
                 }
                 .collapse {
@@ -3272,7 +3272,7 @@ textarea.form-control {
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
-            background-color: #2aaae1;
+            background-color: @color-link;
             padding: 0 15px;
             color: #fff;
             text-decoration: none;
@@ -3280,7 +3280,7 @@ textarea.form-control {
             &:hover,
             &:active,
             &:focus {
-                background-color: darken(#2aaae1, 10%);
+                background-color: darken(@color-link, 10%);
             }
         }
     }
@@ -3522,7 +3522,7 @@ textarea.form-control {
         border-left: solid 1px #ccc;
         top: 3px;
         left: -40px;
-        /*color: #2AAAE1;*/
+        /*color: @color-link;*/
         color: #88A4B6;
         vertical-align: top;
     }
@@ -3533,7 +3533,7 @@ textarea.form-control {
             border: 0;
             box-shadow: none;
             border-left: solid 1px #ccc;
-            color: #2AAAE1;
+            color: @color-link;
             background-color: transparent;
         }
     }
@@ -3714,7 +3714,7 @@ textarea.form-control {
     }
     .tt-suggestion {
         &:hover {
-            background-color: #2AAAE1;
+            background-color: @color-link;
         }
     }
 }
@@ -3743,7 +3743,7 @@ textarea.form-control {
             top: 13px;
             left: 8px;
             content: "";
-            color: #2AAAE1;
+            color: @color-link;
         }
     }
 }*/
@@ -3751,7 +3751,7 @@ textarea.form-control {
 #week-select {
     margin-bottom: 15px;
     .btn-group > .btn .caret {
-        color: #2aaae1;
+        color: @color-link;
         margin-left: 5px;
     }
     .dropdown-menu {
@@ -3769,7 +3769,7 @@ textarea.form-control {
     .btn {
         display: block; 
         .caret {
-            color: #2aaae1;
+            color: @color-link;
             margin-left: 5px;
         }
     }
@@ -3955,6 +3955,8 @@ textarea.form-control {
     display: none;
 }
 
+// zz - radio
+
 .content-radio {
     &-head {
         .content-radio-head-title {
@@ -3980,7 +3982,7 @@ textarea.form-control {
             font-size: 16px;
             font-weight: 400;
             /*color: #6b8fa7;*/
-            color: #2aaae1;
+            color: @color-link;
         }
         .title-radio {
             position: relative;
@@ -4158,7 +4160,6 @@ textarea.form-control {
             }
         }
         .radio-playlist {
-            
             .play-time {
                 font-size: 13px;
                 color: #6E91A7;
@@ -4173,7 +4174,7 @@ textarea.form-control {
                 > .btn {
                     .radius(4px);
                     .caret {
-                        color: #2aaae1;
+                        color: @color-link;
                         margin-left: 5px;
                     }
                 }
@@ -4186,7 +4187,7 @@ textarea.form-control {
                         &:hover,
                         &:active,
                         &:focus {
-                            background-color: #2aaae1;
+                            background-color: @color-link;
                             color: #fff;
                         }
                     }
@@ -4195,9 +4196,22 @@ textarea.form-control {
             }
             ul { font-weight: 400; }
             li { 
-                border-bottom: 1px solid #E0E2E5;
+                /*border-bottom: 1px solid #E0E2E5;*/
                 padding: 5px 0;
                 &:last-child { border-bottom: none; }
+            }
+            
+            .list-cut {
+                font-size: 13px;
+                li { 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .list-cut-wrap {
+                    height: 150px;
+                    padding: 0;
+                }
+                .list-cut-control { color: @color-blue; }
             }
             
             &-more {
@@ -4206,8 +4220,8 @@ textarea.form-control {
                 font-size: 14px;
                 font-weight: 400;
                 .fa { margin-right: 6px; }
+                // zz 1
             }
-            
         }
     }
     &-single {
@@ -4247,27 +4261,48 @@ textarea.form-control {
                 strong { font-weight: 600; }
                 margin: 5px 10px;
                 padding-left: 10px;
+                
+                ul {
+                    margin-left: 0;
+                    padding-left: 0;
+                    margin-top: 0;
+                }
             }
             &-more {
                 color: @color-blue;
                 margin-top: 10px;
                 .fa { 
-                    margin-right: 10px; 
                     color: @color-blue !important;
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin-right: 8px;
                 }
+                //zz 2
             }
         }
+        //zz 2
         .radio-play {
             margin-bottom: 15px;
             &-list {
                 > a.list-group-item {
                     padding-top: 8px;
                     padding-bottom: 8px;
+                    padding-left: 20px;
+                    padding-right: 20px;
                     .radius(0px); 
                     text-decoration: none;
                     color: #536771;
                     overflow: hidden;
-                    .list-group-item-heading { margin-bottom: 0; }
+                    .list-group-item-heading { 
+                        margin-bottom: 0; 
+                        .btnPlayItem {
+                            color: #3D4C53;
+                            margin-right: 5px;
+                            &:hover,
+                            &:active,
+                            &:focus { color: @color-green !important; }
+                        }
+                    }
                     .radio-rate {
                         border: 1px solid #DDDDDD;
                         .radius(2px);
@@ -4278,12 +4313,21 @@ textarea.form-control {
                         float: right;
                         margin-bottom: 1px;
                     }
-                    &.active { 
+                    &.active {
                         color: #fff; 
                         .radio-rate {
                             background-color: #fff;
                             border-color: transparent;
                             color: #526771;
+                        }
+                        .list-group-item-heading {
+                            .btnPlayItem {
+                                color: #fff;
+                                &:hover,
+                                &:active,
+                                &:focus { color: lighten(@color-green, 30%) !important; 
+                                }
+                            }
                         }
                     }
                 }
@@ -4305,7 +4349,7 @@ textarea.form-control {
         background-color: #EEF2F5;
         min-height: 50px;
         /*margin-bottom: 15px;*/
-        padding: 15px 24px;
+        padding: 15px 20px;
         color: #3D4C54;
         audio { width: 100%; }
         .radio-play-controls {
@@ -4379,6 +4423,42 @@ textarea.form-control {
                 /*margin-left: 10px;*/
                 vertical-align: middle;
             }
+        }
+    }
+}
+
+// zz 3
+.list-cut {
+    .list-cut-wrap {
+        height: 120px;
+        overflow-y: auto;
+        /*border: 1px solid #E0E2E5;*/
+        padding: 8px 10px;
+    }
+    .list-cut-control {
+        display: block;
+        cursor: pointer;
+        border-color: transparent;
+        &:before {
+            content: "";
+            font-family: "FontAwesome";
+            display: inline-block;
+            vertical-align: middle;
+            color: @color-link;
+            font-size: 18px;
+            margin-right: 10px;
+        }    
+        &[aria-expanded="false"] {
+            &:before { content: "\f107"; }
+        }
+        &[aria-expanded="true"] {
+            &:before { content: "\f106"; }
+            
+            /*border-top: 1px solid #E0E2E5;*/
+            border-top: 1px solid lighten(@color-blue, 15%);
+            padding-top: 5px;
+            .trans();
+            
         }
     }
 }
