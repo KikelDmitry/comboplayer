@@ -196,33 +196,53 @@
     </audio>
     <div class="radio-play-controls">
         <div class="btnPlay fa fa-play"></div>
+        <!--<div class="btnPlay fa fa-pause"></div>-->
         <div class="soundBtn"></div>
         <!--<div class="soundBtn muted"></div>-->
         <div class="volume">
             <span class="volumeBar" style="width: 52%"></span>
         </div>
-        <p class="radio-play-title"><strong>Django Reinhardt</strong> - Please be kind</p>
+        <p class="radio-play-title"><strong>DFM</strong> - 96 kbps</p>
     </div>
 </div>
                                            
 <div class="list-group radio-play-list">
     <a href="#" class="list-group-item active">
-        <div class="list-group-item-heading">DFM <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            <!--<span class="btnPlayItem fa fa-pause"></span>-->
+            DFM <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
     <a href="#" class="list-group-item">
-        <div class="list-group-item-heading">DFM Club <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            DFM Club <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
     <a href="#" class="list-group-item">
-        <div class="list-group-item-heading">DFM Russian Dance <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            DFM Russian Dance <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
     <a href="#" class="list-group-item">
-        <div class="list-group-item-heading">DFM Динамит <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            DFM Динамит <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
     <a href="#" class="list-group-item">
-        <div class="list-group-item-heading">DFM Trap <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            DFM Trap <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
     <a href="#" class="list-group-item">
-        <div class="list-group-item-heading">DFM Спокойной ночи, голыши! <span class="radio-rate">96 kbps</span></div>
+        <div class="list-group-item-heading">
+            <span class="btnPlayItem fa fa-play"></span>
+            DFM Спокойной ночи, голыши! <span class="radio-rate">96 kbps</span>
+        </div>
     </a>
 </div>
 
@@ -255,13 +275,30 @@
                                                     </li>
                                                     <li><i class="fa fa-headphones"></i>&nbsp;<span class="radio-info-title">Язык</span>: <a href="#">Русский</a></li>
                                                     <li><i class="fa fa-building fs-13"></i>&nbsp;<span class="radio-info-title">Города вещания:</span> 
-                                                        <ul>
-                                                            <li><a href="#">Москва</a> &mdash; <strong>73,76 УКВ</strong></li>
-                                                            <li><a href="#">Санкт-Петербург</a> &mdash; <strong>91,8 FM</strong></li>
-                                                            <li><a href="#">Ростов-на-Дону</a> &mdash; <strong>100,1 FM</strong></li>
-                                                            <li><a href="#">Воронеж</a> &mdash; <strong>100,7 FM</strong></li>
-                                                        </ul>
-                                                        <p class="radio-info-more"><a href="#"><i class="fa fa-list-ul"></i>Все города&hellip;</a></p>
+                                                       
+<div class="list-cut">
+    <ul class="list-cut-wrap">
+        <li><a href="#">Москва</a> &mdash; <strong>73,76 УКВ</strong></li>
+        <li><a href="#">Санкт-Петербург</a> &mdash; <strong>91,8 FM</strong></li>
+        <li><a href="#">Ростов-на-Дону</a> &mdash; <strong>100,1 FM</strong></li>
+        <li><a href="#">Воронеж</a> &mdash; <strong>100,7 FM</strong></li>
+        <li><a href="#">Москва</a> &mdash; <strong>73,76 УКВ</strong></li>
+        <li>
+            <ul class="list-cut-block collapse" id="listCut1">
+                <li><a href="#">Москва</a> &mdash; <strong>73,76 УКВ</strong></li>
+                <li><a href="#">Санкт-Петербург</a> &mdash; <strong>91,8 FM</strong></li>
+                <li><a href="#">Ростов-на-Дону</a> &mdash; <strong>100,1 FM</strong></li>
+                <li><a href="#">Воронеж</a> &mdash; <strong>100,7 FM</strong></li>
+                <li><a href="#">Москва</a> &mdash; <strong>73,76 УКВ</strong></li>
+                <li><a href="#">Санкт-Петербург</a> &mdash; <strong>91,8 FM</strong></li>
+                <li><a href="#">Ростов-на-Дону</a> &mdash; <strong>100,1 FM</strong></li>
+                <li><a href="#">Воронеж</a> &mdash; <strong>100,7 FM</strong></li>
+            </ul>
+        </li>
+    </ul>
+    <p class="radio-info-more"><span data-toggle="collapse" class="list-cut-control" data-target="#listCut1" aria-expanded="false" aria-controls="listCut1">Все города&hellip;</span></p>
+</div>
+    
                                                     </li>
                                                 </ul>
                                             </div>
@@ -296,13 +333,36 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <ul>
+                                
+                                <!--<ul>
                                     <li>Django Reinhardt - Please be kind <span class="play-time">(20:05)</span></li>
                                     <li>Billie Holiday - God Bless the Child <span class="play-time">(16:17)</span></li>
                                     <li>Not Too Late - Little Room <span class="play-time">(15:25)</span></li>
                                     <li>Tequilla - Bumpin On The Sunset <span class="play-time">(14:10)</span></li>
                                 </ul>
-                                <p class="radio-playlist-more"><a href="#"><i class="fa fa-list-ul"></i>Весь эфир&hellip;</a></p>
+                                <p class="radio-playlist-more"><a href="#"><i class="fa fa-list-ul"></i>Весь эфир&hellip;</a></p>-->
+                                
+                                
+<div class="list-cut">
+    <ul class="list-cut-wrap">
+        <li>Django Reinhardt - Please be kind <span class="play-time">(20:05)</span></li>
+        <li>Billie Holiday - God Bless the Child <span class="play-time">(16:17)</span></li>
+        <li>Not Too Late - Little Room <span class="play-time">(15:25)</span></li>
+        <li>Tequilla - Bumpin On The Sunset <span class="play-time">(14:10)</span></li>
+        <li>Django Reinhardt - Please be kind <span class="play-time">(20:05)</span></li>
+        <li>
+            <ul class="list-cut-block collapse" id="listCut2">
+                <li>Django Reinhardt - Please be kind <span class="play-time">(20:05)</span></li>
+                <li>Billie Holiday - God Bless the Child <span class="play-time">(16:17)</span></li>
+                <li>Not Too Late - Little Room <span class="play-time">(15:25)</span></li>
+                <li>Tequilla - Bumpin On The Sunset <span class="play-time">(14:10)</span></li>
+            </ul>
+        </li>
+    </ul>
+    <p class="radio-playlist-more"><span data-toggle="collapse" class="list-cut-control" data-target="#listCut2" aria-expanded="false" aria-controls="listCut2">Весь эфир&hellip;</span></p>
+</div>
+                                
+                                
                             </div>
                             
                             <div class="col-md-12 col-sm-6 radio-side radio-relative">
