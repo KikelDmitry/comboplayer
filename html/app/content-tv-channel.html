@@ -229,8 +229,6 @@
         </div>
     </div>
              
-    
-                           
 </div>
                             
                         </div>
@@ -281,11 +279,26 @@
         <li><a class="channel-time" href="#"><span>21:15</span> След.
             <br><em>Безупречный синий</em>
         </a></li>
-        <li><a class="channel-time" href="#"><span>22:25</span> Следствие любви. <br><em>3-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>23:15</span> Следствие любви. <br><em>4-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>00:00</span> Когда деревья были большими </a></li>
-        <li><a class="channel-time" href="#"><span>02:00</span> 72 метра. <br><em>1-я серия</em></a></li>
-        <li><a class="channel-time" href="#"><span>03:00</span> 72 метра. <br><em>2-я серия</em></a></li>
+        <li class="notifiable notify-active">
+            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Выключить уведомление"></span>
+            <a class="channel-time" href="#"><span>22:25</span> Следствие любви. <br><em>3-я серия</em></a>
+        </li>
+        <li class="notifiable">
+            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+            <a class="channel-time" href="#"><span>23:15</span> Следствие любви. <br><em>4-я серия</em></a>
+        </li>
+        <li class="notifiable">
+            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+            <a class="channel-time" href="#"><span>00:00</span> Когда деревья были большими </a>
+        </li>
+        <li class="notifiable">
+            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+            <a class="channel-time" href="#"><span>02:00</span> 72 метра. <br><em>1-я серия</em></a>
+        </li>
+        <li class="notifiable">
+            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+            <a class="channel-time" href="#"><span>03:00</span> 72 метра. <br><em>2-я серия</em></a>
+        </li>
         <li><a class="channel-time" href="#"><span>03:55</span> 72 метра. <br><em>3-я серия</em></a></li>
     </ul>
 </div>                          
@@ -481,6 +494,26 @@
         $('.channel-body ul li').tooltip({    
             selector: "a[rel=tooltip]"
         })
+        
+        // notify
+                
+        $('.notifiable').on('mouseover', function() {
+            var progInfo = $(this);
+            var timer = setTimeout(function() {
+                progInfo.addClass('notify-hover');
+            });
+            $(this).data('timer', timer);
+        });
+        $('.notifiable').on('mouseout', function() {
+            var progInfo = $(this);
+            if ($(this).data('timer')) {
+                clearTimeout($(this).data('timer'))
+                $(this).data('timer', null);
+            }
+            progInfo.removeClass('notify-hover');
+        });
+        
+        $('[data-toggle="tooltip"]').tooltip();   
 
     </script>
     
