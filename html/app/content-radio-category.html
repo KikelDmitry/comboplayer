@@ -131,6 +131,7 @@
                                <li class="active"><i class="fa fa-star"></i><a href="#">Топ 100</a></li>
                                <li><a href="#"><i class="fa fa-star"></i>Росссийские поп-радиостанции</a></li>
                                <li><a href="#"><i class="fa fa-star"></i>Радиостанции Ростова-на-Дону</a></li>
+                               <li><a href="#"><i class="fa fa-star"></i>Все города</a></li>
                            </ul>
                         </div> 
                        
@@ -174,170 +175,231 @@
                             
                             <div class="radio-filters">
                               
-                                <div class="radio-filters-block block-city">
-                                    <div data-toggle="collapse" data-target="#block-radio-city" class="block-category-control" aria-expanded="true"><i class="fa fa-building"></i>&nbsp;Город</div>
-                                    
-<div class="auto-search form-group-md">
-    <span class="twitter-typeahead">
-       
-        <!-- для демо, убрать -->
-        <style> .auto-search .input-group-btn input:focus + div { display: block !important;}</style>
-       
-        <span class="input-group-btn">
-            <input type="text" class="form-control input-lg" placeholder="Введите город" spellcheck="false">
-            <div role="listbox" class="tt-menu" style="position: absolute;top: 100%;left: 0px;z-index: 100;display: none;" aria-expanded="false">
-                <div role="presentation" class="tt-dataset tt-dataset-0"></div>
-                <div role="presentation" class="tt-dataset tt-dataset-1">
-                    <div class="tt-suggestion tt-selectable">
-                        <div class="tt-suggestion-name">
-                            Москва
+<div class="radio-filters-block block-city">
+    <div data-toggle="collapse" data-target="#block-radio-city" class="block-category-control" aria-expanded="true"><i class="fa fa-building"></i>&nbsp;Город</div>
+    
+    <div class="auto-search form-group-md">
+        <span class="twitter-typeahead">
+
+            <!-- для демо, убрать -->
+            <style> .auto-search .input-group-btn input:focus + div { display: block !important;}</style>
+
+            <span class="input-group-btn">
+                <input type="text" class="form-control input-lg" placeholder="Введите город" spellcheck="false">
+                <div role="listbox" class="tt-menu" style="position: absolute;top: 100%;left: 0px;z-index: 100;display: none;" aria-expanded="false">
+                    <div role="presentation" class="tt-dataset tt-dataset-0"></div>
+                    <div role="presentation" class="tt-dataset tt-dataset-1">
+                        <div class="tt-suggestion tt-selectable">
+                            <div class="tt-suggestion-name">
+                                Москва
+                            </div>
                         </div>
-                    </div>
-                    <div class="tt-suggestion tt-selectable">
-                        <div class="tt-suggestion-name">
-                            Мехико
+                        <div class="tt-suggestion tt-selectable">
+                            <div class="tt-suggestion-name">
+                                Мехико
+                            </div>
                         </div>
-                    </div>
-                    <div class="tt-suggestion tt-selectable">
-                        <div class="tt-suggestion-name">
-                            Могадишо
+                        <div class="tt-suggestion tt-selectable">
+                            <div class="tt-suggestion-name">
+                                Могадишо
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <button class="btn btn-info btn-lg" type="button">
-                <i class="glyphicon glyphicon-triangle-right"></i>
-            </button>
+                <button class="btn btn-info btn-lg" type="button">
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </button>
+            </span>
         </span>
-    </span>
+    </div>
+
+    <!--<ul class="clearfix collapse in" id="block-radio-city" aria-expanded="true" style="">
+        <li>
+            <input type="checkbox" name="cities[]" value="AU" id="city1">
+            <label for="city1">
+                <a class="link-ignore" href="#">Москва</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AT" id="city2">
+            <label for="city2">
+                <a class="link-ignore" href="#">Санкт-Петербург</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AZ" id="city3" checked="">
+            <label for="city3">
+                <a class="link-ignore" href="#">Новосибирск</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="DZ" id="city4">
+            <label for="city4">
+                <a class="link-ignore" href="#">Екатеринбург</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AR" id="city5">
+            <label for="city5">
+                <a class="link-ignore" href="#">Нижний Новгород</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city6">
+                <a class="link-ignore" href="#">Казань</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city7">
+                <a class="link-ignore" href="#">Челябинск</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city8">
+                <a class="link-ignore" href="#">Омск</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city9">
+                <a class="link-ignore" href="#">Самара</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city10">
+                <a class="link-ignore" href="#">Ростов-на-Дону</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city11">
+                <a class="link-ignore" href="#">Уфа</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city12">
+                <a class="link-ignore" href="#">Красноярск</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city13">
+                <a class="link-ignore" href="#">Пермь</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city14">
+                <a class="link-ignore" href="#">Воронеж</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city15">
+                <a class="link-ignore" href="#">Волгоград</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city16">
+                <a class="link-ignore" href="#">Краснодар</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city17">
+                <a class="link-ignore" href="#">Саратов</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city18">
+                <a class="link-ignore" href="#">Тюмень</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city19">
+                <a class="link-ignore" href="#">Тольятти</a>
+            </label>
+        </li>
+        <li>
+            <input type="checkbox" name="cities[]" value="AM" id="city6">
+            <label for="city20">
+                <a class="link-ignore" href="#">Ижевск</a>
+            </label>
+        </li>
+    </ul>-->
+    
+    <ul class="clearfix collapse in" id="block-radio-city" aria-expanded="true" style="">
+        <li>
+            <a class="active link-ignore" href="#">Москва</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Санкт-Петербург</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Новосибирск</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Екатеринбург</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Нижний Новгород</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Казань</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Челябинск</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Омск</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Самара</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Ростов-на-Дону</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Уфа</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Красноярск</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Пермь</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Воронеж</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Волгоград</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Краснодар</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Саратов</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Тюмень</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Тольятти</a>
+        </li>
+        <li>
+            <a class="link-ignore" href="#">Ижевск</a>
+        </li>
+    </ul>
+    
 </div>
-
-                                    <ul class="clearfix collapse in" id="block-radio-city" aria-expanded="true" style="">
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AU" id="city1">
-                                            <label for="city1">
-                                                <a class="link-ignore" href="#">Москва</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AT" id="city2">
-                                            <label for="city2">
-                                                <a class="link-ignore" href="#">Санкт-Петербург</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AZ" id="city3" checked="">
-                                            <label for="city3">
-                                                <a class="link-ignore" href="#">Новосибирск</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="DZ" id="city4">
-                                            <label for="city4">
-                                                <a class="link-ignore" href="#">Екатеринбург</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AR" id="city5">
-                                            <label for="city5">
-                                                <a class="link-ignore" href="#">Нижний Новгород</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city6">
-                                                <a class="link-ignore" href="#">Казань</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city7">
-                                                <a class="link-ignore" href="#">Челябинск</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city8">
-                                                <a class="link-ignore" href="#">Омск</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city9">
-                                                <a class="link-ignore" href="#">Самара</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city10">
-                                                <a class="link-ignore" href="#">Ростов-на-Дону</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city11">
-                                                <a class="link-ignore" href="#">Уфа</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city12">
-                                                <a class="link-ignore" href="#">Красноярск</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city13">
-                                                <a class="link-ignore" href="#">Пермь</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city14">
-                                                <a class="link-ignore" href="#">Воронеж</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city15">
-                                                <a class="link-ignore" href="#">Волгоград</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city16">
-                                                <a class="link-ignore" href="#">Краснодар</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city17">
-                                                <a class="link-ignore" href="#">Саратов</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city18">
-                                                <a class="link-ignore" href="#">Тюмень</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city19">
-                                                <a class="link-ignore" href="#">Тольятти</a>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <input type="checkbox" name="cities[]" value="AM" id="city6">
-                                            <label for="city20">
-                                                <a class="link-ignore" href="#">Ижевск</a>
-                                            </label>
-                                        </li>
-                                    </ul>
-
-                                    <p class="radio-filters-more"><a href="#">Все города&hellip;</a></p>
-                                    
-                                </div>
                                 
                                 <div class="radio-filters-block block-country">
                                     <div data-toggle="collapse" data-target="#block-radio-country" class="block-category-control"><i class="fa fa-globe"></i>&nbsp;Страна</div>
@@ -492,7 +554,9 @@
                                 <div class="content-radio-table">
                                   
 <h1>Танцевальная музыка</h1>
-                                   
+                           
+<div class="radio-row-box">
+
 <div class="row">
     <div class="col col-md-3 col-sm-12">
         <div class="radio-table-item">
@@ -746,6 +810,8 @@
             </a>
         </div>
     </div>
+</div>
+  
 </div>
    
                             </div>
