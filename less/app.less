@@ -3186,7 +3186,6 @@ textarea.form-control {
                     }
                 }
             }
-            //zz 1
             &#block-radio-city {
                 li {
                     a {
@@ -3284,42 +3283,21 @@ textarea.form-control {
 .content-radio-city {
     &-block {
         border-top: 1px solid #CCCCCC;
-        padding-top: 30px;
-        margin-bottom: 0;
+        padding-top: 15px;
+        margin-bottom: 15px;
     }
     &-title {
-        cursor: pointer;
         font-weight: 700;
         font-size: 16px;
         color: #3C4C54;
         position: relative;
-        padding-left: 20px;
-        .radio-city-control {
-            cursor: pointer;
-            position: absolute;
-            top: 3px;
-            left: 0;
-            color: @color-link;
-            /*content: "\f0d7";*/
-            /*content: "\f0d8";*/
-            &.fa-caret-up { display: none; }
-        }
-        &[aria-expanded="false"] {
-            .radio-city-control.fa-caret-down { display: block; }
-            .radio-city-control.fa-caret-up { display: none; }
-        }
-        &[aria-expanded="true"] {
-            .radio-city-control.fa-caret-down { display: none; }
-            .radio-city-control.fa-caret-up { display: block; }
-        }
     }
     &-list {
         font-weight: 500;
-        margin-bottom: 15px;
         li {
-            min-height: 50px;
-            margin-bottom: 10px;
-            height: 50px;
+            /*min-height: 25px;
+            height: 25px;*/
+            margin-bottom: 5px;
             overflow: hidden;
             text-overflow: ellipsis;
             width: 100%;
@@ -3328,43 +3306,10 @@ textarea.form-control {
                 text-decoration: none;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                height: 50px;
-                img {
-                    height: 50px;
-                    width: auto;
-                    margin-right: 10px;
-                    .radius(7px);
-                    border: 2px solid #fff;
-                    padding: 5px;
-                    padding-left: 8px;
-                    padding-right: 8px;
-                    background-color: #fff;
-                }
-                &.noimage {
-                    &:before {
-                        content: "";
-                        height: 50px;
-                        width: 50px;
-                        margin-right: 10px;
-                        .radius(7px);
-                        border: 2px solid #E0E2E5;
-                        padding: 5px;
-                        background-color: transparent;
-                        vertical-align: middle;
-                        display: inline-block;
-                    } 
-                }
-                &:hover,
-                &:focus,
-                &:active {
-                    img { border-color: #ccc; }
-                    &.noimage {
-                        &:before { border-color: #ccc; }
-                    }
-                }
-                &.active {
-                    color: @color-green;
-                    img { border-color: @color-green; }
+                /*height: 25px;*/
+                &.active { 
+                    color: @color-green; 
+                    font-weight: 600;
                 }
             }
         }
