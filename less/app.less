@@ -3279,7 +3279,6 @@ textarea.form-control {
     }
 }
 
-// zz 2
 .content-radio-city {
     &-block {
         border-top: 1px solid #CCCCCC;
@@ -3326,7 +3325,7 @@ textarea.form-control {
         padding-bottom: 30px;
     }
 }
-
+ 
 .prog-info {
     display: none;
     &.active {
@@ -4330,6 +4329,8 @@ textarea.form-control {
                 text-align: center;
                 font-weight: 600;
                 img { max-width: 100%; }
+                &.noimage {
+                }
             }
         }
         .radio-playlist {
@@ -4394,6 +4395,9 @@ textarea.form-control {
                 font-weight: 400;
                 .fa { margin-right: 6px; }
             }
+        }
+        .radio-row-box {
+            > .row > .col:only-child .radio-table-item { width: 202px; }
         }
     }
     &-single {
