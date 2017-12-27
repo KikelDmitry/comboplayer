@@ -19,7 +19,7 @@
 @color-link: #028cc7; 
 @color-steel: #8BA7BA;
 @color-steel-light: #D4DFE4;
-@color-steel-dark: #3C4C54;
+@color-steel-dark: #3C4C54; 
 
 @color-blue: #1AAFD0;
 @color-red: #fc636b;
@@ -348,7 +348,6 @@ p {
         &:last-child {
             margin-bottom: 0;
         }
-
         &:before {
             position: absolute;
             top: 9px;
@@ -1016,6 +1015,154 @@ textarea.form-control {
         margin-bottom: 20px;
         margin-top: 0;
     }
+}
+
+/* how to watch channel page */
+
+//zz
+.content.howtowatch {
+    .howtowatch {
+        .channel-descr { margin-top: 0; }
+        &-header {}
+        &-steps {
+            &-top {
+                margin: 15px 0 0;
+                > div.col { 
+                    position: relative; 
+                    /*min-height: 250px;*/
+                    min-height: 360px; 
+                    padding: 0;
+                }
+                .col.steps-sign {
+                    text-align: center;
+                    .howtowatch-steps-sign {
+                        transform: translateY(-50%) translateX(-50%);
+                        top: 50%;
+                        left: 50%;
+                    }
+                }
+            }
+            &-number {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                color: @white-base;
+                font-size: 40px;
+                font-weight: 600;
+                line-height: 60px;
+                text-align: center;
+                background: #78a727;
+                background: -moz-linear-gradient(45deg, #78a727 0%, #52a787 100%);
+                background: -webkit-linear-gradient(45deg, #78a727 0%,#52a787 100%);
+                background: linear-gradient(45deg, #78a727 0%,#52a787 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#78a727', endColorstr='#52a787',GradientType=1 );
+            }
+            &-sign {
+                display: block;
+                position: absolute;
+                width: 60px;
+                height: 60px;
+                color: @white-base;
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 60px;
+                text-align: center;
+                background-color: #178dc5;
+            }
+            &-descr {
+                font-weight: 400;
+                padding: 15px 0;
+                position: relative;
+                padding-left: 75px;
+                min-height: 70px;
+                margin-bottom: 5px;
+                .link-download-icon {
+                    content: "";
+                    display: inline-block;
+                    width: 32px;
+                    height: 23px;
+                    background: url('@{images}content-sprites.png') no-repeat -2px -135px; 
+                    vertical-align: sub;
+                    margin-right: 8px;
+                    /*margin-left: 10px;*/
+                    font-weight: 600;
+                    font-size: 20px;
+                }
+            }
+            .steps-image {
+                img {}
+            }
+            &-bottom {
+                margin-bottom: 30px;
+                .howtowatch-steps-descr {
+                    position: relative;
+                    margin: 0;
+                    padding-left: 0;
+                    .howtowatch-steps-number {
+                        display: inline-block;
+                        position: relative;
+                        top: 0;
+                        left: -15px;
+                    }
+                    > div {
+                        &:first-child {}
+                        &:last-child {
+                            text-align: right;
+                        }
+                    }
+                    .howtowatch-steps-sign {
+                        width: 60px;
+                        height: 60px;
+                        position: relative;
+                        display: inline-block;
+                        right: -10px;
+                    }
+                }
+            }
+            &-video {
+                .howtowatch-video-frame {
+                    iframe {}
+                }
+            }
+        }
+    }
+    .channel-actions { margin-top: 0; }
+    .content-tv-channel .channel-stream-brief { padding-top: 0; }
+}
+.howtowatch-features {
+    border-left: 2px solid #769e2b;
+    padding-left: 20px; 
+    margin-bottom: 30px;
+    &-title {
+        color: #3d4c53;
+        font-size: 25px;
+        margin-bottom: 15px;
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 27px;
+            height: 22px;
+            background: url('@{images}content-sprites.png') no-repeat -36px -135px;
+        }
+    }
+    ul > li {
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 5px;
+        font-weight: 400;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "\2013";
+            color: @color-blue;
+            font-weight: bold;
+        }
+    }
+    
 }
 
 @media (min-width: 992px) {
@@ -4292,7 +4439,6 @@ textarea.form-control {
                     }
                 }
             }
-            //zz1
             &.noimage {
                 a::before {
                     display: block;
@@ -4342,8 +4488,6 @@ textarea.form-control {
                 text-align: center;
                 font-weight: 600;
                 img { max-width: 100%; }
-                
-                //zz2
                 &.noimage {
                     a::before {
                         display: block;
@@ -4830,6 +4974,7 @@ textarea.form-control {
     
     .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
 
+    
 }
 
 @media (max-width: @screen-sm-max) {
@@ -4966,6 +5111,25 @@ textarea.form-control {
     
     .notify-watch { display: none !important; }  
     .notify-active a > span { color: #25292b !important; } 
+    
+    //zz2    
+    .content.howtowatch .howtowatch-steps-top > div.col { min-height: auto; }
+    .content.howtowatch .howtowatch-steps-number { position: static;}
+    .content.howtowatch .howtowatch-steps-top .col.steps-sign .howtowatch-steps-sign,
+    .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr .howtowatch-steps-sign { display: none; }
+    .content.howtowatch .howtowatch-steps-top > div.col { padding: 0; }
+    .content.howtowatch .howtowatch-steps-number { 
+        margin-bottom: 15px; 
+        margin-right: 10px;
+    }
+    .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr { padding-bottom: 0; }
+    .content.howtowatch .howtowatch-steps-descr {
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr > .col { padding: 0; }
+    .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr .howtowatch-steps-number { left: 0; }
     
 }
 
