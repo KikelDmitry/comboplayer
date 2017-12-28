@@ -1123,7 +1123,37 @@ textarea.form-control {
             }
             &-video {
                 .howtowatch-video-frame {
-                    iframe {}
+                    position: relative;
+                    .howtowatch-video-control-play {
+                        position: absolute;
+                        width: 120px;
+                        height: 120px;
+                        display: block;
+                        background: #57a685;
+                        background: -moz-linear-gradient(45deg, #57a685 0%, #78a636 100%);
+                        background: -webkit-linear-gradient(45deg, #57a685 0%,#78a636 100%);
+                        background: linear-gradient(45deg, #57a685 0%,#78a636 100%);
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57a685', endColorstr='#78a636',GradientType=1 );                        
+                        line-height: 120px;
+                        .radius(120px;);
+                        top: 50%;
+                        transform: translateX(-50%) translateY(-50%);
+                        left: 50%;
+                        text-align: center;
+                        cursor: pointer;
+                        &:before {
+                            font-family: "FontAwesome";
+                            content: "\f04b";
+                            color: #fff;
+                            font-size: 60px;
+                            padding-left: 10px;
+                            cursor: pointer;
+                            .trans(); 
+                        }
+                        &:hover:before {
+                            font-size: 63px;
+                        }
+                    }
                 }
             }
         }
