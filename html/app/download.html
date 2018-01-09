@@ -15,7 +15,7 @@
     <!-- Styles -->
     <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
     <link rel="stylesheet" href="/css/app.css" />
-    <link rel="stylesheet" href="/css/download_help.css" />
+    <!--<link rel="stylesheet" href="/css/download_help.css" />-->
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
@@ -163,7 +163,7 @@
         </div>
     </div>-->
 
-    <div class="download_popup_bottom_block download_popup_bottom_help" data-browser="opera" style="display: block;">
+    <div class="download_popup_bottom_block download_popup_bottom_help" style="display: block">
         <div class="download_popup download_popup_bottom">
             <div class="download_popup_icon">
                 <i class="fa fa-arrow-down animated bounce infinite"></i>
@@ -174,6 +174,34 @@
                 <img src="/images/download_close_img.png" width="10" height="10" alt="Close"></span>
         </div>
     </div>
+    
+<!--<script type="text/javascript" src="/js/bowser.js"></script>
+<script type="text/javascript">
+(function($, bowser) {
+	var helpers = $('.download_popup_bottom_help');
+	helpers.each(function() {
+		if(
+			!bowser[$(this).data('browser')]
+			|| ($(this).data('browser') === 'msie' && parseFloat(bowser.version) < 9)
+			|| ($(this).data('browser') === 'opera' && parseFloat(bowser.version) < 15)
+		) {
+			$(this).remove();
+		}
+	});
+
+	var show = function() {
+		helpers.fadeIn('fast');
+		setTimeout(hide, 10000);
+	};
+	var hide = function() {
+		helpers.fadeOut('fast');
+	};
+
+	$(document).on('click', 'a.download_help', show);
+	$(document).on('submit', 'form.download_form', show);
+	$(document).on('click', '.download_popup_bottom_help .close_btn', hide);
+})(jQuery, this.bowser);
+</script>-->
     
 <!--<div class="download_popup_top_block download_popup_bottom_help" data-browser="opera" style="">
     <div class="download_popup download_popup_top">
