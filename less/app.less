@@ -5168,6 +5168,71 @@ textarea.form-control {
   transform-origin: center bottom;
 }
 
+/* TV Watch Online Banner */
+.watch-online-block {
+    > a {
+        display: block;
+        height: 150px;
+        overflow: hidden;
+        width: 100%;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        position: relative;
+        padding-left: 8px;
+        padding-top: 8px;
+        max-width: 320px;
+        &:hover {
+            .watch-online-block-image {
+                width: 105%;
+                left: -2%;
+                top: -2%;
+            }
+            .watch-online-block-icon {
+                background-color: #5F871B;
+            }
+            .watch-online-block-title {
+                background-image: none;
+                background-color: #5F871B;    
+            }
+            
+        }
+    }
+    &-image { 
+        width: 100%; 
+        .trans();
+    }
+    &-icon {
+        width: 64px;
+        height: 64px;
+        background-color: #7aac24;
+        background: -moz-linear-gradient(45deg, #7aac25 0%, #4dab91 100%);
+        background: -webkit-linear-gradient(45deg, #7aac25 0%,#4dab91 100%);
+        background: linear-gradient(45deg, #7aac25 0%,#4dab91 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7aac25', endColorstr='#4dab91',GradientType=1 );
+        color: #fff;
+        line-height: 64px;
+        font-size: 32px;
+        padding-left: 6px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .trans();
+    }
+    &-title {
+        position: absolute;
+        bottom: 0;
+        background: #7AAC24;
+        padding: 5px 10px;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 16px;
+        display: inline-block;
+        max-width: 100%;
+        .trans();
+    }
+}
 
 /* media q */
 
