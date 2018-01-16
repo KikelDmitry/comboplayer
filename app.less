@@ -1194,6 +1194,8 @@ textarea.form-control {
     
 }
 
+/* additions */
+
 @media (min-width: 992px) {
     #screenModal {
         .modal-dialog {
@@ -1219,6 +1221,17 @@ textarea.form-control {
 
 .mb-30 {
     margin-bottom: 30px;
+}
+
+.hr-block {
+    &-top {
+        border-top: 1px solid #E0E2E5;
+        padding-top: 30px;
+    }
+    &-bottom {
+        border-bottom: 1px solid #E0E2E5;
+        padding-bottom: 30px;
+    }
 }
 
 /* form css anim */
@@ -2620,6 +2633,8 @@ textarea.form-control {
 
 }
 
+/* video-radio content */
+
 .content-video {
 
     &-head {
@@ -3504,17 +3519,6 @@ textarea.form-control {
         }
     }
 }
-
-.hr-block {
-    &-top {
-        border-top: 1px solid #E0E2E5;
-        padding-top: 30px;
-    }
-    &-bottom {
-        border-bottom: 1px solid #E0E2E5;
-        padding-bottom: 30px;
-    }
-}
  
 .prog-info {
     display: none;
@@ -3930,7 +3934,6 @@ textarea.form-control {
     position: relative;
     display: inline-block;
 }
-
 .tt-menu {
     position: absolute;
     top: 100%;
@@ -3940,39 +3943,20 @@ textarea.form-control {
     z-index: 1000;
     min-width: 430px;
 }
-
 .video-search .tt-menu {
     min-width: inherit !important;
     .tt-suggestion-name {
         padding-right: 0;
     }
 }
-
-.twitter-typeahead {
-    width: 100%;
-}
-
+.twitter-typeahead { width: 100%; }
 .typeahead,
 .tt-query,
-.tt-hint {
-}
-
-.typeahead {
-    background-color: #fff;
-}
-
-.typeahead:focus {
-    border: 2px solid #0097cf;
-}
-
-.tt-query {
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-}
-
-.tt-hint {
-    color: #999
-}
-
+.tt-hint {}
+.typeahead { background-color: #fff; }
+.typeahead:focus { border: 2px solid #0097cf; }
+.tt-query { box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+.tt-hint { color: #999 }
 .tt-menu {
     font-size: 14px;
     width: 350px;
@@ -3983,26 +3967,22 @@ textarea.form-control {
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
 }
-
 .tt-suggestion {
     padding: 4px 20px;
     position: relative;
     border-bottom: 1px solid #E4EBEE;
     &:last-child { border-bottom: 0; }
 }
-
 .tt-suggestion:hover {
     cursor: pointer;
     color: #fff;
     background-color: #0097cf;
 }
-
 .tt-suggestion-subname,
 .tt-suggestion-note {
     color: #aaa;
     width: 100px;
 }
-
 .tt-suggestion-name {
     padding-right: 115px;
     padding-right: 10px;
@@ -4010,7 +3990,6 @@ textarea.form-control {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-
 .tt-suggestion-note {
     text-align: left;
     display: block;
@@ -4028,28 +4007,16 @@ textarea.form-control {
     padding:3px 20px;
     width: 50%;
     font-style: italic;
-    
 }
-
-.tt-suggestion-note strong {
-    font-weight: normal !important;
-}
-
+.tt-suggestion-note strong { font-weight: normal !important; }
 .tt-suggestion:hover .tt-suggestion-subname,
 .tt-suggestion:hover .tt-suggestion-note,
-.tt-suggestion:hover .tt-suggestion-name strong {
-    color: #fff;
-}
-
+.tt-suggestion:hover .tt-suggestion-name strong { color: #fff; }
 .tt-suggestion.tt-cursor {
     color: #fff;
     background-color: #0097cf;
 }
-
-.tt-suggestion p {
-    margin: 0;
-}
-
+.tt-suggestion p { margin: 0; }
 .tt-header {
     margin: 0;
     font-weight: bold;
@@ -4057,7 +4024,6 @@ textarea.form-control {
     padding: 6px 8px 6px 16px;
     background: #efefef;
 }
-
 .twitter-typeahead .tt-menu {
     margin-top: 0;
     .radius(4px);
@@ -4073,9 +4039,7 @@ textarea.form-control {
         font-weight: 600;
     }
     .tt-suggestion {
-        &:hover {
-            background-color: @color-link;
-        }
+        &:hover { background-color: @color-link; }
     }
 }
 
@@ -4919,7 +4883,8 @@ textarea.form-control {
     
 }
 
-/*Download Popup*/
+/* downlad popup*/
+
 .download_popup {
   position: relative;
   padding: 15px 32px 6px 78px;
@@ -5168,7 +5133,8 @@ textarea.form-control {
   transform-origin: center bottom;
 }
 
-/* TV Watch Online Banner */
+/* tv watch online banner */
+
 .watch-online-block {
     > a {
         display: block;
@@ -5231,6 +5197,145 @@ textarea.form-control {
         display: inline-block;
         max-width: 100%;
         .trans();
+    }
+}
+
+/* tv search page */
+
+.tv-search-page {
+    &-header {
+        span { color: #769D2A; }
+    }
+    &-list { padding-bottom: 30px; }
+    &-block {
+        &-title {}
+        &-body {}
+    }
+    &-item {
+        border-bottom: 1px solid #E0E2E5;
+        padding-bottom: 15px;
+        &:last-child { border: none; } 
+        &-title { 
+            .title-text {
+                margin-top: 0;
+                font-size: 20px;
+                font-weight: 600;
+                color: #3D4C53;
+                a {
+                    color: #26292B;
+                    text-decoration: none;
+                    &:hover,
+                    &:active { 
+                        color: @color-link !important; 
+                    }
+                }
+            }
+        }
+        &-body {}
+        .info-channel {
+            .channel-title {
+                margin-bottom: 15px;
+                margin-top: 15px;
+                a {
+                    text-decoration: none;
+                    display: inline-block;
+                }
+                .channel-icon img {
+                    width: 64px;
+                    height: 64px;
+                    margin-right: 10px;    
+                    vertical-align: middle;    
+                    border: 1px solid #eee;
+                    padding: 4px;
+                }
+                &-text {
+                    text-decoration: none;
+                    font-weight: 600;
+                    color: #25292b;
+                    font-size: 20px;
+                    border-bottom: 2px solid #028cc7;
+                }
+            }
+            .no-stream {
+                font-weight: 600;
+                font-style: italic;
+                color: #769D2A;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+        }
+        .info-programm {
+            .programm-image {
+                > a {
+                    &:hover,
+                    &:active { 
+                        img { border-color: @color-link; }
+                    }
+                } 
+            }
+            .channel-stream {
+                margin-left: 15px;
+                ul { 
+                    margin: 0; 
+                    li { 
+                        margin-bottom: 0; 
+                        hr { 
+                            margin-top: 5px;
+                            margin-bottom: 5px; 
+                        }
+                    }
+                }
+                .stream-more {
+                    font-size: 14px;
+                    display: inline-block;
+                    margin-top: 10px;
+                    i.fa { margin-right: 5px; } 
+                    &:hover,
+                    &:active {
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .search {
+        &-channels {
+            background-color: #EEF2F5;
+            .tv-search-page-block-body { padding: 15px 0; }
+            .tv-search-page-item {
+                text-align: center;
+                &-body { padding-top: 5px; }
+                .channel-icon {
+                    img {
+                        border: 1px solid #eee;
+                        padding: 10px;
+                        margin-bottom: 10px;    
+                        background-color: #fff;
+                    }
+                }
+                .channel-title-text {
+                    font-weight: 600;
+                    color: #000;
+                    border-bottom: 2px solid @color-link;
+                    text-decoration: none;
+                    &:hover,
+                    &:active {
+                        text-decoration: none;
+                        color: @color-link;
+                        border-bottom-color: transparent;
+                    }
+                }
+            }
+        }
+        &-programms {}
+        &-programms-alone {}
+    }
+    .programm {
+        &-descr {}
+        &-image {
+            img { max-height: 150px; }
+        }
+        &-rate {}
     }
 }
 
@@ -5647,7 +5752,7 @@ textarea.form-control {
     .article-page {
         > div.container-fluid {
             font-size: 17px;
-            padding-right: 20%;
+            /*padding-right: 20%;*/
         }
     }
 }
