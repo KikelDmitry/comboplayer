@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Результаты поиска</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Styles -->
+    <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
+    <link rel="stylesheet" href="/css/app.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand logo">Project name</span>
+                        <p class="slogan">Бесплатный плеер видео и аудио</p>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                       
+                        <!--<div class="navbar-form navbar-right">
+                            <ul class="header-menu clearfix">
+                                <li class="header-menu-item">
+                                    <a href="#" class="header-menu-link">Авторизация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="contacts.html" class="header-menu-link">Регистрация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="http://tv.comboplayer.ru" class="header-menu-link">Combo TV</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-tv"></i>ТВ-программа</a>
+                                </li>
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-video"></i>Видео</a>
+                                </li>
+                                <li class="header-menu-item extra-item">    
+                                    <a href="#" class="header-menu-link"><i class="icon-radio"></i>Радио</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="http://www.comboplayer.ru" onclick="Reformal.widgetOpen();return false;" class="header-menu-link">Отзывы и предложения</a>
+                                </li>
+                                
+                            </ul>
+                        </div>-->
+                        
+                        <div class="navbar-form navbar-right">
+                            <ul class="header-menu clearfix">
+                               
+                                <li class="header-menu-item content-menu-link visible-xs">
+                                    <a href="#" rel="nofollow" class="header-menu-link">Фильмы</a>
+                                </li>
+                                <li class="header-menu-item content-menu-link visible-xs">
+                                    <a href="#" rel="nofollow" class="header-menu-link">Сериалы</a>
+                                </li>
+                                <li class="header-menu-item content-menu-link visible-xs">
+                                    <a href="#" rel="nofollow" class="header-menu-link">Мультфильмы</a>
+                                </li>
+                                <li class="header-menu-item content-menu-link visible-xs">
+                                    <a href="#" rel="nofollow" class="header-menu-link">Передачи</a>
+                                </li>
+                                
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" rel="nofollow" onclick="yaCounter38016245.reachGoal('authorize'); return true;" href="https://www.comboplayer.ru/login">Авторизация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" rel="nofollow" onclick="yaCounter38016245.reachGoal('registry'); return true;" href="https://www.comboplayer.ru/register">Регистрация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/tv" rel="nofollow" class="header-menu-link ">
+                                        <i class="fa fa-tv"></i> Combo-TV
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/tv-guide" rel="nofollow" class="header-menu-link active">
+                                        <i class="fa fa-list"></i> ТВ-программа
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/videos" rel="nofollow" class="header-menu-link ">
+                                        <i class="fa fa-play"></i> Фильмы онлайн
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/radio" rel="nofollow" class="header-menu-link">
+                                        <i class="fa fa-podcast"></i> Радио
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </div>
+        </header>
+        
+        <main class="content tv-search-page">
+            
+            <div class="content-tv-head">
+                
+                <div class="container-fluid">
+                          
+                    <div class="tv-search-page-header">
+                        <h1 class="tv-content-header content-tv-head-title">Результаты поиска по запросу <span>&laquo;матч&raquo;</span></h1>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="content-tv-channel">
+               
+               <div class="container-fluid">
+                   
+                    <div class="row">
+                        
+                        <div class="col col-md-9">
+
+                            <div class="tv-search-page-list">
+                                
+                                <div class="tv-search-page-block search-channels">
+                                    
+                                    <div class="tv-search-page-block-body">
+                                    
+                                        <div class="row">
+
+                                            <div class="col col-md-3">
+                                                <div class="tv-search-page-item">
+                                                    <div class="tv-search-page-item-body">
+                                                        <a href="#">
+                                                            <i class="channel-icon">
+                                                                <img src="https://www.comboplayer.ru/static/channels/1de/566/1de566c050696618132b6bb53611fe97c27dbedc.png">
+                                                            </i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="tv-search-page-item-title">
+                                                        <div class="channel-title">
+                                                            <a href="#" class="channel-title-text">Матч ТВ</a>
+                                                        </div>    
+                                                    </div>
+                                                </div>    
+                                            </div>
+
+                                            <div class="col col-md-3">
+                                                <div class="tv-search-page-item">
+                                                    <div class="tv-search-page-item-body">
+                                                        <a href="#">
+                                                            <i class="channel-icon">
+                                                                <img src="https://www.comboplayer.ru/static/channels/ebb/bce/ebbbcec57e753ad922bf75058cc31e9dcc3bd0e1.png">
+                                                            </i>
+                                                        </a>
+                                                    </div>
+                                                    <div class="tv-search-page-item-title">
+                                                        <div class="channel-title">
+                                                            <a href="#" class="channel-title-text">Матч ТВ HD</a>
+                                                        </div>    
+                                                    </div>
+                                                </div>
+                                            </div>
+   
+                                        </div>    
+
+                                    </div>
+
+                                </div>
+                                
+                                <hr class="tv-search-page-sep">
+                            
+                                <div class="tv-search-page-block search-programms">
+
+                                    <div class="tv-search-page-block-body">
+                                       
+                                        <div class="tv-search-page-item">
+                                        
+                                            <div class="info-channel">
+                                                <div class="channel-title">
+                                                    <a href="#">
+                                                       <i class="channel-icon">
+                                                            <img src="https://www.comboplayer.ru/static/channels/572/44c/57244c5384e9930ed5ccb712796efef1adfb6b86.png">
+                                                        </i>
+                                                        <span class="channel-title-text">КХЛ</span>
+                                                    </a>    
+                                                </div>
+                                            </div>
+
+                                            <div class="info-programm">
+
+                                                <div class="row">
+                                                    <div class="col col-md-6">
+
+                                                        <div class="tv-search-page-item-title">
+                                                            <h3 class="title-text"><a href="#">Матч звёзд КХЛ-2018. Мастер-шоу</a></h3>
+                                                        </div>
+                                                        <div class="tv-search-page-item-body clearfix">
+                                                            <div class="programm-image pull-left">
+                                                                <a href="#"><img class="img-thumbnail" src="https://www.comboplayer.ru/static/video_images/dba/064/dba06485d941756af06b95e042b5c0ff8dfc9281.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="channel-stream pull-left">
+                                                                <ul>
+                                                                    <li><strong>Завтра, СБ</strong></li>
+                                                                    <li><span>10:00</span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        
+                                        </div>
+
+                                        <div class="tv-search-page-item">
+                                           
+                                            <div class="info-channel">
+                                                <div class="channel-title">
+                                                    <a href="#">
+                                                       <i class="channel-icon">
+                                                            <img src="https://www.comboplayer.ru/static/channels/572/44c/57244c5384e9930ed5ccb712796efef1adfb6b86.png">
+                                                        </i>
+                                                        <span class="channel-title-text">КХЛ</span>
+                                                    </a>    
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="info-programm">
+                                                <div class="row">
+                                                    <div class="col col-md-6">
+                                                       
+                                                        <div class="tv-search-page-item-title">
+                                                            <h3 class="title-text"><a href="#">Матч звёзд ЖХЛ-2018</a></h3>
+                                                        </div>
+                                                        <div class="tv-search-page-item-body clearfix">
+                                                            <!--<div class="programm-descr">
+                                                                <p>Спорт</p>    
+                                                            </div>-->
+                                                            <div class="programm-image pull-left">
+                                                                <a href="#"><img class="img-thumbnail" src="https://www.comboplayer.ru/static/video_images/196/da9/196da9689ae3ba4be1645d66bf0655c2a606cdb0.jpg" alt=""></a>
+                                                            </div>
+                                                            <!--<div class="programm-rate">
+                                                                <span class="programm-category">Трансляция</span>
+                                                                <span class="programm-age">12+</span>
+                                                            </div>-->
+                                                            <div class="channel-stream pull-left"> 
+                                                                <ul>
+                                                                    <li class="channel-time-past"><strong>Среда</strong></li>
+                                                                    <li class="channel-time-past"><span>15:55</span></li>
+                                                                    <li><hr></li>
+                                                                    <li><strong>Завтра, СБ</strong></li>
+                                                                    <li><span>21:10</span></li>
+                                                                    <li><hr></li>
+                                                                    <li><strong>Воскресенье</strong></li>
+                                                                    <li><span>14:35</span></li>
+                                                                    <li><a class="stream-more" href="#"><i class="fa fa-tv"></i>Вся программа</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    
+                                                    </div>
+                                                    
+                                                    <div class="col col-md-6">
+
+                                                        <div class="tv-search-page-item-title">
+                                                            <h3 class="title-text"><a href="#">Матч звёзд КХЛ-2018</a></h3>
+                                                        </div>
+                                                        <div class="tv-search-page-item-body clearfix">
+                                                            <div class="programm-image pull-left">
+                                                                <a href="#"><img class="img-thumbnail" src="https://www.comboplayer.ru/static/video_images/dba/064/dba06485d941756af06b95e042b5c0ff8dfc9281.jpg" alt=""></a>
+                                                            </div>
+                                                            <div class="channel-stream pull-left">
+                                                                <ul>
+                                                                    <li><strong>Завтра, СБ</strong></li>
+                                                                    <li><span>10:00</span></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            
+                                <hr class="tv-search-page-sep">
+                            
+                                <div class="tv-search-page-block search-programms-alone">
+                                    <div class="tv-search-page-block-body">
+                                    
+                                        <div class="tv-search-page-item">
+                                        
+                                            <div class="info-channel">
+                                                <div class="no-stream"><em>Не будут идти на этой неделе</em></div>
+                                            </div>
+                                            
+                                            <div class="info-programm">
+                                                <div class="row">
+
+                                                    <div class="col col-md-4">
+                                                        <div class="tv-search-page-item-title">
+                                                            <h3 class="title-text"><a href="#">Матч-реванш</a></h3>
+                                                        </div>
+                                                        <div class="tv-search-page-item-body">
+                                                            <div class="programm-image">
+                                                                <a href="#"><img class="img-thumbnail" src="https://www.comboplayer.ru/static/video_images/fb8/7eb/fb87eb519df7513a441aff7b6f0e64cb266edef0.jpg" alt=""></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="col col-md-4">
+                                                        <div class="info-programm">
+                                                            <div class="tv-search-page-item-title">
+                                                                <h3 class="title-text"><a href="#">Матч Поинт</a></h3>
+                                                            </div>
+                                                            <div class="tv-search-page-item-body">
+                                                                <div class="programm-image">
+                                                                    <a href="#"><img class="img-thumbnail" src="https://www.comboplayer.ru/static/video_images/91a/1d7/91a1d71485289e30bf708a3a9476700cd2db4107.jpg" alt=""></a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        
+                                        </div>
+                              
+                                    </div>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="col col-md-3">
+
+                            <div class="tv-search-page-side">
+                                <!--<p>...</p>-->
+                            </div>
+
+                        </div>
+                
+                   </div>
+           
+                </div>
+                
+            </div>
+
+        </main>
+        
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <p>
+                            <a href="http://www.rudorogi.ru/go/?url=http%3A%2F%2Fwww.rostpay.ru%2F&amp;hash=862124ed4de23f7db193e79e37d4bd83" target="_blank" rel="nofollow"><strong>ООО &copy; &laquo;РОСТПЭЙ&raquo;, 2016</strong></a><br>
+                            344011, г. Ростов-на-Дону, пер. Доломановский, <br>
+                            д. 70Д, оф. 1 (10 этаж) <br>
+                            ОГРН: 1086168004669 <br>
+                            ИНН/КПП: 6168024612 / 616401001 <br>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i>&nbsp;+7 (863) 280-00-12 <br>
+                            <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@comboplayer.ru">info@comboplayer.ru</a>
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Партнерам</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Интеграторам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Сайтам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Магазинам</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Продукты</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://comboplayer.ru">Бесплатный медиаплеер</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://tv.comboplayer.ru">IP ТВ</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="#">Радио</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Мы с соцсетях</strong></p>
+                        <ul class="footer-menu social">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="https://vk.com/comboplayer"><i class="fa fa-vk"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Помощь</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Добавить канал</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Правообладателям</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+    
+    <script type="text/javascript">
+        
+        // disable carousel auto
+        
+         $('.carousel').carousel ({
+           interval:false
+         });
+        
+    </script>
+    
+</body>
+</html>
