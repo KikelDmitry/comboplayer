@@ -5218,9 +5218,11 @@ textarea.form-control {
         &-title { 
             .title-text {
                 margin-top: 0;
-                font-size: 20px;
+                /*font-size: 20px;*/
+                font-size: 16px; 
                 font-weight: 600;
                 color: #3D4C53;
+                line-height: normal;
                 a {
                     color: #26292B;
                     text-decoration: none;
@@ -5265,11 +5267,26 @@ textarea.form-control {
             }
         }
         .info-programm {
+            > .row { 
+                margin-bottom: 15px; 
+                &:last-child { margin-bottom: 0; }
+            }
             .programm-image {
                 > a {
                     &:hover,
                     &:active { 
                         img { border-color: @color-link; }
+                    }
+                    &.noimage {
+                        min-width: 150px;
+                        min-height: 150px;
+                        background: url("@{images}tv-search-noimg.png") no-repeat center;
+                        display: inline-block;
+                        padding: 4px;
+                        border: 1px solid #ddd;
+                        .radius(3px);
+                        &:hover,
+                        &:active { border-color: @color-link; } 
                     }
                 } 
             }
