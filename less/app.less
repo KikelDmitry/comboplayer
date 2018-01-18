@@ -222,6 +222,12 @@ h5 {
     box-shadow: @x @y @blur @distance @color;
 }
 
+.rotation(@property: 45deg){
+    transform:rotate(@property);
+    -ms-transform:rotate(@property);
+    -webkit-transform:rotate(@property);
+}
+
 .ellipsis {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -3522,6 +3528,7 @@ textarea.form-control {
  
 .prog-info {
     display: none;
+    z-index: 10;
     &.active {
         display: block;
         position: absolute;
@@ -5356,6 +5363,103 @@ textarea.form-control {
             }
         }
         &-rate {}
+    }
+}
+
+/* tv city */
+
+.city-local {
+    margin-top: 15px;
+    &-current {
+        i.fa {
+            color: #7aac24;
+            font-size: 22px;
+            vertical-align: baseline;
+            margin-right: 10px;
+            margin-left: 5px;
+        }
+        &-name {
+            font-size: 15px;
+            font-weight: 600;
+            display: inline-block;
+            padding: 1px 4px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+            cursor: pointer;
+            &:hover,
+            &:active {
+                border-color: #ccc;
+            }
+            &.active {
+                border-color: #ccc;
+            }
+        }
+    }
+    &-pop {
+        /*position: relative;
+        top: 20px;*/
+        position: absolute;
+        margin-top: 15px;
+        &:before {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: #e4ebee;
+            position: absolute;
+            top: -11px;
+            left: 23px;
+            .rotation(45deg); 
+        }
+    }
+    &-question {
+        background-color: #e4ebee;
+        padding: 15px; 
+        font-weight: 600;
+        color: #000;
+        > div:first-child {
+            padding: 7px 5px;
+        }
+        .btn {
+            min-width: 70px;
+            padding: 5px;
+            background-color: #7aac24;
+            font-size: 15px;
+            border-color: transparent;
+            color: #fff;
+            &:hover,
+            &:active {
+                background-color: darken(#7aac24, 5%);
+            }
+        }
+    }
+    &-select {
+        padding: 15px;
+        background-color: #cedadf;
+        .form-control {
+            height: 32px;
+            .radius(4px);
+        }
+        .input-group-btn {
+            position: relative;
+        }
+        &-btn {
+            position: absolute !important;
+            top: 0;
+            right: 0;
+            color: #178dc5;
+            width: 32px;
+            height: 32px;
+            background-color: transparent;
+            display: block; 
+        } 
+        .tt-menu {
+            min-width: auto;
+            .tt-dataset {
+                border-bottom: 1px solid #e4ebee;
+                &:last-child { border: none; }
+            }
+            
+        }
     }
 }
 
