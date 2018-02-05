@@ -1633,6 +1633,7 @@ textarea.form-control {
         }
     }
     &-table {
+        min-height: 150px;
         &-wrap {
             margin-top: 30px;
         }
@@ -4206,7 +4207,7 @@ textarea.form-control {
     position:fixed;
     margin:0px;
 }
-#downloadHelper {
+#downloadHelper { 
     .modal-dialog { 
         width: 320px; 
         .modal-content {
@@ -5400,6 +5401,7 @@ textarea.form-control {
         top: 20px;*/
         position: absolute;
         margin-top: 15px;
+        z-index: 10;
         &:before {
             content: "";
             width: 24px;
@@ -5409,6 +5411,9 @@ textarea.form-control {
             top: -11px;
             left: 23px;
             .rotation(45deg); 
+        }
+        @media (max-width: @screen-sm-min) {
+            position: relative;
         }
     }
     &-question {
