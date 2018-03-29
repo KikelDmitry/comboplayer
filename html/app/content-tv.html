@@ -668,6 +668,40 @@
                                                         <div class="prog-info-cat">Инфо</div>
                                                     </div>
                                                 </div>-->
+                                                
+                                                
+<!--<div class="watch-online-block">
+    <a href="#">
+        <img class="watch-online-block-image" src="https://www.comboplayer.ru/static/video_images/cbe/028/cbe028db9a899392e834ce136a5000264bb07f20.jpg" alt="">
+        <i class="watch-online-block-icon fa fa-play"></i>
+        <span class="watch-online-block-title">Смотреть онлайн</span>
+    </a>
+</div>-->
+                                                
+                                                
+                                                <div class="prog-info active watch-online-prev">
+                                                    <div class="prog-info-head">
+                                                        <div class="prog-info-title">Вести</div>
+                                                        <div class="prog-info-notify">
+                                                            <span class="notify-watch"></span>
+                                                            <span class="notify-watch-text">Напомнить за 5 минут до начала</span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="prog-info-image">
+                                                        <img src="/images/prog-vesti.jpg" alt="">
+                                                        <i class="watch-online-block-icon fa fa-play"></i>
+                                                        <span class="watch-online-block-title">Смотреть онлайн</span>
+                                                    </a>
+                                                    <div class="prog-info-wrap">
+                                                        <div class="prog-info-body">
+                                                            <p>
+                                                                В прямом эфире ведущие представят основные новости дня в сфере политики, культуры, общества и спорта. В выпуске репортажи о важнейших событиях, полученные от собственных российских и зарубежных корреспондентов.
+                                                            </p>
+                                                        </div>
+                                                        <div class="age-rate">16+</div>
+                                                        <div class="prog-info-cat">Инфо</div>
+                                                    </div>
+                                                </div>
 
                                                 <a href="#">
                                                     <span class="channel-time">17:00</span> Вести
@@ -727,10 +761,12 @@
                                     </div>
                                     <div class="channel-body">
                                         <ul>
-                                            <li><a href="#"><span class="channel-time">13:00</span> Восьмидесятые</a></li>
-                                            <li><a href="#"><span class="channel-time active col-violet">15:30</span> Воронины <em>(Серия 15. Сезон 5)</em></a></li>
-                                            <li><a href="#"><span class="channel-time active col-violet">19:00</span> Воронины <em>(Серия 16. Сезон 5)</em></a></li>
-                                            <li><a href="#"><span class="channel-time">20:00</span> Премьера! "Молодёжка"</a></li>
+                                            <li><a href="#"><span class="channel-time">13:00</span> Восьмидесятые</a>
+                                                <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
+                                            </li>
+                                            <li><a href="#"><span class="channel-time active col-violet">15:30</span> Воронины <em>(Серия 15. Сезон 5)</em></a><a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a></li>
+                                            <li><a href="#"><span class="channel-time active col-violet">19:00</span> Воронины <em>(Серия 16. Сезон 5)</em></a><a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a></li>
+                                            <li><a href="#"><span class="channel-time">20:00</span> Премьера! "Молодёжка"</a><a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a></li>
                                             <li><a href="#"><span class="channel-time">21:00</span> Кухня в Париже</a></li>
                                         </ul>
                                         <a class="week-view" href="#"><i class="fa fa-tv"></i> <span>Программа канала на неделю</span></a>
@@ -1232,8 +1268,7 @@
     
     
 <script>   
-// push notify
-    
+// push notify  
 function handler1() {
     $(this).addClass("active");
     $(this).one("click", handler2);
@@ -1243,6 +1278,10 @@ function handler2() {
     $(this).one("click", handler1);
 }
 $(".prog-info-notify").one("click", handler1);
+    
+// tooltips
+$('[data-toggle="tooltip"]').tooltip();   
+    
 </script>
     
 </body>
