@@ -1831,7 +1831,6 @@ textarea.form-control {
                 &:hover {
                     .week-view { visibility: visible; }
                 }
-                
             }
         }
         &.fix-padding { padding-top: 200px; }
@@ -3721,6 +3720,71 @@ textarea.form-control {
         padding-right: 25px;
         color: darken(#89A4B5, 5%);
     }
+    
+    //zz1
+    &.watch-online-prev {
+        width: 320px;
+        .prog-info-image {
+            display: block;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            max-width: 320px;
+            max-height: 240px; 
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+            &:hover {
+                img {
+                    width: 105%;
+                    left: -2%;
+                    top: -2%;
+                }
+                .watch-online-block-icon { background-color: #5F871B; }
+                .watch-online-block-title {
+                    background-image: none;
+                    background-color: #5F871B;    
+                }   
+            }
+            img {
+                width: 100%; 
+                height: auto;
+                .trans();
+            }
+        }
+        .watch-online-block-icon {
+            width: 64px;
+            height: 64px;
+            background-color: #7aac24;
+            background: -moz-linear-gradient(45deg, #7aac25 0%, #4dab91 100%);
+            background: -webkit-linear-gradient(45deg, #7aac25 0%,#4dab91 100%);
+            background: linear-gradient(45deg, #7aac25 0%,#4dab91 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7aac25', endColorstr='#4dab91',GradientType=1 );
+            color: #fff;
+            line-height: 64px;
+            font-size: 32px;
+            padding-left: 6px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            .trans();
+        }
+        .watch-online-block-title {
+            position: absolute;
+            bottom: 0;
+            background: #7AAC24;
+            padding: 5px 10px;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-block;
+            max-width: 100%;
+            .trans();
+        }
+    }
+
 }
 
 .programm-series {
@@ -5167,14 +5231,11 @@ textarea.form-control {
                 left: -2%;
                 top: -2%;
             }
-            .watch-online-block-icon {
-                background-color: #5F871B;
-            }
+            .watch-online-block-icon { background-color: #5F871B; }
             .watch-online-block-title {
                 background-image: none;
                 background-color: #5F871B;    
-            }
-            
+            }   
         }
     }
     &-image { 
@@ -5477,6 +5538,80 @@ textarea.form-control {
 
 #fill_balance_box {
     #amount, #paypal-btn { height: 46px; }
+}
+
+//zz2
+.content-tv-table-channel .channel-body,
+.channel-stream ul li {
+    .prog-watch {
+        margin-left: 5px;
+        background-color: #BECCD5;
+        .radius(30px);
+        color: #fff;
+        text-align: center;
+        display: inline-block;
+        padding: 2px 5px;
+        width: 16px;
+        font-size: 9px;
+        vertical-align: middle;
+        &:hover,
+        &:active,    
+        &:focus {
+            background-color: #178DC5;
+            color: #fff !important;
+        }
+    }
+}
+
+//zz3
+/*.tooltip {
+    &-inner{
+        max-width:200px;
+        padding:3px 8px;
+        color:#fff;
+        .radius(3px);
+        background-color: #178DC5;
+        font-size: 13px;
+        opacity: 1; 
+        .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.3));
+    }
+    &.in { opacity: 1; }
+    &.top .tooltip-arrow{
+        border-top-color: #178DC5;
+    }
+    &.left .tooltip-arrow{
+        border-left-color: #178DC5;
+    }
+    &.bottom .tooltip-arrow{
+        border-bottom-color: #178DC5
+    }
+    &.right .tooltip-arrow{
+        border-right-color: #178DC5;
+    }
+}*/
+.tooltip {
+    &-inner{
+        max-width:200px;
+        padding:3px 8px;
+        color:#028cc7;
+        .radius(3px);
+        background-color: #E9EFF2;
+        font-size: 13px;
+        opacity: 1; 
+    } 
+    &.in { opacity: 1; }
+    &.top .tooltip-arrow{
+        border-top-color: #E9EFF2;
+    }
+    &.left .tooltip-arrow{
+        border-left-color: #E9EFF2;
+    }
+    &.bottom .tooltip-arrow{
+        border-bottom-color: #E9EFF2;
+    }
+    &.right .tooltip-arrow{
+        border-right-color: #E9EFF2;
+    }
 }
 
 /* media q */
