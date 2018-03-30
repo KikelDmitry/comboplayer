@@ -2803,7 +2803,8 @@ textarea.form-control {
                     &:hover,
                     &:active,
                     &:focus { 
-                        background-color: @color-link;
+                        /*background-color: @color-link;*/
+                        background-color: #abbfcd;
                         color: #fff;
                         &:after { color: #fff; }
                     }
@@ -3318,7 +3319,8 @@ textarea.form-control {
                 }
             }
             &[aria-expanded="true"] {
-                background-color: @color-brand;
+                /*background-color: @color-brand;*/
+                background-color: @color-link;
                 color: #fff;
                 &:after {
                     color: #fff;
@@ -3402,14 +3404,17 @@ textarea.form-control {
                 }
             }
         }
-        &.selected {
+        &.selected { 
             .block-category-control {
-                background-color: @color-link;
+                //zz
+                /*background-color: @color-link;*/
+                background-color: @color-green-light;
                 color: #fff;
                 &:after { 
                     color: #fff; 
                     border-color: #fff;
-                    background-color: @color-link;
+                    /*background-color: @color-link;*/
+                    background-color: transparent;
                 }
                 span {
                     color: #516772;
@@ -3446,7 +3451,7 @@ textarea.form-control {
                     overflow: hidden;
                     text-overflow: ellipsis;
                     &:hover,
-                    &:active { background-color: darken(@color-blue, 5%); }
+                    &:active { background-color: darken(@color-link, 5%); }
                 }
                 &-reset {
                     span { font-size: 17px; }
@@ -3721,7 +3726,6 @@ textarea.form-control {
         color: darken(#89A4B5, 5%);
     }
     
-    //zz1
     &.watch-online-prev {
         width: 320px;
         .prog-info-image {
@@ -5540,7 +5544,6 @@ textarea.form-control {
     #amount, #paypal-btn { height: 46px; }
 }
 
-//zz2
 .content-tv-table-channel .channel-body,
 .channel-stream ul li {
     .prog-watch {
@@ -5563,7 +5566,6 @@ textarea.form-control {
     }
 }
 
-//zz3
 /*.tooltip {
     &-inner{
         max-width:200px;
