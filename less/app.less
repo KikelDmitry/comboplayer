@@ -1979,6 +1979,32 @@ textarea.form-control {
                             left: 150px;
                             top: -200px;
                         }
+                        .more-series-list {
+                            margin-top: 8px;
+                            background-color: #dee6eb;
+                            padding: 5px;
+                            display: block;
+                            width: 30px;
+                            margin-bottom: 8px;
+                            color: @color-steel-dark;
+                            cursor: pointer;
+                            &:after {
+                                display: inline-block;
+                                font-weight: bold;
+                                color: @color-steel;
+                                padding-left: 5px;
+                                font-family: "FontAwesome";
+                                font-size: 16px;
+                            }
+                            &[aria-expanded="false"] {
+                                &:after { content: "\f107"; }
+                            }
+                            &[aria-expanded="true"] {
+                                &:after { content: "\f106"; }
+                            }
+                            &:hover,
+                            &:focus { background-color: lighten(@color-steel, 30%); }
+                        }
                     }
                 }
                 &-brief {
