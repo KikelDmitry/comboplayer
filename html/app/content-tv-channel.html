@@ -14,7 +14,8 @@
 
     <!-- Styles -->
     <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
-    <link rel="stylesheet" href="/css/app.css" />
+    <!--<link rel="stylesheet" href="/css/app.css" />-->
+    <link rel="stylesheet" href="/less/app.css" />
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
@@ -311,6 +312,7 @@
                         <div class="col col-md-6 col-md-pull-3">
 
 <div class="channel-actions">
+   
     <!--<a class="channel-watch" href="#">
         <i class="fa fa-play-circle"></i>
         <span>Смотреть в Comboplayer</span>
@@ -320,10 +322,35 @@
         <span>Купить подписку на канал</span>
     </a>-->
     
-    <div class="btn-group try-buy">
+    <!--<div class="btn-group try-buy">
         <a class="btn btn-default">107 каналов за 250 <i class="fa fa-rub" aria-hidden="true"></i></a>
         <a class="btn btn-default">Попробовать за 17 <i class="fa fa-rub" aria-hidden="true"></i></a>
         <a class="btn btn-default btn-info"><i class="fa fa-info-circle"></i>&nbsp;Подробнее</a>
+    </div>-->
+    
+    <div class="channel-try-free channel-try-free-single">
+        <a href="#" class="clearfix">
+            <i class="fa fa-tv"></i>
+            <span class="tf-title">Попробовать бесплатно</span>
+            <span class="tf-period pull-right">На <strong>1</strong> месяц</span>    
+        </a>
+    </div>
+    
+    <hr>
+    
+    <div class="channel-try-free channel-try-free-double">
+        <i class="fa fa-tv"></i>
+        <div class="panel-top">
+            <a href="#">
+                <span class="tf-title tf-darkblock">Пятый канал</span> <span class="tf-plus">+</span> <strong>121</strong> канал за 200 <i class="fa fa-rub"></i>    
+            </a>
+        </div>
+        <div class="panel-bottom">
+            <a href="#">
+                <span class="tf-darkblock">Или</span> <strong>117</strong> канал бесплатно
+                <span class="tf-period tf-lightblock pull-right">На <strong>1</strong> месяц</span>    
+            </a>
+        </div>
     </div>
     
 </div>
