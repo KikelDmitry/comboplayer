@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <title>Combo TV</title>
+    <title>Title</title>
     <meta charset="utf-8" />
     <meta name="description" content="" />
     <meta name="author" content="" />
@@ -10,17 +10,19 @@
 
     <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="/images/tv/favicon.ico">
 
     <!-- Styles -->
-    <!-- <link rel="stylesheet/less" href="/css/tv.css" /> -->
-    <link rel="stylesheet" href="/css/tv.css" />
+    <!-- <link rel="stylesheet/less" href="styles/less/styles.less" /> -->
+    <!--<link rel="stylesheet" href="styles/css/styles.css" />-->
+    <link rel="stylesheet" href="/less/tv.css" />
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
 </head>
 <body>
    
@@ -351,25 +353,6 @@
    
     <!--<div class="channel-item" data-target="#channel-popup-1">
         <img src="https://www.comboplayer.ru/static/channels/281/172/2811723f323fa0a06b12b42982003e10f5244b31.png" alt="Первый" class="channel-item-img">
-        
-        <div id="channel-popup-1" class="channel-item-data-popup" style="display: block">
-            <button type="button" class="fa fa-times btn-close"></button>
-            <span class="channel-item-data-popup-title">Первый</span>
-            <div class="row mb-20">
-                <div class="col-sm-3 col-xs-12">
-                    <img src="https://www.comboplayer.ru/static/channels/281/172/2811723f323fa0a06b12b42982003e10f5244b31.png" alt="Первый" class="channel-item-data-popup-img">
-                </div>
-                <div class="col-sm-9 col-xs-12">
-                    <p></p>
-                </div>
-            </div>
-            <div class="channel-item-data-popup-list">
-                <p class="mb-5"><strong>Канал входит в пакеты:</strong></p>
-                <ul class="ul-list">
-                    <li>Открытый</li>
-                </ul>
-            </div>
-        </div>
         
         <div id="channel-popup-1" class="channel-item-data-popup" style="display: block;">
             <button type="button" class="fa fa-times btn-close"></button>
@@ -3457,45 +3440,22 @@
                                             
                                             <span class="text-muted"><small>Необходим для отправки логина и&nbsp;пароля</small></span>
                                         </div>
-                                        
-                                        <!--<div class="pay-choice">
-                                            <div class="btn-group">
-                                                <div class="btn pay-choice-ya">
-                                                    <span class="pay-choice-ya-q" data-toggle="modal" data-target=".popup-paychoice-ya"></span>
-                                                    <a href="#" class="">
-                                                        Яндекс
-                                                    </a>
-                                                </div>
-                                                <div class="btn pay-choice-paypal">
-                                                   <span class="pay-choice-paypal-q" data-toggle="modal" data-target=".popup-paychoice-paypal"></span>
-                                                    <a href="#" class="">
-                                                        Paypal
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>-->
-                                        
-                                        <div class="pay-choice-wide">
-                                            <div class="btn pay-choice-ya">
-                                                <span class="pay-choice-ya-q" data-toggle="modal" data-target=".popup-paychoice-ya"></span>
-                                                <a href="#" class="">Заплатить через Яндекс</a>
-                                            </div>
-                                            <div class="btn pay-choice-paypal">
-                                                <span class="pay-choice-paypal-q" data-toggle="modal" data-target=".popup-paychoice-paypal"></span>
-                                            </div>
-                                        </div>
-                                        
                                         <!--<div class="form-group text-left has-feedback">
                                             <i class="fa fa-asterisk" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Поле обязательно для заполнения"></i>
                                             <input type="name" class="form-control" id="exampleInputName" placeholder="Укажите имя" required>
                                             <span class="text-muted"><small>Ф.И.О. небходимы для заключения договора</small></span>
                                         </div>-->
-                                        
-                                        <!--<button class="btn btn-primary btn-block btn-lg">Перейти к оплате</button>-->
-                                        
+                                        <button class="btn btn-primary btn-block btn-lg">Перейти к оплате</button>
                                         <a href="#" class="side-basket-footer-link" data-toggle="modal" data-target=".popup-public-offer">Условия публичной аферты</a>
                                         
                                         <!--<div class="tariffs-choice-payment">
+                                            <span class="visa"></span>
+                                            <span class="visa-ver"></span>
+                                            <span class="mc"></span>
+                                            <span class="mc-ver"></span>
+                                        </div>-->
+                                        
+                                        <div class="tariffs-choice-payment">
                                             <span class="card"></span>
                                             <span class="ya"></span>
                                             <span class="sber"></span>
@@ -3503,14 +3463,14 @@
                                             <span class="wm"></span>
                                             <span class="psb"></span>
                                             <span class="alpha"></span>
-                                        </div>-->
+                                        </div>
                                         
                                         <div>
                                             <a class="tariffs-choice-payment-info" href="#">
                                             <i class="fa fa-info-circle"></i> Как выбрать способ оплаты?</a>
                                         </div>
                                         
-                                        <!--<p class="text-muted paynote">Для оплаты вы будете перенаправлены на сайт ООО НКО «Яндекс.Деньги», где в безопасном режиме (SSL) , будет произведена оплата.</p>-->
+                                        <p class="text-muted paynote">Для оплаты вы будете перенаправлены на сайт ООО НКО «Яндекс.Деньги», где в безопасном режиме (SSL) , будет произведена оплата.</p>
                                         
                                     </div>
                                     
@@ -3886,30 +3846,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal modal-popup fade popup-paychoice-ya" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">Яндекс Умный платеж</h4>
-                </div>
-                <div class="modal-body">...</div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal modal-popup fade popup-paychoice-paypal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title">PayPal</h4>
-                </div>
-                <div class="modal-body">...</div>
             </div>
         </div>
     </div>
