@@ -5682,7 +5682,6 @@ textarea.form-control {
                     background-color: darken(#6AAB56, 5%);
                     .tf-period {
                         background-color: #3E6E84;
-                        /*background-color: #5f871b;*/
                         color: #fff;
                     }
                 }
@@ -5845,6 +5844,99 @@ textarea.form-control {
             }
         }
     }    
+}
+
+/* */
+
+//nc1
+.film-free {
+    background-color: #fff;
+    color: #26292b;
+    height: 80px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding-left: 245px;
+    position: relative;
+    > a {
+        display: block;
+        height: 80px;
+        text-decoration: none;
+        color: #26292b;
+        .trans;
+        &:hover,
+        &:active {
+            /*text-decoration: none;
+            color: #26292b;*/
+            /*color: #238FC4;*/
+            /*background-color: #516771;*/
+            background-color: #dce7ef;
+            /*color: #fff;*/
+            /*strong { color: #fff; }*/
+        }
+    }
+    &-img {
+        background: #2fa4db;
+        background: -moz-linear-gradient(-45deg, #2fa4db 0%, #178dc5 100%);
+        background: -webkit-linear-gradient(-45deg, #2fa4db 0%,#178dc5 100%);
+        background: linear-gradient(135deg, #2fa4db 0%,#178dc5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2fa4db', endColorstr='#178dc5',GradientType=1 );
+        width: 245px;
+        height: 80px;
+        position: relative;
+        /*float: left;*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 126px;
+            height: 147px;
+            background: url('@{images}content-sprites.png') no-repeat 0 -186px; 
+            top: -31px;
+            left: 15px;
+        }
+        &:after {
+            width: 113px;
+            height: 108px;
+            display: block;
+            content: "";
+            position: absolute;
+            background: url('@{images}content-sprites.png') no-repeat -128px -186px; 
+            top: -27px;
+            right: 15px;
+        }
+    }
+    &-text {
+        position: relative;
+        font-size: 20px;
+        font-weight: 600;
+        /*font-weight: 400;*/
+        padding: 12px 30px;
+        .fa-rub { 
+            font-size: 19px; 
+            margin-left: 2px;
+        }
+        strong {
+            /* background: #47b1e3; */
+            /* color: #fff; */
+            /* padding: 1px 7px; */
+            color: #2894C8;
+        }
+        &:before {
+            display: block;
+            position: absolute;
+            top: 31px;
+            left: -11px;
+            .rotation;
+            width: 20px;
+            height: 20px;
+            background-color: #178dc5;
+            content: "";
+        }
+    }
 }
 
 /* media q */
@@ -6089,6 +6181,26 @@ textarea.form-control {
     .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr > .col { padding: 0; }
     .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr .howtowatch-steps-number { left: 0; }
     
+    //nc2
+    .film-free {
+        border: 1px solid #eee;
+        padding-left: 125px;
+        height: auto;
+        min-height: 80px;
+    }
+    .film-free > a { 
+        height: auto; 
+        min-height: 80px;
+    }
+    .film-free-img { width: 125px; }
+    .film-free-img { min-height: 100%; }
+    .film-free-img:after { display: none; }
+    .film-free-text {
+        font-size: 17px;    
+        padding: 10px 15px;
+    }
+    .film-free-text:before { display: none; }
+    
 }
 
 @media (max-width: @screen-xs-max) {
@@ -6253,6 +6365,11 @@ textarea.form-control {
         font-size: 18px;
         vertical-align: bottom;
     }
+    
+    //nc3
+    .film-free-text { font-size: 15px; }
+    .film-free-img { display: none; }
+    .film-free { padding-left: 0; }
     
 }
 
