@@ -778,9 +778,26 @@ p {
     background: -webkit-linear-gradient(45deg, #4cb5e2 0%, #93d2ee 100%);
     background: linear-gradient(45deg, #4cb5e2 0%, #93d2ee 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4cb5e2', endColorstr='#93d2ee', GradientType=1);
-    position: relative;
     overflow: hidden;
     text-align: left;
+    color: #fff;
+    display: block;
+    position: relative;
+    border: 0;
+    padding-bottom: 25px;
+    &:hover,
+    &:active,
+    &:focus {
+      cursor: pointer;
+      color: #fff;
+      text-decoration: none;
+      .free-tariff-title-name {
+        /*background-color: #39A8D9; */
+        /*background-color: #F75C35;*/
+        background-color: #1D1D1D;
+        color: #fff;
+      }
+    }
     &:before {
       display: block;
       content: "";
@@ -804,26 +821,6 @@ p {
       /*background-color: orange;*/
       z-index: 5;
       background: url('@{images}/ft-sprites.png') no-repeat -358px 0 transparent;
-    }
-    > a {
-      color: #fff;
-      display: block;
-      position: relative;
-      border: 0;
-      padding-bottom: 25px;
-      &:hover,
-      &:active,
-      &:focus {
-        cursor: pointer;
-        color: #fff;
-        text-decoration: none;
-        .free-tariff-title-name {
-          /*background-color: #39A8D9; */
-          /*background-color: #F75C35;*/
-          background-color: #1D1D1D;
-          color: #fff;
-        }
-      }
     }
     &-title {
       z-index: 6;
