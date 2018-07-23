@@ -1,11 +1,12 @@
 @import "./admin_lte/less/AdminLTE";
 @import "./admin_lte/less/skins/skin-black-light";
-@import './includes/app_variables';
+@import "./includes/app_variables";
 @import "./includes/app_header";
 @import "./includes/app_footer";
+@import "../local_vars.less";
 
 body, .layout-boxed {
-    background: url('@{images}boxed-bg.jpg') repeat fixed;
+    background: url('@{images}/boxed-bg.jpg') repeat fixed;
 }
 
 .main-sidebar {
@@ -258,5 +259,11 @@ body, .layout-boxed {
         &:hover {
             border-bottom: 1px transparent solid;
         }
+    }
+}
+
+#fill_balance_box {
+    #amount, #paypal-btn {
+        height: 46px;
     }
 }
