@@ -768,9 +768,9 @@ p {
     }
   }
 
-  //nb1
   .free-tariff {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
+    margin-bottom: 15px;
     height: 240px;
     /*padding-bottom: 25px;*/
     background: #4cb5e2;
@@ -876,6 +876,153 @@ p {
       }
     }
   }
+    
+    //nb1
+    .tvbox-offer {
+        margin-bottom: 15px;
+        height: 190px;
+        /*background: #d6dfe4;*/
+        background: #fff;
+        background: linear-gradient(to right, #ffffff 20%,#d6dfe4 35%);
+        overflow: hidden;
+        text-align: left;
+        color: #303030;
+        display: block;
+        position: relative;
+        border: 0;
+        -webkit-box-shadow: 0px 4px 10px #d6dfe4;
+        -moz-box-shadow: 0px 4px 10px #d6dfe4;
+        box-shadow: 0px 4px 10px #d6dfe4;
+        &:hover,
+        &:active,
+        &:focus {
+            cursor: pointer;
+            color: #303030;
+            text-decoration: none;
+            .tvbox-offer-title {
+                em { 
+                    background-color: #333; 
+                    color: #fff;
+                }
+                strong { 
+                    background-color: #F65D34; 
+                    color: #fff;
+                }
+            }
+        }
+        &:before {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 480px;
+            height: 419px;
+            /*left: -54px;*/
+            left: -20px;
+            bottom: -115px;
+            z-index: 5;
+            background: url('@{images}/ft-sprites.png') no-repeat 0 -481px transparent;
+        }
+        &:after {
+            display: block;
+            content: "";
+            position: absolute;
+            width: 269px;
+            height: 311px;
+            right: -69px;
+            bottom: -128px;
+            z-index: 5;
+            background: url('@{images}/ft-sprites.png') no-repeat -578px -589px transparent;
+        }
+        &-title {
+            z-index: 6;
+            position: relative;
+            display: block;
+            font-size: 26px;
+            text-transform: uppercase;
+            padding: 34px 0;
+            font-weight: 500;
+            line-height: 30px;
+            em, strong {
+                padding: 1px 4px;
+                background-color: #fff;
+                font-weight: 600;
+                font-style: normal;
+                display: inline-block;
+            }
+            strong { color: #f75c35; }
+        }
+        &-image { 
+            position: relative;
+            z-index: 10; 
+            width: 320px;
+        }
+    }
+    
+}
+
+//nc1
+.tvbox-offer-sm {
+    display: block;
+    height: 90px;
+    margin-bottom: 15px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    overflow: hidden;
+    background: #ffffff;
+    background: -moz-linear-gradient(-45deg, #ffffff 33%, #eef2f4 100%);
+    background: -webkit-linear-gradient(-45deg, #ffffff 33%,#eef2f4 100%);
+    background: linear-gradient(135deg, #ffffff 33%,#eef2f4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eef2f4',GradientType=1 );
+    color: #2c303b;
+    .tvbox-offer-image-sm {
+        /*height: 135%;
+        top: -16px;
+        position: relative;*/
+        max-width: 100%;
+        max-height: 90px;
+    }
+    .tvbox-offer-title-sm {
+        font-weight: 500;
+        font-size: 20px;
+        text-transform: uppercase;
+        padding: 17px 15px 17px 0;
+        line-height: 25px;
+        display: block;
+        em, strong {
+            padding: 1px 4px;
+            background-color: #fff;
+            font-weight: 600;
+            font-style: normal;
+            display: inline-block;
+        }
+        strong { color: #f75c35; }
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        cursor: pointer;
+        color: #303030;
+        text-decoration: none;
+        .tvbox-offer-title {
+            strong { 
+                background-color: #F65D34; 
+                color: #fff;
+            }
+        }
+    }
+}
+
+//nb0
+.tariffs-vars {
+    /*border-top: 4px solid #eef2f4;*/
+    background-color: #fff !important;
+    padding-top: 20px;
+    .contain { 
+        padding: 0px 40px 20px;
+    }
+    .tariffs-choice-block {
+        border: 4px solid #eef2f4;
+    }
 }
 
 .tariffs-choice-list {
@@ -3252,6 +3399,27 @@ textarea.form-control {
   .side-basket-footer .btn-primary {
     font-size: 18px;
   }
+    
+    .tariff-heading {
+        overflow: hidden;
+        height: auto;
+    }
+    
+    //nb2
+    .tariffs-choice .tvbox-offer {
+        /*height: auto;
+        &:after { display: none; }*/
+    }
+    
+    //nc2 
+    .tvbox-offer-sm {
+        height: auto !important;
+        .tvbox-offer-title-sm { 
+            font-size: 18px; 
+            line-height: normal;
+        }
+    }
+    
 }
 
 @media (max-width: @screen-sm-max) {
@@ -3271,7 +3439,6 @@ textarea.form-control {
     }
   }
 
-  //nb2
   .tariffs-choice .free-tariff {
     height: auto;
   }
@@ -3303,6 +3470,15 @@ textarea.form-control {
   .tariffs-choice .free-tariff-title-limit {
     margin-left: 25px;
   }
+    
+    //nb3
+    .tariffs-choice .tvbox-offer-image {
+        width: 250px;
+        margin-top: 24px;
+    }
+    .tariffs-choice .tvbox-offer-title {
+        font-size: 23px;
+    }
 
 }
 
@@ -3568,7 +3744,6 @@ textarea.form-control {
     margin-left: 0;
   }
 
-  //nb3
   .tariffs-choice .free-tariff-title-slogan {
     font-size: 30px;
   }
@@ -3577,8 +3752,31 @@ textarea.form-control {
     margin-right: 20px;
   }
 
-  .tariffs-choice .free-tariff:after {
-  }
+    //nb4
+    .tariffs-choice .tvbox-offer {
+        height: auto;
+        background: #fff;
+        &:before,
+        &:after { display: none; }
+    }
+    .tariffs-choice .tvbox-offer-image {
+        margin: 0 auto;
+        display: block;
+        float: none !important;
+    }
+    .tariffs-choice .tvbox-offer-title {
+        padding: 0 15px 15px 15px;
+        float: none !important;
+        text-align: center;
+        font-size: 20px;
+        br { display: none ;}
+    }
+    
+    //nc3
+    .tvbox-offer-sm {
+        background-image: none;
+        .row > div { text-align: center; }
+    }
 
 }
 
@@ -3606,6 +3804,7 @@ textarea.form-control {
       margin-bottom: 50px;
     }
   }
+    
 }
 
 @media screen and (max-width: 460px) {
