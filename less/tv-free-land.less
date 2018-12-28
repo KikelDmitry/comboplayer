@@ -514,7 +514,8 @@ input[type="color"]:focus,
             }
         }
     }
-    .slogan-header {
+    
+    /*.slogan-header {
         max-width: 360px;
         span {
             font-family: @font-heading;
@@ -524,7 +525,6 @@ input[type="color"]:focus,
             font-size: 34px;
             line-height: 37px;
             padding: 5px 6px 5px 0px;
-            /* white-space: pre-wrap; */
             font-weight: 500;
             strong { 
                 color: @color-blue-light; 
@@ -541,7 +541,42 @@ input[type="color"]:focus,
             top: 8px;
             right: 3px;
         }
+    }*/
+    
+    //zz1
+    .slogan-header {
+        max-width: 360px;
+        position: relative;
+        transform: translateY(50%);
+        top: 10px;
+        font-size: 0;
+        span {
+            font-family: @font-heading;
+            color: white;
+            background: @color-blue-dark;
+            font-weight: 500;
+            font-size: 34px;
+            padding: 0px 10px;
+            line-height: 43px;
+            height: 43px;
+            display: inline-block;
+            strong { 
+                color: @color-blue-light; 
+                font-weight: 500;
+            }
+            /*&-last-child { height: 44px; }*/
+            &-first-child { padding-top: 3px; }
+        }
+        &-ast {
+            position: absolute;
+            font-size: 34px;
+            font-weight: 100;
+            text-shadow: 0px 7px 0px rgba(38, 144, 191, 1);
+            top: 20px;
+            right: -12px;
+        }
     }
+    
 }
 
 /* // main */
@@ -917,9 +952,7 @@ input[type="color"]:focus,
 } 
 @media (max-width: @screen-md) {
     // меньше 992px
-    
     .btn.btn-lg { font-size: 30px; }
-    
     .header {
         /*height: 185px;*/
         height: auto;
@@ -936,7 +969,7 @@ input[type="color"]:focus,
         float: left;
         font-size: 55px;
     }
-    .header .slogan-header {
+    /*.header .slogan-header {
         top: 0;
         max-width: none;
         transform: none;
@@ -949,8 +982,26 @@ input[type="color"]:focus,
             top: 6px;
             right: 8px;
         }
+    }*/
+    //zz2
+    .header .slogan-header {
+        top: 0;
+        max-width: none;
+        transform: none;
+        margin: 15px 0px 20px 10px;
+        span { 
+            /*&:first-child { padding-right: 0; }*/
+            padding: 0px 5px;
+        }
+        &-ast {
+            position: relative;
+            /*top: auto;
+            right: 6px;*/
+            top: -22px;
+            right: 8px;
+        }
     }
-    
+        
     .content .block-pay-info {
         padding: 0px 0px 0px 30px;
         margin-top: 0;
@@ -964,16 +1015,61 @@ input[type="color"]:focus,
     .content-top-block .features-item span { font-size: 22px; }
     .content-top-block .features-item strong { font-size: 53px; }
     .content-top-block .howto { padding: 15px 0 0; }
+    .content h2 { margin-top: 0; }
 } 
 @media (max-width: 600px) {} // меньше 600px
 @media (max-width: @screen-xs) {
     // меньше 480px
-    .header .slogan-header {
+    //zz3
+    /*.header .slogan-header {
         top: 15px;
         span {
             font-size: 25px;
             line-height: normal;
         }
+    }*/
+    .header .slogan-header {
+        top: 0;
+        span {
+            font-size: 25px;
+            line-height: 23px;
+            margin: 0;
+            height: 32px;
+            vertical-align: top;
+            padding: 6px;
+        }
+        .slogan-header-ast { font-size: 25px; }
+    }
+    
+    .header-title-text {
+        font-size: 40px;    
+        > span {
+            padding: 0px 8px 0;
+            line-height: 50px;
+        }
+    }
+    .header-title-sup {
+        font-size: 30px;
+        height: 50px;
+        line-height: 50px;    
+        margin-top: 0;
     }
 } 
 @media (max-width: 400px) {} // меньше 400px 
+@media (max-width: 320px) {
+    .header .slogan-header .slogan-header-ast { display: none; }
+    .header .slogan-header {
+        margin: 10px 0 0 0;
+        border: 7px solid @color-blue-dark;
+    }
+    .header .slogan-header span {
+        line-height: 25px;
+        height: auto;
+        padding: 0;
+        display: block;
+    }
+    
+} 
+
+
+
