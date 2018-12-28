@@ -411,9 +411,29 @@ input[type="color"]:focus,
             i { background-color: @color-blue; }
         }
     }
-    &-default, &-default:link {}
+    &-default, &-default:link {
+        background-color: @color-white;
+        /*color: @color-blue-dark;
+        border: 4px solid @color-gray-lightest;*/
+        color: @color-green;
+        border: 4px solid @color-green;
+        font-weight: 600;
+        padding: 10px 25px;
+        &:hover,
+        &:active,
+        &:focus {
+            /*background-color: @color-blue-dark;
+            color: @color-white;
+            border-color: @color-blue-dark;*/
+            background-color: @color-green;
+            color: @color-white;
+            border-color: @color-green;
+        }
+    }
     &.btn-sm {}
-    &.btn-md {}
+    &.btn-md {
+        font-size: 25px;
+    }
     &.btn-lg {
         width: 350px;
         max-width: 100%;
@@ -427,7 +447,6 @@ input[type="color"]:focus,
     border: none; 
 }
 
-//zz
 .popover {
     font-family: @font-base;
     &.right { margin-left: 0; }
@@ -445,6 +464,17 @@ input[type="color"]:focus,
         line-height: normal;
         font-size: 15px;
     }
+}
+
+.form-control {
+    border-radius: 4px;
+    .radius(0px);
+    border-color: @color-gray-lighter;
+}
+.input-lg {
+    height: 62px;
+    padding: 15px;
+    font-size: 18px;
 }
 
 /* / layout */
@@ -803,6 +833,79 @@ input[type="color"]:focus,
     }
 }
 
+/* / payment page */
+
+.content {
+    .block-pay {
+        &-price {
+            span {
+                /*display: block;*/
+                font-size: 30px;
+                font-weight: 600;
+                line-height: 30px;
+                vertical-align: middle;
+            }
+            strong {
+                font-size: 100px;
+                font-weight: 600;
+                /*display: block;*/
+                vertical-align: middle;
+                line-height: 100px;
+            }
+            i.fa-rub {
+                font-size: 43px;
+                margin-left: 10px;
+            }
+            i.fa-asterisk {
+                font-size: 16px;
+                vertical-align: super;
+                padding: 0 5px;
+                color: @color-green;
+            }
+        }
+        &-info {
+            /*padding: 5px 0;*/
+            padding: 12px 0;
+            padding-left: 30px;
+            border-left: 4px solid @color-green;
+            margin-top: 27px;
+            margin-bottom: 15px;
+            p { margin-bottom: 0; }
+        }
+        &-submit {
+            padding: 30px 20px 20px;
+            border: 2px solid @color-gray-lightest;
+            &-note {
+                padding: 8px 0;
+                font-size: 17px;
+                color: @color-gray;
+            }
+            &-btn {
+                .btn {
+                    width: 310px;
+                    max-width: 100%;
+                    text-align: center;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .block-pay-submit-note { padding-right: 25%; }
+                .fa-asterisk { color: @color-blue; }            
+            }
+        }
+        &-conditions {
+            &-info {
+                padding: 5px 0;
+                padding-left: 30px;
+                border-left: 4px solid @color-blue;
+                margin-top: 27px;
+                margin-bottom: 15px;
+                p { margin-bottom: 0; }
+            }
+        }
+    }
+    
+}
+
 /* / media q */
 
 @media (min-width: @screen-xl) {} // больше 1600px
@@ -847,6 +950,12 @@ input[type="color"]:focus,
             right: 8px;
         }
     }
+    
+    .content .block-pay-info {
+        padding: 0px 0px 0px 30px;
+        margin-top: 0;
+    }
+    
 } 
 @media (max-width: @screen-sm) {
     // меньше 768px
