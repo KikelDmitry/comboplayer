@@ -5941,6 +5941,70 @@ textarea.form-control {
     }
 }
 
+.video-single-cites {
+    .citeblock {
+        margin: 15px 0;
+        &-section {
+            /*max-width: 740px;*/
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+        &-column {
+            margin: 10px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 0;
+            position: relative;
+            font-size: 13px;
+            > div {
+                display: block;
+                /*background: #E5ECEE;*/
+                background: #fff;
+                border: 1px solid #DEE6EB;
+                padding: 10px 15px 10px 20px;
+                border-radius: 5px;
+            }
+            &:before {
+                font-family: "FontAwesome";
+                content: "\f10e";
+                /*color: #89A4B5;*/
+                color: #abbbc5;
+                font-size: 16px;
+                background-color: #fff;
+                position: absolute;
+                top: -15px;
+                left: -15px;
+                width: 30px;
+                height: 30px;
+                text-align: center;
+                line-height: 30px;
+                border-radius: 32px;
+            }
+            p {
+                margin-bottom: 10px;
+            }
+        }
+        &-section:nth-of-type(5) .citeblock-column:first-of-type {
+            flex-grow: 2;
+            flex-shrink: 2;
+            flex-basis: 22px;
+        }
+        &-section:nth-of-type(6) .citeblock-column:nth-of-type(2) {
+            flex-grow: 4;
+            flex-shrink: 4;
+            flex-basis: 66px;
+        }
+        .cite-hero { 
+            font-weight: 600; 
+            /*color: #3C4C54;*/
+            /*color: #34ABDF;*/
+            color: #1aa0da;
+        }
+        
+    }
+}
+
 /* media q */
 
 @media (max-width: 1280px) {
@@ -6026,7 +6090,6 @@ textarea.form-control {
     .video-filters { margin-top: 20px; }
     
     .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
-
     
 }
 
@@ -6202,6 +6265,10 @@ textarea.form-control {
         padding: 10px 15px;
     }
     .film-free-text:before { display: none; }
+    
+    .video-single-cites .citeblock-section { display: block; }
+    .video-single-cites .citeblock-column:before { font-size: 14px; }
+
     
 }
 
