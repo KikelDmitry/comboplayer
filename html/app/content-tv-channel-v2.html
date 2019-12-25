@@ -22,6 +22,7 @@
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 </head>
 
 <body>
@@ -142,7 +143,7 @@
         <div class="row">
             <div class='col-md-12'>
                
-                <!--<div class="carousel slide hidden-xs" id="weekslide">
+                <div class="carousel slide" id="weekslide">
                     <div class="carousel-inner">
                         <div class="item active">
                             <div class="row">
@@ -192,6 +193,31 @@
                     </div>
                     <a data-slide="prev" href="#weekslide" class="week-control week-prev left"><i class="fa fa-angle-left"></i></a>
                     <a data-slide="next" href="#weekslide" class="week-control week-next right"><i class="fa fa-angle-right"></i></a>
+                </div>
+                
+                <!--<div class="slide-carousel" id="weekslide">
+                    <div>02, ПН</div>
+                    <div>03, ВТ</div>
+                    <div>04, СР</div>
+                    <div>05, ЧТ</div>
+                    <div>06, ПТ</div>
+                    <div>07, СБ</div>
+                    <div>08, ВС</div>
+                    <div>Сегодня</div>
+                    <div>ВC</div>
+                    <div>Вчера, ПН</div>
+                    <div>Сегодня</div>
+                    <div>Завтра, СР</div>
+                    <div>ЧТ</div>
+                    <div>ПТ</div>
+                    <div>СБ</div>
+                    <div>15, ПН</div>
+                    <div>16, ВТ</div>
+                    <div>17, СР</div>
+                    <div>18, ЧТ</div>
+                    <div>19, ПТ</div>
+                    <div>20, СБ</div>
+                    <div>21, ВС</div>
                 </div>-->
                 
                 <!--<div class="row visible-xs">
@@ -231,7 +257,7 @@
                     
                 </div>-->
                     
-                <div id="week-select" class="visible-xs">
+                <!--<div id="week-select" class="visible-xs">
                     <div class="btn-group show-on-hover">
                         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                             Сегодня <span class="caret"></span>
@@ -252,7 +278,7 @@
                             <li><a href="#">17, СР</a></li>
                         </ul>
                     </div>
-                </div>
+                </div>-->
                 
             </div>
         </div>
@@ -279,166 +305,248 @@
                <div class="container-fluid">
                     <div class="row">
                         
-                        <div class="col col-md-3 col-md-push-6">
-                        
-<!--<div class="channel-header">
-    <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/fe7/15b/fe715b8ee8354e4de5b90c32acf77c47ea7a7259.png" alt=""></i>
-    <h1 class="channel-header-text">Пятый канал &mdash; программа передач</h1>
-</div>-->
-
-<div class="channel-stream channel-stream-brief">
-    <ul>
-      
-        <li class="channel-stream-past">
-           <ul class="collapse" id="tv-stream-past">
-                <li><a class="channel-time channel-time-past" href="#"><span>16:40</span> Детективы. Небесное тело </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>17:20</span> Детективы. Последняя любовь </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>18:00</span> Детективы. Певичка</a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>19:00</span> След. Гарпии </a></li>
-                <li><a class="channel-time channel-time-past" href="#"><span>19:50</span> След. Она по проволоке ходила </a></li>
-            </ul>    
-            <div class="channel-stream-past-control " data-toggle="collapse" data-target="#tv-stream-past" aria-expanded="false">Прошедшие</div>               
-        </li>
-        
-        <li>
-            <img src="https://www.comboplayer.ru/static/video_images/be3/53c/be353c141e1e1e0a-203x_.jpg" alt="">
-            <a class="channel-time channel-time-current" href="#">
-                <span>20:30</span> Сейчас: Тайны следствия
-            </a>
-        </li>
-        
-        <li><a class="channel-time" href="#"><span>21:15</span> След.
-            <br><em>Безупречный синий</em>
-        </a></li>
-        
-        <li class="notifiable notify-active">
-            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Выключить уведомление"></span>
-            <a class="channel-time" href="#">
-                <span class="stream-time">22:25</span>
-                <span class="stream-title">Следствие любви. <!--<br>--><em>3-я серия</em></span>
-            </a>
-            <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
-        </li>
-        
-        <li class="notifiable">
-            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
-            <a class="channel-time" href="#"><span>23:15</span> Следствие любви. <br><em>4-я серия</em></a>
-            <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
-        </li>
-        <li class="notifiable">
-            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
-            <a class="channel-time" href="#"><span>00:00</span> Когда деревья были большими </a>
-            <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
-        </li>
-        <li class="notifiable">
-            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
-            <a class="channel-time" href="#"><span>02:00</span> 72 метра. <br><em>1-я серия</em></a>
-        </li>
-        <li class="notifiable">
-            <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
-            <a class="channel-time" href="#"><span>03:00</span> 72 метра. <br><em>2-я серия</em></a>
-        </li>
-        <li><a class="channel-time" href="#"><span>03:55</span> 72 метра. <br><em>3-я серия</em></a></li>
-    </ul>
-</div>                          
+<div class="col col-md-9">
                        
-                        </div>
-                        
-                        <div class="col col-md-6 col-md-pull-3">
+    <!--<div class="channel-actions">
 
-<div class="channel-actions">
-   
-    <!--<a class="channel-watch" href="#">
-        <i class="fa fa-play-circle"></i>
-        <span>Смотреть в Comboplayer</span>
-    </a>-->
-    <!--<a class="channel-buy" href="#">
-        <i class="fa fa-credit-card"></i>
-        <span>Купить подписку на канал</span>
-    </a>-->
-    
-    <!--<div class="btn-group try-buy">
-        <a class="btn btn-default">107 каналов за 250 <i class="fa fa-rub" aria-hidden="true"></i></a>
-        <a class="btn btn-default">Попробовать за 17 <i class="fa fa-rub" aria-hidden="true"></i></a>
-        <a class="btn btn-default btn-info"><i class="fa fa-info-circle"></i>&nbsp;Подробнее</a>
-    </div>-->
-    
-    <div class="channel-try-free channel-try-free-single">
-        <a href="#" class="clearfix">
-            <i class="fa fa-tv"></i>
-            <span class="tf-title">Попробовать бесплатно</span>
-            <span class="tf-period pull-right">На <strong>1</strong> месяц</span>    
-        </a>
-    </div>
-    
-    <!--<hr>
-    
-    <div class="channel-try-free channel-try-free-double">
-        <i class="fa fa-tv"></i>
-        <div class="panel-top">
-            <a href="#">
-                <span class="tf-title tf-darkblock">Пятый канал</span> <span class="tf-plus">+</span> <strong>121</strong> канал за 200 <i class="fa fa-rub"></i>    
+        <div class="channel-try-free channel-try-free-single">
+            <a href="#" class="clearfix">
+                <i class="fa fa-tv"></i>
+                <span class="tf-title">Попробовать бесплатно</span>
+                <span class="tf-period pull-right">На <strong>1</strong> месяц</span>    
             </a>
         </div>
-        <div class="panel-bottom">
-            <a href="#">
-                <span class="tf-darkblock">Или</span> <strong>117</strong> канал бесплатно
-                <span class="tf-period tf-lightblock pull-right">На <strong>1</strong> месяц</span>    
-            </a>
-        </div>
-    </div>-->
-    
-</div>
 
-<div class="channel-descr">
-    <p>«Пятый канал» - федеральный канал с центром вещания в Санкт-Петербурге. Является преемником старейшего в России (СССР) ленинградского телевидения. В настоящее время канал ориентирован на широкую аудиторию, которой предлагаются как информационно-аналитические, так и развлекательные программы и шоу, документальные и художественные фильмы, сериалы.</p>    
-    <div class="content-links">
-        <div class="row">
-            <div class="col col-sm-7">
-                <a class="content-links-play" href="#"><span>Смотреть World Business Channel HD в Comboplayer</span></a>
-            </div>
-            <div class="col col-sm-5">
-                <a class="content-links-download" href="#"><span>Скачать Comboplayer</span></a>
-            </div>
-        </div>
-    </div>
-    
-        <div class="channel-images">
-            <img src="/images/chann-5.jpg" alt="">
-        </div>
-    
-        <!--<div class="channel-promo-tabs">
-            <div class="tabs-left">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#a" data-toggle="tab"><span class="fa fa-image"></span></a></li>
-                    <li><a href="#b" data-toggle="tab"><span class="fa fa-film"></span></a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="a">
-                        <div class="channel-images">
-                            <img src="/images/chann-5.jpg" alt="">
+    </div>-->
+
+    <div class="channel-stream channel-stream-brief">
+        <ul>
+
+            <li class="channel-stream-past">
+               <ul class="collapse" id="tv-stream-past">
+                    <li><a class="channel-time channel-time-past" href="#"><span>16:40</span> Детективы. Небесное тело </a></li>
+                    <li><a class="channel-time channel-time-past" href="#"><span>17:20</span> Детективы. Последняя любовь </a></li>
+                    <li><a class="channel-time channel-time-past" href="#"><span>18:00</span> Детективы. Певичка</a></li>
+                    <li><a class="channel-time channel-time-past" href="#"><span>19:00</span> След. Гарпии </a></li>
+                    <li><a class="channel-time channel-time-past" href="#"><span>19:50</span> След. Она по проволоке ходила </a></li>
+                </ul>    
+                <div class="channel-stream-past-control " data-toggle="collapse" data-target="#tv-stream-past" aria-expanded="false">Прошедшие</div>
+            </li>
+
+            <li>
+                <div class="stream-item">
+                    <div class="channel-time channel-time-current">
+                        <div class="stream-time">
+                            <a href="#"><span>20:30</span></a>
                         </div>
-                    </div>
-                    <div class="tab-pane" id="b">
-                        <div class="channel-images">
-                            <p>[Видео]</p>
+                        <div class="stream-title">
+                            <a href="#">
+                                Сейчас: Тайны следствия
+                                <img class="stream-image stream-image-current" src="https://www.comboplayer.ru/static/video_images/be3/53c/be353c141e1e1e0a-203x_.jpg" alt="">
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>-->
+                <div class="prog-bar"><span></span></div>
+            </li>
 
-</div>                     
-
-                            <div class="content-links download-ver mb-30">
-                                <a class="download-ver-link googleplay" href="#"><span>Скачать Comboplayer</span></a>
-                            </div> 
-                       
+            <li>
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>21:15</span></a>
+                            <a class="prog-record" href="#" class="">Смотреть в записи <i class="fa fa-play"></i></a>
                         </div>
-                        
-                        <div class="col col-md-3"></div>
+                        <div class="stream-title">
+                            <a href="#">След.</a> <em>Безупречный синий</em>
+                            <div class="stream-descr">
+                                Д/с. Социальный, Биография. 2019 год. Россия. Цикл самых острых аналитических репортажей на актуальные темы современного мира. Под прицелом наших камер только самые важные события! Для нас не существует границ — Нью-Йорк, Сирия, Украина, Франция, Турция — наши корреспонденты повсюду
+                                <span class="link-more" data-click-state="0"><!--Подробнее --><i class="fa fa-caret-down"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="notifiable notify-active">
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>22:25</span></a>
+                        </div>
+                        <div class="stream-title"><a href="#"> Владимир Спиваков, Юрий Башмет и Государственный камерный оркестр "Виртуозы Москвы". В.А.Моцарт. Концертная симфония для скрипки и альта с оркестром</a></div>
+                    </div>
+                    <span class="stream-funcs">
+                        <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
+                        <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Выключить уведомление"></span>
+                    </span>
+                </div>
+            </li>
+            
+            <li class="notifiable">
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>23:15</span></a>
+                            <a class="prog-record" href="#" class="">Смотреть в записи <i class="fa fa-play"></i></a>
+                        </div>
+                        <div class="stream-title"><a href="#">Следствие любви.</a> <em>4-я серия</em></div>
+                    </div>
+                    <span class="stream-funcs">
+                        <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
+                        <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+                    </span>
+                </div>
+            </li>
+            
+            <li class="notifiable">
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>00:00</span></a>
+                        </div>
+                        <div class="stream-title">
+                            <a href="#">Когда деревья были большими
+                                <img class="stream-image" src="https://www.comboplayer.ru/static/video_images/6c6/464/6c64644e4b456546-177x_.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <span class="stream-funcs">
+                        <a class="prog-watch" href="#" data-toggle="tooltip" data-placement="bottom" title="Смотреть онлайн"><i class="fa fa-play"></i></a>
+                        <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+                    </span>
+                </div>
+            </li>
+            
+            <li class="notifiable">
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>02:00</span></a>
+                        </div>
+                        <div class="stream-title"><a href="#">72 метра.</a> <em>1-я серия</em></div>
+                    </div>
+                    <span class="stream-funcs">
+                        <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+                    </span>
+                </div>
+            </li>
+            
+            <li class="notifiable">
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>03:00</span></a>
+                            <a class="prog-record" href="#" class="">Смотреть в записи <i class="fa fa-play"></i></a>
+                        </div>
+                        <div class="stream-title"><a href="#">Профессиональный бокс. Заур Абдуллаев против Умберто Мартинеса. Бой за титул WBC International в полулёгком весе.</a> <em>Трансляция из Екатеринбурга</em></div>
+                    </div>
+                    <span class="stream-funcs">
+                        <span class="notify-watch" data-toggle="tooltip" data-placement="bottom" title="Получить уведомление"></span>
+                    </span>
+                </div>
+            </li>
+            
+            <li>
+                <div class="stream-item">
+                    <div class="channel-time">
+                        <div class="stream-time">
+                            <a href="#"><span>03:55</span></a>
+                        </div>
+                        <div class="stream-title"><a href="#">72 метра.</a> <em>3-я серия</em></div>
+                    </div>
+                </div>
+            </li>
+            
+        </ul>
+    </div>
+
+    <div class="content-links download-ver mb-30">
+        <a class="download-ver-link googleplay" href="#"><span>Скачать Comboplayer</span></a>
+    </div> 
+                           
+    <div class="row">
+        <div class="col-md-3">
+            <div class="channel-images">
+                <img src="/images/chann-5.jpg" alt="">
+            </div>
+        </div>
+        <div class="col-md-9">
+            <p>«Пятый канал» - федеральный канал с центром вещания в Санкт-Петербурге. Является преемником старейшего в России (СССР) ленинградского телевидения. В настоящее время канал ориентирован на широкую аудиторию, которой предлагаются как информационно-аналитические, так и развлекательные программы и шоу, документальные и художественные фильмы, сериалы.</p>
+            <div class="content-links">
+                <div class="row">
+                    <div class="col col-sm-7">
+                        <a class="content-links-play" href="#"><span>Смотреть World Business Channel HD в Comboplayer</span></a>
+                    </div>
+                    <div class="col col-sm-5">
+                        <a class="content-links-download" href="#"><span>Скачать Comboplayer</span></a>
+                    </div>
+                </div>
+            </div>
+            <p>«Пятый канал» - федеральный канал с центром вещания в Санкт-Петербурге. Является преемником старейшего в России (СССР) ленинградского телевидения. В настоящее время канал ориентирован на широкую аудиторию, которой предлагаются как информационно-аналитические, так и развлекательные программы и шоу, документальные и художественные фильмы, сериалы.</p>
+
+        </div>
+        
+    </div>
+                            
+</div>
+
+<div class="col col-md-3">
+   
+    <div>
+        <div class="city-local mb-30">
+            <div>
+                <div class="city-local-current" id="epg_city">
+                    <i class="fa fa-map-marker"></i>
+                    
+                    <!--<span class="city-local-current-name">
+                        Ростов-на-Дону
+                    </span>-->
+                    
+                    <span class="city-local-current-name" href="#" data-toggle="modal" data-target="#change-city-modal">
+                        <i class="fas fa-map-marker-alt"></i><span>Москва</span>
+                    </span>
+                    
+                </div>
+                <div class="city-local-pop" id="city_guess_box" style="display:none;">
+                    <div class="city-local-question clearfix"></div>
+                    <div class="city-local-select">
+                        <span class="twitter-typeahead">
+                            <span class="input-group-btn">
+                                <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control input-lg tt-hint" autocomplete="off" data-route="https://www.comboplayer.ru/tv-guide/cities/autocomplete/%QUERY" spellcheck="false" readonly="" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" name="query" class="form-control input-lg tt-input" id="epg-city-search" placeholder="Выбрать другой" required="" autocomplete="off" data-route="https://www.comboplayer.ru/tv-guide/cities/autocomplete/%QUERY" spellcheck="false" dir="auto" aria-activedescendant="" aria-owns="epg-city-search_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" style="position: relative; vertical-align: top; background-color: transparent;"><span role="status" aria-live="polite" style="position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                        <div role="listbox" class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                            <div role="presentation" class="tt-dataset tt-dataset-0"></div>
+                        </div>
+                        </span>
+                        <button class="city-local-select-btn btn" type="button">
+                            <i class="fa fa-caret-right"></i>
+                        </button>
+                        </span>
+                        </span>
+                        <div class="text-right">
+                            <a href="https://www.comboplayer.ru/tv-guide/cities/all">Все города</a>
+                        </div>
+                    </div>
+
+                    <script type="text/html" id="suggestion-tpl">
+                        <div class="tt-suggestion tt-selectable">
+                            <div class="tt-suggestion-name">
+                                <%= name %>
+                            </div>
+                        </div>
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="test-ad"></div>
+    
+</div>
                         
                     </div>
+                   
+                    
                 </div>
            
             </div>
@@ -447,13 +555,7 @@
         
         <footer class="footer">
             <div class="container-fluid">
-               
-                <!--<div class="row">
-                    <div class="col-sm-6 col-xs-12">
-                        <span>©&nbsp;OOO «РОСТПЭЙ» | <i class="fa fa-envelope-o"></i> <a onclick="yaCounter38016245.reachGoal('email'); return true;" href="mailto:info@comboplayer.ru">info@comboplayer.ru</a></span>
-                    </div>
-                </div>-->
-                
+
                 <div class="row">
                     <div class="col-md-4 col-sm-12 col-xs-12">
                         <p>
@@ -481,9 +583,7 @@
                             <li class="footer-menu-item">
                                 <a class="footer-menu-link" href="#">Магазинам</a>
                             </li>
-                            <!--<li class="footer-menu-item">
-                                <a class="footer-menu-link" href="#">Приведи друга</a>
-                            </li>-->
+                            
                         </ul>
                     </div>
                     
@@ -579,7 +679,19 @@
         });
         
         $('[data-toggle="tooltip"]').tooltip();   
-
+        
+        //
+                
+        $('.stream-descr .link-more').on('click',function(){
+            if($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0)
+                $(this).parent().removeClass("expanded")
+            } else {
+                $(this).attr('data-click-state', 1)
+                $(this).parent().addClass("expanded")
+            }
+        });
+        
     </script>
     
 </body>

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Прямой эфир Матч ТВ</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+    <link rel="shortcut icon" href="/images/favicon.ico">
+
+    <!-- Styles -->
+    <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
+    <!--<link rel="stylesheet" href="/css/app.css" />-->
+    <link rel="stylesheet" href="/less/app.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand logo">Project name</span>
+                        <p class="slogan">Бесплатный плеер видео и аудио</p>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div class="navbar-form navbar-right">
+                            <ul class="header-menu clearfix">
+                                <li class="header-menu-item">
+                                    <a href="#" class="header-menu-link">Авторизация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="contacts.html" class="header-menu-link">Регистрация</a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="http://tv.comboplayer.ru" class="header-menu-link">Combo TV</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-tv"></i>ТВ-программа</a>
+                                </li>
+                                <li class="header-menu-item extra-item">
+                                    <a href="#" class="header-menu-link"><i class="icon-video"></i>Видео</a>
+                                </li>
+                                <li class="header-menu-item extra-item">    
+                                    <a href="#" class="header-menu-link"><i class="icon-radio"></i>Радио</a>
+                                </li>
+                                
+                                <li class="header-menu-item extra-item">
+                                    <a href="http://www.comboplayer.ru" onclick="Reformal.widgetOpen();return false;" class="header-menu-link">Отзывы и предложения</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!--/.navbar-collapse -->
+                </div>
+            </div>
+        </header>
+        
+        <main class="content p-0">
+           
+            <div class="content-player">
+            <div class="content-player-header">
+                <div class="container-fluid">
+                   
+                    <div class="player-header">
+                       
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <!--<div class="channel-btn active">-->
+                                <div class="channel-btn">
+                                    <span class="channel-image">
+                                        <img src="https://www.comboplayer.ru/static/channels/small/ade/441/ade441513e3bd38ec9bf9fac9ae6df283ac0e88f.png" alt="">
+                                    </span>
+                                    <span class="channel-title">
+                                        Канал
+                                    </span>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div class="player-header-title">
+                                    <h1>Прямой эфир <strong>Матч ТВ</strong></h1>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 hidden-xs">
+                                <div class="player-header-stream">
+                                    <div class="player-header-stream-title hidden-sm">
+                                        <h2>Передачи</h2>
+                                    </div>
+                                    <div class="stream-controls">
+                                        <div class="item-prev"><i class="fa fa-step-backward"></i></div>
+                                        <div class="item-next"><i class="fa fa-step-forward"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+                
+            <div class="content-player-body">
+                <div class="container-fluid">
+                   
+                    <div class="player-frame">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="player-frame-screen">
+
+                                    <div class="player-watch-container">
+                                       
+                                        <div class="player-controls offelem">
+                                           
+                                            <div class="player-controls-top">
+                                                <div class="control-progress">
+                                                    <div class="control-progress-line" style="width: 66%"></div>
+                                                    <div class="control-progress-point"></div>
+                                                </div>
+                                            </div>
+                                         
+                                            <div class="player-controls-bottom">
+                                                
+                                                <div class="player-controls-left">
+                                                    <div class="control-play">
+                                                        <i class="fa fa-play"></i>
+                                                        <!--<i class="fa fa-pause"></i>-->
+                                                    </div>
+
+                                                    <div class="control-volume control-volume-on">
+                                                        <!--<i class="fa fa-volume-up"></i>-->
+                                                        <!--<i class="fa fa-volume-off"></i>-->
+                                                        <span class="volume-icon"></span>
+                                                        <span class="volume-bar">
+                                                            <span class="volume-bar-active"></span>
+                                                        </span>
+                                                    </div>
+
+                                                    <div class="control-live">
+                                                        <i class="fa fa-circle"></i>
+                                                        <span class="control-live-title">В эфире</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="player-controls-center">
+                                                    <div class="control-channel">
+                                                        <span class="control-channel-prev"><i class="fa fa-fast-backward"></i></span>
+                                                        <span class="control-channel-title">Матч ТВ</span>
+                                                        <span class="control-channel-next"><i class="fa fa-fast-forward"></i></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="player-controls-right">
+                                                    <div class="control-time">
+                                                        <span class="control-time-current">08:34</span>/<span class="control-time-end">01:32:25</span>
+                                                    </div>
+                                                    <div class="control-size">
+                                                        <i class="fa fa-expand"></i>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                          
+                                        </div>
+                                       
+                                        <!--<iframe class="player-watch" style="width: 100%; height: auto;" allowfullscreen="" src="https://rutube.ru/play/embed/11063587"></iframe>-->
+                                        <img class="player-watch" src="/images/player-frame-screen.jpg" style="width: 100%; height: auto;" alt="">    
+                                        
+<!--<div class="player-channel-menu">
+
+    <div class="menu-item menu-item-search">
+        <i class="fa fa-search"></i>
+        <input id="player-channel-search" type="text" placeholder="Поиск каналов..." spellcheck="false">
+    </div>
+
+    <div class="menu-item menu-item-group">
+        <div data-toggle="collapse" data-target="#channel-cat-favorite" class="channel-group-tab" aria-expanded="true">
+            <i class="channel-group-icon fa fa-heart"></i><span>Избранное</span>
+        </div>
+    </div>
+    <div class="clearfix chanellgroup-list collapse in" id="channel-cat-favorite" aria-expanded="true">
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+            <span class="channel-title">Первый канал</span>
+            <span class="channel-status channel-status-fav status-true" title="Удалить из избранных"><i class="fa fa-heart"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/0ba/db9/0badb9f5c6d806a2ebd7133cfb56c8a351ef6ccf.png" alt="Первый Канал"></i>
+            <span class="channel-title">Россия 1</span>
+            <span class="channel-status channel-status-fav" title="Добавить в избранные"><i class="fa fa-heart-o"></i></span>
+        </div>
+        <div class="menu-item  menu-item-channel active status-fav-true">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/ade/441/ade441513e3bd38ec9bf9fac9ae6df283ac0e88f.png" alt="Первый Канал"></i>
+            <span class="channel-title">Матч ТВ</span>
+            <span class="channel-status channel-status-fav status-true" title="Удалить из избранных"><i class="fa fa-heart"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/c9d/022/c9d022dd20d681aa3f37043153b163d5bc8704bb.png" alt="Первый Канал"></i>
+            <span class="channel-title">НТВ</span>
+            <span class="channel-status channel-status-paid" title="Платный канал"><i class="fa fa-lock"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e6e/6a9/e6e6a9fbf1b809f7e40cf923b2075a776da931e0.png" alt="Первый Канал"></i>
+            <span class="channel-title">ОТР</span>
+            <span class="channel-status channel-status-paid" title="Платный канал"><i class="fa fa-lock"></i></span>
+            <span class="channel-status channel-status-fav" title="Добавить в избранные"><i class="fa fa-heart-o"></i></span>
+        </div>
+    </div>
+
+    <div class="menu-item menu-item-group">
+        <div data-toggle="collapse" data-target="#channel-cat-common" class="channel-group-tab collapsed" aria-expanded="false">
+            <i class="channel-group-icon fa fa-tv"></i><span>Общероссийские</span>
+        </div>
+    </div>
+    <div class="clearfix chanellgroup-list collapse" id="channel-cat-common" aria-expanded="false">
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+            <span class="channel-title">Первый канал</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/0ba/db9/0badb9f5c6d806a2ebd7133cfb56c8a351ef6ccf.png" alt="Первый Канал"></i>
+            <span class="channel-title">Россия 1</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel status-fav-true">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/c9d/022/c9d022dd20d681aa3f37043153b163d5bc8704bb.png" alt="Первый Канал"></i>
+            <span class="channel-title">НТВ</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+    </div>
+
+    <div class="menu-item menu-item-group">
+        <div data-toggle="collapse" data-target="#channel-cat-science" class="channel-group-tab collapsed" aria-expanded="false">
+            <i class="channel-group-icon fa fa-flask"></i><span>Познавательные</span>
+        </div>
+    </div>
+    <div class="clearfix chanellgroup-list collapse" id="channel-cat-science" aria-expanded="false">
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+            <span class="channel-title">Первый канал</span>
+            <span class="channel-status channel-status-paid"><i class="fa fa-heart-o"></i></span>
+        </div>
+    </div>
+
+    <div class="menu-item menu-item-group">
+        <div data-toggle="collapse" data-target="#channel-cat-tvshop" class="channel-group-tab collapsed" aria-expanded="false">
+            <i class="channel-group-icon fa fa-shopping-bag"></i><span>Телемагазин</span>
+        </div>
+    </div>
+    <div class="clearfix chanellgroup-list collapse" id="channel-cat-tvshop" aria-expanded="false">
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+            <span class="channel-title">Первый канал</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+    </div>
+
+    <div class="menu-item menu-item-group">
+        <div data-toggle="collapse" data-target="#channel-cat-sport" class="channel-group-tab collapsed" aria-expanded="false">
+            <i class="channel-group-icon fa fa-trophy"></i><span>Спорт</span>
+        </div>
+    </div>
+    <div class="clearfix chanellgroup-list collapse" id="channel-cat-sport" aria-expanded="false">
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/310/4ed/3104ed6f80544a4848485389ce9280d9847b1ba1.png" alt="Первый Канал"></i>
+            <span class="channel-title">Матч ТВ HD</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+        <div class="menu-item menu-item-channel">
+            <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/f98/91e/f9891efc829ccb7be1fde47b37715e1a7bf51ba1.png" alt="Первый Канал"></i>
+            <span class="channel-title">ЛДПР ТВ</span>
+            <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+        </div>
+    </div>
+
+</div>-->
+                                       
+<div class="player-channel-menu">
+
+    <div class="menu-item menu-item-search">
+        <i class="fa fa-search"></i>
+        <input id="player-channel-search" type="text" placeholder="Поиск каналов..." spellcheck="false">
+    </div>
+    
+    <div class="player-channel-menu-wrap menu-scrollable">
+        
+        <div class="menu-item menu-item-group">
+            <div data-toggle="collapse" data-target="#channel-cat-favorite" class="channel-group-tab" aria-expanded="true">
+                <i class="channel-group-icon fa fa-heart"></i><span>Избранное</span>
+            </div>
+        </div>
+        <div class="clearfix chanellgroup-list collapse in" id="channel-cat-favorite" aria-expanded="true">
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+                <span class="channel-title">Первый канал</span>
+                <span class="channel-status channel-status-fav status-true" title="Удалить из избранных"><i class="fa fa-heart"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/0ba/db9/0badb9f5c6d806a2ebd7133cfb56c8a351ef6ccf.png" alt="Первый Канал"></i>
+                <span class="channel-title">Россия 1</span>
+                <span class="channel-status channel-status-fav" title="Добавить в избранные"><i class="fa fa-heart-o"></i></span>
+            </div>
+            <div class="menu-item  menu-item-channel active status-fav-true">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/ade/441/ade441513e3bd38ec9bf9fac9ae6df283ac0e88f.png" alt="Первый Канал"></i>
+                <span class="channel-title">Матч ТВ</span>
+                <span class="channel-status channel-status-fav status-true" title="Удалить из избранных"><i class="fa fa-heart"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/c9d/022/c9d022dd20d681aa3f37043153b163d5bc8704bb.png" alt="Первый Канал"></i>
+                <span class="channel-title">НТВ</span>
+                <span class="channel-status channel-status-paid" title="Платный канал"><i class="fa fa-lock"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e6e/6a9/e6e6a9fbf1b809f7e40cf923b2075a776da931e0.png" alt="Первый Канал"></i>
+                <span class="channel-title">ОТР</span>
+                <span class="channel-status channel-status-paid" title="Платный канал"><i class="fa fa-lock"></i></span>
+                <span class="channel-status channel-status-fav" title="Добавить в избранные"><i class="fa fa-heart-o"></i></span>
+            </div>
+        </div>
+
+        <div class="menu-item menu-item-group">
+            <div data-toggle="collapse" data-target="#channel-cat-common" class="channel-group-tab collapsed" aria-expanded="false">
+                <i class="channel-group-icon fa fa-tv"></i><span>Общероссийские</span>
+            </div>
+        </div>
+        <div class="clearfix chanellgroup-list collapse" id="channel-cat-common" aria-expanded="false">
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+                <span class="channel-title">Первый канал</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/0ba/db9/0badb9f5c6d806a2ebd7133cfb56c8a351ef6ccf.png" alt="Первый Канал"></i>
+                <span class="channel-title">Россия 1</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel status-fav-true">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/c9d/022/c9d022dd20d681aa3f37043153b163d5bc8704bb.png" alt="Первый Канал"></i>
+                <span class="channel-title">НТВ</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+        </div>
+
+        <div class="menu-item menu-item-group">
+            <div data-toggle="collapse" data-target="#channel-cat-science" class="channel-group-tab collapsed" aria-expanded="false">
+                <i class="channel-group-icon fa fa-flask"></i><span>Познавательные</span>
+            </div>
+        </div>
+        <div class="clearfix chanellgroup-list collapse" id="channel-cat-science" aria-expanded="false">
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+                <span class="channel-title">Первый канал</span>
+                <span class="channel-status channel-status-paid"><i class="fa fa-heart-o"></i></span>
+            </div>
+        </div>
+
+        <div class="menu-item menu-item-group">
+            <div data-toggle="collapse" data-target="#channel-cat-tvshop" class="channel-group-tab collapsed" aria-expanded="false">
+                <i class="channel-group-icon fa fa-shopping-bag"></i><span>Телемагазин</span>
+            </div>
+        </div>
+        <div class="clearfix chanellgroup-list collapse" id="channel-cat-tvshop" aria-expanded="false">
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/e8f/a24/e8fa242a725e6ef7537f1ac332cd73f69d652720.png" alt="Первый Канал"></i>
+                <span class="channel-title">Первый канал</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+        </div>
+
+        <div class="menu-item menu-item-group">
+            <div data-toggle="collapse" data-target="#channel-cat-sport" class="channel-group-tab collapsed" aria-expanded="false">
+                <i class="channel-group-icon fa fa-trophy"></i><span>Спорт</span>
+            </div>
+        </div>
+        <div class="clearfix chanellgroup-list collapse" id="channel-cat-sport" aria-expanded="false">
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/310/4ed/3104ed6f80544a4848485389ce9280d9847b1ba1.png" alt="Первый Канал"></i>
+                <span class="channel-title">Матч ТВ HD</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+            <div class="menu-item menu-item-channel">
+                <i class="channel-icon"><img src="https://www.comboplayer.ru/static/channels/small/f98/91e/f9891efc829ccb7be1fde47b37715e1a7bf51ba1.png" alt="Первый Канал"></i>
+                <span class="channel-title">ЛДПР ТВ</span>
+                <span class="channel-status channel-status-fav"><i class="fa fa-heart-o"></i></span>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+                                        
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                
+                                <div class="player-day-slider">
+                                    <div class="slider-wrap">
+                                        <span class="slider-control slider-prev"><i class="fa fa-caret-left"></i></span>
+                                        <ul>
+                                            <li>24, ПН</li>
+                                            <li class="active">25, ВТ</li>
+                                            <li>26, СР</li>
+                                            <li>27, ЧТ</li>
+                                            <li>28, ПТ</li>
+                                            
+                                            <li>27, ЧТ</li>
+                                            <li>28, ПТ</li>
+                                            
+                                        </ul>
+                                        <span class="slider-control slider-next"><i class="fa fa-caret-right"></i></span>
+                                    </div>
+                                </div>
+                                
+                                <div class="player-stream-menu menu-scrollable">
+                                
+<div class="menu-item menu-item-past"><span class="stream-time">11:23</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div>
+<div class="menu-item menu-item-past"><span class="stream-time">13:50</span><span class="stream-title">Чемпионат мира по водным лыжам</span></div>
+<div class="menu-item"><span class="stream-time">15:05</span><span class="stream-title">Новости гребли</span></div>
+<div class="menu-item menu-item-current"><span class="stream-time">16:10</span><span class="stream-title">Футбол. "Ювентус" - "Удинезе</span></div>
+<div class="menu-item"><span class="stream-time">16:25</span><span class="stream-title">"Боруссия" - "РБ Лейпциг"</span></div>
+<div class="menu-item"><span class="stream-time">17:10</span><span class="stream-title">Вести гандбола</span></div>
+<div class="menu-item"><span class="stream-time">18:05</span><span class="stream-title">Футбол. "Ювентус" - "Удинезе</span></div>
+<div class="menu-item"><span class="stream-time">19:30</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div>
+<div class="menu-item"><span class="stream-time">20:43</span><span class="stream-title">Вся правда о боулинге</span></div>
+<div class="menu-item"><span class="stream-time">21:10</span><span class="stream-title">Чемпионат мира по прыжкам в воду</span></div>
+<div class="menu-item menu-item-future"><span class="stream-time">22:21</span><span class="stream-title">"Боруссия" - "РБ Лейпциг"</span></div>
+<div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div>
+                                   
+<!--<div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div><div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div><div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div><div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div><div class="menu-item menu-item-future"><span class="stream-time">23:32</span><span class="stream-title">Футбол. "Монако" - "Лилль"</span></div>-->
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            </div>
+            
+            <div class="content-player-offer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p><a href="#">Купить подписку на канал</a></p>
+                            <p>117 каналов на 30 дней бесплатно</p>
+                        </div>
+                        <div class="col-md-3">
+                            <p><a href="#">Футбол. "Ювентус" - "Удинезе</a></p>
+                            <p>Трансляция из Украины</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-15">
+                <div class="container-fluid">
+                    <p>«Матч ТВ» – российский федеральный общедоступный канал о спорте и здоровом образе жизни. В эфире – главные спортивные события, новости, аналитические и развлекательные программы, реалити- и ток-шоу, документальные циклы, шоу о здоровом образе жизни, фильмы и сериалы о спорте. Мы работаем над проектом Matchtv.ru, и хотим, чтобы именно здесь вы каждый день находили самые актуальные новости о спорте и здоровом образе жизни.</p>
+                </div>
+            </div>
+
+        </main>
+        
+        <footer class="footer">
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <p>
+                            <a href="http://www.rudorogi.ru/go/?url=http%3A%2F%2Fwww.rostpay.ru%2F&amp;hash=862124ed4de23f7db193e79e37d4bd83" target="_blank" rel="nofollow"><strong>ООО &copy; &laquo;РОСТПЭЙ&raquo;, 2016</strong></a><br>
+                            344011, г. Ростов-на-Дону, пер. Доломановский, <br>
+                            д. 70Д, оф. 1 (10 этаж) <br>
+                            ОГРН: 1086168004669 <br>
+                            ИНН/КПП: 6168024612 / 616401001 <br>
+                        </p>
+                        <p>
+                            <i class="fa fa-phone"></i>&nbsp;+7 (863) 280-00-12 <br>
+                            <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@comboplayer.ru">info@comboplayer.ru</a>
+                        </p>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Партнерам</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Интеграторам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Сайтам</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Магазинам</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Продукты</strong></p>
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://comboplayer.ru">Бесплатный медиаплеер</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="http://tv.comboplayer.ru">IP ТВ</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="#">Радио</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <p><strong>Мы с соцсетях</strong></p>
+                        <ul class="footer-menu social">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" target="_blank" rel="nofollow" href="https://vk.com/comboplayer"><i class="fa fa-vk"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col-md-2 col-sm-3 col-xs-12">
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Помощь</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Добавить канал</a>
+                            </li>
+                            <li class="footer-menu-item">
+                                <a class="footer-menu-link" href="#">Правообладателям</a>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </footer>
+    </div>
+        
+    <script type="text/javascript">
+        
+        $('.thumbnail').click(function(){
+            $('.modal-body').empty();
+            var title = $(this).parent('a').attr("title");
+            $('.modal-title').html(title);
+            $($(this).parents('div').html()).appendTo('.modal-body');
+            $('#screenModal').modal({show:true});
+        });
+        
+        $('.channel-body ul li').tooltip({    
+            selector: "a[rel=tooltip]"
+        })
+        
+        // notify
+                
+        $('.notifiable').on('mouseover', function() {
+            var progInfo = $(this);
+            var timer = setTimeout(function() {
+                progInfo.addClass('notify-hover');
+            });
+            $(this).data('timer', timer);
+        });
+        $('.notifiable').on('mouseout', function() {
+            var progInfo = $(this);
+            if ($(this).data('timer')) {
+                clearTimeout($(this).data('timer'))
+                $(this).data('timer', null);
+            }
+            progInfo.removeClass('notify-hover');
+        });
+        
+        $('[data-toggle="tooltip"]').tooltip();   
+        
+        //
+        
+        $('.content-player .channel-btn').on('click',function(){
+            if($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0);
+                $(this).removeClass("active");
+                $('.player-channel-menu').removeClass("active");
+            } else {
+                $(this).attr('data-click-state', 1);
+                $(this).addClass("active");
+                $('.player-channel-menu').addClass("active");
+            }
+        });
+        
+        //
+        
+        $(function() {
+          $(".player-watch-container").hover(onelem, offelem);
+
+          function onelem () {
+            $(".player-controls").removeClass("offelem");
+            $(".player-controls").addClass("onelem");
+          }
+          function offelem () {
+            $(".player-controls").removeClass("onelem");
+            $(".player-controls").addClass("offelem");
+          }
+
+        });
+        
+    </script>
+    
+</body>
+</html>
