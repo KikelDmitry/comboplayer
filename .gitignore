@@ -1,0 +1,7 @@
+.idea
+node_modules
+less/*.css
+*.orig
+._*
+.DS_Store
+prepros-6.config
