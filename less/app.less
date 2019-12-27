@@ -5812,7 +5812,6 @@ textarea.form-control {
 }
 
 .channel-actions {
-    //nb1
     .channel-try-free {
         &-single {
             color: #fff;
@@ -6006,7 +6005,6 @@ textarea.form-control {
 
 /* */
 
-//nc1
 .film-free {
     background-color: #fff;
     color: #26292b;
@@ -6147,7 +6145,6 @@ textarea.form-control {
 }
 
 //yy 
-
 #weekslide {
     .slick-track {
         > div {
@@ -6196,6 +6193,18 @@ textarea.form-control {
                         margin: 8px 0;
                     }
                 }
+                .channel-icon { 
+                    color: @color-white;
+                    height: 50px;
+                    width: 30px;
+                    background-color: @color-green-light;
+                    padding: 17px 10px;
+                    font-size: 18px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    &:before { content: "\f0d7"; } 
+                }
                 .channel-title {
                     color: @color-white;
                     /*transform: translateY(-50%);
@@ -6216,23 +6225,12 @@ textarea.form-control {
                     vertical-align: bottom;
                     white-space: nowrap;
                 }
-                i {
-                    color: @color-white;
-                    height: 50px;
-                    width: 30px;
-                    background-color: @color-green-light;
-                    padding: 17px 10px;
-                    font-size: 18px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                }
                 
                 &:hover,
                 &:active {
                     background: darken(@color-green, 5%);
                     .channel-image { border-color: darken(@color-green, 5%); }
-                    i { background-color: @color-green; }
+                    .channel-icon { background-color: @color-green; }
                 }
                 &.active {
                     background: @color-dark-main;
@@ -6241,15 +6239,15 @@ textarea.form-control {
                         /*border-color: @color-dark-main; */
                         border-color: @color-green-light;
                     }
-                    i { 
+                    .channel-icon { 
                         background-color: @color-dark-main;
                         color: @color-green-light;
+                        &:before { content: "\f0d8"; } 
                     }
                 }
-                //zz5
                 &:after {
                     content: "";
-                    width: calc(100% + 30px);
+                    width: ~"calc(100% + 30px)";
                     height: 15px;
                     background-color: @color-steel-dull-black;
                     display: block;
@@ -6259,7 +6257,8 @@ textarea.form-control {
             }
             &-title {
                 display: inline-block;
-                padding: 0 15px;
+                /*padding: 0 15px;*/
+                padding: 15px;
                 vertical-align: middle;
                 color: @color-white;
                 h1 {
@@ -6378,9 +6377,9 @@ textarea.form-control {
                         padding: 15px 30px;
                         background-color: rgba(37, 41, 43, 0.9);
                         font-size: 15px;
-                        width: ~"calc(100% - 80px)";
+                        width: ~"calc(100% - 60px)";
                         height: ~"calc(100% - 95px)";
-                        margin: 40px;
+                        margin: 30px;
                         top: 0;
                         right: 0;
                         text-align: center;
@@ -6403,15 +6402,22 @@ textarea.form-control {
                                     line-height: 50px;
                                     font-size: 30px;
                                 }
+                                .lead {
+                                    color: @color-green-light;
+                                    display: inline-block;
+                                    vertical-align: sub;
+                                    max-width: 240px;
+                                    text-align: left;
+                                    line-height: 1.2;
+                                    font-size: 16px;
+                                    margin: 0;
+                                    padding: 10px 10px 10px 10px;
+                                }
                             }
                             &-text {
                                 display: block;
                                 width: 100%;
                                 font-size: 15px;
-                                .lead {
-                                    color: @color-green-light;
-                                    font-size: 15px;
-                                }
                                 .form-control {
                                     max-width: 460px;
                                     margin: 0 auto;
@@ -6424,6 +6430,7 @@ textarea.form-control {
                                 margin: 15px 0;
                                 a { 
                                     width: 250px;
+                                    max-width: 100%;
                                     text-decoration: none; 
                                     font-size: 15px;
                                     font-weight: 600;
@@ -6557,7 +6564,6 @@ textarea.form-control {
                     &-center {}
                     &-right {}
                     
-                    //zz6
                     .control-play,
                     .control-size,
                     .control-channel-prev,
@@ -6581,7 +6587,6 @@ textarea.form-control {
                         }
                     }
                     
-                    //zz7
                     .control-volume {
                         width: auto;
                         padding-right: 10px;
@@ -6687,7 +6692,6 @@ textarea.form-control {
             }
         }
     }
-    //zz4
     .player-channel-menu {
         overflow: hidden;
         z-index: 11;
@@ -6734,6 +6738,11 @@ textarea.form-control {
             cursor: pointer;
             line-height: 40px;
             border-bottom: 1px solid @color-steel-dull-darker;
+            position: relative;
+            padding-right: 25px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             .channel-group-icon {
                 font-weight: 600;
                 width: 30px;
@@ -6747,12 +6756,32 @@ textarea.form-control {
                 line-height: 30px;
                 text-align: center;
                 /*padding: 3px;*/
-                span {}
+            }
+            .channel-group-toggle {
+                display: inline-block;
+                color: @color-steel-dull-dark;
+                position: absolute;
+                right: 10px;
+                top: 12px;
+                &:before { content: "\f0d7"; }
             }
             &:hover {
                 background-color: rgba(0, 0, 0, 0.1);
                 color: @color-white;
+                .channel-group-toggle { color: @color-steel-dull; }
             }
+            
+            &[aria-expanded="false"] {
+                .channel-group-toggle {
+                    &:before { content: "\f0d7"; }
+                }
+            }
+            &[aria-expanded="true"] {
+                .channel-group-toggle {
+                    &:before { content: "\f0d8"; }
+                }
+            }
+            
         }
         .chanellgroup-list {}
         .menu-item:not(.menu-item-group) {
@@ -6788,6 +6817,7 @@ textarea.form-control {
                 font-size: 13px;
                 color: @color-steel-dull-dark;
                 cursor: pointer;
+                min-width: 30px;
                 &:hover { color: @color-white; }
                 &-fav {
                     &.status-true { 
@@ -6815,7 +6845,6 @@ textarea.form-control {
             }
         }
     }
-    //zz2
     .player-day-slider {
         /*margin: 15px 0;*/
         margin: 0 0 15px;
@@ -6895,7 +6924,6 @@ textarea.form-control {
             .slider-next { right: 0; }
         }
     }
-    //zz3
     .player-stream-menu {
         overflow-y: auto;
         max-height: 480px;
@@ -7006,7 +7034,8 @@ textarea.form-control {
         background-color: @color-steel-light; 
         padding: 20px 0;
         .tvfree-promo {
-            text-align: left;
+            /*text-align: left;*/
+            text-align: center;
             a {
                 height: 45px;
                 font-size: 0;
@@ -7304,7 +7333,6 @@ textarea.form-control {
     .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr > .col { padding: 0; }
     .content.howtowatch .howtowatch-steps-bottom .howtowatch-steps-descr .howtowatch-steps-number { left: 0; }
     
-    //nc2
     .film-free {
         border: 1px solid #eee;
         padding-left: 125px;
@@ -7341,6 +7369,8 @@ textarea.form-control {
         }
         
     }
+    
+    .content-player .player-stream-menu.taller-ver { max-height: none; }
     
 }
 
@@ -7467,6 +7497,13 @@ textarea.form-control {
     }*/
     
     .content-tv-head .tv-table-week .week-control-wrap { margin-left: 0; }
+    
+    .content-player .player-channel-menu { width: 320px; }
+    .content-player-header .player-header .channel-btn {
+        min-width: auto;
+        .channel-title { display: none; }
+            
+    }
 
 }
 
@@ -7523,33 +7560,25 @@ textarea.form-control {
   }
 }
 
-
+@media (max-width: 500px) {
+    .content-player-body .player-frame-screen .player-controls .control-live-title { display: none; }
+}
 
 @media (max-width: 400px) {
     .function-list-item {
         text-align: center;
-        [class^="icon-function-"] {
-            float: none;
-        }
-        &-body {
-            margin-left: 0;
-        }
+        [class^="icon-function-"] { float: none; }
+        &-body { margin-left: 0; }
     }
     .contacts-vcard {
         &-item {
             padding-left: 0;
-            .fa {
-                left: -27px;
-            }
+            .fa { left: -27px; }
         }
     }
     .home-hero-video {
-        &-text {
-            top: 24%;
-        }
-        &-btn {
-            font-size: 18px;
-        }
+        &-text { top: 24%; }
+        &-btn { font-size: 18px; }
     }
     
     .tv-content-header { 
@@ -7562,11 +7591,24 @@ textarea.form-control {
         vertical-align: bottom;
     }
     
-    //nc3
     .film-free-text { font-size: 15px; }
     .film-free-img { display: none; }
     .film-free { padding-left: 0; }
     
+    .content-player-header .player-header-title {
+        padding: 10px 0 10px 5px;
+        width: 230px;
+        /*white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;*/
+        h1 {
+            font-size: 15px;
+            /*white-space: nowrap;*/
+        }
+    }
+    .content-player-header .player-header .channel-btn:after { display: none; }
+    .content-player-body .player-frame-screen .player-controls .control-time { display: none; }
+
 }
 
 @media (min-width: 768px) {
@@ -7602,7 +7644,6 @@ textarea.form-control {
 @media (max-width: 610px) {
     .video-bar-item { min-height: 380px !important; }
 
-  //nb2
   .channel-actions .channel-try-free-single {
     font-size: 16px;
     > a { height: auto; }
@@ -7635,7 +7676,6 @@ textarea.form-control {
     main.content,
     .footer-contain { padding: 0; }
 
-    //nb3
     .channel-actions .channel-try-free-single {
         i.fa { top: 10px; }
     }
