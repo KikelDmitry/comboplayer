@@ -7092,6 +7092,107 @@ textarea.form-control {
     }
 }
 
+.channel-tvfree {
+    margin: 15px 0;
+    > a {
+        border: 3px solid #E9EFF1;
+        display: flex;
+        color: @color-steel-dark;
+        font-weight: 500;
+        height: 75px;
+        text-decoration: none;
+        justify-content: flex-start;
+        align-items: center;
+        overflow: hidden;
+        .trans;
+        &:hover,
+        &:active { 
+            border-color: #D5DFE4; 
+            background-color: #E9EFF1;
+            .channel-tvfree-number {
+                color: #fff;
+                /*background-color: @color-green-light;*/
+                background-color: #87BE2F;
+                i { 
+                    background-color: lighten(@color-green-light, 15%); 
+                    /*background-color: @color-green-light; */
+                }
+            }
+            .channel-tvfree-duration { background-color: #D5DFE4; } 
+        }
+        > div {
+            height: 75px;
+            font-size: 17px;
+            line-height: 1.2;
+            strong { font-weight: 600; }
+            .wrap {
+                display: flex;
+                align-items: center;
+                height: 75px;
+            }
+        }
+        .channel-tvfree {
+            &-image {
+                width: 75px;
+                text-align: center;
+                line-height: 75px;
+                background: rgb(136,192,21);
+                background: -moz-linear-gradient(45deg,  rgba(136,192,21,1) 0%, rgba(84,180,106,1) 100%);
+                background: -webkit-linear-gradient(45deg,  rgba(136,192,21,1) 0%,rgba(84,180,106,1) 100%);
+                background: linear-gradient(45deg,  rgba(136,192,21,1) 0%,rgba(84,180,106,1) 100%);
+                &:before {
+                    content: "";
+                    display: block;
+                    margin: 11px 8px;
+                    width: 51px;
+                    height: 48px;
+                    background: url('@{images}/content-sprites.png') no-repeat -128px -87px; 
+                }
+            }
+            &-text {
+                height: auto;
+                padding: 0 20px 0 15px;
+                background-color: transparent;
+                strong {}
+            }
+            &-number {
+                .trans;
+                background-color: #ffffff;
+                margin-left: auto;
+                padding: 0 15px 0 20px;
+                font-size: 28px;
+                font-weight: bold;
+                width: 87px;
+                background-color: #D4DFE4;
+                position: relative;
+                overflow: visible;
+                i {
+                    width: 32px;
+                    height: 32px;
+                    background-color: #8ABD21;
+                    color: #ffffff;
+                    position: absolute;
+                    top: 22px;
+                    left: -15px;
+                    text-align: center;
+                    line-height: 32px;
+                    border-radius: 2px;
+                    font-size: 21px;
+                }
+                span {}
+            }
+            &-duration {
+                padding: 0 15px;
+                background-color: #E9EFF1;
+                em {
+                    color: @color-green;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
 
 /* media q */
 
@@ -7372,6 +7473,8 @@ textarea.form-control {
     }
     
     .content-player .player-stream-menu.taller-ver { max-height: none; }
+    
+    .channel-tvfree > a > div { font-size: 16px; }
     
 }
 
@@ -7659,6 +7762,52 @@ textarea.form-control {
     .tf-period { float: none !important; }
     .tf-plus { width: 23px; height: 23px; }
   }
+    
+    .channel-tvfree {
+        overflow: hidden;
+        > a {
+            display: block;
+            height: auto;
+            border-width: 1px;
+            > div {
+                height: 50px;
+                font-size: 14px;
+                strong {}
+                .wrap { height: 50px; }
+            }
+            .channel-tvfree {
+                &-image {
+                    float: left;
+                    width: 95px;
+                    &:before { margin: -1px 16px; }
+                }
+                &-text {
+                    float: left;
+                    height: 50px;
+                    line-height: 1.2;
+                    width: ~"calc(100% - 95px)";
+                    strong {}
+                }
+                &-number {
+                    clear: both;
+                    float: left;
+                    width: 95px;
+                    padding: 0 15px 0 40px;
+                    i { 
+                        left: 5px; 
+                        top: 10px;
+                    }
+                    span { font-size: 22px; }
+                }
+                &-duration {
+                    float: left;
+                    width: ~"calc(100% - 95px)";
+                    em {}
+                }
+            }
+        }
+    }
+    
 }
 @media (max-width: 530px) {
     .video-bar-item { min-height: 325px !important; }
