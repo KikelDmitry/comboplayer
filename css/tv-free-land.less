@@ -135,7 +135,8 @@
     box-shadow: @x @y @blur @distance @color;
 }
 .sprite(@position: 0 0) {
-    background-image: url("@{images}sprites.png");
+    /*background-image: url("@{images}sprites.png");*/
+    background-image: url("@{images}sprites2.png");
     background-repeat: no-repeat;
     background-color: transparent;
     background-position: @position;
@@ -498,6 +499,10 @@ input[type="color"]:focus,
             height: 55px;
             line-height: 55px;
         }
+        &-sub {
+            font-size: 32px;
+            color: @color-white;
+        }
         &-text {
             font-size: 75px;
             font-weight: 600;
@@ -543,7 +548,6 @@ input[type="color"]:focus,
         }
     }*/
     
-    //zz1
     .slogan-header {
         max-width: 360px;
         position: relative;
@@ -575,6 +579,10 @@ input[type="color"]:focus,
             top: 20px;
             right: -12px;
         }
+        &.on-site {
+            span { font-size: 32.2px; }
+        }
+        
     }
     
 }
@@ -621,8 +629,9 @@ input[type="color"]:focus,
             &-item {
                 /*margin-bottom: 30px;*/
                 /*margin: 10px 0 30px;*/
-                margin: 10px 0 50px;
-                min-height: 68px;
+                /*margin: 10px 0 50px;*/
+                margin: 10px 0 35px;
+                /*min-height: 68px;*/
             }
             &-header {
                 font-size: 17px;
@@ -630,14 +639,14 @@ input[type="color"]:focus,
                 margin-bottom: 3px;
             }
             &-sub {
-                font-size: 15px;
+                /*font-size: 15px;*/
+                font-size: 14px;
                 color: @color-blue-dark;
             }
             &-image {
                 display: inline-block;
                 width: 62px;
                 height: 62px;
-                background-color: magenta;
                 border: 4px solid @color-gray-lightest;
                 float: left;
                 margin-right: 10px;
@@ -654,6 +663,19 @@ input[type="color"]:focus,
             }
             &-smart {
                 .howto-image { .sprite(@position: -190px -4px); }
+            }
+            &-site {
+                .howto-image { .sprite(@position: -252px -4px); }
+                .howto-header { padding: 20px 0; }
+            }
+            
+            &:last-child { 
+                padding-top: 0; 
+                .howto-info { 
+                    margin-top: 0; 
+                    font-size: 22px;
+                    margin-bottom: 0;
+                }
             }
             
         }
@@ -983,7 +1005,6 @@ input[type="color"]:focus,
             right: 8px;
         }
     }*/
-    //zz2
     .header .slogan-header {
         top: 0;
         max-width: none;
@@ -1020,7 +1041,6 @@ input[type="color"]:focus,
 @media (max-width: 600px) {} // меньше 600px
 @media (max-width: @screen-xs) {
     // меньше 480px
-    //zz3
     /*.header .slogan-header {
         top: 15px;
         span {

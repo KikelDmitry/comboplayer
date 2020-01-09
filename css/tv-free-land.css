@@ -548,6 +548,10 @@ input[type="color"]:focus,
   height: 55px;
   line-height: 55px;
 }
+.header-title-sub {
+  font-size: 32px;
+  color: #ffffff;
+}
 .header-title-text {
   font-size: 75px;
   font-weight: 600;
@@ -597,6 +601,9 @@ input[type="color"]:focus,
   top: 20px;
   right: -12px;
 }
+.header .slogan-header.on-site span {
+  font-size: 32.2px;
+}
 /* // main */
 .content-top-block {
   padding-bottom: 30px;
@@ -637,8 +644,9 @@ input[type="color"]:focus,
 .content-top-block .howto-item {
   /*margin-bottom: 30px;*/
   /*margin: 10px 0 30px;*/
-  margin: 10px 0 50px;
-  min-height: 68px;
+  /*margin: 10px 0 50px;*/
+  margin: 10px 0 35px;
+  /*min-height: 68px;*/
 }
 .content-top-block .howto-header {
   font-size: 17px;
@@ -646,41 +654,63 @@ input[type="color"]:focus,
   margin-bottom: 3px;
 }
 .content-top-block .howto-sub {
-  font-size: 15px;
+  /*font-size: 15px;*/
+  font-size: 14px;
   color: #2690bf;
 }
 .content-top-block .howto-image {
   display: inline-block;
   width: 62px;
   height: 62px;
-  background-color: magenta;
   border: 4px solid #e4edf0;
   float: left;
   margin-right: 10px;
 }
 .content-top-block .howto-devices .howto-image {
-  background-image: url("/images/tv/landings/sprites.png");
+  /*background-image: url("@{images}sprites.png");*/
+  background-image: url("/images/tv/landings/sprites2.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -4px -4px;
 }
 .content-top-block .howto-media .howto-image {
-  background-image: url("/images/tv/landings/sprites.png");
+  /*background-image: url("@{images}sprites.png");*/
+  background-image: url("/images/tv/landings/sprites2.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -66px -4px;
 }
 .content-top-block .howto-win .howto-image {
-  background-image: url("/images/tv/landings/sprites.png");
+  /*background-image: url("@{images}sprites.png");*/
+  background-image: url("/images/tv/landings/sprites2.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -128px -4px;
 }
 .content-top-block .howto-smart .howto-image {
-  background-image: url("/images/tv/landings/sprites.png");
+  /*background-image: url("@{images}sprites.png");*/
+  background-image: url("/images/tv/landings/sprites2.png");
   background-repeat: no-repeat;
   background-color: transparent;
   background-position: -190px -4px;
+}
+.content-top-block .howto-site .howto-image {
+  /*background-image: url("@{images}sprites.png");*/
+  background-image: url("/images/tv/landings/sprites2.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: -252px -4px;
+}
+.content-top-block .howto-site .howto-header {
+  padding: 20px 0;
+}
+.content-top-block .howto:last-child {
+  padding-top: 0;
+}
+.content-top-block .howto:last-child .howto-info {
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 0;
 }
 .content-center-block {
   background-color: #e4edf0;
