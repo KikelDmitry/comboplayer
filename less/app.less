@@ -1648,7 +1648,7 @@ textarea.form-control {
                 &:focus {
                     background-color: darken(#e9eff2, 5%);
                 }
-                &.active {
+                /*&.active {
                     background-color: #79ae0b;
                     color: #fff;
                 }
@@ -1684,7 +1684,7 @@ textarea.form-control {
                 }
                 &:nth-child(11).active {
                     background-color: @color-brown;
-                }
+                }*/
             }
         }
         &-channel {
@@ -1831,7 +1831,7 @@ textarea.form-control {
                     }
                 }
             }
-            //yy
+            
             &-stream {
                 margin: 0;
                 .channel-epg {
@@ -1904,6 +1904,17 @@ textarea.form-control {
                                 }
                                 &:hover, &:focus {
                                     background-color: lighten(@color-steel, 30%);
+                                }
+                            }
+                            //zz
+                            ul li {
+                                display: flex;
+                                align-items: center;
+                                .prog-record {
+                                    width: 140px;
+                                    text-align: right;
+                                    font-size: 12px;
+                                    color: #7BAD23 !important;
                                 }
                             }
                         }
@@ -1990,7 +2001,6 @@ textarea.form-control {
                             }
                         }
                         
-                        //yy
                         .stream {
                             &-item {
                                 display: flex;
@@ -2168,7 +2178,6 @@ textarea.form-control {
                         /*a { color: darken(@color-link, 10%) !important; }*/
                     }
                 }
-                //yy
                 display: flex;
                 align-items: baseline;
                 > span {
@@ -2394,6 +2403,7 @@ textarea.form-control {
                         display: inline-block;
                         position: relative;
                         top: 3px;
+                        //zz
                         .channel-action {
                             display: inline-block;
                             cursor: pointer;
@@ -2658,6 +2668,7 @@ textarea.form-control {
 
 } 
 
+//zz
 .content-tv-table-channel .channel-title,
 .content-video-single-sub .channel-header {
     margin-bottom: 15px;
@@ -2673,9 +2684,7 @@ textarea.form-control {
             vertical-align: bottom;
         }
         &.noimage {
-            img {
-                display: none;
-            }
+            img { display: none; }
             width: 30px;
             height: 30px;
             display: inline-block;
@@ -2694,7 +2703,7 @@ textarea.form-control {
         &:active,
         &:focus {
             color: #208ebd;
-            border-bottom: 0;
+            border-bottom-color: transparent;
         }
     }
     .channel-action {
@@ -2734,6 +2743,7 @@ textarea.form-control {
             }
         }
     }
+    //zz
     .channel-watch {
         position: relative;
         margin-right: -5px;
@@ -2766,6 +2776,44 @@ textarea.form-control {
                 background-color: #79ae0b;
                 .boxShadow(0, 2px, 17px, -1px, rgba(60, 70, 84, 0.3));
             }
+        }
+    }
+}
+//zz
+.content-tv-table-channel {
+    .channel-title {
+        margin-bottom: 5px;
+    }
+    .channel-body {
+        margin-top: 5px;
+    }
+    .channel-action-sub {
+        margin: 7px 0;
+        /*padding-left: 40px;*/
+        .channel-watch {
+            display: block;
+            text-decoration: none;
+            color: darken(@color-link, 5%);
+            i {
+                font-size: 18px;
+                color: @color-link;
+                margin-right: 3px;
+                vertical-align: middle;
+            }
+            span { 
+                text-decoration: underline; 
+                font-weight: 400;
+                /*font-size: 14px;*/
+                font-size: 13px;
+            }
+            &:hover {
+                i { color: darken(@color-link, 10%); }
+                span {
+                    text-decoration: none;
+                    color: darken(@color-link, 10%);
+                }
+            }
+            
         }
     }
 }
@@ -5720,7 +5768,6 @@ textarea.form-control {
     }
 }*/
 
-//zz
 .city-local {
     /*margin-top: 15px;
     margin-bottom: 5px;*/
@@ -6344,7 +6391,6 @@ textarea.form-control {
     max-width: 100%;
 }
 
-//zz
 .content-player {
     color: @color-steel-dull-lighter;
     &-header {
@@ -7313,7 +7359,7 @@ textarea.form-control {
                 height: 75px;
             }
         }
-        .channel-tvfree {
+        .channel-tvfree { 
             &-image {
                 width: 75px;
                 text-align: center;
@@ -7648,7 +7694,7 @@ textarea.form-control {
             .channel-image { display: none; }
             .tvfree-promo-info {
                 background: transparent;
-                font-size: 16px;
+                font-size: 16px; 
             }
         }
         
@@ -7658,8 +7704,13 @@ textarea.form-control {
     
     .channel-tvfree > a > div { font-size: 16px; }
     
-    //zz
     .header-menu { overflow-y: visible !important; }
+    
+    .content-tv-channel .channel-stream ul li.channel-stream-past ul li .prog-record {
+        text-align: left;
+        width: 73px;
+        margin-left: 8px;
+    }
     
 }
 
@@ -7794,7 +7845,6 @@ textarea.form-control {
             
     }
     
-    //zz
     .city-local-pop:before {
         right: auto;
         left: 22px;
