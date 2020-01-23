@@ -14,7 +14,8 @@
 
     <!-- Styles -->
     <!--<link rel="stylesheet/less" href="styles/less/styles.less" />-->
-    <link rel="stylesheet" href="/css/app.css" />
+    <!--<link rel="stylesheet" href="/css/app.css" />-->
+    <link rel="stylesheet" href="/less/app.css" />
 
     <!-- Scripts -->
     <script type="text/javascript">less = {env: "development",async: false,fileAsync: false,relativeUrls: false};</script>
@@ -51,7 +52,8 @@
 <a id="reformal_tab" href="http://www.comboplayer.ru" onclick="Reformal.widgetOpen();return false;" onmouseover="Reformal.widgetPreload();" onmouseout="Reformal.widgetAbortPreload();"><img src="https://tab.reformal.ru/T9GC0LfRi9Cy0Ysg0Lgg0L%252FRgNC10LTQu9C%252B0LbQtdC90LjRjw==/FFFFFF/2a94cfe6511106e7a48d0af3904e3090/left/1/tab.png" alt=""></a>   -->
    
     <div class="page">
-        <header class="header">
+       
+        <!--<header class="header">
             <div class="navbar" role="navigation">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -78,14 +80,95 @@
                                 </li>
                             </ul>
                         </div>
-                    </div><!--/.navbar-collapse -->
+                    </div>
+                </div>
+            </div>
+        </header>-->
+        
+        <header class="header">
+            <div class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <span class="navbar-brand logo">Project name</span>
+                        <p class="slogan">Бесплатный плеер видео и аудио</p>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <div class="navbar-form navbar-right">
+                                
+                            <ul class="header-menu clearfix">
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/tv" class="header-menu-link ">
+                                        <i class="fa fa-tv"></i> Combo-TV
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/tv-guide/city/armavir" rel="nofollow" class="header-menu-link active">
+                                        <i class="fa fa-list"></i> ТВ-программа
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a href="https://www.comboplayer.ru/videos/type/film" rel="nofollow" class="header-menu-link ">
+                                        <i class="fa fa-play"></i> Фильмы онлайн
+                                    </a>
+                                </li>
+                                <li class="header-menu-item">
+                                    <a class="header-menu-link" rel="nofollow" onclick="globalCounter.reachGoal(MetrikaGoals.AUTHORIZE); return true;" href="https://www.comboplayer.ru/login">Авторизация</a>
+                                </li>
+          
+                                <li class="header-menu-item">
+                                    
+                                    <div class="city-local">
+
+                                        <div class="city-local-current" id="epg_city">
+                                            <i class="fa fa-map-marker"></i>
+                                            <span class="city-local-current-name" data-toggle="modal" data-target="#change-city-modal">
+                                                <i class="fas fa-map-marker-alt"></i><span>Москва</span>
+                                            </span>
+        
+                                        </div>
+                                        
+                                        <div class="city-local-pop" id="city_guess_box" style="display:none;">
+                                                <div class="city-local-question clearfix"></div>
+                                                <div class="city-local-select">
+                                                    <span class="twitter-typeahead">
+                                                        <span class="input-group-btn">
+                                                            <span class="twitter-typeahead" style="position: relative; display: inline-block;"><input type="text" class="form-control input-lg tt-hint" autocomplete="off" data-route="https://www.comboplayer.ru/tv-guide/cities/autocomplete/%QUERY" spellcheck="false" readonly="" tabindex="-1" dir="ltr" style="position: absolute; top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255);"><input type="text" name="query" class="form-control input-lg tt-input" id="epg-city-search" placeholder="Выбрать другой" required="" autocomplete="off" data-route="https://www.comboplayer.ru/tv-guide/cities/autocomplete/%QUERY" spellcheck="false" dir="auto" aria-activedescendant="" aria-owns="epg-city-search_listbox" role="combobox" aria-readonly="true" aria-autocomplete="list" style="position: relative; vertical-align: top; background-color: transparent;"><span role="status" aria-live="polite" style="position: absolute; padding: 0px; border: 0px; height: 1px; width: 1px; margin-bottom: -1px; margin-right: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap;"></span><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                                                    <div role="listbox" class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                                                        <div role="presentation" class="tt-dataset tt-dataset-0"></div>
+                                                    </div>
+                                                    </span>
+                                                    <button class="city-local-select-btn btn" type="button">
+                                                        <i class="fa fa-caret-right"></i>
+                                                    </button>
+                                                    </span>
+                                                    </span>
+                                                    <div class="text-right">
+                                                        <a href="https://www.comboplayer.ru/tv-guide/cities/all">Все города</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                </li>
+                                
+                                
+                            </ul>
+                            
+                        </div>
+                    </div>
                 </div>
             </div>
         </header>
         
         <main class="content">
            
-            <div class="content-tv-nav">
+            <!--<div class="content-tv-nav">
                 
                 <div class="container-fluid">
                     <div class="row">
@@ -106,7 +189,7 @@
                     </div>
                 </div>
                 
-            </div>
+            </div>-->
             
             <div class="content-tv-head">
                 
@@ -166,7 +249,7 @@
                                     <img src="/images/prog-vesti.jpg" alt="">
                                 </div>-->
                                 
-                                <div class="channel-images">
+                                <!--<div class="channel-images">
                                     <img src="http://www.comboplayer.ru/static/tv_program_images/219/9cb/2199cb469961833464e939585c62522a42bddcd0.jpg" alt="" class="thumbnail">
                                     <div class="row">
                                         <div class="col-md-4 col-xs-6">
@@ -180,7 +263,48 @@
                                             </a>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
+                                
+<div class="channel-images">
+    <img src="https://www.comboplayer.ru/static/video_images/64e/4e7/64e4e7d3e1eccef7.jpg" alt="Вести" title="Вести" class="thumbnail">
+    <div class="row">
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/33e/3e6/33e3e6da5e33870f.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/33e/3e6/33e3e6da5e33870f-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/3f2/842/3f2842e2e03439f3.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/3f2/842/3f2842e2e03439f3-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/64e/4e7/64e4e7d3e1eccef7.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/64e/4e7/64e4e7d3e1eccef7-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/f0f/0f4/f0f0f4d2fad2fcf8.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/f0f/0f4/f0f0f4d2fad2fcf8-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/64e/4e7/64e4e7d3e1eccef7.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/64e/4e7/64e4e7d3e1eccef7-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/33e/3e6/33e3e6da5e33870f.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/33e/3e6/33e3e6da5e33870f-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+        <div class="col-md-4 col-xs-6">
+            <a href="https://www.comboplayer.ru/static/video_images/f0f/0f4/f0f0f4d2fad2fcf8.jpg" rel="screenshots">
+                <img src="https://www.comboplayer.ru/static/video_images/f0f/0f4/f0f0f4d2fad2fcf8-177x_.jpg" alt="Вести" title="Вести" class="thumbnail img-responsive">
+            </a>
+        </div>
+    </div>
+</div>
                                 
                             </div>   
                             

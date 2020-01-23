@@ -1906,7 +1906,7 @@ textarea.form-control {
                                     background-color: lighten(@color-steel, 30%);
                                 }
                             }
-                            //zz
+                            
                             ul li {
                                 display: flex;
                                 align-items: center;
@@ -2403,7 +2403,7 @@ textarea.form-control {
                         display: inline-block;
                         position: relative;
                         top: 3px;
-                        //zz
+                        
                         .channel-action {
                             display: inline-block;
                             cursor: pointer;
@@ -2668,7 +2668,6 @@ textarea.form-control {
 
 } 
 
-//zz
 .content-tv-table-channel .channel-title,
 .content-video-single-sub .channel-header {
     margin-bottom: 15px;
@@ -2743,7 +2742,7 @@ textarea.form-control {
             }
         }
     }
-    //zz
+    
     .channel-watch {
         position: relative;
         margin-right: -5px;
@@ -2779,7 +2778,7 @@ textarea.form-control {
         }
     }
 }
-//zz
+
 .content-tv-table-channel {
     .channel-title {
         margin-bottom: 5px;
@@ -3992,7 +3991,7 @@ textarea.form-control {
                 .watch-online-block-icon { background-color: #5F871B; }
                 .watch-online-block-title {
                     background-image: none;
-                    background-color: #5F871B;    
+                    background-color: #5F871B;
                 }   
             }
             img {
@@ -7350,7 +7349,7 @@ textarea.form-control {
         }
         > div {
             height: 75px;
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.2;
             strong { font-weight: 600; }
             .wrap {
@@ -7422,6 +7421,91 @@ textarea.form-control {
     }
 }
 
+/*.channel-online-prev {
+    > .row > div {
+        &:last-child { padding-left: 0; }
+    }
+    .watch-online {
+        &-block {
+            > a { 
+                height: 75px; 
+                margin-top: 15px;
+            }
+            &-icon {
+                width: 44px;
+                height: 44px; 
+                line-height: 44px;
+                font-size: 22px;
+                top: 16px;
+            }
+            &-title {
+                display: none; 
+                top: 0;
+                height: 38px;
+                font-size: 12px;
+                width: 82px;
+                line-height: 14px;
+                padding: 6px 11px;
+                right: 0px;
+            }
+            &-image { margin-top: -10% }
+        }
+    }
+}*/
+
+//zz
+.content-tv-head .channel-header-flex {
+    display: flex;
+    /*align-items: center;*/
+    .channel-header-left {}
+    .channel-header-right {
+        margin-left: auto;
+        .watch-online {
+            border: 1px solid red;
+            &-block {
+                padding: 0;
+                margin: 0;
+                max-width: none;
+                /*background-color: #E9EFF1;
+                padding-right: 15px;
+                border-radius: 2px;*/
+                line-height: 1.3;
+                > a {
+                    text-decoration: none;
+                    height: 64px;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    width: auto;
+                    align-items: center;
+                    color: #3D4C54;
+                    span {
+                        display: inline-block;
+                        font-weight: 600;
+                        margin-left: 1rem;
+                        width: 70px;
+                    }
+                    &:hover,
+                    &:active { 
+                        color: @color-link;
+                        span { text-decoration: none; }
+                        i { font-size: 28px; }
+                    }
+                }
+                &-icon {
+                    display: inline-block;
+                    line-height: 64px;
+                    border-radius: 2px;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 25px;
+                    .trans;
+                }
+            }
+        }
+    }
+}
+
 /* media q */
 
 @media (max-width: 1280px) {
@@ -7458,9 +7542,7 @@ textarea.form-control {
         }
     }
 
-    .home-hero-video-p.small {
-        font-size: 12px;
-    }
+    .home-hero-video-p.small { font-size: 12px; }
 
     .content-tv-channel {
         .try-buy {
@@ -7712,6 +7794,34 @@ textarea.form-control {
         margin-left: 8px;
     }
     
+    //zz
+    .content-tv-head .channel-header-flex {
+        align-items: center;
+        .channel-header-right {
+            .watch-online {
+                &-block {
+                    margin: 15px 0 0 80px;
+                    > a {
+                        height: 34px;
+                        span {
+                            /*width: 70px;*/
+                        }
+                        &:hover,
+                        &:active { 
+                            i { font-size: 15px; }
+                        }
+                    }
+                    &-icon {
+                        line-height: 34px;
+                        font-size: 15px;
+                        width: 34px;
+                        height: 34px;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 @media (max-width: @screen-xs-max) {
@@ -7849,6 +7959,14 @@ textarea.form-control {
         right: auto;
         left: 22px;
     }
+    
+    .channel-online-prev {
+        > .row > div {
+            &:last-child { padding-left: 15px; }
+        }        
+    }
+    
+    .content-tv-head .channel-header-flex { display: block; }
 
 }
 
