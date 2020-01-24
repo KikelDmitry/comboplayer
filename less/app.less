@@ -1873,6 +1873,7 @@ textarea.form-control {
                         > ul {
                             margin-bottom: 0;
                         }
+                        //yy
                         &.channel-stream-past {
                             border-color: transparent;
                             .channel-stream-past-control {
@@ -1908,14 +1909,18 @@ textarea.form-control {
                             }
                             
                             ul li {
-                                display: flex;
-                                align-items: center;
+                                /*display: flex;
+                                align-items: center;*/
+                                
                                 .prog-record {
                                     width: 140px;
                                     text-align: right;
                                     font-size: 12px;
                                     color: #7BAD23 !important;
                                 }
+                                
+                                .channel-time-sub { padding-left: 48px; }
+                                
                             }
                         }
                         &.notifiable {
@@ -2153,6 +2158,40 @@ textarea.form-control {
                         }
                     }
                 }
+                
+                .channel-time-block {
+                    display: flex;
+                    align-items: center;
+                }
+                .channel-time-sub {
+                    /*padding: 5px 0 0 48px;*/
+                    padding: 5px 0 0 0;
+                    a {
+                        font-weight: 600;
+                        font-size: 14px;
+                        &:hover,
+                        &:active { 
+                            color: #228EC3;
+                            em { color: #228EC3; }
+                        }
+                    }
+                    .more-series-toggle {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: #34ABDF;
+                        margin: 2px 0;
+                        &:hover,
+                        &:active { color: #228EC3; }
+                        i { margin-left: 4px; }
+                    }
+                    ul {
+                        li {
+                            padding: 0;
+                            border: 0;
+                        }
+                    }
+                }
+                                
             }
 
             &-time {
@@ -2357,7 +2396,6 @@ textarea.form-control {
                         margin-bottom: 0;
                     }
                 }
-
             }
             &-images {
                 img {
@@ -2366,6 +2404,7 @@ textarea.form-control {
                     margin-bottom: 15px;
                 }
             }
+            
         }
 
         .programm {
@@ -7788,6 +7827,7 @@ textarea.form-control {
     
     .header-menu { overflow-y: visible !important; }
     
+    //yy
     .content-tv-channel .channel-stream ul li.channel-stream-past ul li .prog-record {
         text-align: left;
         width: 73px;
