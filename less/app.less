@@ -2574,15 +2574,19 @@ textarea.form-control {
 
 //zz
 .prog-on-channel {
+    &-pagetitle { border-bottom-color: transparent !important; }
     &-header {
         border-color: transparent;
-        /*background: #f7f7f7;*/
-        border: 1px solid #DEE6EB;
+        background-color: #f6f8f9;
+        /*border: 1px solid #DEE6EB;*/
         padding-top: 10px;
         padding-left: 10px;
         padding-right: 10px;
         margin-bottom: 10px;
         /*&:last-of-type { margin-bottom: 0; }*/
+        
+        &:hover { background-color: darken(#f6f8f9, 2%); }
+        
         .channel-header-flex { display: block !important; }
         .programm-header {
             border-color: transparent;
@@ -2592,6 +2596,7 @@ textarea.form-control {
                 vertical-align: bottom; 
                 .channel-action { vertical-align: super; }
             }
+            .channel-icon { background-color: @color-white; }
         }
         .watch-online {
             &-block {
