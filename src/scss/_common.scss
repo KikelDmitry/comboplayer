@@ -1,0 +1,57 @@
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-flow: column nowrap;
+	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-weight: normal;
+	font-size: 16px;
+}
+.title-1 {
+	font-family: "Roboto Condensed";
+	font-weight: normal;
+	font-size: 25px;
+	line-height: 100%;
+}
+.title-2 {
+	font-family: "Roboto Condensed";
+	font-weight: bold;
+	font-size: 19px;
+	line-height: 125%;
+}
+.title-3 {
+	font-family: "Roboto";
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 125%;
+}
+.title-4 {
+	font-family: "Roboto";
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 125%;
+}
+.buy-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $green-grad;
+	color: $color-white;
+	border-radius: 4px;
+	text-align: center;
+	box-shadow: $btn-shad;
+	font-weight: bold;
+	line-height: 100%;
+	white-space: nowrap;
+	transition-property: background;
+	transition-duration: 300ms;
+
+	&:hover {
+		background: $green-grad-light;
+	}
+	&:active {
+		background: #009F6B;
+	}
+	&:focus-visible {
+		outline: 2px solid red;
+	}
+}

@@ -1,0 +1,58 @@
+.header {
+	--height: 47px;
+	height: var(--height);
+	color: $color-cobalt-1;
+	background-color: $color-white;
+	border-bottom: 1px solid $color-steel-dull-9;
+
+	@include media-breakpoint-up(sm) {
+		--height: 52px;
+	}
+	@include media-breakpoint-up(lg) {
+		--height: 84px;
+	}
+	&__logo {
+		display: flex;
+		height: var(--height);
+		align-items: center;
+		padding: 5px 0;
+
+		@include media-breakpoint-up(sm) {
+			padding: 8px 0;
+		}
+		@include media-breakpoint-up(lg) {
+			padding: 12px 0;
+		}
+		img {
+			max-width: none;
+			max-height: 100%;
+		}
+	}
+	&__slogan {
+		font-family: $addFont;
+		font-size: 16px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 20px;
+		}
+	}
+	&__phone {
+		display: block;
+		height: var(--height);
+		font-family: $addFont;
+		font-size: 16px;
+		line-height: var(--height);
+		text-align: center;
+		border: 1px solid $color-steel-dull-9;
+		border-top: 0;
+		border-bottom: 0;
+		white-space: nowrap;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 24px;
+		}
+	}
+}

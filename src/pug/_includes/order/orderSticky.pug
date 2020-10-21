@@ -1,0 +1,25 @@
+section.order-sticky
+	form.order-panel
+		.container
+			.order-panel__inner.row
+				.d-none.d-lg-block.col-lg-3
+					.order-panel__descr Для оформления укажите контактные данные
+				.col-auto.col-md-6.col-lg-3
+					.order-panel__email
+						input.order-panel__input(type="email" name="email" placeholder="johndoe@gmail.com" required)
+						.order-panel__check
+							i.order-panel__check-icon.order-panel__check-icon--true.icon-check-solid
+							i.order-panel__check-icon.order-panel__check-icon--false.icon-close.d-none
+				.col-auto.order-last.pl-md-4.pr-md-0.pr-lg-auto.col-md-3.order-md-0
+					button.order-panel__submit.buy-btn(type="submit")
+						span.order-panel__submit-text.d-none.d-md-block Оформить подписку
+						i.order-panel__submit-icon.icon-shopping-cart.d-md-none
+				.col-md-3
+					.order-panel__total
+						.order-panel__total-title Цена выбранных пакетов:
+						.order-panel__total-num 298 ₽
+	//- .order-sticky__msg
+		.container
+			.order-sticky__msg-inner
+				i.order-sticky__msg-icon.icon-close
+				span.order-sticky__msg-title Произошла ошибка

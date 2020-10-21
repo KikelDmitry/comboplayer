@@ -1,0 +1,43 @@
+$roboto: (
+	("Roboto-Thin", 100, normal),
+	("Roboto-ThinItalic", 100, italic),
+	("Roboto-Light", 300, normal),
+	("Roboto-LightItalic", 300, italic),
+	("Roboto-Regular", normal, normal),
+	("Roboto-RegularItalic", normal, italic),
+	("Roboto-Medium", 500, normal),
+	("Roboto-MediumItalic", 500, italic),
+	("Roboto-Bold", 700, normal),
+	("Roboto-BoldItalic", 700, italic),
+	("Roboto-Black", 900, normal),
+	("Roboto-BlackItalic", 900, italic)
+);
+$robotoCond: (
+	("RobotoCondensed-Light", 300, normal),
+	("RobotoCondensed-LightItalic", 300, italic),
+	("RobotoCondensed-Regular", normal, normal),
+	("RobotoCondensed-Italic", normal, italic),
+	("RobotoCondensed-Bold", bold, normal),
+	("RobotoCondensed-BoldItalic", bold, italic)
+);
+
+@each $name, $weight, $style in $roboto {
+	@font-face {
+		font-family: "Roboto";
+		src: url($font-path + "roboto/" + $name + ".woff2") format("woff2"),
+			url($font-path + $name + ".woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}
+@each $name, $weight, $style in $robotoCond {
+	@font-face {
+		font-family: "Roboto Condensed";
+		src: url($font-path + "roboto-condensed/" + $name + ".woff2") format("woff2"),
+			url($font-path + $name + ".woff") format("woff");
+		font-weight: $weight;
+		font-style: $style;
+		font-display: swap;
+	}
+}

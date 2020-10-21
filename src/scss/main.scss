@@ -1,0 +1,24 @@
+// BS
+// full
+@import "~bootstrap/scss/bootstrap.scss";
+
+// CUSTOM
+@import "_variables.scss";
+@import "_fonts.scss";
+@import "_icons.scss";
+@import "_resets.scss";
+
+// BASE
+@import "_common.scss";
+
+// MAIN INCLUDES
+@import "_header.scss";
+@import "_footer.scss";
+
+// ORDER PAGE
+@import "order/_order-sticky.scss";
+@import "order/_order-main.scss";
+
+
+
+// @import "_debug.scss";

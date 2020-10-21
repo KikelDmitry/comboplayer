@@ -1,0 +1,9 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Подписка';
+	- config.page.description = 'Оформление подписки';
+
+block content
+	include /_includes/order/orderSticky.pug
+	include /_includes/order/orderMain.pug

@@ -1,0 +1,385 @@
+-
+	var channels = [
+		{
+			title: 'Первый',
+			value: 'first',
+			icon: 'ch-1.png'
+		},
+		{
+			title: 'Россия 1',
+			value: 'russia1',
+			icon: 'rus-1.png'
+		},
+		{
+			title: 'СТС',
+			value: 'sts',
+			icon: 'sts.png'
+		},
+		{
+			title: 'Культура',
+			value: 'culture',
+			icon: 'cult.png'
+		},
+		{
+			title: 'Пятый',
+			value: 'fifth',
+			icon: 'ch-5.png'
+		},
+		{
+			title: 'Спас',
+			value: 'spas',
+			icon: 'spas.png'
+		},
+		{
+			title: 'Пятница',
+			value: 'friday',
+			icon: 'friday.png'
+		},
+		{
+			title: 'Домашний',
+			value: 'home',
+			icon: 'home.png'
+		},
+		{
+			title: 'Рен-тв',
+			value: 'ren-tv',
+			icon: 'ren-tv.png'
+		},
+		{
+			title: 'Карусель',
+			value: 'carousel',
+			icon: 'carousel.png'
+		},
+		{
+			title: 'Первый',
+			value: 'first',
+			icon: 'ch-1.png'
+		},
+		{
+			title: 'Россия 1',
+			value: 'russia1',
+			icon: 'rus-1.png'
+		},
+		{
+			title: 'СТС',
+			value: 'sts',
+			icon: 'sts.png'
+		},
+		{
+			title: 'Культура',
+			value: 'culture',
+			icon: 'cult.png'
+		},
+		{
+			title: 'Пятый',
+			value: 'fifth',
+			icon: 'ch-5.png'
+		},
+		{
+			title: 'Спас',
+			value: 'spas',
+			icon: 'spas.png'
+		},
+		{
+			title: 'Пятница',
+			value: 'friday',
+			icon: 'friday.png'
+		},
+		{
+			title: 'Домашний',
+			value: 'home',
+			icon: 'home.png'
+		},
+		{
+			title: 'Рен-тв',
+			value: 'ren-tv',
+			icon: 'ren-tv.png'
+		},
+		{
+			title: 'Карусель',
+			value: 'carousel',
+			icon: 'carousel.png'
+		},
+		{
+			title: 'Первый',
+			value: 'first',
+			icon: 'ch-1.png'
+		},
+		{
+			title: 'Россия 1',
+			value: 'russia1',
+			icon: 'rus-1.png'
+		},
+		{
+			title: 'СТС',
+			value: 'sts',
+			icon: 'sts.png'
+		},
+		{
+			title: 'Культура',
+			value: 'culture',
+			icon: 'cult.png'
+		},
+		{
+			title: 'Пятый',
+			value: 'fifth',
+			icon: 'ch-5.png'
+		},
+		{
+			title: 'Спас',
+			value: 'spas',
+			icon: 'spas.png'
+		},
+		{
+			title: 'Пятница',
+			value: 'friday',
+			icon: 'friday.png'
+		},
+		{
+			title: 'Домашний',
+			value: 'home',
+			icon: 'home.png'
+		},
+		{
+			title: 'Рен-тв',
+			value: 'ren-tv',
+			icon: 'ren-tv.png'
+		},
+		{
+			title: 'Карусель',
+			value: 'carousel',
+			icon: 'carousel.png'
+		},
+		{
+			title: 'Первый',
+			value: 'first',
+			icon: 'ch-1.png'
+		},
+		{
+			title: 'Россия 1',
+			value: 'russia1',
+			icon: 'rus-1.png'
+		},
+		{
+			title: 'СТС',
+			value: 'sts',
+			icon: 'sts.png'
+		},
+		{
+			title: 'Культура',
+			value: 'culture',
+			icon: 'cult.png'
+		},
+		{
+			title: 'Пятый',
+			value: 'fifth',
+			icon: 'ch-5.png'
+		},
+		{
+			title: 'Спас',
+			value: 'spas',
+			icon: 'spas.png'
+		},
+		{
+			title: 'Пятница',
+			value: 'friday',
+			icon: 'friday.png'
+		},
+		{
+			title: 'Домашний',
+			value: 'home',
+			icon: 'home.png'
+		},
+		{
+			title: 'Рен-тв',
+			value: 'ren-tv',
+			icon: 'ren-tv.png'
+		},
+		{
+			title: 'Карусель',
+			value: 'carousel',
+			icon: 'carousel.png'
+		},
+	];
+-
+	var tariffs = [
+		{
+			title: 'Социальный',
+			value: 'social',
+			channels() {
+				return channels.filter((channel, idx) => (idx >= 4 && idx <= 42))
+			},
+			amount: 99,
+			additional: [
+				{
+					title: 'Для взрослых',
+					value: 'adult',
+					channels() {
+						return channels.filter((channel, idx) => (idx >= 0 && idx <= 7))
+					},
+					amount: 4,
+					duration: [
+						{
+							title: '1 месяц',
+							value: '1month',
+							price: '199 ₽'
+						},
+						{
+							title: '2 месяца',
+							value: '2month',
+							price: '280 ₽'
+						},
+					]
+				},
+				{
+					title: 'Для детей',
+					value: 'kids',
+					channels() {
+						return channels.filter((channel, idx) => (idx >= 0 && idx <= 7))
+					},
+					amount: 8,
+					duration: [
+						{
+							title: '1 месяц',
+							value: '1month',
+							price: '199 ₽'
+						},
+						{
+							title: '2 месяца',
+							value: '2month',
+							price: '280 ₽'
+						},
+					]
+				},
+			],
+			price: '99 ₽',
+		},
+		{
+			title: 'Базовый',
+			value: 'base',
+			channels() {
+				return channels.filter((channel, idx) => (idx >= 6 && idx <= 12))
+			},
+			amount: 24,
+			additional: [],
+			price: '399 ₽',
+		},
+		{
+			title: 'Открытый',
+			value: 'opened',
+			channels() {
+				return channels.filter((channel, idx) => (idx >= 12 && idx <= 32))
+			},
+			amount: 55,
+			additional: [],
+			price: '399 ₽',
+		},
+		{
+			title: 'Всё включено',
+			value: 'allInc',
+			channels() {
+				return channels.filter((channel, idx) => (idx >= 4 && idx <= 25))
+			},
+			amount: 125,
+			additional: [],
+			price: '599 ₽',
+		},
+	]
+-
+	function channelWord(word, num) {
+
+		let lastNum = +('' + num).slice(-1);
+		if (
+			(lastNum == 0)
+			||
+			(num >= 5 && num <= 19)
+			||
+			(lastNum >= 5 && lastNum <= 9)
+		) {
+			word += 'ов'
+		} else if (
+			(num >= 2 && num <= 4)
+			||
+			(lastNum >= 2 && lastNum <= 4)
+		) {
+			word += 'а'
+		}
+		return word
+	}
+
+main.order-main
+	form.tariffs.container
+		.row
+			.tariffs__left.col-12.col-md-6
+				h2.tariffs__title Доступные пакеты для покупки
+				p.tariffs__subtitle Выберите подходящий для вас пакет каналов
+					each tariff in tariffs
+						.tariff-item.js-item-state
+							label.tariff-item__label
+								input.tariff-item__input(type="radio" name="tariff" value=tariff.value)
+								span.tariff-item__title #{tariff.title}
+								span.tariff-item__duration 1 месяц
+								span.tariff-item__price (#{tariff.price})
+								i.tariff-item__icon.icon-tv-icon
+								span.tariff-item__amount #{tariff.amount}
+								span.tariff-item__amount-name.d-none.d-lg-block #{channelWord('канал', tariff.amount)}
+								button.tariff-item__expand.d-md-none(type="button" data-toggle="collapse" data-target="#collapse_" + tariff.value aria-expanded="false" aria-controls="collapseExample")
+									i.icon-caret-down
+							.d-md-none.collapse(id="collapse_" + tariff.value)
+								ul.channels-list.channels-list--main
+									each channel in tariff.channels()
+										li.channels-list__item
+											img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+
+							if tariff.additional.length > 0
+								.tariff-item__add-title
+									i.icon-masonry
+									span Дополнительные пакеты
+								.tariff-item__add-container
+									each add in tariff.additional
+										.tariff-add.js-item-state
+											.tariff-add__inner
+												label.tariff-add__label
+													input.tariff-add__input(type="checkbox" name=add.value)
+													span.tariff-add__check
+														i.icon-check-solid
+													span.tariff-add__title #{add.title}
+													i.tariff-add__icon.icon-tv-icon
+													span.tariff-add__amount #{add.amount}
+													button.tariff-add__expand.d-md-none(type="button" data-toggle="collapse" data-target="#collapse_" + add.value aria-expanded="false" aria-controls="collapseExample")
+														i.icon-caret-down
+
+												if add.duration
+													.tariff-duration
+														each dur in add.duration	
+															label.tariff-duration__label.js-item-state
+																input.tariff-duration__input(type="radio" name=add.value + "-duration" value=dur.value)
+																span.tariff-duration__title #{dur.title}
+																span.tariff-duration__price (#{dur.price})
+											.d-md-none.collapse(id="collapse_" + add.value)
+												ul.channels-list.channels-list--add
+													each channel in add.channels()
+														li.channels-list__item
+															img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+			.tariffs__right.col-12.col-md-6
+				.tariffs__not-chosen.d-none
+					.tariffs__not-chosen-content Для просмотра информации выберите пакет из списка
+				.tariffs__channels.d-none.d-md-block
+					h2.tariffs__title Основные каналы пакета Социальный
+					p.tariffs__subtitle Краткое описание выбранного пакета, умещающееся в две строчки и не выходящие за этот предел
+					ul.channels-list.channels-list--main
+						each channel in tariffs[0].channels()
+							li.channels-list__item
+								img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+					h3.tariffs__title.tariffs__title--add Дополнительные каналы 
+					ul.channels-list.channels-list--add
+						each channel in tariffs[0].additional[0].channels()
+							li.channels-list__item
+								img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+				.tariffs__submit.tariff-submit
+					button.tariff-submit__btn.buy-btn(type="submit") Оформить подписку
+					.tariff-submit__price
+						.tariff-submit__title Цена выбранных пакетов:
+						.tariff-submit__num 298 ₽
+					small.tariff-submit__descr для активации бесплатного периода, будет списана и возвращена сумма:
+						b 1₽

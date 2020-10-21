@@ -1,0 +1,118 @@
+-
+	var footer = {
+		top: {
+			prod: [
+				{
+					title: 'Бесплатный медиаплеер',
+					link: '#',
+				},
+				{
+					title: 'Фильмы онлайн',
+					link: '#',
+				},
+				{
+					title: 'IP ТВ',
+					link: '#',
+				},
+				{
+					title: 'Программа передач',
+					link: '#',
+				},
+			],
+			partners: [
+				{
+					title: 'Партнерская программа',
+					link: '#',
+				},
+				{
+					title: 'Наши партнеры',
+					link: '#',
+				},
+				{
+					title: 'Правообладателям',
+					link: '#',
+				},
+			],
+			socials: [
+				{
+					title: 'VK',
+					link: '#',
+				},
+				{
+					title: 'Facebook',
+					link: '#',
+				},
+			]
+		},
+		bottom: {
+			menu: [
+				{
+					title: 'Лицензионное соглашение',
+					link: '#',
+				},
+				{
+					title: 'Правила пользования',
+					link: '#',
+				},
+				{
+					title: 'Политики конфиденциальности',
+					link: '#',
+				},
+				{
+					title: 'Политика обработки персональных данных',
+					link: '#',
+				},
+			]
+		}
+	}
+
+footer.footer
+	.footer__top
+		.container
+			.row
+				.col-12.col-sm-6.col-md-4.col-lg-3
+					.footer-item
+						h4.footer-item__title Продукты
+						nav.footer-item__menu
+							ul.footer-item__list
+								each item in footer.top.prod
+									li.footer-item__list-item
+										a.footer-item__list-link(href=item.link) #{item.title}
+
+				.col-12.col-sm-6.col-md-4.col-lg-3
+					.footer-item
+						h4.footer-item__title Партнерство
+						nav.footer-item__menu
+							ul.footer-item__list
+								each item in footer.top.partners
+									li.footer-item__list-item
+										a.footer-item__list-link(href=item.link) #{item.title}
+
+				.col-12.col-md-4.col-lg-3
+					.footer-item
+						h4.footer-item__title Мы в соцсетях
+						ul.footer-item__socials
+							li.footer-item__socials-item
+								a.footer-item__socials-link(href="#" title="VK")
+									i.footer-item__socials-logo.icon-vk-logo
+							li.footer-item__socials-item
+								a.footer-item__socials-link(href="#" title="Facebook")
+									i.footer-item__socials-logo.icon-facebook-logo
+
+				.col-12.col-lg-3.order-lg-first
+					.footer-item.footer-copyright
+						p.footer-copyright__row
+							strong © OOO «РОСТПЭЙ»
+							|, 2016 - 2020
+						p.footer-copyright__row ОГРН: 1086168004669
+						p.footer-copyright__row +7 (863) 280-00-12
+						p.footer-copyright__row
+							a(href="mailto:info@comboplayer.ru") info@comboplayer.ru
+						
+
+						
+	.footer__bottom
+		.container
+			.footer__bottom-inner
+				each item in footer.bottom.menu
+					a.footer__bottom-item(href=item.link) #{item.title}
