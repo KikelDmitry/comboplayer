@@ -9,10 +9,14 @@
 
 	input.addEventListener('input', function () {
 		if (re.test(input.value)) {
+			inputContainer.classList.add('is-true')
+			inputContainer.classList.remove('is-false')
 			check.classList.add('is-true')
 			check.classList.remove('is-false')
 			orderErr.classList.remove('is-active')
 		} else {
+			inputContainer.classList.add('is-false')
+			inputContainer.classList.remove('is-true')
 			check.classList.add('is-false')
 			check.classList.remove('is-true')
 		}
@@ -28,7 +32,7 @@
 			orderErr.classList.add('is-active')
 			setTimeout(function() {
 				orderErr.classList.remove('is-active')
-			}, 2000)
+			}, 3000)
 		}
 	})
 }
