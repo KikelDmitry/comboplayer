@@ -1,26 +1,35 @@
 //email validate
 {
-	let input = document.querySelector('.order-panel__input'),
-		inputContainer = document.querySelector('.order-panel__email'),
-		checkTrue = document.querySelector('.order-panel__check-icon--true'),
-		checkFalse = document.querySelector('.order-panel__check-icon--false'),
-		re = /\S+@\S+\.\S+/;
+	let form = document.querySelector('.order-panel'),
+		input = form.querySelector('.order-panel__input'),
+		inputContainer = form.querySelector('.order-panel__email'),
+		check = form.querySelector('.order-panel__check'),
+		re = /\S+@\S+\.\S+/,
+		orderErr = form.querySelector('.order-panel__error');
 
 	input.addEventListener('input', function () {
 		if (re.test(input.value)) {
-			inputContainer.classList.add('is-true')
-			inputContainer.classList.remove('is-false')
-			checkTrue.classList.remove('d-none')
-			checkFalse.classList.add('d-none')
+			check.classList.add('is-true')
+			check.classList.remove('is-false')
+			orderErr.classList.remove('is-active')
 		} else {
-			inputContainer.classList.remove('is-true')
-			inputContainer.classList.add('is-false')
-			checkTrue.classList.add('d-none')
-			checkFalse.classList.remove('d-none')
+			check.classList.add('is-false')
+			check.classList.remove('is-true')
 		}
 	})
 	input.addEventListener('blur', function () {
 		inputContainer.classList.remove('is-true', 'is-false')
+	})
+	form.addEventListener('submit', function(e) {
+		e.preventDefault();
+		if (check.classList.contains('is-true')) {
+			alert('submit success')
+		} else {
+			orderErr.classList.add('is-active')
+			setTimeout(function() {
+				orderErr.classList.remove('is-active')
+			}, 2000)
+		}
 	})
 }
 

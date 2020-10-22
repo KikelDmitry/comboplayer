@@ -278,11 +278,11 @@
 			title: 'Всё включено',
 			value: 'allInc',
 			channels() {
-				return channels.filter((channel, idx) => (idx >= 4 && idx <= 25))
+				return channels
 			},
 			amount: 125,
 			additional: [],
-			price: '599 ₽',
+			//- price: '599 ₽',
 		},
 	]
 -
@@ -318,8 +318,9 @@ main.order-main
 							label.tariff-item__label
 								input.tariff-item__input(type="radio" name="tariff" value=tariff.value)
 								span.tariff-item__title #{tariff.title}
-								span.tariff-item__duration 1 месяц
-								span.tariff-item__price (#{tariff.price})
+								if tariff.price
+									span.tariff-item__duration 1 месяц
+									span.tariff-item__price (#{tariff.price})
 								i.tariff-item__icon.icon-tv-icon
 								span.tariff-item__amount #{tariff.amount}
 								span.tariff-item__amount-name.d-none.d-lg-block #{channelWord('канал', tariff.amount)}
