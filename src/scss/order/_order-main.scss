@@ -40,7 +40,7 @@ $form-trans: 200ms;
 		.tariffs__subtitle {
 			margin-bottom: 18px;
 			color: $color-steel-8;
-			
+
 			@include media-breakpoint-up(md) {
 				margin-bottom: 40px;
 			}
@@ -64,8 +64,6 @@ $form-trans: 200ms;
 			margin-bottom: 20px;
 			color: inherit;
 			overflow: hidden;
-
-			
 		}
 	}
 	&__title {
@@ -73,6 +71,10 @@ $form-trans: 200ms;
 		font-family: $addFont;
 		font-size: 25px;
 		font-weight: normal;
+
+		span {
+			font-weight: bold;
+		}
 	}
 	&__subtitle {
 		line-height: 125%;
@@ -159,6 +161,9 @@ $form-trans: 200ms;
 
 		@include media-breakpoint-up(md) {
 			padding: 16px;
+		}
+		&:hover {
+			background-color: lighten($color-steel-3, 5%);
 		}
 	}
 	&__input {
@@ -317,8 +322,11 @@ $form-trans: 200ms;
 			top: 0;
 			left: 0;
 			bottom: 0;
-			background-color: #496e7f;
+			background-color: $color-steel-3;
 			transition: inherit;
+		}
+		&:hover {
+			background-color: lighten($color-steel-05, 2%);
 		}
 	}
 	&__label {
@@ -429,6 +437,7 @@ $form-trans: 200ms;
 		display: block;
 		padding-left: 37px;
 		margin-bottom: 0;
+		background-color: $color-steel-05;
 		border-radius: 4px;
 		transition: background-color $form-trans;
 
@@ -436,6 +445,9 @@ $form-trans: 200ms;
 			background-color: $color-steel-1;
 		}
 
+		&:hover {
+			background-color: lighten($color-steel-05, 5%);
+		}
 		// duration item active state
 		&.is-active {
 			background-color: $color-apple-deep-5;
@@ -494,6 +506,11 @@ $form-trans: 200ms;
 		@include media-breakpoint-up(md) {
 			color: $color-cobalt-1;
 		}
+		&::after {
+			content: "*";
+			color: $color-cyan-deep-5;
+			padding-left: 0.2em;
+		}
 	}
 	&__descr {
 		padding-top: 10px;
@@ -535,6 +552,14 @@ $form-trans: 200ms;
 
 			@include media-breakpoint-up(md) {
 				background-color: $color-cyan-deep-7;
+			}
+		}
+		a {
+			font-weight: bold;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
 			}
 		}
 		b {

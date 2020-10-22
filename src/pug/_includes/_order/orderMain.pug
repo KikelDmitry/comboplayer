@@ -310,7 +310,7 @@
 main.order-main
 	form.tariffs.container
 		.row
-			.tariffs__left.col-12.col-md-6
+			.tariffs__left.col-12.col-md-6#accordion
 				h2.tariffs__title Доступные пакеты для покупки
 				p.tariffs__subtitle Выберите подходящий для вас пакет каналов
 					each tariff in tariffs
@@ -326,7 +326,7 @@ main.order-main
 								span.tariff-item__amount-name.d-none.d-lg-block #{channelWord('канал', tariff.amount)}
 								button.tariff-item__expand.d-md-none(type="button" data-toggle="collapse" data-target="#collapse_" + tariff.value aria-expanded="false" aria-controls="collapseExample")
 									i.icon-caret-down
-							.d-md-none.collapse(id="collapse_" + tariff.value)
+							.d-md-none.collapse(id="collapse_" + tariff.value data-parent="#accordion")
 								ul.channels-list.channels-list--main
 									each channel in tariff.channels()
 										li.channels-list__item
@@ -366,7 +366,8 @@ main.order-main
 				.tariffs__not-chosen.d-none
 					.tariffs__not-chosen-content Для просмотра информации выберите пакет из списка
 				.tariffs__channels.d-none.d-md-block
-					h2.tariffs__title Основные каналы пакета Социальный
+					h2.tariffs__title Основные каналы пакета 
+						span Социальный
 					p.tariffs__subtitle Краткое описание выбранного пакета, умещающееся в две строчки и не выходящие за этот предел
 					ul.channels-list.channels-list--main
 						each channel in tariffs[0].channels()
@@ -384,3 +385,5 @@ main.order-main
 						.tariff-submit__num 298 ₽
 					small.tariff-submit__descr для активации бесплатного периода, будет списана и возвращена сумма:
 						b 1₽
+						| . 
+						a(href="#") Подробно

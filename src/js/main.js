@@ -44,7 +44,7 @@
 		itemStates = form.querySelectorAll('.js-item-state');
 
 	function getChecks() {
-		let checkeds = [...inputs].filter(function (input) {
+		let checkeds = Array.from(inputs).filter(function (input) {
 			return input.checked
 		})
 		itemStates.forEach(function (item) {

@@ -35,6 +35,9 @@
 			&:not(:last-child) {
 				margin-right: 25px;
 			}
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }
@@ -63,6 +66,8 @@
 		}
 	}
 	&__socials {
+		$social-trans: 200ms;
+
 		display: flex;
 		flex-flow: row wrap;
 
@@ -78,9 +83,19 @@
 			align-items: center;
 			background-color: $color-apple-9;
 			border-radius: 4px;
+			transition: background-color $social-trans;
+
+			&:hover {
+				background-color: $color-apple-deep-5;
+
+				.footer-item__socials-logo {
+					color: $color-apple-9;
+				}
+			}
 		}
 		&-logo {
 			color: $color-apple-deep-5;
+			transition: color $social-trans;
 		}
 	}
 }

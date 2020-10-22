@@ -51,7 +51,7 @@ body {
 	&:active {
 		background: #009F6B;
 	}
-	&:focus-visible {
-		outline: 2px solid red;
+	&:focus {
+		outline: 0;
 	}
 }
