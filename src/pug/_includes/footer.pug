@@ -92,12 +92,10 @@ footer.footer
 					.footer-item
 						h4.footer-item__title Мы в соцсетях
 						ul.footer-item__socials
-							li.footer-item__socials-item
-								a.footer-item__socials-link(href="#" title="VK")
-									i.footer-item__socials-logo.icon-vk-logo
-							li.footer-item__socials-item
-								a.footer-item__socials-link(href="#" title="Facebook")
-									i.footer-item__socials-logo.icon-facebook-logo
+							each item in footer.top.socials
+								li.footer-item__socials-item
+									a.footer-item__socials-link(href=item.link title=item.title aria-label=item.title)
+										i.footer-item__socials-logo(class="icon-" + item.title.toLowerCase() + "-logo")
 
 				.col-12.col-lg-3.order-lg-first
 					.footer-item.footer-copyright
