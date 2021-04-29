@@ -1,15 +1,41 @@
+-
+	var menu = [
+		{
+			title: 'Combo TV',
+			link: 'order.html',
+		},
+		{
+			title: 'ТВ-программа',
+			link: '#',
+		},
+		{
+			title: 'Фильмы онлайн',
+			link: '#',
+		},
+	]
+
 header.header
-	.container
-		.row.align-items-center
-			.col-6.col-md-3
+	.container-xl
+		.row
+			.col-auto
 				a.header__logo(href="/")
 					h1.visually-hidden Comboplayer
 					img(src="/img/logo.svg" alt="comboplayer logo")
-
-			.d-none.d-md-block.col-md-6
+			.d-flex.col-auto.ml-auto.pr-0.position-static
+				nav.header__menu
+					each item in menu
+						a.header__menu-item(href=item.link) #{item.title}
+				a.header__login(href="#" aria-label="Вход")
+						i.icon-login
+						span Вход
+				.header__burger.d-md-none
+					button.header__burger-btn(type="button" aria-label="Открыть меню")
+						i.icon-burger
+						
+			//- .d-none.d-md-block.col-md-6
 				.header__slogan Смотрите бесплатно ТВ онлайн
 					
-			.col-6.col-md-3
+			//- .col-6.col-md-3.ml-auto
 				a.header__phone(href="tel:+78632800012")
 					b +7 (863) 
 					| 280-00-12

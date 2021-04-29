@@ -1,9 +1,13 @@
 .header {
+	$header-border: 1px solid $color-steel-dull-9;
 	--height: 47px;
+
 	height: var(--height);
 	color: $color-cobalt-1;
 	background-color: $color-white;
-	border-bottom: 1px solid $color-steel-dull-9;
+	border-bottom: $header-border;
+	font-family: $addFont;
+	// overflow: hidden;
 
 	@include media-breakpoint-up(sm) {
 		--height: 52px;
@@ -12,6 +16,7 @@
 		--height: 84px;
 	}
 	&__logo {
+		min-width: 140px;
 		display: flex;
 		height: var(--height);
 		align-items: center;
@@ -22,37 +27,140 @@
 		}
 		@include media-breakpoint-up(lg) {
 			padding: 12px 0;
+			min-width: 220px;
 		}
 		img {
 			max-width: none;
 			max-height: 100%;
 		}
 	}
-	&__slogan {
-		font-family: $addFont;
-		font-size: 16px;
+	&__menu {
+		display: flex;
 
-		@include media-breakpoint-up(lg) {
-			font-size: 20px;
+		// mobile menu
+		flex-direction: column;
+		position: absolute;
+		z-index: 100;
+		top: var(--height);
+		left: 0;
+		right: 0;
+		background-color: $color-cobalt-1;
+		transform: translateX(-100%);
+		will-change: transform;
+		transition: transform 300ms;
+
+		@include media-breakpoint-up(md) {
+			// regular menu
+			position: static;
+			flex-direction: row;
+			justify-content: flex-end;
+			height: var(--height);
+			border-left: $header-border;
+			background-color: transparent;
+			transform: none;
+		}
+		&.is-active {
+			transform: translateX(0);
+		}
+
+		&-item {
+			// mobile menu
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			height: var(--height);
+			padding: 14px 16px;
+			padding-left: 60px;
+			font-size: 16px;
+			font-family: $mainFont;
+			color: $color-white;
+			
+			&:not(:last-child) {
+				// mobile menu
+				border-bottom: 1px solid $color-cobalt-3;
+
+				@include media-breakpoint-up(md) {
+					// regular menu
+					border-bottom: 0;
+				}
+			}
+			
+			@include media-breakpoint-up(md) {
+				// regular menu
+				justify-content: center;
+				padding-left: 16px;
+				border-right: $header-border;
+				color: inherit;
+			}
+			@include media-breakpoint-up(lg) {
+				font-size: 19px;
+				font-family: $addFont;
+			}
+			&:hover {
+				background-color: $color-cobalt-3;
+				color: $color-white;
+
+				// regular menu
+				@include media-breakpoint-up(md) {
+					color: lighten($color-cobalt-1, 5%);
+					background-color: darken($color-white, 5%);
+				}
+			}
 		}
 	}
-	&__phone {
-		display: block;
+	&__login {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		height: var(--height);
-		font-family: $addFont;
+		padding: 14px 16px;
 		font-size: 16px;
-		line-height: var(--height);
-		text-align: center;
-		border: 1px solid $color-steel-dull-9;
-		border-top: 0;
-		border-bottom: 0;
-		white-space: nowrap;
-
+		background-repeat: no-repeat;
+		border-left: $header-border;
+		border-right: $header-border;
+		
+		@include media-breakpoint-up(md) {
+			border-right: 0;
+			border-left: 0;
+		}
 		@include media-breakpoint-up(lg) {
-			font-size: 22px;
+			font-size: 19px;
+			font-family: $addFont;
 		}
 		@include media-breakpoint-up(xl) {
-			font-size: 24px;
+			border-right: $header-border;
+		}
+		&:hover {
+			color: lighten($color-cobalt-1, 5%);
+			background-color: darken($color-white, 5%);
+		}
+		i {
+			color: $color-apple-deep-4;
+			font-size: 16px;
+		}
+		span {
+			display: none;
+			margin-left: 8px;
+
+			@include media-breakpoint-up(sm) {
+				display: inline;
+			}
+		}
+	}
+	&__burger {
+		width: var(--height);
+		height: var(--height);
+		color: #c74848;
+		font-size: 12.74px;
+
+		button {
+			width: 100%;
+			height: 100%;
+			transition: background-color 300ms, color 300ms;
+			&.is-active {
+				background-color: $color-cobalt-1;
+				color: $color-white;
+			}
 		}
 	}
 }

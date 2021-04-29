@@ -1,0 +1,43 @@
+-
+	var slides = [
+		{
+			title: 'Телевидение онлайн',
+			descr: 'Достаточно просто установить <strong>ComboPlayer</strong>, никаких настроек и поиска кодеков не потребуется — все необходимое устанавливается автоматически вместе с программой.',
+			poster: 'someimg.jpg',
+			tags: [
+				'18+',
+				'Новинка',
+				'Премьера',
+			]
+		},
+		{
+			title: 'Телевидение онлайн',
+			descr: 'Достаточно просто установить <strong>ComboPlayer</strong>, никаких настроек и поиска кодеков не потребуется — все необходимое устанавливается автоматически вместе с программой.',
+			poster: 'someimg.jpg',
+			tags: [
+				'18+',
+				'Новинка',
+				'Премьера',
+			]
+		},
+		{
+			title: 'Майор Гном',
+			descr: 'Достаточно просто установить <strong>ComboPlayer</strong>, никаких настроек и поиска кодеков не потребуется — все необходимое устанавливается автоматически вместе с программой.',
+			poster: 'someimg.jpg',
+			tags: [
+				'18+',
+				'Новинка',
+				'Премьера',
+			]
+		},
+	]
+
+section.top-slider
+	.top-slider__container.col-12.p-0.owl-carousel
+		each slide in slides
+			.top-slider__item
+				h2 #{slide.title}
+	button(type="button" aria-label="Предыдущий элемент").top-slider__nav.top-slider__nav--left
+		i.icon-caret-down
+	button(type="button" aria-label="Следующий элемент").top-slider__nav.top-slider__nav--right
+		i.icon-caret-down

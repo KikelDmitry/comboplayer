@@ -45,32 +45,34 @@
 
 // order form
 {
-	let form = document.querySelector('.tariffs'),
-		inputs = form.querySelectorAll('input'),
-		itemStates = form.querySelectorAll('.js-item-state');
+	let form = document.querySelector('.tariffs');
+	if (form) {
+		let inputs = form.querySelectorAll('input'),
+			itemStates = form.querySelectorAll('.js-item-state');
 
-	function getChecks() {
-		let checkeds = Array.from(inputs).filter(function (input) {
-			return input.checked
-		})
-		itemStates.forEach(function (item) {
-			item.classList.remove('is-active')
-		})
-		checkeds.forEach(function (checked) {
-			checked.closest('.js-item-state').classList.add('is-active')
-		})
+		function getChecks() {
+			let checkeds = Array.from(inputs).filter(function (input) {
+				return input.checked
+			})
+			itemStates.forEach(function (item) {
+				item.classList.remove('is-active')
+			})
+			checkeds.forEach(function (checked) {
+				checked.closest('.js-item-state').classList.add('is-active')
+			})
+
+			inputs.forEach(function (input) {
+				input.addEventListener('change', getChecks)
+			})
+		}
 	}
-
-	inputs.forEach(function (input) {
-		input.addEventListener('change', getChecks)
-	})
 }
+// sticky panel fallback
 {
-	// sticky panel fallback
 	$(window).scroll(function () {
 		let header = $('.header'),
-		 offset = header.height(),
-		sticky = $('.order-sticky');
+			offset = header.height(),
+			sticky = $('.order-sticky');
 		if ($(window).scrollTop() > offset) {
 			header.css({
 				marginBottom: sticky.height()
@@ -87,4 +89,34 @@
 			});
 		}
 	})
+}
+
+// mobile menu
+{
+	let burger = document.querySelector('.header__burger-btn');
+	function mobileMenuOpen() {
+		let menu = document.querySelector('.header__menu');
+		burger.classList.toggle('is-active');
+
+		if (burger.classList.contains('is-active')) {
+			// open action
+			menu.classList.add('is-active')
+			burger.setAttribute('aria-label', 'Закрыть меню')
+		} else {
+			// close action
+			menu.classList.remove('is-active')
+			burger.setAttribute('aria-label', 'Открыть меню')
+		}
+	}
+	burger.addEventListener('click', mobileMenuOpen)
+}
+// owl carousel
+{
+	$(document).ready(function () {
+		$('.owl-carousel').owlCarousel({
+			items: 1,
+			nav: false,
+			dots: false
+		});
+	});
 }
