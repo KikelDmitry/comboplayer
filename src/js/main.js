@@ -112,11 +112,17 @@
 }
 // owl carousel
 {
-	$(document).ready(function () {
-		$('.owl-carousel').owlCarousel({
-			items: 1,
-			nav: false,
-			dots: false
-		});
-	});
+	// $(document).ready(function () {
+	// 	$('.owl-carousel').owlCarousel({
+	// 		responsive: {
+
+	// 		},
+	// 		items: 1,
+	// 		nav: false,
+	// 		dots: false,
+	// 		// stagePadding: 150,
+	// 		loop: true,
+	// 		margin: 15
+	// 	});
+	// });
 }
