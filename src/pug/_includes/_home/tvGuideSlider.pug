@@ -1,0 +1,53 @@
+-
+	var data = {
+		title: 'Программа передач на ТВ каналы',
+		buttons: [
+			'Сейчас на ТВ',
+			'Сегодня',
+		],
+	};
+-
+	var programms = [
+		{
+			channel: 'channel_ch-1.png',
+			poster: 'male-female.png',
+			time: '16:05',
+			title: 'Мужское/женское',
+		},
+		{
+			channel: 'channel_ch-5.png',
+			poster: 'bro.png',
+			time: '18:10',
+			title: 'Брат за брата',
+		},
+		{
+			channel: 'channel_match-tv.png',
+			poster: 'fitness.png',
+			time: '22:10',
+			title: 'Фитнес',
+		},
+	];
+
+section.tv-guide-slider
+	.container-xl
+		.programm-slider
+			.programm-slider__header
+				h2.programm-slider__title #{data.title}
+				.programm-slider__category
+					each btn, idx in data.buttons
+						button.programm-slider__tab-nav(type="button" class=(idx == 1 ? 'is-active': '')) #{btn}
+			.programm-slider__body
+				each programm in programms
+					.programm-item
+						.programm-item__poster
+							img(src="/img/content/programms/" + programm.poster alt=programm.title)
+						.programm-item__overlay
+						.programm-item__play
+							i.icon-play
+						.programm-item__channel
+							img(src="/img/content/channels/" + programm.channel alt="Название канала")
+						footer.programm-item__footer
+							.programm-item__time #{programm.time}
+							h3.programm-item__title #{programm.title}
+						.programm-item__progress
+							.programm-item__progress-bar(style="width:60%")

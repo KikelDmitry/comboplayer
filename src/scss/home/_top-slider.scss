@@ -28,10 +28,14 @@
 		background-color: rgba(255, 255, 255, 0.75);
 		border-radius: 5px;
 		box-shadow: $shadow-md;
-		transition: background-color 300ms;
+		transition: background-color 100ms, color 100ms;
 
 		&:hover {
 			background-color: $color-white;
+		}
+		&:active {
+			background-color: $color-cobalt-3;
+			color: $color-white;
 		}
 		&--left {
 			left: 0;
@@ -81,23 +85,12 @@
 		align-items: center;
 		background-repeat: no-repeat;
 		background-size: 0 0;
-		flex: 2 1 auto;
+		background-position: center center;
+		flex: 1 1 auto;
 
 		@include media-breakpoint-up(sm) {
-			flex-shrink: 0;
-			max-width: 348px;
 			background-size: cover;
 		}
-		@include media-breakpoint-up(md) {
-			max-width: 525px;
-		}
-		@include media-breakpoint-up(lg) {
-			max-width: 590px;
-		}
-		@include media-breakpoint-up(xl) {
-			max-width: 782px;
-		}
-
 		img {
 			width: 100%;
 			height: 100%;
@@ -109,6 +102,8 @@
 		color: $color-white;
 		font-size: 15px;
 		line-height: 125%;
+		max-width: 440px;
+		text-shadow: 0 0 1px #000;
 
 		@include media-breakpoint-up(sm) {
 			padding-right: 40px;
@@ -133,8 +128,7 @@
 		overflow: hidden;
 
 		@include media-breakpoint-up(sm) {
-			flex-grow: 1;
-			flex-shrink: 1;
+			width: 228px;
 			position: relative;
 			display: flex;
 			justify-content: flex-start;
@@ -142,10 +136,15 @@
 			padding: 30px 20px;
 			font-size: 25px;
 		}
+		@include media-breakpoint-up(md) {
+			width: 243px;
+		}
 		@include media-breakpoint-up(lg) {
+			width: 402px;
 			font-size: 35px;
 		}
 		@include media-breakpoint-up(xl) {
+			width: 363px;
 			font-size: 40px;
 		}
 		&-text {

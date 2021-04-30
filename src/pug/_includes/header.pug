@@ -23,7 +23,7 @@ header.header
 					img(src="/img/logo.svg" alt="comboplayer logo")
 			.d-flex.col-auto.ml-auto.pr-0.pr-xl-3.position-static
 				nav.header__menu
-					each item in menu
+					each item, idx in menu
 						a.header__menu-item(href=item.link) #{item.title}
 				a.header__login(href="#" aria-label="Вход")
 						i.icon-login

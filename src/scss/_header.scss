@@ -74,7 +74,7 @@
 			font-size: 16px;
 			font-family: $mainFont;
 			color: $color-white;
-			
+
 			&:not(:last-child) {
 				// mobile menu
 				border-bottom: 1px solid $color-cobalt-3;
@@ -84,7 +84,7 @@
 					border-bottom: 0;
 				}
 			}
-			
+
 			@include media-breakpoint-up(md) {
 				// regular menu
 				justify-content: center;
@@ -102,9 +102,17 @@
 
 				// regular menu
 				@include media-breakpoint-up(md) {
-					color: lighten($color-cobalt-1, 5%);
-					background-color: darken($color-white, 5%);
+					color: $color-white;
+					background-color: $color-cobalt-4;
 				}
+			}
+			&:active,
+			&.is-active {
+				color: $color-steel-4;
+				background-color: $color-steel-dull-85;
+			}
+			&.is-active {
+				pointer-events: none;
 			}
 		}
 	}
@@ -118,7 +126,7 @@
 		background-repeat: no-repeat;
 		border-left: $header-border;
 		border-right: $header-border;
-		
+
 		@include media-breakpoint-up(md) {
 			border-right: 0;
 			border-left: 0;
@@ -131,8 +139,16 @@
 			border-right: $header-border;
 		}
 		&:hover {
-			color: lighten($color-cobalt-1, 5%);
-			background-color: darken($color-white, 5%);
+			color: $color-white;
+			background-color: $color-cobalt-4;
+
+			i {
+				color: $color-cobalt-deep-8;
+			}
+		}
+		&:active {
+			color: $color-steel-4;
+			background-color: $color-steel-dull-85;
 		}
 		i {
 			color: $color-apple-deep-4;

@@ -112,17 +112,21 @@
 }
 // owl carousel
 {
-	// $(document).ready(function () {
-	// 	$('.owl-carousel').owlCarousel({
-	// 		responsive: {
+	$(document).ready(function () {
+		$('.owl-carousel').owlCarousel({
+			responsive: {
 
-	// 		},
-	// 		items: 1,
-	// 		nav: false,
-	// 		dots: false,
-	// 		// stagePadding: 150,
-	// 		loop: true,
-	// 		margin: 15
-	// 	});
-	// });
+			},
+			items: 1,
+			nav: true,
+			navElement: 'button',
+			navClass: ['top-slider__nav top-slider__nav--left', 'top-slider__nav top-slider__nav--right'],
+			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
+			dots: false,
+			// stagePadding: 300,
+			loop: true,
+			// autoWidth: true,
+			center: true
+		});
+	});
 }
