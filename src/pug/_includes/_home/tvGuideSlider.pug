@@ -15,6 +15,12 @@
 			title: 'Мужское/женское',
 		},
 		{
+			channel: 'channel_sts.png',
+			//- poster: 'undefined.png',
+			time: '04:20',
+			title: 'Телепедерача без постера',
+		},
+		{
 			channel: 'channel_ch-5.png',
 			poster: 'bro.png',
 			time: '18:10',
@@ -40,10 +46,14 @@ section.tv-guide-slider
 				each programm in programms
 					.programm-item
 						.programm-item__poster
-							img(src="/img/content/programms/" + programm.poster alt=programm.title)
+							if programm.poster
+								img(src="/img/content/programms/" + programm.poster alt=programm.title)
+							else
+								img(src="/img/tv-dummy.png" alt=programm.title)
 						.programm-item__overlay
-						.programm-item__play
-							i.icon-play
+							.programm-item__overlay-dimmer
+							.programm-item__overlay-play
+								i.icon-play
 						.programm-item__channel
 							img(src="/img/content/channels/" + programm.channel alt="Название канала")
 						footer.programm-item__footer

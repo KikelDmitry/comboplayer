@@ -98,12 +98,16 @@
 	}
 	&:hover {
 		.programm-item__overlay {
-			background-image: linear-gradient(180deg, rgba(37, 64, 76, 0.5) 0%, #25404c 100%);
-		}
-		.programm-item__play {
-			visibility: visible;
-			opacity: 1;
-			transform: translate(-50%, -50%) scale(1);
+			
+			&-dimmer {
+				visibility: visible;
+				opacity: 1;
+			}
+			&-play {
+				visibility: visible;
+				opacity: 1;
+				transform: scale(1);
+			}
 		}
 	}
 	&__poster {
@@ -127,48 +131,58 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
-		// background-image: linear-gradient(180deg, rgba(37, 64, 76, 0) 0, $color-steel-05 100%);
-		// background-repeat: no-repeat;
-		// background-size: 100% 60%;
-		// background-position: left bottom;
-		background-image:  linear-gradient(180deg, rgba(37, 64, 76, 0) 59.37%, $color-steel-05 100%);
-		border-radius: inherit;
-	}
-	&__play {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 50px;
-		height: 50px;
 		display: flex;
-		transform: translate(-50%, -50%) scale(0.8);
-		background-color: rgba(25, 54, 69, 0.5);
-		border-radius: 50%;
+		border-radius: inherit;
+		background-image: linear-gradient(180deg, rgba(37, 64, 76, 0) 59.37%, $color-steel-05 100%);
+		// transition: all 300ms;
 
-		visibility: hidden;
-		opacity: 0;
-		transition: all 300ms;
+		&-dimmer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: inherit;
+			background-image: linear-gradient(180deg, rgba(37, 64, 76, 0.5) 0%, #25404c 100%);
 
-		@include media-breakpoint-up(sm) {
-			width: 60px;
-			height: 60px;
+			visibility: hidden;
+			opacity: 0;
+			transition: all 300ms;
 		}
-		@include media-breakpoint-up(lg) {
-			width: 75px;
-			height: 75px;
-		}
-		i {
-			background: $green-grad;
-			color: transparent;
-			background-clip: text;
+		&-play {
+			width: 50px;
+			height: 50px;
 			margin: auto;
-			filter: drop-shadow(0 0 28px rgba(52, 229, 193, 0.66));
+			display: flex;
+			transform: scale(0.5);
+			background-color: rgba(25, 54, 69, 0.5);
+			border-radius: 50%;
+
+			visibility: hidden;
+			opacity: 0;
+			transition: all 300ms;
 
 			@include media-breakpoint-up(sm) {
-				font-size: 19px;
+				width: 60px;
+				height: 60px;
 			}
 			@include media-breakpoint-up(lg) {
-				font-size: 24px;
+				width: 75px;
+				height: 75px;
+			}
+			i {
+				background: $green-grad;
+				color: transparent;
+				background-clip: text;
+				margin: auto;
+				filter: drop-shadow(0 0 28px rgba(52, 229, 193, 0.66));
+
+				@include media-breakpoint-up(sm) {
+					font-size: 19px;
+				}
+				@include media-breakpoint-up(lg) {
+					font-size: 24px;
+				}
 			}
 		}
 	}
