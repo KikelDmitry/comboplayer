@@ -1,0 +1,46 @@
+-
+	var data = {
+		title: 'Плеер',
+		subtitle: '<strong>Смотрите ТВ онлайн</strong> бесплатно',
+		requirements: {
+			title: 'Cистемные требования:',
+			text: 'ОС Windows Vista и выше, 1024 Мб ОЗУ, 350 Мб свободного пространства HDD',
+		},
+		advantages: {
+			title: 'Преимущества плеера',
+			list: [
+				'Просмотр ТВ каналов',
+				'Слушать музыку',
+				'Воспроизведение видеофайлов',
+				'Слушать радио',
+				'Виджет просмотра поверх всех окон',
+			]
+		},
+		button: 'Скачать Comboplayer',
+		version: 'Версия: <span>3.0.1</span>',
+	};
+
+section.download-block.d-none.d-lg-block
+	.container-xl
+		.row
+			.col-3
+				h2.download-block__title #{data.title}
+				.download-block__subtitle.row.align-items-center
+					.col-4
+						.download-block__icon
+							img(src="/img/tv-icon.svg" alt="tv icon")
+					.col-8
+						| !{data.subtitle}
+				.download-block__requirements
+					.download-block__requirements-title #{data.requirements.title}
+					.download-block__requirements-text #{data.requirements.text}
+			.col-5
+				img.download-block__img(src="/img/app-interface-view.png", alt="comboplayer interface view")
+			.col-4
+				.download-block__advantages
+					h3.download-block__advantages-title #{data.advantages.title}
+					ul.download-block__advantages-list
+						each item in data.advantages.list
+							li.download-block__advantages-item #{item}
+				a.download-block__btn.buy-btn(href="#" download) #{data.button}
+				.download-block__version !{data.version}

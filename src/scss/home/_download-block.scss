@@ -1,0 +1,102 @@
+.download-block {
+	min-height: 335px;
+	padding: 40px 0;
+
+	&__title {
+		margin-bottom: 40px;
+		color: $color-cobalt-1;
+		font-family: $addFont;
+		font-size: 25px;
+		font-weight: normal;
+		line-height: 100%;
+
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 48px;
+		}
+	}
+	&__subtitle {
+		margin-bottom: 38px;
+		font-family: $addFont;
+		letter-spacing: -0.01em;
+		font-size: 18px;
+		line-height: 110%;
+		color: #0ab0b0;
+
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 50px;
+		}
+
+		strong {
+			color: $color-steel-2;
+			font-weight: normal;
+		}
+	}
+	&__requirements {
+		font-size: 15px;
+		line-height: 125%;
+
+		&-title {
+			color: $color-cobalt-1;
+		}
+		&-text {
+			color: $color-steel-3;
+		}
+	}
+	&__img {
+		border-radius: 8px;
+	}
+	&__advantages {
+		&-title {
+			margin-top: 4px;
+			margin-bottom: 11px;
+			padding-left: 30px;
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 32px;
+			letter-spacing: -0.01em;
+			color: $color-cobalt-1;
+		}
+		&-list {
+			margin-bottom: 24px;
+		}
+		&-item {
+			display: flex;
+			align-items: center;
+			color: $color-steel-2;
+			font-size: 15px;
+			line-height: 135%;
+			letter-spacing: -0.01em;
+
+			&::before {
+				content: "";
+				flex: 0 0 auto;
+				width: 12px;
+				height: 2px;
+				margin-right: 18px;
+				background-color: $color-cyan-deep-7;
+			}
+		}
+	}
+	&__btn {
+		height: 50px;
+		margin-left: 30px;
+		margin-bottom: 16px;
+		font-size: 20px;
+		font-weight: bold;
+
+		&:hover {
+			color: $color-white;
+		}
+	}
+	&__version {
+		padding-left: 30px;
+		font-size: 15px;
+		line-height: 125%;
+		letter-spacing: -0.01em;
+		color: $color-cobalt-1;
+
+		span {
+			color: $color-steel-3;
+		}
+	}
+}
