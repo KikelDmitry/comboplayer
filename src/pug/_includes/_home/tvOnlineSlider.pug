@@ -42,7 +42,7 @@ section.tv-online-slider
 				.programm-slider__category
 					each btn, idx in data.buttons
 						button.programm-slider__tab-nav(type="button" class=(idx == 0 ? 'is-active': '')) #{btn}
-			.programm-slider__body
+			.programm-slider__body.items-carousels.owl-carousel
 				each programm in programms
 					.programm-item
 						.programm-item__poster

@@ -112,12 +112,12 @@
 }
 // owl carousel
 {
-	$(document).ready(function () {
-		$('.owl-carousel').owlCarousel({
-			responsive: {
+	let bannerSlider = $('.top-slider__container'),
+		itemsCarousels = $('.items-carousels');
 
-			},
-			items: 1,
+	itemsCarousels.each(function () {
+		$(this).owlCarousel({
+			items: 5,
 			nav: true,
 			navElement: 'button',
 			navClass: ['top-slider__nav top-slider__nav--left', 'top-slider__nav top-slider__nav--right'],
@@ -125,8 +125,26 @@
 			dots: false,
 			// stagePadding: 300,
 			loop: true,
+			margin: 0,
 			// autoWidth: true,
-			center: true
-		});
-	});
+			// center: true
+		})
+	})
+	// $(document).ready(function () {
+	// 	$('.movies-slider__body').owlCarousel({
+	// 		responsive: {
+
+	// 		},
+	// 		items: 5,
+	// 		nav: true,
+	// 		navElement: 'button',
+	// 		navClass: ['top-slider__nav top-slider__nav--left', 'top-slider__nav top-slider__nav--right'],
+	// 		navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
+	// 		dots: false,
+	// 		// stagePadding: 300,
+	// 		loop: true,
+	// 		// autoWidth: true,
+	// 		center: true
+	// 	});
+	// });
 }
