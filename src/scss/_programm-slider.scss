@@ -25,17 +25,12 @@
 		}
 	}
 	&__title {
-		font-size: 20px;
-		line-height: 100%;
 		color: $color-cobalt-1;
 		margin-bottom: 8px;
 
 		@include media-breakpoint-up(sm) {
 			margin-right: 1em;
 			margin-bottom: 0;
-		}
-		@include media-breakpoint-up(lg) {
-			font-size: 25px;
 		}
 	}
 	&__category {
@@ -98,7 +93,6 @@
 	}
 	&:hover {
 		.programm-item__overlay {
-			
 			&-dimmer {
 				visibility: visible;
 				opacity: 1;
@@ -111,11 +105,7 @@
 		}
 	}
 	&__poster {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		@include absoluteFull;
 		border-radius: inherit;
 
 		img {
@@ -126,22 +116,14 @@
 		}
 	}
 	&__overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		@include absoluteFull;
 		display: flex;
 		border-radius: inherit;
 		background-image: linear-gradient(180deg, rgba(37, 64, 76, 0) 59.37%, $color-steel-05 100%);
 		// transition: all 300ms;
 
 		&-dimmer {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
+			@include absoluteFull;
 			border-radius: inherit;
 			background-image: linear-gradient(180deg, rgba(37, 64, 76, 0.5) 0%, #25404c 100%);
 

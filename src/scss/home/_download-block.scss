@@ -5,10 +5,6 @@
 	&__title {
 		margin-bottom: 40px;
 		color: $color-cobalt-1;
-		font-family: $addFont;
-		font-size: 25px;
-		font-weight: normal;
-		line-height: 100%;
 
 		@include media-breakpoint-up(xl) {
 			margin-bottom: 48px;

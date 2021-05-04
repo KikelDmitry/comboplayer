@@ -1,81 +1,108 @@
 {
   "selection": [
     {
-      "order": 9,
-      "name": "caret-down"
+      "order": 26,
+      "name": "caret-down",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "caret-up"
+      "order": 27,
+      "name": "caret-up",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "check-solid"
+      "order": 28,
+      "name": "check-solid",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "exclamation-triangle-solid"
+      "order": 29,
+      "name": "exclamation-triangle-solid",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "facebook-logo"
+      "order": 30,
+      "name": "facebook-logo",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "play-plus"
+      "order": 31,
+      "name": "play-plus",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "kinopoisk-logo"
+      "order": 32,
+      "name": "kinopoisk-logo",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "login"
+      "order": 33,
+      "name": "login",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "play"
+      "order": 34,
+      "name": "play",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "plus-square-solid"
+      "order": 35,
+      "name": "plus-square-solid",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "shopping-cart"
+      "order": 36,
+      "name": "shopping-cart",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "close"
+      "order": 37,
+      "name": "close",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "tv-icon"
+      "order": 38,
+      "name": "tv-icon",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "burger"
+      "order": 39,
+      "name": "burger",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "masonry"
+      "order": 40,
+      "name": "masonry",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "logout"
+      "order": 41,
+      "name": "logout",
+      "prevSize": 32
     },
     {
-      "order": 0,
-      "name": "vk-logo"
+      "order": 42,
+      "name": "vk-logo",
+      "prevSize": 32
+    },
+    {
+      "order": 43,
+      "name": "ruble",
+      "prevSize": 32
+    },
+    {
+      "order": 44,
+      "name": "playback",
+      "prevSize": 32
     }
   ],
   "metadata": {
     "name": "Untitled Set",
     "importSize": {
-      "width": 200,
-      "height": 321
+      "width": 201,
+      "height": 201
     },
-    "iconsHash": 81369075
+    "iconsHash": 1075283133
   },
   "height": 1024,
   "prevSize": 32,
@@ -88,7 +115,8 @@
       "grid": 16,
       "tags": [
         "caret-down"
-      ]
+      ],
+      "defaultCode": 59650
     },
     {
       "paths": [
@@ -98,7 +126,8 @@
       "grid": 16,
       "tags": [
         "caret-up"
-      ]
+      ],
+      "defaultCode": 59651
     },
     {
       "paths": [
@@ -108,7 +137,8 @@
       "grid": 16,
       "tags": [
         "check-solid"
-      ]
+      ],
+      "defaultCode": 59652
     },
     {
       "paths": [
@@ -118,7 +148,8 @@
       "grid": 16,
       "tags": [
         "exclamation-triangle-solid"
-      ]
+      ],
+      "defaultCode": 59653
     },
     {
       "paths": [
@@ -128,7 +159,8 @@
       "grid": 16,
       "tags": [
         "facebook-logo"
-      ]
+      ],
+      "defaultCode": 59654
     },
     {
       "paths": [
@@ -137,7 +169,8 @@
       "grid": 16,
       "tags": [
         "play-plus"
-      ]
+      ],
+      "defaultCode": 59655
     },
     {
       "paths": [
@@ -146,7 +179,8 @@
       "grid": 16,
       "tags": [
         "kinopoisk-logo"
-      ]
+      ],
+      "defaultCode": 59656
     },
     {
       "paths": [
@@ -155,7 +189,8 @@
       "grid": 16,
       "tags": [
         "login"
-      ]
+      ],
+      "defaultCode": 59657
     },
     {
       "paths": [
@@ -165,7 +200,8 @@
       "grid": 16,
       "tags": [
         "play"
-      ]
+      ],
+      "defaultCode": 59658
     },
     {
       "paths": [
@@ -175,7 +211,8 @@
       "grid": 16,
       "tags": [
         "plus-square-solid"
-      ]
+      ],
+      "defaultCode": 59659
     },
     {
       "paths": [
@@ -185,7 +222,8 @@
       "grid": 16,
       "tags": [
         "shopping-cart"
-      ]
+      ],
+      "defaultCode": 59660
     },
     {
       "paths": [
@@ -195,7 +233,8 @@
       "grid": 16,
       "tags": [
         "close"
-      ]
+      ],
+      "defaultCode": 59661
     },
     {
       "paths": [
@@ -205,7 +244,8 @@
       "grid": 16,
       "tags": [
         "tv-icon"
-      ]
+      ],
+      "defaultCode": 59662
     },
     {
       "paths": [
@@ -215,7 +255,8 @@
       "grid": 16,
       "tags": [
         "burger"
-      ]
+      ],
+      "defaultCode": 59663
     },
     {
       "paths": [
@@ -225,7 +266,8 @@
       "grid": 16,
       "tags": [
         "masonry"
-      ]
+      ],
+      "defaultCode": 59664
     },
     {
       "paths": [
@@ -235,7 +277,8 @@
       "grid": 16,
       "tags": [
         "logout"
-      ]
+      ],
+      "defaultCode": 59665
     },
     {
       "paths": [
@@ -245,7 +288,32 @@
       "grid": 16,
       "tags": [
         "vk-logo"
-      ]
+      ],
+      "defaultCode": 59666
+    },
+    {
+      "paths": [
+        "M554.935 655.367c181.587 0 308.563-126.844 308.563-309.182s-126.976-305.218-308.563-305.218h-348.501c-14.138 0-25.6 11.462-25.6 25.6v440.815h-110.933c-14.138 0-25.6 11.462-25.6 25.6v96.785c0 14.137 11.462 25.6 25.6 25.6h110.933v68.267h-110.933c-14.138 0-25.6 11.462-25.6 25.6v85.333c0 14.138 11.462 25.6 25.6 25.6h110.933v110.933c0 14.138 11.462 25.6 25.6 25.6h124.928c14.137 0 25.6-11.462 25.6-25.6v-110.933h344.403c14.138 0 25.6-11.462 25.6-25.6v-85.333c0-14.138-11.462-25.6-25.6-25.6h-344.403v-68.267h197.973zM356.962 187.629h167.936c99.669 0 159.742 62.102 159.742 158.556 0 97.775-60.073 161.197-162.473 161.197h-165.205v-319.753z"
+      ],
+      "width": 887,
+      "grid": 16,
+      "tags": [
+        "ruble"
+      ],
+      "defaultCode": 59649
+    },
+    {
+      "paths": [
+        "M1023.114 258.338v509.453c0 67.559-26.838 132.351-74.609 180.117-47.771 47.771-112.558 74.609-180.117 74.609h-509.454c-67.558 0-132.348-26.838-180.119-74.609-47.77-47.766-74.607-112.558-74.607-180.117v-271.708h84.909v271.708c0 45.041 17.891 88.232 49.739 120.078s75.040 49.738 120.079 49.738h509.454c45.036 0 88.232-17.892 120.078-49.738s49.738-75.037 49.738-120.078v-509.453c0-45.039-17.892-88.232-49.738-120.079s-75.042-49.738-120.078-49.738h-509.454c-45.039 0-88.232 17.891-120.079 49.738s-49.739 75.040-49.739 120.079v237.744h-84.909v-237.744c0-67.558 26.837-132.348 74.607-180.119s112.562-74.607 180.119-74.607h509.454c67.559 0 132.346 26.837 180.117 74.607s74.609 112.562 74.609 180.119z",
+        "M832.731 512.26c0-10.999-4.998-21.053-13.358-26.812l-208.901-145.676c-9.038-6.232-19.945-6.598-29.268-1.047-9.084 5.394-14.275 15.605-14.275 27.91v291.248c0 12.359 5.191 22.518 14.321 27.964 3.413 2.038 7.356 3.872 13.073 3.872 5.573 0 11.055-1.727 15.717-4.972l209.095-145.627c8.503-5.915 13.597-15.971 13.597-26.858z",
+        "M220.059 334.813h42.64c14.068 0 25.473 11.404 25.473 25.473v303.959c0 14.068-11.404 25.473-25.473 25.473h-42.64c-14.068 0-25.473-11.404-25.473-25.473v-303.959c0-14.068 11.404-25.473 25.473-25.473z",
+        "M365.862 334.813h42.64c14.068 0 25.473 11.404 25.473 25.473v303.959c0 14.068-11.404 25.473-25.473 25.473h-42.64c-14.068 0-25.473-11.404-25.473-25.473v-303.959c0-14.068 11.404-25.473 25.473-25.473z"
+      ],
+      "grid": 16,
+      "tags": [
+        "playback"
+      ],
+      "defaultCode": 59648
     }
   ],
   "colorThemes": [],
@@ -258,7 +326,7 @@
     "fontPref": {
       "prefix": "icon-",
       "metadata": {
-        "fontFamily": "multipass-app",
+        "fontFamily": "icomoon",
         "majorVersion": 1,
         "minorVersion": 0
       },

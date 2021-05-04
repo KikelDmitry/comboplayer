@@ -9,8 +9,12 @@ body {
 .title-1 {
 	font-family: "Roboto Condensed";
 	font-weight: normal;
-	font-size: 25px;
+	font-size: 20px;
 	line-height: 100%;
+	
+	@include media-breakpoint-up(lg) {
+		font-size: 25px;
+	}
 }
 .title-2 {
 	font-family: "Roboto Condensed";
@@ -42,7 +46,7 @@ body {
 	font-weight: bold;
 	line-height: 100%;
 	white-space: nowrap;
-	transition-property: background;
+	transition-property: background-color, background-image;
 	transition-duration: 300ms;
 
 	&:hover {

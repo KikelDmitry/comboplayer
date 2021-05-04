@@ -38,7 +38,7 @@ section.tv-guide-slider
 	.container-xl
 		.programm-slider
 			.programm-slider__header
-				h2.programm-slider__title #{data.title}
+				h2.programm-slider__title.title-1 #{data.title}
 				.programm-slider__category
 					each btn, idx in data.buttons
 						button.programm-slider__tab-nav(type="button" class=(idx == 1 ? 'is-active': '')) #{btn}

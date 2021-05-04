@@ -1,0 +1,68 @@
+-
+	var data = {
+		title: 'Фильмы',
+		actions: {
+			buy: 'Покупка',
+			subs: 'Подписка',
+		},
+	};
+-
+	var movies = [
+		{
+			badges: [
+				'18+',
+			],
+			rating: '6.5',
+			title: 'Поли',
+			poster: 'poli.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '6.5',
+			title: 'Italian Best Shorts 4: Истории нашей жизни',
+			poster: 'italian-best-shorts.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '5.3',
+			title: 'Мой брат – супергерой',
+			poster: 'my-brother.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '8.1',
+			title: 'Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу',
+			poster: 'doctor-strangelove.jpg',
+		},
+	];
+
+section.movies-slider
+	.container-xl
+		h2.movies-slider__title.title-1 #{data.title}
+		.movies-slider__body
+			each movie in movies
+				.movie-item
+					.movie-item__poster
+						img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+						.movie-item__overlay
+							.movie-item__actions
+								a.movie-item__actions-item(href="#buy-link")
+									i.icon-ruble
+									span #{data.actions.buy}
+								a.movie-item__actions-item(href="#subscription-link")
+									i.icon-play-plus
+									span #{data.actions.subs}
+					.movie-item__badge 
+						each badge in movie.badges
+							.movie-item__badge-item #{badge}
+					.movie-item__rating
+						.movie-item__rating-icon
+							i.icon-kinopoisk-logo
+						.movie-item__rating-value #{movie.rating}
+					h3.movie-item__title #{movie.title}

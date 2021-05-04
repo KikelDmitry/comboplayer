@@ -21,53 +21,59 @@
 }
 
 .icon-caret-down::before {
-  content: "\e900";
-}
-.icon-caret-up::before {
-  content: "\e901";
-}
-.icon-check-solid::before {
   content: "\e902";
 }
-.icon-exclamation-triangle-solid::before {
+.icon-caret-up::before {
   content: "\e903";
 }
-.icon-facebook-logo::before {
+.icon-check-solid::before {
   content: "\e904";
 }
-.icon-play-plus::before {
+.icon-exclamation-triangle-solid::before {
   content: "\e905";
 }
-.icon-kinopoisk-logo::before {
+.icon-facebook-logo::before {
   content: "\e906";
 }
-.icon-login::before {
+.icon-play-plus::before {
   content: "\e907";
 }
-.icon-play::before {
+.icon-kinopoisk-logo::before {
   content: "\e908";
 }
-.icon-plus-square-solid::before {
+.icon-login::before {
   content: "\e909";
 }
-.icon-shopping-cart::before {
+.icon-play::before {
   content: "\e90a";
 }
-.icon-close::before {
+.icon-plus-square-solid::before {
   content: "\e90b";
 }
-.icon-tv-icon::before {
+.icon-shopping-cart::before {
   content: "\e90c";
 }
-.icon-burger::before {
+.icon-close::before {
   content: "\e90d";
 }
-.icon-masonry::before {
+.icon-tv-icon::before {
   content: "\e90e";
 }
-.icon-logout::before {
+.icon-burger::before {
   content: "\e90f";
 }
-.icon-vk-logo::before {
+.icon-masonry::before {
   content: "\e910";
+}
+.icon-logout::before {
+  content: "\e911";
+}
+.icon-vk-logo::before {
+  content: "\e912";
+}
+.icon-ruble::before {
+  content: "\e901";
+}
+.icon-playback::before {
+  content: "\e900";
 }
