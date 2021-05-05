@@ -13,51 +13,31 @@
 			poster: 'male-female.png',
 			time: '16:05',
 			title: 'Мужское/женское',
+			progress: 10,
 		},
 		{
 			channel: 'channel_sts.png',
 			//- poster: 'undefined.png',
 			time: '04:20',
 			title: 'Телепедерача без постера',
+			progress: 87,
 		},
 		{
 			channel: 'channel_ch-5.png',
 			poster: 'bro.png',
 			time: '18:10',
 			title: 'Брат за брата',
+			progress: 35,
 		},
 		{
 			channel: 'channel_match-tv.png',
 			poster: 'fitness.png',
 			time: '22:10',
 			title: 'Фитнес',
+			progress: 20,
 		},
 	];
 
 section.tv-guide-slider
 	.container-xl
-		.programm-slider
-			.programm-slider__header
-				h2.programm-slider__title.title-1 #{data.title}
-				.programm-slider__category
-					each btn, idx in data.buttons
-						button.programm-slider__tab-nav(type="button" class=(idx == 1 ? 'is-active': '')) #{btn}
-			.programm-slider__body.items-carousels.owl-carousel
-				each programm in programms
-					.programm-item
-						.programm-item__poster
-							if programm.poster
-								img(src="/img/content/programms/" + programm.poster alt=programm.title)
-							else
-								img(src="/img/tv-dummy.png" alt=programm.title)
-						.programm-item__overlay
-							.programm-item__overlay-dimmer
-							.programm-item__overlay-play
-								i.icon-play
-						.programm-item__channel
-							img(src="/img/content/channels/" + programm.channel alt="Название канала")
-						footer.programm-item__footer
-							.programm-item__time #{programm.time}
-							h3.programm-item__title #{programm.title}
-						.programm-item__progress
-							.programm-item__progress-bar(style="width:60%")
+		+programmSlider(data.title, data.buttons, programms)

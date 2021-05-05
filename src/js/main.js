@@ -115,36 +115,44 @@
 	let bannerSlider = $('.top-slider__container'),
 		itemsCarousels = $('.items-carousels');
 
-	itemsCarousels.each(function () {
-		$(this).owlCarousel({
-			items: 5,
+	let	bannerConfig = {
+			// items: 1,
+			nav: true,
+			loop: true,
+			center: true,
+		},
+		carouselConfig = {
 			nav: true,
 			navElement: 'button',
-			navClass: ['top-slider__nav top-slider__nav--left', 'top-slider__nav top-slider__nav--right'],
+			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
 			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
 			dots: false,
 			// stagePadding: 300,
 			loop: true,
 			margin: 0,
 			// autoWidth: true,
-			// center: true
-		})
-	})
-	// $(document).ready(function () {
-	// 	$('.movies-slider__body').owlCarousel({
-	// 		responsive: {
+			// center: true,
+			responsive: {
+				0: {
+					items: 2,
+				},
+				540: {
+					items: 3,
+				},
+				768: {
+					items: 4,
+				},
+				1100: {
+					items: 5,
+				}
+			}
+		};
 
-	// 		},
-	// 		items: 5,
-	// 		nav: true,
-	// 		navElement: 'button',
-	// 		navClass: ['top-slider__nav top-slider__nav--left', 'top-slider__nav top-slider__nav--right'],
-	// 		navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
-	// 		dots: false,
-	// 		// stagePadding: 300,
-	// 		loop: true,
-	// 		// autoWidth: true,
-	// 		center: true
-	// 	});
-	// });
+	$(document).ready(function() {
+		itemsCarousels.each(function () {
+			$(this).owlCarousel(carouselConfig)
+		});
+		bannerSlider.owlCarousel(bannerConfig);
+	})
+
 }

@@ -6,3 +6,32 @@ mixin svg(classes, anchor, title, desc)
 			title=title
 		if desc
 			desc=desc
+
+//- tv slider
+mixin programmSlider(title, tabs, programms)
+	.programm-slider
+			.programm-slider__header
+				h2.programm-slider__title.title-1 #{title}
+				.programm-slider__category
+					each btn, idx in tabs
+						button.programm-slider__tab-nav(type="button" class=(idx == 0 ? 'is-active': '')) #{btn}
+			.programm-slider__body.items-carousels.owl-carousel
+				each programm in programms
+					.programm-item
+						.programm-item__inner
+							.programm-item__poster
+								if programm.poster
+									img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title)
+								else
+									img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
+							.programm-item__overlay
+								.programm-item__overlay-dimmer
+								.programm-item__overlay-play
+									i.icon-play
+							.programm-item__channel
+								img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
+							footer.programm-item__footer
+								.programm-item__time #{programm.time}
+								h3.programm-item__title #{programm.title}
+							.programm-item__progress
+								.programm-item__progress-bar(style="width:" + programm.progress + "%")
