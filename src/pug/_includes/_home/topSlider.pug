@@ -37,22 +37,31 @@
 			],
 			color: '#CD3E2F',
 		},
-		//- {
-		//- 	title: 'Следствие вели...',
-		//- 	tags: [
-		//- 		'18+',
-		//- 		'Новинка',
-		//- 		'Премьера',
-		//- 	]
-		//-		color: '#514A44',
-		//- },
+		{
+			title: 'Следствие вели...',
+			tags: [
+				{
+					type: 'new',
+					text: 'Новинка',
+				},
+				{
+					type: 'premiere',
+					text: 'Премьера',
+				},				
+				{
+					type: 'rated',
+					text: '18+',
+				},
+			],
+				color: '#514A44',
+		},
 	]
 
 section.top-slider
 	.top-slider__container.owl-carousel
 		each slide, idx in slides
-			.container-xl
-				.top-slide(style="background-color:" + slide.color)
+			.container-xl.top-slide
+				.top-slide__inner(style="background-color:" + slide.color)
 					.top-slide__poster(style="background-image: url(/img/content/banners/slide" + idx + ".png)")
 						.top-slide__description !{slide.descr}
 						//- img(src="/img/content/banners/slide" + idx + ".png")

@@ -12,7 +12,7 @@
 	@include media-breakpoint-up(lg) {
 		--height: 320px;
 
-		padding: 30px 0;
+		padding: 10px 0;
 	}
 	// &__nav {
 	// 	position: absolute;
@@ -60,25 +60,28 @@
 .top-slide {
 	--slide-height: 200px;
 
-	position: relative;
-	overflow: hidden;
-	min-height: var(--slide-height);
-	display: flex;
-	flex-direction: column;
-	background-color: $color-steel-dull-6;
-	box-shadow: $shadow-lg;
-	border-radius: 5px;
+	padding: 20px 15px;
 
-	@include media-breakpoint-up(sm) {
-		flex-direction: row;
+	&__inner {
+		position: relative;
+		overflow: hidden;
+		min-height: var(--slide-height);
+		display: flex;
+		flex-direction: column;
+		background-color: $color-steel-dull-6;
+		box-shadow: $shadow-lg;
+		border-radius: 5px;
+	
+		@include media-breakpoint-up(sm) {
+			flex-direction: row;
+		}
+		@include media-breakpoint-up(md) {
+			--slide-height: 220px;
+		}
+		@include media-breakpoint-up(lg) {
+			--slide-height: 260px;
+		}
 	}
-	@include media-breakpoint-up(md) {
-		--slide-height: 220px;
-	}
-	@include media-breakpoint-up(lg) {
-		--slide-height: 260px;
-	}
-
 	&__poster {
 		display: flex;
 		justify-content: flex-start;

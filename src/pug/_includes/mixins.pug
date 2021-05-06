@@ -10,11 +10,15 @@ mixin svg(classes, anchor, title, desc)
 //- tv slider
 mixin programmSlider(title, tabs, programms)
 	.programm-slider
-			.programm-slider__header
-				h2.programm-slider__title.title-1 #{title}
-				.programm-slider__category
-					each btn, idx in tabs
-						button.programm-slider__tab-nav(type="button" class=(idx == 0 ? 'is-active': '')) #{btn}
+		.programm-slider__header
+			h2.programm-slider__title.title-1 #{title}
+			.programm-slider__category
+				each btn, idx in tabs
+					button.programm-slider__tab-nav(type="button" class=(idx == 0 ? 'active': '')) #{btn}
+		- var i = 0;
+		while i < 2
+			if(i == 1)
+				- programms = programms.reverse();
 			.programm-slider__body.items-carousels.owl-carousel
 				each programm in programms
 					.programm-item
@@ -35,3 +39,4 @@ mixin programmSlider(title, tabs, programms)
 								h3.programm-item__title #{programm.title}
 							.programm-item__progress
 								.programm-item__progress-bar(style="width:" + programm.progress + "%")
+			- i++

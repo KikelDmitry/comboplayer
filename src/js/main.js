@@ -116,22 +116,12 @@
 		itemsCarousels = $('.items-carousels');
 
 	let	bannerConfig = {
-			// items: 1,
-			nav: true,
+			items: 1,
+			// nav: true,
 			loop: true,
 			center: true,
 		},
 		carouselConfig = {
-			nav: true,
-			navElement: 'button',
-			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
-			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
-			dots: false,
-			// stagePadding: 300,
-			loop: true,
-			margin: 0,
-			// autoWidth: true,
-			// center: true,
 			responsive: {
 				0: {
 					items: 2,
@@ -145,7 +135,16 @@
 				1100: {
 					items: 5,
 				}
-			}
+			},
+			nav: true,
+			navElement: 'button',
+			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
+			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
+			dots: false,
+			// stagePadding: 300,
+			loop: true,
+			// autoWidth: true,
+			// center: true,
 		};
 
 	$(document).ready(function() {
