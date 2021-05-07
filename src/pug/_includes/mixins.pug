@@ -32,7 +32,7 @@ mixin programmSlider(title, tabs, programms)
 								.programm-item__overlay-dimmer
 								.programm-item__overlay-play
 									i.icon-play
-							.programm-item__channel
+							a.programm-item__channel(href="#channel-link")
 								img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
 							footer.programm-item__footer
 								.programm-item__time #{programm.time}
