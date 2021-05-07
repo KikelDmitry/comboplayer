@@ -7,10 +7,13 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		width: 50px;
-		// background-color: tomato;
+		width: 20px;
 		z-index: 10;
 		pointer-events: none;
+
+		@include media-breakpoint-up(sm) {
+			width: 50px;
+		}
 	}
 	&::before {
 		left: 0;

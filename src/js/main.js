@@ -115,39 +115,46 @@
 	let bannerSlider = $('.top-slider__container'),
 		itemsCarousels = $('.items-carousels');
 
-	let	bannerConfig = {
-			items: 1,
-			// nav: true,
-			loop: true,
-			center: true,
-		},
+	let bannerConfig = {
+		items: 1,
+		nav: true,
+		navElement: 'button',
+		navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
+		navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
+		loop: true,
+		center: true,
+	},
 		carouselConfig = {
-			responsive: {
-				0: {
-					items: 2,
-				},
-				540: {
-					items: 3,
-				},
-				768: {
-					items: 4,
-				},
-				1100: {
-					items: 5,
-				}
-			},
-			nav: true,
+			// nav: true,
 			navElement: 'button',
 			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
 			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
 			dots: false,
-			// stagePadding: 300,
 			loop: true,
+			responsive: {
+				0: {
+					nav: false,
+					items: 2,
+				},
+				540: {
+					nav: false,
+					items: 3,
+				},
+				768: {
+					nav: true,
+					items: 4,
+				},
+				1100: {
+					nav: true,
+					items: 5,
+				}
+			},
+			// stagePadding: 300,
 			// autoWidth: true,
 			// center: true,
 		};
 
-	$(document).ready(function() {
+	$(document).ready(function () {
 		itemsCarousels.each(function () {
 			$(this).owlCarousel(carouselConfig)
 		});

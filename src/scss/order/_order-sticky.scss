@@ -16,7 +16,7 @@
 		background-size: 220px 100%;
 	}
 	@include media-breakpoint-up(sm) {
-		background-size: 44% 100%;
+		background-size: 70% 100%;
 	}
 	@include media-breakpoint-up(md) {
 		background-size: 50% 100%;
@@ -39,7 +39,7 @@
 			border-left-color: $color-steel-dull-85;
 		}
 		@include media-breakpoint-up(sm) {
-			left: 44%;
+			left: 70%;
 			border-width: 14px;
 		}
 		@include media-breakpoint-up(md) {

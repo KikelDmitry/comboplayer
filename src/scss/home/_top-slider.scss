@@ -59,6 +59,7 @@
 }
 .top-slide {
 	--slide-height: 200px;
+	--banner-color: #{$color-steel-dull-6};
 
 	padding: 20px 15px;
 
@@ -68,7 +69,7 @@
 		min-height: var(--slide-height);
 		display: flex;
 		flex-direction: column;
-		background-color: $color-steel-dull-6;
+		background-color: var(--banner-color);
 		box-shadow: $shadow-lg;
 		border-radius: 5px;
 	
@@ -127,7 +128,9 @@
 		font-weight: 300;
 		line-height: 91%;
 		color: $color-white;
-		background-image: linear-gradient(180deg, #3268c1 0%, #418afd 100%);
+		background-color: var(--banner-color);
+		// background-image: linear-gradient(180deg, #3268c1 0%, #418afd 100%);
+		background-image: linear-gradient(to top, var(--banner-color), white);
 		overflow: hidden;
 
 		@include media-breakpoint-up(sm) {

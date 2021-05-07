@@ -61,7 +61,7 @@ section.top-slider
 	.top-slider__container.owl-carousel
 		each slide, idx in slides
 			.container-xl.top-slide
-				.top-slide__inner(style="background-color:" + slide.color)
+				a.top-slide__inner(style="--banner-color:" + slide.color href="#")
 					.top-slide__poster(style="background-image: url(/img/content/banners/slide" + idx + ".png)")
 						.top-slide__description !{slide.descr}
 						//- img(src="/img/content/banners/slide" + idx + ".png")

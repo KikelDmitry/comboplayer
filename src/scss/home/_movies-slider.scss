@@ -3,22 +3,35 @@
 	background-color: $color-steel-dull-95;
 	background-image: url("#{$img-path}movies-slider-back.svg");
 	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: auto 100%;
+	background-position: 50% center;
+	background-size: calc(100% - 40px) 100%;
 
 	@include media-breakpoint-up(sm) {
+		background-size: calc(100% - 100px) 100%;
 		padding: 30px 0 32px;
 	}
 	@include media-breakpoint-up(md) {
 		padding: 38px 0 40px;
 	}
 	@include media-breakpoint-up(xl) {
+		background-size: calc(1140px - 100px) 100%;
 		padding: 45px 0;
+	}
+	&__inner {
+		margin: 0 -15px;
+	
+		@include mf(350) {
+			margin: 0;
+		}
 	}
 	&__title {
 		color: $color-cobalt-1;
 		margin-bottom: 13px;
+		padding: 0 15px;
 
+		@include mf(350) {
+			padding: 0;
+		}
 		@include media-breakpoint-up(sm) {
 			margin-bottom: 18px;
 		}
@@ -34,26 +47,14 @@
 			background-image: linear-gradient(270deg, #f0f8fa 2.5%, #f0f8fa 10.62%, rgba(240, 248, 250, 0) 100%);
 		}
 	}
-	&__body {
-		//tmp
-		// display: flex;
-		// flex-flow: row wrap;
-
-		// & > * {
-		// 	margin-right: 16px;
-
-		// 	@include media-breakpoint-up(sm) {
-		// 		margin-right: 18px;
-		// 	}
-		// 	@include media-breakpoint-up(xl) {
-		// 		margin-right: 28px;
-		// 	}
-		// }
-	}
 }
 .movie-item {
 	$transDur: 300ms;
 	padding: 20px 0;
+
+	@include media-breakpoint-up(sm) {
+		padding: 20px 8px;
+	}
 
 	&:hover {
 		.movie-item__overlay {

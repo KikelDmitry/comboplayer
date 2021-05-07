@@ -1,6 +1,10 @@
 .programm-slider {
 	padding: 25px 0;
-
+	margin: 0 -15px;
+	
+	@include mf(350) {
+		margin: 0;
+	}
 	@include media-breakpoint-up(sm) {
 		padding: 30px 0;
 	}
@@ -13,7 +17,11 @@
 		flex-direction: column;
 		font-family: $addFont;
 		margin-bottom: 20px;
+		padding: 0 15px;
 
+		@include mf(350) {
+			padding: 0;
+		}
 		@include media-breakpoint-up(sm) {
 			flex-direction: row;
 		}
@@ -57,17 +65,13 @@
 			color: $color-white;
 		}
 	}
-	&__body {
-		//tmp
-		// display: flex;
-		// flex-flow: row wrap;
-	}
 }
 .programm-item {
 	padding: 20px 0;
-	//tmp
-	// margin-right: 10px;
 
+	@include media-breakpoint-up(sm) {
+		padding: 20px 8px;
+	}
 	&:hover {
 		.programm-item__overlay {
 			&-dimmer {

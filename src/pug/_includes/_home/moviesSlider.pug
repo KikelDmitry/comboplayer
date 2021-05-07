@@ -12,6 +12,54 @@
 			badges: [
 				'18+',
 			],
+			rating: '7.0',
+			title: 'Реинкарнация',
+			poster: 'reincarnation.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Мавританец',
+			poster: 'mauritian.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Дочь волка',
+			poster: 'wolfs-daughter.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Гипсомния',
+			poster: 'hyposomny.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Станиславский. Жажда жизни',
+			poster: 'stanislavsky.png',
+		},
+		{
+			badges: [
+				'12+',
+			],
+			rating: '5.5',
+			title: 'Скайлайн 3',
+			poster: 'skyline.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
 			rating: '6.5',
 			title: 'Поли',
 			poster: 'poli.png',
@@ -40,38 +88,31 @@
 			title: 'Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу',
 			poster: 'doctor-strangelove.jpg',
 		},
-		{
-			badges: [
-				'18+',
-			],
-			rating: '8.1',
-			title: 'Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу',
-			poster: 'doctor-strangelove.jpg',
-		},
 	];
 
-section.movies-slider
+//- section.movies-slider
 	.container-xl
-		h2.movies-slider__title.title-1 #{data.title}
-		.movies-slider__body.items-carousels.owl-carousel
-			each movie in movies
-				.movie-item
-					.movie-item__inner
-						.movie-item__poster
-							img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
-							.movie-item__overlay
-								.movie-item__actions
-									a.movie-item__actions-item(href="#buy-link")
-										i.icon-ruble
-										span #{data.actions.buy}
-									a.movie-item__actions-item(href="#subscription-link")
-										i.icon-play-plus
-										span #{data.actions.subs}
-						.movie-item__badge 
-							each badge in movie.badges
-								span.movie-item__badge-item #{badge}
-						.movie-item__rating
-							.movie-item__rating-icon
-								i.icon-kinopoisk-logo
-							.movie-item__rating-value #{movie.rating}
-						h3.movie-item__title #{movie.title}
+		.movies-slider__inner
+			h2.movies-slider__title.title-1 #{data.title}
+			.movies-slider__body.items-carousels.owl-carousel
+				each movie in movies
+					.movie-item
+						.movie-item__inner
+							.movie-item__poster
+								img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+								.movie-item__overlay
+									.movie-item__actions
+										a.movie-item__actions-item(href="#buy-link")
+											i.icon-ruble
+											span #{data.actions.buy}
+										a.movie-item__actions-item(href="#subscription-link")
+											i.icon-play-plus
+											span #{data.actions.subs}
+							.movie-item__badge 
+								each badge in movie.badges
+									span.movie-item__badge-item #{badge}
+							.movie-item__rating
+								.movie-item__rating-icon
+									i.icon-kinopoisk-logo
+								.movie-item__rating-value #{movie.rating}
+							h3.movie-item__title #{movie.title}
