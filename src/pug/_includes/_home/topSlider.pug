@@ -62,9 +62,9 @@ section.top-slider
 		each slide, idx in slides
 			.container-xl.top-slide
 				a.top-slide__inner(style="--banner-color:" + slide.color href="#")
-					.top-slide__poster(style="background-image: url(/img/content/banners/slide" + idx + ".png)")
+					.top-slide__poster
 						.top-slide__description !{slide.descr}
-						//- img(src="/img/content/banners/slide" + idx + ".png")
+						img.top-slide__poster-img(src="/img/content/banners/slide" + idx + ".png")
 					.top-slide__title
 						.top-slide__title-text #{slide.title}
 						.top-slide__tags

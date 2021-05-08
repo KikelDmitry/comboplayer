@@ -97,7 +97,6 @@
 	function mobileMenuOpen() {
 		let menu = document.querySelector('.header__menu');
 		burger.classList.toggle('is-active');
-
 		if (burger.classList.contains('is-active')) {
 			// open action
 			menu.classList.add('is-active')
@@ -108,7 +107,7 @@
 			burger.setAttribute('aria-label', 'Открыть меню')
 		}
 	}
-	burger.addEventListener('click', mobileMenuOpen)
+	burger.addEventListener('click', mobileMenuOpen);
 }
 // owl carousel
 {
@@ -123,9 +122,17 @@
 		navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
 		loop: true,
 		center: true,
+		responsive: {
+			0: {
+				nav: false,
+			},
+			540: {
+				nav: true,
+			}
+		}
 	},
 		carouselConfig = {
-			// nav: true,
+			nav: true,
 			navElement: 'button',
 			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
 			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
