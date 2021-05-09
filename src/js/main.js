@@ -163,7 +163,7 @@
 
 	$(document).ready(function () {
 		itemsCarousels.each(function () {
-			$(this).owlCarousel(carouselConfig)
+			$(this).owlCarousel(carouselConfig);
 		});
 		bannerSlider.owlCarousel(bannerConfig);
 	})

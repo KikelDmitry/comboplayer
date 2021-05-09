@@ -5,6 +5,16 @@
 			'Сейчас на ТВ',
 			'Смотреть в записи',
 		],
+		category: [
+			{
+				id: 'on-air',
+				title: 'Сейчас на ТВ',
+			},
+			{
+				id: 'on-record',
+				title: 'Смотреть в записи',
+			},
+		]
 	};
 -
 	var programms = [
@@ -40,4 +50,4 @@
 
 section.tv-online-slider
 	.container-xl
-		+programmSlider(data.title, data.buttons, programms)
+		+programmSlider(data.title, data.buttons, programms, data.category)

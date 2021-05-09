@@ -5,6 +5,16 @@
 			'Сейчас на ТВ',
 			'Сегодня',
 		],
+		category: [
+			{
+				id: 'today',
+				title: 'Сегодня',
+			},
+			{
+				id: 'now',
+				title: 'Сейчас на ТВ',
+			},
+		],
 	};
 -
 	var programms = [
@@ -40,4 +50,4 @@
 
 section.tv-guide-slider
 	.container-xl
-		+programmSlider(data.title, data.buttons, programms)
+		+programmSlider(data.title, data.buttons, programms, data.category)
