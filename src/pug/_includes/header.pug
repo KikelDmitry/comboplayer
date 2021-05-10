@@ -21,7 +21,14 @@ header.header
 				a.header__logo(href="/")
 					h1.visually-hidden Comboplayer
 					img(src="/img/logo.svg" alt="comboplayer logo")
-			.d-flex.col-auto.ml-auto.pr-0.pr-xl-3.position-static
+			.col-auto.col-md.ml-auto
+				form.header__search
+					input.header__search-input(type="text" placeholder="Поиск" name="s")
+					button.header__search-submit(type="submit")
+						i.icon-zoom
+						span.visually-hidden Искать
+
+			.d-flex.col-auto.pr-0.pr-xl-3.position-static.header__right-side
 				nav.header__menu
 					each item, idx in menu
 						a.header__menu-item(href=item.link) #{item.title}
