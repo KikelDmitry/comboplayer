@@ -2,6 +2,9 @@
 	min-height: 335px;
 	padding: 40px 0;
 
+	@include media-breakpoint-up(xl) {
+		min-height: 363px; 
+	}
 	&__pattern {
 		position: absolute;
 		top: -25px;

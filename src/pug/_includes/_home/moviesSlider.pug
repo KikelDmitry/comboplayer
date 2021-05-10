@@ -115,4 +115,5 @@ section.movies-slider
 								.movie-item__rating-icon
 									i.icon-kinopoisk-logo
 								.movie-item__rating-value #{movie.rating}
-							h3.movie-item__title #{movie.title}
+							.movie-item__title(title=movie.title)
+								h3.movie-item__title-text #{movie.title}

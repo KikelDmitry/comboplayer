@@ -14,7 +14,7 @@ mixin programmSlider(title, tabs, programms, categories)
 			h2.programm-slider__title.title-1 #{title}
 			.programm-slider__category.nav
 				each category, idx in categories
-					a.programm-slider__tab(type="button" class=(idx == 0 ? 'active': '') href="#"+category.id data-toggle="tab") #{category.title}
+					a.programm-slider__tab(class=(idx == 0 ? 'active': '') href="#"+category.id data-toggle="tab") #{category.title}
 		.tab-content
 			each category, idx in categories
 				if (idx == 1)
@@ -40,3 +40,4 @@ mixin programmSlider(title, tabs, programms, categories)
 										h3.programm-item__title #{programm.title}
 									.programm-item__progress
 										.programm-item__progress-bar(style="width:" + programm.progress + "%")
+		noscript.no-js-msg #{globalData.nojs}

@@ -64,12 +64,13 @@ section.top-slider
 				a.top-slide__inner(style="--banner-color:" + slide.color href="#")
 					.top-slide__poster
 						.top-slide__description !{slide.descr}
-						img.top-slide__poster-img(src="/img/content/banners/slide" + idx + ".png")
+						img.top-slide__poster-img(src="/img/content/banners/slide" + idx + ".png" alt=slide.title)
 					.top-slide__title
 						.top-slide__title-text #{slide.title}
 						.top-slide__tags
 							each tag in slide.tags
 								.top-slide__tag(class="top-slide__tag--" + tag.type) #{tag.text}
+	noscript.no-js-msg #{globalData.nojs}
 	//- button(type="button" aria-label="Предыдущий элемент").slider-nav.slider-nav--left
 		i.icon-caret-down
 	//- button(type="button" aria-label="Следующий элемент").slider-nav.slider-nav--right

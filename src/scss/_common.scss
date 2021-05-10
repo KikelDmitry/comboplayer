@@ -59,5 +59,11 @@ body {
 		outline: 0;
 	}
 }
+.no-js-msg {
+	display: block;
+	width: 100%;
+	text-align: center;
+	padding: 0 15px;
+}
 
 @import "_sliders.scss";

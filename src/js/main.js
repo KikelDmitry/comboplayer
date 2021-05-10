@@ -69,28 +69,30 @@
 }
 // sticky panel fallback
 {
-	$(window).scroll(function () {
-		let header = $('.header'),
-			offset = header.height(),
-			sticky = $('.order-sticky');
-		if ($(window).scrollTop() > offset) {
-			header.css({
-				marginBottom: sticky.height()
-			});
-			sticky.css({
-				position: 'fixed'
-			});
-		} else {
-			header.css({
-				marginBottom: 0
-			});
-			sticky.css({
-				position: 'relative'
-			});
-		}
-	})
-}
+	let header = $('.header'),
+		offset = header.height(),
+		sticky = $('.sticky-header');
+	if (!!sticky) {
+		$(window).scroll(function () {
+			if ($(window).scrollTop() > offset) {
+				header.css({
+					marginBottom: sticky.height()
+				});
+				sticky.css({
+					position: 'fixed'
+				});
+			} else {
+				header.css({
+					marginBottom: 0
+				});
+				sticky.css({
+					position: 'relative'
+				});
+			}
+		})
 
+	}
+}
 // mobile menu
 {
 	let burger = document.querySelector('.header__burger-btn');
@@ -114,36 +116,35 @@
 	let bannerSlider = $('.top-slider__container'),
 		itemsCarousels = $('.items-carousels');
 
-	let bannerConfig = {
-		items: 1,
+	let defaultConfig = {
 		nav: true,
 		navElement: 'button',
 		navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
-		navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
+		navText: ['<span class="visually-hidden">Предыдущий элемент</span><i class="icon-caret-down"></i>', '<span class="visually-hidden">Следующий элемент</span><i class="icon-caret-down"></i>'],
 		loop: true,
-		center: true,
-		responsive: {
-			0: {
-				nav: false,
-			},
-			540: {
-				nav: true,
-			}
-		}
 	},
+		bannerConfig = {
+			...defaultConfig,
+			items: 1,
+			center: true,
+			// autoWidth: true,
+			responsive: {
+				0: {
+					nav: false,
+				},
+				576: {
+					nav: true,
+				},
+			}
+		},
 		carouselConfig = {
-			nav: true,
-			navElement: 'button',
-			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
-			navText: ['<i class="icon-caret-down"></i>', '<i class="icon-caret-down"></i>'],
-			dots: false,
-			loop: true,
+			...defaultConfig,
 			responsive: {
 				0: {
 					nav: false,
 					items: 2,
 				},
-				540: {
+				576: {
 					nav: false,
 					items: 3,
 				},
@@ -156,9 +157,6 @@
 					items: 5,
 				}
 			},
-			// stagePadding: 300,
-			// autoWidth: true,
-			// center: true,
 		};
 
 	$(document).ready(function () {
