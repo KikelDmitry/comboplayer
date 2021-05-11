@@ -78,6 +78,7 @@
 }
 .programm-item {
 	padding: 20px 0;
+	display: block;
 
 	@include media-breakpoint-up(sm) {
 		padding: 20px 8px;
@@ -197,19 +198,12 @@
 		background-color: $color-white;
 		border: 3px solid $color-white;
 		border-radius: inherit;
-		
-		&:hover {
-			.programm-item__channel-img {
-				transform: scale(1.1);
-			}
-		} 
-		
+				
 		&-img {
 			max-width: 32px;
 			max-height: 32px;
 			margin: auto;
 			border-radius: inherit;
-			transition: transform 300ms;
 		}
 	}
 	&__footer {

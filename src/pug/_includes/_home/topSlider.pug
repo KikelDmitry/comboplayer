@@ -17,7 +17,7 @@
 					text: '18+',
 				},
 			],
-			color: '#2459AB',
+			gradient: 'linear-gradient(231.13deg, rgba(65, 138, 253, 0.5) 0%, rgba(33, 68, 133, 0.5) 72.31%), #418AFD;',
 		},
 		{
 			title: 'Майор Гном',
@@ -35,7 +35,7 @@
 					text: 'Бесплатно',
 				},
 			],
-			color: '#CD3E2F',
+			gradient: 'linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #E13928;',
 		},
 		{
 			title: 'Следствие вели...',
@@ -53,7 +53,7 @@
 					text: '18+',
 				},
 			],
-				color: '#514A44',
+				gradient: 'linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #1A292E;',
 		},
 	]
 
@@ -61,7 +61,7 @@ section.top-slider
 	.top-slider__container.owl-carousel
 		each slide, idx in slides
 			.container-xl.top-slide
-				a.top-slide__inner(style="--banner-color:" + slide.color href="#")
+				a.top-slide__inner(style="--gradient:" + slide.gradient href="#")
 					.top-slide__poster
 						.top-slide__description !{slide.descr}
 						img.top-slide__poster-img(src="/img/content/banners/slide" + idx + ".png" alt=slide.title)

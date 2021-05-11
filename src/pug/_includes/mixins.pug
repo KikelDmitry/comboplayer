@@ -22,7 +22,7 @@ mixin programmSlider(title, tabs, programms, categories)
 				.tab-pane(class=(idx == 0 ? 'active' : 'fade') id=category.id)
 					.programm-slider__body.items-carousels.owl-carousel
 						each programm in programms
-							.programm-item
+							a.programm-item(href="#link-to-programm")
 								.programm-item__inner
 									.programm-item__poster
 										if programm.poster
@@ -33,7 +33,7 @@ mixin programmSlider(title, tabs, programms, categories)
 										.programm-item__overlay-dimmer
 										.programm-item__overlay-play
 											i.icon-play
-									a.programm-item__channel(href="#channel-link")
+									.programm-item__channel
 										img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
 									.programm-item__footer
 										.programm-item__time #{programm.time}
