@@ -22,7 +22,7 @@ mixin programmSlider(title, tabs, programms, categories)
 				.tab-pane(class=(idx == 0 ? 'active' : 'fade') id=category.id)
 					.programm-slider__body.items-carousels.owl-carousel
 						each programm in programms
-							a.programm-item(href="#link-to-programm")
+							a.programm-item(href="#link-to-programm" title=programm.title)
 								.programm-item__inner
 									.programm-item__poster
 										if programm.poster

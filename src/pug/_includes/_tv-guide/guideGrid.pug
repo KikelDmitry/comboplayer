@@ -1,0 +1,171 @@
+-
+	var guide = [
+		{
+			title: 'Первый',
+			logo: 'channel_ch-1.png',
+			list: [
+				{
+					title: 'Новости',
+					time: '14:25',
+				},
+				{
+					title: 'Давай поженимся или давай без давай',
+					time: '15:15',
+				},
+				{
+					title: 'Брат за брата',
+					time: '16:00',
+					descr: '1-ая серия “За основу взято”',
+				},
+				{
+					title: 'Вечерние новости',
+					time: '17:00',
+				},
+			],
+		},
+		{
+			title: 'Россия 1',
+			logo: 'channel_rus-1.png',
+			list: [
+				{
+					title: 'Вести',
+					time: '15:15',
+				},
+				{
+					title: 'Вести. Местное время',
+					time: '16:00',
+				},
+				{
+					title: 'Жемчуга',
+					time: '17:00',
+					type: 'series',
+				},
+				{
+					title: '60 минут',
+					time: '22:00',
+				},
+			],
+		},
+		{
+			title: 'Матч ТВ',
+			logo: 'channel_match-tv.png',
+			list: [
+				{
+					title: 'Все на Матч! Прямая трансляция',
+					time: '15:15',
+				},
+				{
+					title: 'Фитнес',
+					time: '16:00',
+				},
+				{
+					title: 'Новости',
+					time: '17:00',
+				},
+				{
+					title: 'Фитнес',
+					time: '22:00',
+				},
+			],
+		},
+		{
+			title: 'НТВ',
+			logo: 'channel_ntv.png',
+			list: [
+				{
+					title: 'Место встречи',
+					time: '15:15',
+				},
+				{
+					title: 'Сегодня',
+					time: '16:00',
+				},
+				{
+					title: 'Красная зона',
+					time: '17:00',
+					type: 'series',
+				},
+				{
+					title: 'ДНК',
+					time: '22:00',
+				},
+			],
+		},
+		{
+			title: 'Петербург-5',
+			logo: 'channel_ch-5.png',
+			list: [
+				{
+					title: 'Ржев',
+					time: '15:15',
+				},
+				{
+					title: 'Известия',
+					time: '16:00',
+				},
+				{
+					title: 'Спецотряд "Шторм"',
+					time: '17:00',
+					descr: 'Большой передел',
+					type: 'series'
+				},
+				{
+					title: 'Спецотряд "Шторм"',
+					time: '22:00',
+					descr: 'Город контрастов',
+					type: 'series'
+				},
+			],
+		},
+		{
+			title: 'Россия К',
+			logo: 'channel_cult.png',
+			list: [
+				{
+					title: '2 Верник 2 (Светлана Владимировна Немоляева)',
+					time: '15:15',
+					type: 'culture',
+				},
+				{
+					title: 'День за днем',
+					time: '16:00',
+					descr: 'Апрель, 7, среда',
+				},
+				{
+					title: 'В.Гаврилин. "Военные письма". Большой симфонический оркестр имени П.И.Чайковского. Дирижер Владимир Федосеев',
+					time: '17:00',
+					type: 'culture',
+				},
+				{
+					title: 'Антиохийская церковь',
+					time: '22:00',
+				},
+			],
+		},
+	]
+
+section.guide-grid
+	.container-xl
+		.row
+			each channel in guide
+				.col-sm-6.col-md-4.col-xl-3
+					.guide-channel
+						header.guide-channel__header
+							.guide-channel__logo
+								img.guide-channel__logo-img(src="/img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
+							h3.guide-channel__title #{channel.title}
+							.guide-channel__control
+								a.guide-channel__control-item.guide-channel__control-item--play(href="#channel-page-link" title="Воспроизведение")
+									i.icon-play
+								button.guide-channel__control-item.guide-channel__control-item--fav(type="button" title="Добавить в избранное")
+									i.icon-heart-empty
+									i.icon-heart-solid
+						ul.guide-channel__list.programm-list
+							each programm in channel.list
+								li.programm-list__item
+									.programm-list__time(class=(programm.type ? 'programm-list__time--' + programm.type : '')) #{programm.time}
+									a.programm-list__link(href="#programm-page-link") 
+										span.programm-list__title #{programm.title}
+										span.programm-list__descr #{programm.descr}
+		button.guide-grid__load-more(type="button") Загрузить ещё...
+

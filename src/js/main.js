@@ -72,7 +72,7 @@
 	let header = $('.header'),
 		offset = header.height(),
 		sticky = $('.sticky-header');
-	if (!!sticky) {
+	if (sticky.length !== 0) {
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > offset) {
 				header.css({
@@ -99,12 +99,12 @@
 		rightBar = $('.header__right-side'),
 		searchResults = $('.search-dropdown');
 
-	searchInput.focus(function() {
+	searchInput.focus(function () {
 		rightBar.addClass('d-none')
 		rightBar.removeClass('d-flex')
 		searchResults.addClass('is-active')
 	})
-	searchInput.blur(function() {
+	searchInput.blur(function () {
 		rightBar.addClass('d-flex')
 		rightBar.removeClass('d-none')
 		searchResults.removeClass('is-active')
@@ -183,4 +183,10 @@
 		bannerSlider.owlCarousel(bannerConfig);
 	})
 
+}
+// tv guide
+{
+	$('.guide-channel__control-item--fav').click(function() {
+		$(this).toggleClass('is-active')
+	})
 }
