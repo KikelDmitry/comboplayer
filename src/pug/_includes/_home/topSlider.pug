@@ -61,7 +61,7 @@ section.top-slider
 	.top-slider__container.owl-carousel
 		each slide, idx in slides
 			.container-xl.top-slide(class="grad-" + slide.gradient)
-				a.top-slide__inner(href="#")
+				a.top-slide__inner(href="#link-to-item")
 					.top-slide__poster
 						.top-slide__description !{slide.descr}
 						img.top-slide__poster-img(src="/img/content/banners/slide" + idx + ".png" alt=slide.title)

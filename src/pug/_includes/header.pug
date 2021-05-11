@@ -16,19 +16,19 @@
 
 header.header
 	.container-xl
-		.row
+		.row.flex-nowrap
 			.col-auto
 				a.header__logo(href="/")
 					h1.visually-hidden Comboplayer
 					img(src="/img/logo.svg" alt="comboplayer logo")
-			.col-auto.col-md.ml-auto
+			.col-auto.col-md.ml-auto.p-0
 				form.header__search
 					label.header__search-label
 						i.header__search-icon.icon-zoom
 						input.header__search-input(type="text" placeholder="Поиск" name="s")
 					//- button.header__search-submit(type="submit")
 						span.visually-hidden Искать
-				include searchDropdown.pug
+				//- include searchDropdown.pug
 
 			.d-flex.col-auto.pr-0.pr-xl-3.position-static.header__right-side
 				nav.header__menu
