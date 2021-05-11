@@ -1,0 +1,38 @@
+-
+	var data = [
+		{
+			title: 'Каналы',
+			list: [
+				'<b>Мир</b>',
+				'Детский <b>мир</b>',
+				'<b>Мир</b> HD',
+			],
+		},
+		{
+			title: 'Передачи',
+			list: [
+				{
+					title: 'Старт, <b>Мир</b> спорта',
+					time: 'Сегодня 12:50',
+				},
+				{
+					title: 'Extreme Sports, <b>Мир</b> экстремального спорта',
+					time: 'Сегодня 15:20',
+				},
+			],
+		},
+	];
+
+.search-dropdown
+	each cat in data
+		.search-dropdown__title #{cat.title}
+		ul.search-dropdown__list
+			each item in cat.list
+				li.search-dropdown__item
+					a.search-dropdown__link(href="#")
+						if item.title
+							span.search-dropdown__link-title !{item.title}
+							span.search-dropdown__link-time #{item.time}
+						else
+							span.search-dropdown__link-title !{item}
+		.search-dropdown__item.search-dropdown__item--not-found Ничего не найдено (условное отображение)
