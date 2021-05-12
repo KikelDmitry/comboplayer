@@ -46,7 +46,8 @@
 	.container-xl
 		ul.categories-list
 			each cat in categories
-				li.categories-list__item
-					label.categories-list__label(class="categories-list__label--" + cat.id)
+				li.categories-list__item(class="categories-list__item--" + cat.id)
+					label.categories-list__label
 						input.categories-list__input.visually-hidden(type="checkbox" name=cat.id id=cat.id)
-						span.categories-list__title #{cat.title}
+						.categories-list__view
+							.categories-list__title #{cat.title}

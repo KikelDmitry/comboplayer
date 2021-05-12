@@ -161,7 +161,7 @@
 		&--series {
 		}
 		&--culture {
-			background-color: $color-culture;
+			background-color: map-get($color-cat, culture );
 			color: $color-white;
 		}
 	}

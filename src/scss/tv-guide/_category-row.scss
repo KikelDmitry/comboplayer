@@ -10,70 +10,42 @@
 	&__item {
 		margin-right: 10px;
 		margin-bottom: 10px;
+
+		@include catColor(movie);
+		@include catColor(series);
+		@include catColor(sport);
+		@include catColor(learning);
+		@include catColor(info);
+		@include catColor(news);
+		@include catColor(entertain);
+		@include catColor(culture);
+		@include catColor(kids);
 	}
 	&__label {
+		margin: 0;
+	}
+	&__input {
+		appearance: none;
+
+		&:checked {
+			& + .categories-list__view {
+				.categories-list__title {
+					&::before {
+						transform: scale(1);
+					}
+				}
+			}
+		}
+	}
+	&__view {
 		padding: 0 8px;
 		margin: 0;
 		background-color: $color-steel-dull-9;
 		color: $color-steel-2;
 		border-radius: 3px;
 		cursor: pointer;
+		transition: background-color 200ms, color 200ms;
 
-		&.is-checked {
-
-		}
-		//category colors
-		&--movie {
-			background-color: $color-movie;
-			color: $color-white;
-		}
-		&--series {
-			background-color: $color-series;
-			color: $color-white;
-		}
-		&--sport {
-			background-color: $color-sport;
-			color: $color-white;
-		}
-		&--learning {
-			background-color: $color-learning;
-			color: $color-white;
-		}
-		&--learning {
-			background-color: $color-learning;
-			color: $color-white;
-		}
-		&--info {
-			background-color: $color-info;
-			color: $color-white;
-		}
-		&--news {
-			background-color: $color-news;
-			color: $color-white;
-		}
-		&--entertain {
-			background-color: $color-entertain;
-			color: $color-white;
-		}
-		&--culture {
-			background-color: $color-culture;
-			color: $color-white;
-		}
-		&--kids {
-			background-color: $color-kids;
-			color: $color-white;
-		}
-	}
-	&__input {
-		appearance: none;
-
-		&:checked {
-			& + .categories-list__title {
-				&::before {
-					transform: scale(1);
-				}
-			}
-		}
 	}
 	&__title {
 		display: flex;

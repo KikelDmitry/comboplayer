@@ -189,6 +189,9 @@
 }
 // tv guide
 {
+	// $('.categories-list__input').change(function() {
+	// 	$(this).parent('.categories-list__label').toggleClass('is-checked')
+	// })
 	$('.guide-channel__control-item--fav').click(function() {
 		$(this).toggleClass('is-active')
 	})
