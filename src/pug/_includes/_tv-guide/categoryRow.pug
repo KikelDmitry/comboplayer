@@ -1,0 +1,52 @@
+-
+	var categories = [
+		{
+			title: 'Фильмы',
+			id: 'movie',
+		},
+		{
+			title: 'Сериалы',
+			id: 'series',
+		},
+		{
+			title: 'Спорт',
+			id: 'sport',
+		},
+		{
+			title: 'Познавательное',
+			id: 'learning',
+		},
+		{
+			title: 'Инфо',
+			id: 'info',
+		},
+		{
+			title: 'Новости',
+			id: 'news',
+		},
+		{
+			title: 'Культура',
+			id: 'culture',
+		},
+		{
+			title: 'Досуг',
+			id: 'entertain',
+		},
+		{
+			title: 'Детям',
+			id: 'kids',
+		},
+		{
+			title: 'Остальное',
+			id: 'rest',
+		},
+	]
+
+.category-row
+	.container-xl
+		ul.categories-list
+			each cat in categories
+				li.categories-list__item
+					label.categories-list__label(class="categories-list__label--" + cat.id)
+						input.categories-list__input.visually-hidden(type="checkbox" name=cat.id id=cat.id)
+						span.categories-list__title #{cat.title}

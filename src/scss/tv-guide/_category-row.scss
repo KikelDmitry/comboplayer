@@ -1,0 +1,100 @@
+.category-row {
+	padding: 12px 0 2px;
+}
+.categories-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	&__item {
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+	&__label {
+		padding: 0 8px;
+		margin: 0;
+		background-color: $color-steel-dull-9;
+		color: $color-steel-2;
+		border-radius: 3px;
+		cursor: pointer;
+
+		&.is-checked {
+
+		}
+		//category colors
+		&--movie {
+			background-color: $color-movie;
+			color: $color-white;
+		}
+		&--series {
+			background-color: $color-series;
+			color: $color-white;
+		}
+		&--sport {
+			background-color: $color-sport;
+			color: $color-white;
+		}
+		&--learning {
+			background-color: $color-learning;
+			color: $color-white;
+		}
+		&--learning {
+			background-color: $color-learning;
+			color: $color-white;
+		}
+		&--info {
+			background-color: $color-info;
+			color: $color-white;
+		}
+		&--news {
+			background-color: $color-news;
+			color: $color-white;
+		}
+		&--entertain {
+			background-color: $color-entertain;
+			color: $color-white;
+		}
+		&--culture {
+			background-color: $color-culture;
+			color: $color-white;
+		}
+		&--kids {
+			background-color: $color-kids;
+			color: $color-white;
+		}
+	}
+	&__input {
+		appearance: none;
+
+		&:checked {
+			& + .categories-list__title {
+				&::before {
+					transform: scale(1);
+				}
+			}
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		font-family: $addFont;
+		font-size: 16px;
+		user-select: none;
+		
+		@include media-breakpoint-up(xl) {
+			font-size: 18px;
+		}
+		&::before {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			margin-right: 4px;
+			border-radius: 50%;
+			background-color: rgba(218, 218, 242, 0.66);
+			transform: scale(0);
+			transition: transform 200ms;
+		}
+	}
+}
