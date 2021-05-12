@@ -46,16 +46,19 @@
 		justify-content: space-between;
 		align-items: center;
 		height: var(--height);
-		padding-right: 30px;
+		padding-right: 10px;
 		position: relative;
 		border-left: 1px solid $color-steel-dull-85;
 		transition: background-color 300ms;
 		
+		@include media-breakpoint-up(lg) {
+			padding-right: 30px;
+		}
 		&.is-focused {
 			background-color: $color-steel-dull-95;
 
 			.header__form-reset {
-				display: block;
+				display: flex;
 			}
 		}
 		&-label {
@@ -79,6 +82,7 @@
 			width: 100%;
 			flex: 1 1 auto;
 			padding: 0;
+			padding-right: 10px;
 			border: 0;
 			background-color: inherit;
 			color: $color-steel-2;
@@ -95,6 +99,7 @@
 		}
 		&-reset {
 			display: none;
+			flex: 0 0 auto;
 			width: 12px;
 			height: 12px;
 			color: $color-steel-6;
