@@ -59,6 +59,15 @@
 
 section.top-slider
 	.top-slider__container.owl-carousel
+		// классы для градиентов '.top-slide':
+			.grad-green
+			.grad-blue
+			.grad-cyan
+			.grad-red
+			.grad-violet
+			.grad-gray
+			.grad-brown
+			.grad-black
 		each slide, idx in slides
 			.container-xl.top-slide(class="grad-" + slide.gradient)
 				a.top-slide__inner(href="#link-to-item")

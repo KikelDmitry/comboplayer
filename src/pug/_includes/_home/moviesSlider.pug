@@ -1,7 +1,7 @@
 -
 	var data = {
 		title: 'Фильмы',
-		actions: {
+		info: {
 			buy: 'Покупка',
 			subs: 'Подписка',
 		},
@@ -99,15 +99,18 @@ section.movies-slider
 					.movie-item
 						.movie-item__inner
 							.movie-item__poster
-								img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+								img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
 								.movie-item__overlay
-									.movie-item__actions
-										a.movie-item__actions-item(href="#buy-link")
-											i.icon-ruble
-											span #{data.actions.buy}
-										a.movie-item__actions-item(href="#subscription-link")
-											i.icon-play-plus
-											span #{data.actions.subs}
+									.movie-item__overlay-play
+										i.icon-play
+								.movie-item__info
+									//- a.movie-item__info-item(href="#buy-link")
+										i.icon-ruble
+										span #{data.info.buy}
+									.movie-item__info-item
+										i.icon-play-plus
+										span #{data.info.subs}
+								
 							.movie-item__badge 
 								each badge in movie.badges
 									span.movie-item__badge-item #{badge}
@@ -115,5 +118,7 @@ section.movies-slider
 								.movie-item__rating-icon
 									i.icon-kinopoisk-logo
 								.movie-item__rating-value #{movie.rating}
-							.movie-item__title(title=movie.title)
+							.movie-item__title
 								h3.movie-item__title-text #{movie.title}
+							a.movie-item__link(href="#movie-link" title=movie.title)
+								span.visually-hidden #{movie.title}
