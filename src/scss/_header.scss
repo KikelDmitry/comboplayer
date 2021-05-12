@@ -35,15 +35,28 @@
 		}
 	}
 	&__search {
-		height: var(--height);
+		position: static;
+
+		@include media-breakpoint-up(sm) {
+			position: relative;
+		}
+	}
+	&__form {
 		display: flex;
+		justify-content: space-between;
 		align-items: center;
+		height: var(--height);
+		padding-right: 30px;
 		position: relative;
 		border-left: 1px solid $color-steel-dull-85;
 		transition: background-color 300ms;
 		
-		&:focus-within {
+		&.is-focused {
 			background-color: $color-steel-dull-95;
+
+			.header__form-reset {
+				display: block;
+			}
 		}
 		&-label {
 			width: 100%;
@@ -61,9 +74,11 @@
 			margin-right: 10px;
 		}
 		&-input {
+			display: block;
 			min-width: 0;
-			// max-width: 100%;
+			width: 100%;
 			flex: 1 1 auto;
+			padding: 0;
 			border: 0;
 			background-color: inherit;
 			color: $color-steel-2;
@@ -78,12 +93,19 @@
 				outline: 0;
 			}
 		}
-		&-submit {
-			position: absolute;
-			top: 50%;
-			left: 10px;
-			transform: translateY(-50%);
-		} 
+		&-reset {
+			display: none;
+			width: 12px;
+			height: 12px;
+			color: $color-steel-6;
+			font-size: 12px;
+		}
+		// &-submit {
+		// 	position: absolute;
+		// 	top: 50%;
+		// 	left: 10px;
+		// 	transform: translateY(-50%);
+		// } 
 
 	}
 	&__menu {
