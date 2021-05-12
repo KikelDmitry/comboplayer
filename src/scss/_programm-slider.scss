@@ -266,4 +266,7 @@
 			background-color: $color-apple-4;
 		}
 	}
+	&__link {
+		@include absoluteFull;
+	}
 }

@@ -22,11 +22,11 @@ mixin programmSlider(title, tabs, programms, categories)
 				.tab-pane(class=(idx == 0 ? 'active' : 'fade') id=category.id)
 					.programm-slider__body.items-carousels.owl-carousel
 						each programm in programms
-							a.programm-item(href="#link-to-programm" title=programm.title)
+							.programm-item
 								.programm-item__inner
 									.programm-item__poster
 										if programm.poster
-											img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title)
+											img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title + " постер")
 										else
 											img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
 									.programm-item__overlay
@@ -40,4 +40,6 @@ mixin programmSlider(title, tabs, programms, categories)
 										h3.programm-item__title #{programm.title}
 									.programm-item__progress
 										.programm-item__progress-bar(style="width:" + programm.progress + "%")
+									a.programm-item__link(href="#programm-link" title=programm.title)
+										span.visually-hidden #{programm.title}
 		noscript.no-js-msg #{globalData.nojs}
