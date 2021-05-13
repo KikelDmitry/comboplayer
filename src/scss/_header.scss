@@ -36,6 +36,7 @@
 	}
 	&__search {
 		position: static;
+		padding-right: 0;
 
 		@include media-breakpoint-up(sm) {
 			position: relative;
@@ -89,6 +90,7 @@
 			font-family: $mainFont;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			transition: all 300ms;
 
 			&::placeholder {
 				color: $color-steel-5;
