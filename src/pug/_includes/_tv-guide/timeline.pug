@@ -1,0 +1,92 @@
+-
+	var dates = [
+		{
+			text: '26, ПН',
+		},
+		{
+			text: 'Вчера',
+		},
+		{
+			text: 'Сейчас',
+			type: 'is-active',
+		},
+		{
+			text: 'Сегодня',
+		},
+		{
+			text: 'Завтра',
+		},
+		{
+			text: '30, ПТ',
+		},
+		{
+			text: '01, СБ',
+			type: 'is-weekend',
+		},
+		{
+			text: '02, ВС',
+			type: 'is-weekend',
+		},
+		{
+			text: '03, ПН',
+		},
+		{
+			text: '04, ВТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '05, СР',
+			type: 'is-inactive',
+		},
+		{
+			text: '06, ЧТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '07, ПТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '08, СБ',
+			type: 'is-inactive is-weekend',
+		},
+		{
+			text: '09, ВС',
+			type: 'is-inactive is-weekend',
+		},
+		{
+			text: '10, ПН',
+			type: 'is-inactive',
+		},
+		{
+			text: '11, ВТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '12, СР',
+			type: 'is-inactive',
+		},
+		{
+			text: '13, ЧТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '14, ПТ',
+			type: 'is-inactive',
+		},
+		{
+			text: '15, СБ',
+			type: 'is-inactive is-weekend',
+		},
+	]
+
+.tv-guide-timeline
+	.container-xl
+		.timeline
+			button.timeline__nav.timeline__nav--left(type="button" aria-label="Раньше")
+				i.icon-caret-up
+			.timeline__tape
+				each date in dates
+					button.timeline__item(type="button" class=date.type) #{date.text}
+			button.timeline__nav.timeline__nav--right(type="button" aria-label="Позже")
+				i.icon-caret-up
