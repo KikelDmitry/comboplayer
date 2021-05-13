@@ -70,24 +70,22 @@
 // sticky panel fallback
 {
 	let header = $('.header'),
-		offset = header.height(),
+		postHeader = $('.post-header'),
+		offset = (header.outerHeight() + postHeader.outerHeight() || header.outerHeight()),
 		sticky = $('.sticky-header');
+
 	if (sticky.length !== 0) {
 		$(window).scroll(function () {
 			if ($(window).scrollTop() > offset) {
 				header.css({
 					marginBottom: sticky.height()
 				});
-				sticky.css({
-					position: 'fixed'
-				});
+				sticky.addClass('is-sticky');
 			} else {
 				header.css({
 					marginBottom: 0
 				});
-				sticky.css({
-					position: 'relative'
-				});
+				sticky.removeClass('is-sticky');
 			}
 		})
 
@@ -187,12 +185,9 @@
 	})
 
 }
-// tv guide
+// favorite btn
 {
-	// $('.categories-list__input').change(function() {
-	// 	$(this).parent('.categories-list__label').toggleClass('is-checked')
-	// })
-	$('.guide-channel__control-item--fav').click(function() {
-		$(this).toggleClass('is-active')
+	$('.fav-btn').click(function() {
+		$(this).toggleClass('is-active');
 	})
 }

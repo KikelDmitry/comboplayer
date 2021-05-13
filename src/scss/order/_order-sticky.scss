@@ -1,11 +1,6 @@
 .order-sticky {
 	--height: 54px;
-	position: -webkit-sticky;
-	position: sticky;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 90;
+
 	height: var(--height);
 	background-color: $color-steel-dull-95;
 

@@ -25,6 +25,7 @@
 		@include catColor(entertain);
 		@include catColor(culture);
 		@include catColor(kids);
+		@include catColor(rest);
 	}
 	&__label {
 		margin: 0;
@@ -36,7 +37,9 @@
 			& + .categories-list__view {
 				.categories-list__title {
 					&::before {
-						transform: scale(1);
+						width: 8px;
+						// height: 8px;
+						margin-right: 4px;
 					}
 				}
 			}
@@ -65,13 +68,12 @@
 		&::before {
 			content: '';
 			display: block;
-			width: 8px;
+			width: 0;
 			height: 8px;
-			margin-right: 4px;
+			margin-right: 0;
 			border-radius: 50%;
 			background-color: rgba(218, 218, 242, 0.66);
-			transform: scale(0);
-			transition: transform 200ms;
+			transition: all 200ms;
 		}
 	}
 }

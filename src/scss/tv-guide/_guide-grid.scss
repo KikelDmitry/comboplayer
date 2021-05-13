@@ -82,35 +82,8 @@
 			&--fav {
 				color: $color-steel-7;
 
-				i {
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					transition: visibility 200ms, opacity 200ms;
-
-					&.icon-heart-empty {
-						visibility: visible;
-						opacity: 1;
-					}
-					&.icon-heart-solid {
-						visibility: hidden;
-						opacity: 0;
-					}
-				}
 				&.is-active {
 					color: $color-apple-6;
-
-					i {
-						&.icon-heart-empty {
-							visibility: hidden;
-							opacity: 0;
-						}
-						&.icon-heart-solid {
-							visibility: visible;
-							opacity: 1;
-						}
-					}
 				}
 			}
 		}

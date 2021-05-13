@@ -2,12 +2,12 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-flow: column nowrap;
-	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+	font-family: $mainFont, "Helvetica", "Arial", sans-serif;
 	font-weight: normal;
 	font-size: 16px;
 }
 .title-1 {
-	font-family: "Roboto Condensed";
+	font-family: $addFont;
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 100%;
@@ -17,22 +17,33 @@ body {
 	}
 }
 .title-2 {
-	font-family: "Roboto Condensed";
+	font-family: $addFont;
 	font-weight: bold;
 	font-size: 19px;
 	line-height: 125%;
 }
 .title-3 {
-	font-family: "Roboto";
+	font-family: $mainFont;
 	font-weight: bold;
 	font-size: 16px;
 	line-height: 125%;
 }
 .title-4 {
-	font-family: "Roboto";
+	font-family: $mainFont;
 	font-weight: normal;
 	font-size: 16px;
 	line-height: 125%;
+}
+.sticky-header {
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+
+	&.is-sticky {
+		position: fixed;
+	}
 }
 .buy-btn {
 	display: flex;
@@ -57,6 +68,36 @@ body {
 	}
 	&:focus {
 		outline: 0;
+	}
+}
+.fav-btn {
+	i {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: visibility 200ms, opacity 200ms;
+
+		&.icon-heart-empty {
+			visibility: visible;
+			opacity: 1;
+		}
+		&.icon-heart-solid {
+			visibility: hidden;
+			opacity: 0;
+		}
+	}
+	&.is-active {
+		i {
+			&.icon-heart-empty {
+				visibility: hidden;
+				opacity: 0;
+			}
+			&.icon-heart-solid {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
 	}
 }
 .no-js-msg {

@@ -1,0 +1,160 @@
+.filters-management {
+	padding-top: 18px;
+
+	&__title {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		margin-bottom: 12px;
+		color: $color-cobalt-1;
+
+		@include media-breakpoint-up(sm) {
+			margin-bottom: 0;
+		}
+	}
+	&__controls {
+		display: flex;
+	}
+}
+.channel-favorite {
+	height: 36px;
+	display: flex;
+	align-items: center;
+	padding: 8px 12px;
+	border-radius: 4px;
+	transition: background-color 200ms;
+
+	&:hover {
+		background-color: $color-steel-dull-9;
+
+		.channel-favorite__title {
+			color: $color-steel-2;
+		}
+	}
+
+	&.is-active {
+		background-color: $color-steel-dull-95;
+
+		.channel-favorite__icon {
+			color: $color-apple-5;
+		}
+		.channel-favorite__title {
+			color: $color-cobalt-2;
+		}
+	}
+	&__icon {
+		width: 16px;
+		height: 16px;
+		flex: 0 0 auto;
+		margin-right: 8px;
+		position: relative;
+		color: $color-apple-7;
+		transition: color 200ms;
+	}
+	&__title {
+		flex: 0 0 auto;
+		color: $color-steel-6;
+		transition: color 200ms;
+
+		@include media-breakpoint-up(sm) {
+			font-size: 14px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 15px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 16px;
+		}
+	}
+}
+.channels-dropdown {
+	@include media-breakpoint-up(sm) {
+		margin-left: 10px;
+	}
+	@include media-breakpoint-up(lg) {
+		margin-left: 15px;
+	}
+	@include media-breakpoint-up(xl) {
+		margin-left: 10px;
+	}
+	&__btn {
+		height: 36px;
+		display: flex;
+		align-items: center;
+		padding: 8px 12px;
+		border-radius: 4px;
+		background-color: $color-steel-dull-95;
+		transition: background-color 200ms;
+
+		&::after {
+			margin-left: 8px;
+			color: $color-apple-4;
+			border-width: 0.4em;
+			transition: color 200ms;
+
+			@include media-breakpoint-up(md) {
+				margin-left: 38px;
+			}
+		}
+		&:hover {
+			background-color: $color-steel-dull-85;
+		}
+		&[aria-expanded="true"] {
+			background-color: $color-apple-4;
+
+			&::after {
+				color: $color-white;
+			}
+			i {
+				color: $color-apple-8;
+			}
+			.channels-dropdown__btn-title {
+				color: $color-white;
+			}
+		}
+		i {
+			margin-right: 8px;
+			color: $color-apple-5;
+			transition: color 200ms;
+		}
+		&-title {
+			color: $color-cobalt-2;
+			font-size: 14px;
+			transition: color 200ms;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 15px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 16px;
+			}
+		}
+	}
+	&__list {
+		right: 0 !important;
+		padding: 6px 0 10px;
+		background-color: $color-white;
+		box-shadow: $shadow-lg;
+		border-radius: 5px;
+		border: 0;
+	}
+	&__item {
+		min-height: 28px;
+
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-steel-dull-9;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 4px 16px;
+		font-size: 15px;
+		color: $color-steel-2;
+		transition: background-color 200ms, color 200ms;
+
+		&:hover {
+			color: $color-apple-3;
+			background-color: $color-apple-9;
+		}
+	}
+}

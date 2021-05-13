@@ -1,0 +1,35 @@
+-
+	var channels = [
+		'Все каналы',
+		'Другое',
+		'Информация',
+		'Каналы для взрослых',
+		'Музыка',
+		'Детям',
+		'Познавательные',
+		'Развлечения',
+		'Спорт',
+		'Увлечения',
+		'Фильмы и сериалы',
+	]
+
+.filters-management.post-header
+	.container-xl
+		.row.flex-nowrap.flex-column.flex-sm-row.justify-content-sm-between.align-center
+			.col-auto
+				h2.filters-management__title.title-1 Программа передач на сейчас
+			.col-auto.pl-0 
+				.filters-management__controls
+					button.channel-favorite.fav-btn(type="button")
+						span.channel-favorite__icon
+							i.icon-heart-empty
+							i.icon-heart-solid
+						span.channel-favorite__title Избранное
+					.channels-dropdown.dropdown
+						button.channels-dropdown__btn.dropdown-toggle#channels-list(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							i.icon-tv-icon
+							span.channels-dropdown__btn-title Все каналы
+						ul.channels-dropdown__list.dropdown-menu(aria-labelledby="channels-list")
+							each channel in channels
+								li.channels-dropdown__item
+									a.channels-dropdown__link(href="#") #{channel}
