@@ -194,28 +194,42 @@
 // tv guide info
 {
 	let programmLink = $('.programm-list__item'),
-		programmInfo = $('.programm-card');
+		programmInfo = $('.programm-card'),
+		gridCol = $('.guide-grid__col');
+	function offset(el) {
+		let rect = el.getBoundingClientRect(),
+			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		return {
+			top: rect.top + scrollTop,
+			left: rect.left + scrollLeft
+		}
+	}
 
 	programmLink.mouseover(function () {
-		let linkPos = $(this).offset(),
-			linkWidth = $(this).outerWidth();
-		windowWidth = $(window).width();
-		programmInfo.addClass('is-visible');
+		let currentCol = $(this).closest(gridCol);
+		let prevCol = gridCol[currentCol.index() - 1];
+		let nextCol = gridCol[currentCol.index() + 1];
+		console.log(currentCol, prevCol)
+
 		programmInfo.css({
-			top: `${linkPos.top + $(this).outerHeight()}px`,
-			left: linkPos.left,
-		});
-		// if (windowWidth - (linkPos.left + linkWidth) < 320) {
-		// 	programmInfo.css({
-		// 		// transform: 'translate(-100%)',
-		// 	})
-		// } else {
-		// 	programmInfo.css({
-		// 		// transform: `translate(100%)`,
-		// 	})
-		// }
-	});
-	programmLink.mouseout(function () {
-		programmInfo.removeClass('is-visible')
+			width: currentCol.offsetWidth,
+		})
+		programmInfo.addClass('is-visible');
+
+		if (nextCol == undefined || offset(nextCol).left < offset(currentCol).left) {
+			programmInfo.css({
+				left: offset(prevCol).left,
+				top: offset(prevCol).top,
+			});
+		} else {
+			programmInfo.css({
+				left: offset(nextCol).left,
+				top: offset(nextCol).top,
+			});
+		};
+		programmLink.mouseout(function () {
+			programmInfo.removeClass('is-visible')
+		})
 	})
 }

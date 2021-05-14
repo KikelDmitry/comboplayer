@@ -5,19 +5,22 @@
 	top: 0;
 	left: 0;
 	z-index: 120;
-	margin: 10px 0;
 	background-color: $color-white;
 	border-radius: 5px;
 	box-shadow: $shadow-xl;
+
+	//hidden
 	visibility: hidden;
 	opacity: 0;
-	transform: translateY(30px);
+	transform: translateY(20px);
+	pointer-events: none;
 	transition: visibility 300ms, opacity 300ms, transform 300ms;
-
+	
 	&.is-visible {
 		visibility: visible;
 		opacity: 1;
 		transform: translateY(0);
+		pointer-events: all;
 	}
 	&__header {
 		height: 48px;

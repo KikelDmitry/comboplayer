@@ -98,7 +98,6 @@
 	&__item {
 		display: flex;
 		align-items: baseline;
-		margin-bottom: 10px;
 
 		&:hover {
 			.programm-list__time {
@@ -143,6 +142,7 @@
 		flex-direction: column;
 		align-items: flex-start;
 		flex: 1 1 auto;
+		margin-bottom: 10px;
 	}
 	&__title {
 		color: $color-steel-0;
