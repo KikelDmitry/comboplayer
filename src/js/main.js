@@ -187,7 +187,35 @@
 }
 // favorite btn
 {
-	$('.fav-btn').click(function() {
+	$('.fav-btn').click(function () {
 		$(this).toggleClass('is-active');
+	})
+}
+// tv guide info
+{
+	let programmLink = $('.programm-list__item'),
+		programmInfo = $('.programm-card');
+
+	programmLink.mouseover(function () {
+		let linkPos = $(this).offset(),
+			linkWidth = $(this).outerWidth();
+		windowWidth = $(window).width();
+		programmInfo.addClass('is-visible');
+		programmInfo.css({
+			top: `${linkPos.top + $(this).outerHeight()}px`,
+			left: linkPos.left,
+		});
+		// if (windowWidth - (linkPos.left + linkWidth) < 320) {
+		// 	programmInfo.css({
+		// 		// transform: 'translate(-100%)',
+		// 	})
+		// } else {
+		// 	programmInfo.css({
+		// 		// transform: `translate(100%)`,
+		// 	})
+		// }
+	});
+	programmLink.mouseout(function () {
+		programmInfo.removeClass('is-visible')
 	})
 }
