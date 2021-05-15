@@ -8,7 +8,10 @@
 	}
 
 article.programm-card
-	header.programm-card__header #{card.title}
+	header.programm-card__header
+		span #{card.title}
+		button.programm-card__close.d-flex.d-lg-none
+			i.icon-close
 	.programm-card__poster
 		img.programm-card__poster-img(src="/img/content/banners/" + card.poster, alt=card.title = " постер")
 	.programm-card__descr #{card.descr}

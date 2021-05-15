@@ -195,14 +195,17 @@
 {
 	let programmLink = $('.programm-list__item'),
 		programmInfo = $('.programm-card'),
-		gridCol = $('.guide-grid__col');
+		gridCol = $('.guide-grid__col'),
+		closeBtn = $('.programm-card__close');
+
 	function offset(el) {
 		let rect = el.getBoundingClientRect(),
 			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
 			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 		return {
 			top: rect.top + scrollTop,
-			left: rect.left + scrollLeft
+			left: rect.left + scrollLeft,
+			width: rect.width
 		}
 	}
 
@@ -210,26 +213,29 @@
 		let currentCol = $(this).closest(gridCol);
 		let prevCol = gridCol[currentCol.index() - 1];
 		let nextCol = gridCol[currentCol.index() + 1];
-		console.log(currentCol, prevCol)
+		currentCol = currentCol[0];
 
 		programmInfo.css({
-			width: currentCol.offsetWidth,
+			width: offset(currentCol).width - 30,
 		})
 		programmInfo.addClass('is-visible');
 
 		if (nextCol == undefined || offset(nextCol).left < offset(currentCol).left) {
 			programmInfo.css({
-				left: offset(prevCol).left,
+				left: offset(prevCol).left + 15,
 				top: offset(prevCol).top,
 			});
 		} else {
 			programmInfo.css({
-				left: offset(nextCol).left,
+				left: offset(nextCol).left + 15,
 				top: offset(nextCol).top,
 			});
 		};
 		programmLink.mouseout(function () {
-			programmInfo.removeClass('is-visible')
+			programmInfo.removeClass('is-visible');
 		})
+	})
+	closeBtn.click(function() {
+		programmInfo.removeClass('is-active');
 	})
 }
