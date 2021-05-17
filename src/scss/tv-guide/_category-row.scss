@@ -1,10 +1,5 @@
 .category-row {
 	padding: 12px 0 2px;
-
-	// top: 0;
-	// left: 0;
-	// right: 0;
-	// z-index: 100;
 }
 .categories-list {
 	display: flex;
@@ -12,20 +7,15 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 
+	$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest;
+
 	&__item {
 		margin-right: 10px;
 		margin-bottom: 10px;
-
-		@include catColor(movie);
-		@include catColor(series);
-		@include catColor(sport);
-		@include catColor(learning);
-		@include catColor(info);
-		@include catColor(news);
-		@include catColor(entertain);
-		@include catColor(culture);
-		@include catColor(kids);
-		@include catColor(rest);
+		
+		@each $cat in $cat-list {
+			@include catColor($cat);
+		}
 	}
 	&__label {
 		margin: 0;
@@ -38,7 +28,6 @@
 				.categories-list__title {
 					&::before {
 						width: 8px;
-						// height: 8px;
 						margin-right: 4px;
 					}
 				}
@@ -53,7 +42,6 @@
 		border-radius: 3px;
 		cursor: pointer;
 		transition: background-color 200ms, color 200ms;
-
 	}
 	&__title {
 		display: flex;
@@ -61,12 +49,12 @@
 		font-family: $addFont;
 		font-size: 16px;
 		user-select: none;
-		
+
 		@include media-breakpoint-up(xl) {
 			font-size: 18px;
 		}
 		&::before {
-			content: '';
+			content: "";
 			display: block;
 			width: 0;
 			height: 8px;

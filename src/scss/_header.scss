@@ -51,7 +51,7 @@
 		position: relative;
 		border-left: 1px solid $color-steel-dull-85;
 		transition: background-color 300ms;
-		
+
 		@include media-breakpoint-up(lg) {
 			padding-right: 30px;
 		}
@@ -70,6 +70,11 @@
 			display: flex;
 			align-items: center;
 			cursor: pointer;
+
+			@include df(400) {
+				flex-direction: row-reverse;
+				padding-left: 10px;
+			}
 		}
 		&-icon {
 			flex: 0 0 auto;
@@ -92,8 +97,16 @@
 			text-overflow: ellipsis;
 			transition: all 300ms;
 
+			@include df(400) {
+				padding-right: 0;
+			}
+
 			&::placeholder {
 				color: $color-steel-5;
+
+				@include df(400) {
+					color: transparent;
+				}
 			}
 			&:focus {
 				outline: 0;
@@ -107,13 +120,6 @@
 			color: $color-steel-6;
 			font-size: 12px;
 		}
-		// &-submit {
-		// 	position: absolute;
-		// 	top: 50%;
-		// 	left: 10px;
-		// 	transform: translateY(-50%);
-		// } 
-
 	}
 	&__menu {
 		display: flex;
@@ -121,7 +127,7 @@
 		// mobile menu
 		flex-direction: column;
 		position: absolute;
-		z-index: 100;
+		z-index: 110;
 		top: var(--height);
 		left: 0;
 		right: 0;

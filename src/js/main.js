@@ -67,7 +67,7 @@
 		}
 	}
 }
-// sticky panel fallback
+// sticky panel
 {
 	let header = $('.header'),
 		postHeader = $('.post-header'),
@@ -76,16 +76,18 @@
 
 	if (sticky.length !== 0) {
 		$(window).scroll(function () {
-			if ($(window).scrollTop() > offset) {
-				header.css({
-					marginBottom: sticky.height()
-				});
-				sticky.addClass('is-sticky');
-			} else {
-				header.css({
-					marginBottom: 0
-				});
-				sticky.removeClass('is-sticky');
+			if($(window).height() > 600) {
+				if ($(window).scrollTop() > offset) {
+					header.css({
+						marginBottom: sticky.height()
+					});
+					sticky.addClass('is-sticky');
+				} else {
+					header.css({
+						marginBottom: 0
+					});
+					sticky.removeClass('is-sticky');
+				}
 			}
 		})
 
