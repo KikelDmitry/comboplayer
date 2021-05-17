@@ -58,6 +58,12 @@
 		&.is-focused {
 			background-color: $color-steel-dull-95;
 
+			.header__form-icon {
+				border-color: transparent;
+			}
+			.header__form-input {
+				opacity: 1;
+			}
 			.header__form-reset {
 				display: flex;
 			}
@@ -72,7 +78,6 @@
 			cursor: pointer;
 
 			@include df(400) {
-				flex-direction: row-reverse;
 				padding-left: 10px;
 			}
 		}
@@ -80,7 +85,16 @@
 			flex: 0 0 auto;
 			color: $color-cobalt-1;
 			font-size: 18px;
-			margin-right: 10px;
+			padding-right: 10px;
+			align-self: stretch;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-right: 1px solid $color-steel-dull-85;
+
+			@include mf(400) {
+				border-right: 0;
+			}
 		}
 		&-input {
 			display: block;
@@ -95,10 +109,14 @@
 			font-family: $mainFont;
 			overflow: hidden;
 			text-overflow: ellipsis;
+			opacity: 0;
 			transition: all 300ms;
-
+			
 			@include df(400) {
 				padding-right: 0;
+			}
+			@include media-breakpoint-up(sm) {
+				opacity: 1;
 			}
 
 			&::placeholder {
