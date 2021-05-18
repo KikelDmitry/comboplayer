@@ -29,13 +29,17 @@
 		color: $color-white;
 		padding-left: 25px;
 		padding-right: 15px;
+		border-radius: 5px 5px 0 0;
+	}
+	&__title {
+		font-family: $addFont;
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 48px;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		font-family: $addFont;
-		border-radius: 5px 5px 0 0;
-		font-size: 18px;
-		line-height: 48px;
+
 	}
 	&__close {
 	}
