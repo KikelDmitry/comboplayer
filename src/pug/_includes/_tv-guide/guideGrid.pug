@@ -151,9 +151,10 @@ section.guide-grid
 				.guide-grid__col.col-sm-6.col-md-4.col-xl-3
 					.guide-channel
 						header.guide-channel__header
-							.guide-channel__logo
-								img.guide-channel__logo-img(src="/img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
-							h3.guide-channel__title #{channel.title}
+							.guide-channel__header-link
+								.guide-channel__logo
+									img.guide-channel__logo-img(src="/img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
+								a.guide-channel__title(href="#") #{channel.title}
 							.guide-channel__control
 								a.guide-channel__control-item.guide-channel__control-item--play(href="#channel-page-link" title="Воспроизведение")
 									i.icon-play

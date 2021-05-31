@@ -34,9 +34,10 @@ header.header
 
 			.d-flex.col-auto.p-0.pr-xl-3.position-static.header__right-side
 				nav.header__menu
-					// класс для активного пункта меню .header__menu-item - 'is-active'
-					each item, idx in menu
-						a.header__menu-item(href=item.link) #{item.title}
+					.header__menu-inner
+						// класс для активного пункта меню .header__menu-item - 'is-active'
+						each item, idx in menu
+							a.header__menu-item(href=item.link) #{item.title}
 				a.header__login(href="#" aria-label="Вход")
 						i.icon-login
 						span Вход

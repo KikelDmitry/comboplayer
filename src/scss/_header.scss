@@ -38,7 +38,7 @@
 		position: static;
 		padding-right: 0;
 
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(md) {
 			position: relative;
 		}
 	}
@@ -56,7 +56,15 @@
 			padding-right: 30px;
 		}
 		&.is-focused {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
 			background-color: $color-steel-dull-95;
+
+			@include media-breakpoint-up(md) {
+				position: static;
+			}
 
 			.header__form-icon {
 				border-color: transparent;
@@ -140,32 +148,45 @@
 		}
 	}
 	&__menu {
-		display: flex;
-
-		// mobile menu
-		flex-direction: column;
 		position: absolute;
 		z-index: 110;
 		top: var(--height);
 		left: 0;
 		right: 0;
-		background-color: $color-cobalt-1;
-		transform: translateX(-100%);
-		will-change: transform;
-		transition: transform 300ms;
-
+		pointer-events: none;
+		overflow: hidden;
+		
 		@include media-breakpoint-up(md) {
-			// regular menu
 			position: static;
-			flex-direction: row;
-			justify-content: flex-end;
-			height: var(--height);
-			border-left: $header-border;
-			background-color: transparent;
-			transform: none;
+			pointer-events: all;
+		}
+		
+		&-inner {
+			display: flex;
+			
+			// mobile menu
+			flex-direction: column;
+			background-color: $color-cobalt-1;
+			transform: translateX(100%);
+			will-change: transform;
+			transition: transform 400ms;
+			
+			@include media-breakpoint-up(md) {
+				// regular menu
+				position: static;
+				flex-direction: row;
+				justify-content: flex-end;
+				height: var(--height);
+				border-left: $header-border;
+				background-color: transparent;
+				transform: none;
+			}
 		}
 		&.is-active {
-			transform: translateX(0);
+			pointer-events: all;
+			.header__menu-inner {
+				transform: translateX(0);
+			}
 		}
 
 		&-item {
@@ -271,7 +292,7 @@
 	&__burger {
 		width: var(--height);
 		height: var(--height);
-		color: #c74848;
+		color: $color-steel-6;
 		font-size: 12.74px;
 
 		button {

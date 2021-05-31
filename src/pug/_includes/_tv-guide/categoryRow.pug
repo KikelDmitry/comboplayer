@@ -44,10 +44,15 @@
 
 .category-row
 	.container-xl
-		ul.categories-list
-			each cat in categories
-				li.categories-list__item(class="categories-list__item--" + cat.id)
-					label.categories-list__label
-						input.categories-list__input.visually-hidden(type="checkbox" name=cat.id id=cat.id)
-						span.categories-list__view
-							.categories-list__title #{cat.title}
+		.category-row__inner
+			button.category-row__nav.category-row__nav--prev(type="button" aria-label="Назад")
+				i.icon-caret-up
+			ul.categories-list.category-row__list
+				each cat in categories
+					li.categories-list__item(class="categories-list__item--" + cat.id)
+						label.categories-list__label
+							input.categories-list__input(type="checkbox" name=cat.id id=cat.id)
+							span.categories-list__view
+								span.categories-list__title #{cat.title}
+			button.category-row__nav.category-row__nav--next(type="button" aria-label="Вперед")
+				i.icon-caret-up

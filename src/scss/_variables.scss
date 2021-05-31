@@ -28,6 +28,11 @@
 			background-color: map-get($color-cat, #{$cat});
 			color: $color-white;
 		}
+		.categories-list__title {
+			&::before {
+				background-color: lighten(map-get($color-cat, #{$cat}), 20%);
+			}
+		}
 	}
 }
 
