@@ -32,6 +32,7 @@
 		img {
 			max-width: none;
 			max-height: 100%;
+			margin-left: -6px
 		}
 	}
 	&__search {
@@ -264,6 +265,23 @@
 		@include media-breakpoint-up(xl) {
 			border-right: $header-border;
 		}
+		&--dropdown {
+			display: block;
+			max-width: 135px;
+			@include dottedEnd;
+		}
+		i {
+			color: $color-apple-deep-4;
+			font-size: 16px;
+		}
+		span {
+			display: none;
+			margin-left: 8px;
+
+			@include media-breakpoint-up(sm) {
+				display: inline;
+			}
+		}
 		&:hover {
 			color: $color-white;
 			background-color: $color-cobalt-4;
@@ -276,16 +294,37 @@
 			color: $color-steel-4;
 			background-color: $color-steel-dull-85;
 		}
-		i {
-			color: $color-apple-deep-4;
-			font-size: 16px;
+	}
+	&__dropdown {
+		&-menu {
+			left: auto !important;
+			right: 0 !important;
+			transform: translate3d(0, var(--height), 0) !important;
+			padding: 0;
+			margin-top: 0;
+			background-color: $color-white;
+			box-shadow: $shadow-lg;
+			border: 0;
+			border-radius: 0;
 		}
-		span {
-			display: none;
-			margin-left: 8px;
+		&-item {
 
-			@include media-breakpoint-up(sm) {
-				display: inline;
+		}
+		&-link {
+			display: block;
+			padding: 10px 15px;
+			height: 40px;
+			white-space: nowrap;
+
+			i {
+				margin-right: 11px;
+				color: $color-cobalt-4;
+			}
+			span {
+				color: $color-cobalt-2;
+			}
+			&:hover {
+				background-color: $color-cobalt-deep-9;
 			}
 		}
 	}

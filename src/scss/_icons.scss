@@ -21,69 +21,81 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-caret-down:before {
-  content: "\e901";
+.icon-location:before {
+  content: "\e919";
 }
-.icon-caret-up:before {
-  content: "\e902";
-}
-.icon-check-solid:before {
-  content: "\e903";
-}
-.icon-exclamation-triangle-solid:before {
-  content: "\e904";
-}
-.icon-facebook-logo:before {
-  content: "\e905";
-}
-.icon-play-plus:before {
-  content: "\e906";
-}
-.icon-kinopoisk-logo:before {
+.icon-lock:before {
   content: "\e900";
 }
-.icon-login:before {
+.icon-logout2:before {
+  content: "\e901";
+}
+.icon-user:before {
+  content: "\e902";
+}
+.icon-caret-down:before {
+  content: "\e903";
+}
+.icon-caret-up:before {
+  content: "\e904";
+}
+.icon-check-solid:before {
+  content: "\e905";
+}
+.icon-exclamation-triangle-solid:before {
+  content: "\e906";
+}
+.icon-facebook-logo:before {
   content: "\e907";
 }
-.icon-play:before {
+.icon-play-plus:before {
   content: "\e908";
 }
-.icon-plus-square-solid:before {
+.icon-kinopoisk-logo:before {
   content: "\e909";
 }
-.icon-shopping-cart:before {
+.icon-login:before {
   content: "\e90a";
 }
-.icon-close:before {
+.icon-play:before {
   content: "\e90b";
 }
-.icon-tv-icon:before {
+.icon-plus-square-solid:before {
   content: "\e90c";
 }
-.icon-burger:before {
+.icon-shopping-cart:before {
   content: "\e90d";
 }
-.icon-masonry:before {
+.icon-close:before {
   content: "\e90e";
 }
-.icon-logout:before {
+.icon-tv-icon:before {
   content: "\e90f";
 }
-.icon-vk-logo:before {
+.icon-burger:before {
   content: "\e910";
 }
-.icon-ruble:before {
+.icon-masonry:before {
   content: "\e911";
 }
-.icon-playback:before {
+.icon-logout:before {
   content: "\e912";
 }
-.icon-zoom:before {
+.icon-vk-logo:before {
   content: "\e913";
 }
-.icon-heart-solid:before {
+.icon-ruble:before {
   content: "\e914";
 }
-.icon-heart-empty:before {
+.icon-playback:before {
   content: "\e915";
+}
+.icon-zoom:before {
+  content: "\e916";
+}
+.icon-heart-solid:before {
+  content: "\e917";
+}
+.icon-heart-empty:before {
+  content: "\e918";
 }

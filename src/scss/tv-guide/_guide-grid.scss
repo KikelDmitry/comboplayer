@@ -26,7 +26,7 @@
 		justify-content: flex-start;
 		align-items: center;
 		margin-bottom: 15px;
-		
+
 		&-link {
 			position: relative;
 			display: flex;
@@ -44,6 +44,7 @@
 			}
 		}
 	}
+
 	&__logo {
 		display: flex;
 		width: 51px;
@@ -78,12 +79,14 @@
 			font-size: 20px;
 		}
 		&::after {
-			content: '';
+			content: "";
 			@include absoluteFull;
 		}
 	}
 	&__control {
 		display: flex;
+		opacity: 0;
+		visibility: hidden;
 
 		&-item {
 			flex: 0 0 auto;
@@ -112,6 +115,12 @@
 	}
 	&__list {
 		margin-bottom: 30px;
+	}
+	&:hover {
+		.guide-channel__control {
+			opacity: 1;
+			visibility: visible;
+		}
 	}
 }
 .programm-list {
@@ -155,7 +164,7 @@
 		&--series {
 		}
 		&--culture {
-			background-color: map-get($color-cat, culture );
+			background-color: map-get($color-cat, culture);
 			color: $color-white;
 		}
 	}
@@ -172,7 +181,7 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		transition: color $transDur;
-		
+
 		@include media-breakpoint-up(lg) {
 			font-size: 15px;
 		}

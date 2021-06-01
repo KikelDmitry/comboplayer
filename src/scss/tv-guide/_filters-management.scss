@@ -51,18 +51,20 @@
 		width: 16px;
 		height: 16px;
 		flex: 0 0 auto;
-		margin-right: 8px;
 		position: relative;
 		color: $color-apple-7;
 		transition: color 200ms;
 	}
 	&__title {
+		display: none;
 		flex: 0 0 auto;
+		margin-left: 8px;
 		color: $color-steel-6;
+		font-size: 14px;
 		transition: color 200ms;
 
-		@include media-breakpoint-up(sm) {
-			font-size: 14px;
+		@include media-breakpoint-up(md) {
+			display: block;
 		}
 		@include media-breakpoint-up(lg) {
 			font-size: 15px;
@@ -162,5 +164,173 @@
 			color: $color-apple-3;
 			background-color: $color-apple-9;
 		}
+	}
+}
+.city-dropdown {
+	margin-left: 10px;
+	
+	@include media-breakpoint-up(lg) {
+		margin-left: 15px;
+	}
+	@include media-breakpoint-up(xl) {
+		margin-left: 10px;
+	}
+	&__btn {
+		height: 36px;
+		display: flex;
+		align-items: center;
+		padding: 8px 12px;
+		border-radius: 4px;
+		background-color: $color-steel-dull-95;
+		transition: background-color 200ms;
+
+		&::after {
+			margin-left: 8px;
+			color: $color-apple-4;
+			border-width: 0.4em;
+			transition: color 200ms;
+
+			@include media-breakpoint-up(md) {
+				margin-left: 38px;
+			}
+		}
+		&:hover {
+			background-color: $color-steel-dull-85;
+		}
+		&[aria-expanded="true"] {
+			background-color: $color-apple-4;
+
+			&::after {
+				color: $color-white;
+			}
+			i {
+				color: $color-apple-8;
+			}
+			.city-dropdown__btn-title {
+				color: $color-white;
+			}
+		}
+		i {
+			margin-right: 8px;
+			color: $color-apple-5;
+			transition: color 200ms;
+		}
+		&-title {
+			color: $color-cobalt-2;
+			font-size: 14px;
+			transition: color 200ms;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 15px;
+			}
+			@include media-breakpoint-up(xl) {
+				font-size: 16px;
+			}
+		}
+	}
+	&__menu {
+		right: 0 !important;
+		left: auto !important;
+		transform: translate3d(0, 36px, 0) !important;
+		max-width: 225px;
+		box-shadow: $shadow-lg;
+		padding: 0;
+		border: 0;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	&__form {
+		display: flex;
+		align-items: center;
+		height: 48px;
+		padding: 10px 15px;
+		background-color: $color-steel-dull-9;
+		border-bottom: 1px solid #D3E8E1;
+
+		&-input {
+			min-width: 0;
+			flex: 1 1 auto;
+			border: 0;
+			background-color: transparent;
+			color: $color-steel-2;
+			font-size: 14px;
+
+			&::placeholder {
+				color: $color-steel-5;
+			}
+			&:focus {
+				outline: 0;
+			}
+		}
+		&-submit {
+			width: 20px;
+			height: 20px;
+			flex: 0 0 auto;
+			color: $color-apple-5;
+
+			i {
+			}
+		}
+		&:hover,
+		&:focus-within {
+			background-color: $color-apple-9;
+
+			i {
+				color: $color-apple-3;
+			}
+		}
+	}
+	&__link {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 40px;
+		padding: 10px 15px;
+		color: $color-cobalt-2;
+		font-size: 14px;
+
+		i {
+			transform: rotateZ(90deg);
+			font-size: 17px;
+		}
+		&:hover {
+			background-color: $color-cobalt-deep-9;
+			color: $color-cobalt-2;
+		}
+	}
+	&__city-list {
+	}
+}
+.city-droplist {
+	--item-height: 45px;
+
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 1px solid #D3E8E1;
+		}
+	}
+	&__link {
+		height: var(--item-height);
+		display: flex;
+		flex-direction: column;
+		padding: 2px 15px;
+
+		&:hover {
+			background-color: $color-apple-9;
+			color: $color-steel-1;
+
+			.city-droplist__city,
+			.city-droplist__county {
+				color: inherit;
+			}
+		}
+	}
+	&__city {
+		font-size: 14px;
+		color: $color-steel-2;
+	}
+	&__county {
+		font-size: 12px;
+		color: $color-steel-4;
 	}
 }

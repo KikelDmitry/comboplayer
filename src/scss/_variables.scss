@@ -21,6 +21,11 @@
 	right: 0;
 	bottom: 0;
 }
+@mixin dottedEnd() {
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
 //category color mixin
 @mixin catColor($cat) {
 	&--#{$cat} {

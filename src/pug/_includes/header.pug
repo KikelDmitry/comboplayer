@@ -38,17 +38,28 @@ header.header
 						// класс для активного пункта меню .header__menu-item - 'is-active'
 						each item, idx in menu
 							a.header__menu-item(href=item.link) #{item.title}
-				a.header__login(href="#" aria-label="Вход")
+				// anonymus state
+				a.header__login(href="login.html" aria-label="Вход")
 						i.icon-login
 						span Вход
+				// logged state
+				// .header__dropdown.dropdown
+					button.header__login.header__login--dropdown.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							i.icon-user
+							span UserName12345
+					ul.header__dropdown-menu.dropdown-menu
+						li.header__dropdown-item
+							a.header__dropdown-link(href="#")
+								i.icon-lock
+								span Админка 
+						li.header__dropdown-item
+							a.header__dropdown-link(href="#")
+								i.icon-user
+								span Личный кабинет 
+						li.header__dropdown-item
+							a.header__dropdown-link(href="#")
+								i.icon-logout2
+								span Выйти 
 				.header__burger.d-md-none
 					button.header__burger-btn(type="button" aria-label="Открыть меню")
 						i.icon-burger
-						
-			//- .d-none.d-md-block.col-md-6
-				.header__slogan Смотрите бесплатно ТВ онлайн
-					
-			//- .col-6.col-md-3.ml-auto
-				a.header__phone(href="tel:+78632800012")
-					b +7 (863) 
-					| 280-00-12
