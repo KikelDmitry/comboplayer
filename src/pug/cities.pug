@@ -1,0 +1,69 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Выбор города';
+	- config.page.description = 'Выбор города';
+
+	-
+		var regions = [
+			{
+				cities: [
+					'Москва',
+					'Санкт-Петербург',
+				],
+			},
+			{
+				title: 'Республика Башкоркостан',
+				cities: [
+					'Уфа',
+				],
+			},
+			{
+				title: 'Белгородская область',
+				cities: [
+					'Белгород',
+				],
+			},
+			{
+				title: 'Челябинская область',
+				cities: [
+					'Челябинск',
+				],
+			},
+			{
+				title: 'Краснодарский край',
+				cities: [
+					'Краснодар',
+					'Сочи',
+					'Анапа',
+					'Апшеронск',
+					'Армавир',
+					'Кореновск',
+					'Крымск',
+					'Курганинск',
+					'Новокубанск',
+					'Новороссийск',
+					'Славянск-на-Кубани',
+					'Сочи',
+					'Темрюк',
+					'Тимашёвск',
+					'Туапсе',
+				],
+			},
+		]
+block content
+	section.cities-section
+		.container-xl
+			h2.cities-section__title.title-1 Выбрать город
+			ul.cities-section__region-list
+				each region in regions
+					li.cities-section__region-item
+						if region.title
+							h3.cities-section__region-title.title-2 #{region.title}
+						else
+							.cities-section__region-title.cities-section__region-title--blank
+						ul.cities-section__cities-list
+							each city in region.cities
+								li.cities-section__cities-item
+									a.cities-section__cities-link(href="#") #{city} 
+		
