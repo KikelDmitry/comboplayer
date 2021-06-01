@@ -21,6 +21,33 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-moi-mir:before {
+  content: "\e91a";
+}
+.icon-facebook:before {
+  content: "\e91b";
+}
+.icon-instagram:before {
+  content: "\e91c";
+}
+.icon-odnoklassniki:before {
+  content: "\e91d";
+}
+.icon-twitter:before {
+  content: "\e91e";
+}
+.icon-vk:before {
+  content: "\e91f";
+}
+.icon-yandex:before {
+  content: "\e920";
+}
+.icon-question:before {
+  content: "\e921";
+}
+.icon-question-solid:before {
+  content: "\e922";
+}
 .icon-location:before {
   content: "\e919";
 }
