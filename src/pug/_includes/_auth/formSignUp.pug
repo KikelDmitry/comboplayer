@@ -1,0 +1,27 @@
+form.log-form
+	h3.log-form__title Зарегистрироваться с помощью соц.сетей
+	include socialList.pug
+	h3.log-form__title или логина и пароля
+	.log-form__row
+		input.log-form__input(type="text" placeholder="Имя" name="reg_name")
+	.log-form__row
+		input.log-form__input(type="email" placeholder="E-mail" name="reg_email")
+	.row
+		.col-sm-6
+			.log-form__row
+				input.log-form__input(type="password" placeholder="Пароль" name="reg_password")
+		.col-sm-6
+			.log-form__row
+				input.log-form__input(type="password" placeholder="Повторите пароль" name="reg_password-repeat")
+	.log-form__az-block
+		.log-form__az-icon
+			img(src="img/az-password.svg" alt="az password logo")
+		a.log-form__az-link(href="https://azpassword.ru" target="_blank") Сгенерируй надежный пароль с AZpassword
+	.log-form__row
+		label.log-form__label
+			input.log-form__check.visually-hidden(type="checkbox" name="news-subscribe")
+			span.log-form__check-view
+				i.icon-check-solid
+			span.log-form__label-text Подписаться на новости
+	.log-form__row
+		button.log-form__submit.buy-btn(type="submit") Зарегистрироваться

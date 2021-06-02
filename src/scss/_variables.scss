@@ -40,6 +40,14 @@
 		}
 	}
 }
+//social icons color
+@mixin socialColors($social) {
+	&--#{$social} {
+		.social-list__link {
+			background: map-get($color-social, #{$social} )
+		}
+	}
+}
 
 // paths
 $font-path: "/fonts/";
@@ -215,6 +223,18 @@ $color-cat: (
 	culture: #29afce,
 	kids: #bf65c3,
 	rest: #9aafb7,
+);
+
+//social media colors (login form)
+
+$color-social: (
+	vk: #4f76a2,
+	facebook: #3d5b96,
+	twitter: #4f76a2,
+	odnoklassniki: #f38231,
+	moi-mir: #228fdf,
+	yandex: #fc0d1b,
+	instagram: (linear-gradient(180deg, #BA3FA9 0%, #FD444D 100%), #FEC15D)
 );
 
 // Effect styles

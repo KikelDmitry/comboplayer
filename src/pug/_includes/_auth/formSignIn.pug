@@ -1,0 +1,25 @@
+form.log-form
+	h3.log-form__title Войти с помощью соц.сетей
+	include socialList.pug
+	h3.log-form__title или логина и пароля
+	.log-form__row
+		input.log-form__input(type="text" placeholder="Email или телефон" name="login_name")
+	.log-form__row
+		input.log-form__input(type="password" placeholder="Пароль" name="login_password")
+	.row
+		.col-sm-5
+			.log-form__row
+				label.log-form__label
+					input.log-form__check.visually-hidden(type="checkbox" name="login_stay-online")
+					span.log-form__check-view
+						i.icon-check-solid
+					span.log-form__label-text Оставаться в сети
+			.log-form__forgot.log-form__row
+				.log-form__forgot-icon
+					i.icon-question
+					i.icon-question-solid
+				a.log-form__forgot-link(href="#") Забыли пароль?
+		.col-sm-7
+			img(src="img/content/recaptcha.png" alt="временное отображение")
+	.log-form__row
+		button.log-form__submit.buy-btn(type="submit") Войти

@@ -1,0 +1,5 @@
+ul.social-list
+	each item in socials
+		li.social-list__item(class="social-list__item--" + item.icon)
+			a.social-list__link(href="#" aria-label=item.title title=item.title)
+				i(class="icon-" + item.icon)

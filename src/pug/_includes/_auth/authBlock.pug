@@ -1,9 +1,41 @@
-.auth-block
-	header.auth-block__header.nav
-		a.auth-block__header-item.active(href="#sign-in" data-toggle="tab") Вход
-		a.auth-block__header-item(href="#sign-up" data-toggle="tab") Регистрация 
-	.auth-block__body.tab-content
-		#sign-in.tab-pane.active
-			include formSignIn.pug
-		#sign-up.tab-pane.fade 
-			include formSignUp.pug
+-
+	var socials = [
+		{
+			title: 'ВКонтакте',
+			icon: 'vk',
+		},
+		{
+			title: 'Facebook',
+			icon: 'facebook',
+		},
+		{
+			title: 'Twitter',
+			icon: 'twitter',
+		},
+		{
+			title: 'OK',
+			icon: 'odnoklassniki',
+		},
+		{
+			title: 'Мой Мир',
+			icon: 'moi-mir',
+		},
+		{
+			title: 'Яндекс',
+			icon: 'yandex',
+		},
+		{
+			title: 'Instagram',
+			icon: 'instagram',
+		},
+	]
+.login-register-wrapper
+	.auth-block
+		header.auth-block__header.nav
+			a.auth-block__header-item.active(href="#sign-in" data-toggle="tab") Вход
+			a.auth-block__header-item(href="#sign-up" data-toggle="tab") Регистрация 
+		.auth-block__body.tab-content
+			#sign-in.tab-pane.fade.active.show
+				include formSignIn.pug
+			#sign-up.tab-pane.fade 
+				include formSignUp.pug
