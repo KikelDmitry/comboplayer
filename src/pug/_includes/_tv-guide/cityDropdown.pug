@@ -1,0 +1,35 @@
+-
+	var cities = [
+		{
+			title: 'Ростов-на-Дону',
+			descr: 'Ростовская область',
+		},
+		{
+			title: 'Ростов Великий',
+			descr: 'Ярославская область',
+		},
+		{
+			title: 'Ростановское',
+			descr: 'Ставропольский край',
+		},
+	]
+
+//- .city-dropdown
+//- 	input#cities(type="text")
+.city-dropdown.dropdown
+	button.city-dropdown__btn(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+		i.icon-location
+		span.city-dropdown__btn-title Ростов-на-Дону
+	.city-dropdown__menu.dropdown-menu
+		form.city-dropdown__form
+			input.city-dropdown__form-input#cities-picker(type="text" name="city" placeholder="Другой город...")
+			i.city-dropdown__form-icon.icon-zoom
+		a.city-dropdown__link(href="cities.html")
+			span Все города
+			i.icon-caret-up
+		//- ul.city-dropdown__city-list.city-droplist
+			each city in cities
+				li.city-droplist__item
+					a.city-droplist__link(href="#")
+						span.city-droplist__city #{city.title}
+						span.city-droplist__county (#{city.descr})

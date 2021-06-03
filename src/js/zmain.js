@@ -8,7 +8,7 @@
 	// 		re = /\S+@\S+\.\S+/,
 	// 		orderErr = form.querySelector('.order-panel__error'),
 	// 		reset = form.querySelector('.order-panel__reset');
-	
+
 	// 	input.addEventListener('input', function () {
 	// 		if (re.test(input.value)) {
 	// 			inputContainer.classList.add('is-true')
@@ -242,4 +242,47 @@
 	closeBtn.click(function () {
 		programmInfo.removeClass('is-active');
 	})
+}
+// cities dropdwon typehead.js
+{
+	let substringMatcher = function (strs) {
+		return function findMatches(q, cb) {
+			let matches, substringRegex;
+
+			// an array that will be populated with substring matches
+			matches = [];
+
+			// regex used to determine if a string contains the substring `q`
+			substrRegex = new RegExp(q, 'i');
+
+			// iterate through the pool of strings and for any string that
+			// contains the substring `q`, add it to the `matches` array
+			$.each(strs, function (i, str) {
+				if (substrRegex.test(str)) {
+					matches.push(str);
+				}
+			});
+
+			cb(matches);
+		};
+	};
+
+	let cities = [
+		'Ростов-на-Дону',
+		'Ростов Великий',
+		'Ростановское',
+		'Россошь',
+		'Роскосмос',
+		'Роскомнадзор',
+	];
+
+	$('#cities-picker').typeahead({
+		hint: false,
+		highlight: true,
+		minLength: 1
+	},
+	{
+		name: 'cities',
+		source: substringMatcher(cities)
+	});
 }

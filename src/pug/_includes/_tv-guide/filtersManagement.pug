@@ -12,21 +12,7 @@
 		'Увлечения',
 		'Фильмы и сериалы',
 	];
--
-	var cities = [
-		{
-			title: 'Ростов-на-Дону',
-			descr: 'Ростовская область',
-		},
-		{
-			title: 'Ростов Великий',
-			descr: 'Ярославская область',
-		},
-		{
-			title: 'Ростановское',
-			descr: 'Ставропольский край',
-		},
-	]
+
 
 .filters-management.post-header
 	.container-xl
@@ -48,21 +34,5 @@
 							each channel in channels
 								li.channels-dropdown__item
 									a.channels-dropdown__link(href="#") #{channel}
-					.city-dropdown.dropdown
-						button.city-dropdown__btn(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-							i.icon-location
-							span.city-dropdown__btn-title Москва
-						.city-dropdown__menu.dropdown-menu
-							form.city-dropdown__form
-								input.city-dropdown__form-input(type="text" name="city" placeholder="Другой город...")
-								button.city-dropdown__form-submit(type="submit" aria-label="Поиск" title="Искать")
-									i.icon-zoom
-							a.city-dropdown__link(href="cities.html")
-								span Все города
-								i.icon-caret-up
-							ul.city-dropdown__city-list.city-droplist
-								each city in cities
-									li.city-droplist__item
-										a.city-droplist__link(href="#")
-											span.city-droplist__city #{city.title}
-											span.city-droplist__county (#{city.descr})
+					include cityDropdown.pug
+					
