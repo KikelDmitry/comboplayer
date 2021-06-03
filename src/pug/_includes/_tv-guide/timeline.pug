@@ -83,10 +83,10 @@
 .tv-guide-timeline
 	.container-xl
 		.timeline
-			button.timeline__nav.timeline__nav--left(type="button" aria-label="Раньше")
+			//- button.timeline__nav.timeline__nav--left(type="button" aria-label="Раньше")
 				i.icon-caret-up
-			.timeline__tape
+			.timeline__tape.owl-carousel
 				each date in dates
-					button.timeline__item(type="button" class=date.type) #{date.text}
-			button.timeline__nav.timeline__nav--right(type="button" aria-label="Позже")
+					a.timeline__item(href="#" class=date.type) #{date.text}
+			//- button.timeline__nav.timeline__nav--right(type="button" aria-label="Позже")
 				i.icon-caret-up

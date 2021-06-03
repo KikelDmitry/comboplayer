@@ -136,7 +136,8 @@
 // owl carousel
 {
 	let bannerSlider = $('.top-slider__container'),
-		itemsCarousels = $('.items-carousels');
+		itemsCarousels = $('.items-carousels'),
+		timeline = $('.timeline__tape');
 
 	let defaultConfig = {
 		nav: true,
@@ -179,13 +180,21 @@
 					items: 5,
 				}
 			},
-		};
+		},
+		timelineConfig = {
+			autoWidth: true,
+			nav: true,
+			navElement: 'button',
+			navClass: ['timeline__nav timeline__nav--left', 'timeline__nav timeline__nav--right'],
+			navText: ['<span class="visually-hidden">Назад</span><i class="icon-caret-up"></i>', '<span class="visually-hidden">Вперед</span><i class="icon-caret-up"></i>'],
+		}
 
 	$(document).ready(function () {
 		itemsCarousels.each(function () {
 			$(this).owlCarousel(carouselConfig);
 		});
 		bannerSlider.owlCarousel(bannerConfig);
+		timeline.owlCarousel(timelineConfig)
 	})
 
 }
@@ -267,7 +276,8 @@
 		};
 	};
 
-	let cities = [
+	let citiesArr = [
+		'Ростов',
 		'Ростов-на-Дону',
 		'Ростов Великий',
 		'Ростановское',
@@ -275,7 +285,6 @@
 		'Роскосмос',
 		'Роскомнадзор',
 	];
-
 	$('#cities-picker').typeahead({
 		hint: false,
 		highlight: true,
@@ -283,6 +292,6 @@
 	},
 	{
 		name: 'cities',
-		source: substringMatcher(cities)
+		source: substringMatcher(citiesArr),
 	});
 }
