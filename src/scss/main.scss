@@ -43,7 +43,10 @@
 @import "cities/_cities.scss";
 
 // LOGIN | REGISTER PAGE
-@import "login/_authBlock.scss";
+@import "login/_auth-block.scss";
 
+// CHANNEL PAGE
+@import "channel/_channel-header.scss";
+@import "channel/_channel-guide.scss";
 
 // @import "_debug.scss";

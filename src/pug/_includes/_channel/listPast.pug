@@ -1,0 +1,11 @@
+.channel-guide__past
+	button.channel-guide__past-opener(type="button" data-toggle="collapse" data-target="#past-list" aria-expanded="false" aria-controls="#past-list")
+		span Прошедшие
+		i.icon-caret-up
+	ul.channel-guide__past-list.programm-list.collapse.show#past-list
+		each item in data.pastList
+			li.programm-list__item
+				.programm-list__time #{item.time}
+				.programm-list__link
+					.programm-list__title #{item.title}
+					.programm-list__descr #{item.descr}

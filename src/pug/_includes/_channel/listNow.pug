@@ -1,0 +1,20 @@
+.channel-guide__now
+	ul.programm-list.channel-guide__now-list
+		each item, idx in data.nowList
+			if idx == 0
+				li.programm-list__item.programm-list__item--on-air
+					.programm-list__time #{item.time}
+					.programm-list__link
+						.programm-list__title #{item.title}
+						.programm-list__descr
+							img.programm-list__descr-img(src="img/content/programms/preview/" + item.img alt=item.title + " preview")
+							span.programm-list__descr-text #{item.descr}
+						.programm-list__progress
+							.programm-list__progress-bar(style="width:" + item.progress + "%")
+
+			else
+				li.programm-list__item
+					.programm-list__time #{item.time}
+					.programm-list__link
+						.programm-list__title #{item.title}
+						.programm-list__descr #{item.descr}

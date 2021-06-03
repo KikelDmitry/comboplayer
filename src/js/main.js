@@ -197,7 +197,7 @@
 }
 // tv guide info
 {
-	let programmLink = $('.programm-list__item'),
+	let programmLink = $('.guide-channel__list > .programm-list__item'),
 		programmInfo = $('.programm-card'),
 		gridCol = $('.guide-grid__col'),
 		closeBtn = $('.programm-card__close');

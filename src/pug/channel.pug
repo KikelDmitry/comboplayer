@@ -1,0 +1,11 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'ТВ-программа Первый канал';
+	- config.page.description = 'ТВ-программа Первый канал description';
+
+block content
+	include /_includes/_channel/postHeader.pug
+	include /_includes/_channel/stickyTimeline.pug
+	include /_includes/_channel/channelGuide.pug
+
