@@ -1,0 +1,22 @@
+.about-channel {
+	margin: 20px 0 32px;
+	
+	@include media-breakpoint-up(lg) {
+		padding-left: 60px;
+	}
+	h2 {
+		font-family: $addFont;
+		font-size: 20px;
+		color: $color-cobalt-1;
+		line-height: 32px;
+		
+		@include media-breakpoint-up(lg) {
+			line-height: 48px;
+		}
+	}
+	p {
+		font-weight: 300;
+		color: $color-steel-0;
+	}
+
+}
