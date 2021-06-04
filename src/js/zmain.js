@@ -137,7 +137,8 @@
 {
 	let bannerSlider = $('.top-slider__container'),
 		itemsCarousels = $('.items-carousels'),
-		timeline = $('.timeline__tape');
+		timeline = $('.timeline__tape'),
+		categories = $('.categories-list');
 
 	let defaultConfig = {
 		nav: true,
@@ -187,6 +188,13 @@
 			navElement: 'button',
 			navClass: ['timeline__nav timeline__nav--left', 'timeline__nav timeline__nav--right'],
 			navText: ['<span class="visually-hidden">Назад</span><i class="icon-caret-up"></i>', '<span class="visually-hidden">Вперед</span><i class="icon-caret-up"></i>'],
+		},
+		categoriesConfig = {
+			autoWidth: true,
+			nav: true,
+			navElement: 'button',
+			navClass: ['category-row__nav category-row__nav--prev', 'category-row__nav category-row__nav--next'],
+			navText: ['<span class="visually-hidden">Назад</span><i class="icon-caret-up"></i>', '<span class="visually-hidden">Вперед</span><i class="icon-caret-up"></i>'],
 		}
 
 	$(document).ready(function () {
@@ -194,7 +202,14 @@
 			$(this).owlCarousel(carouselConfig);
 		});
 		bannerSlider.owlCarousel(bannerConfig);
-		timeline.owlCarousel(timelineConfig)
+		timeline.owlCarousel(timelineConfig);
+		categories.owlCarousel(categoriesConfig);
+
+		$('.categories-list__input').each(function() {
+			$(this).change(function() {
+				categories.trigger('refresh.owl.carousel')
+			})
+		})
 	})
 
 }

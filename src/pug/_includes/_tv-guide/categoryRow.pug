@@ -45,14 +45,14 @@
 .category-row
 	.container-xl
 		.category-row__inner
-			button.category-row__nav.category-row__nav--prev(type="button" aria-label="Назад")
+			//- button.category-row__nav.category-row__nav--prev(type="button" aria-label="Назад")
 				i.icon-caret-up
-			ul.categories-list.category-row__list
+			ul.categories-list.category-row__list.owl-carousel
 				each cat in categories
 					li.categories-list__item(class="categories-list__item--" + cat.id)
 						label.categories-list__label
 							input.categories-list__input(type="checkbox" name=cat.id id=cat.id)
 							span.categories-list__view
 								span.categories-list__title #{cat.title}
-			button.category-row__nav.category-row__nav--next(type="button" aria-label="Вперед")
+			//- button.category-row__nav.category-row__nav--next(type="button" aria-label="Вперед")
 				i.icon-caret-up

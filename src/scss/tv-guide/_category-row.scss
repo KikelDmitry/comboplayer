@@ -2,18 +2,20 @@
 	padding: 12px 0;
 
 	&__inner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+		position: relative;
+		// display: flex;
+		// justify-content: space-between;
+		// align-items: center;
 	}
 	&__nav {
+		position: absolute;
+		top: 0;
 		flex: 0 0 auto;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		width: 24px;
 		height: 24px;
-		position: relative;
 		background-color: $color-steel-dull-9;
 		color: $color-cobalt-2;
 		border-radius: 3px;
@@ -38,6 +40,8 @@
 			}
 		}
 		&--prev {
+			left: 0;
+
 			i {
 				transform: rotateZ(-90deg);
 			}
@@ -48,6 +52,8 @@
 			}
 		}
 		&--next {
+			right: 0;
+
 			i {
 				transform: rotateZ(90deg);
 			}
@@ -62,7 +68,7 @@
 		}
 	}
 	&__list {
-		padding: 0 12px;
+		// padding: 0 12px;
 		flex: 1 1 auto;
 		overflow-x: auto;
 		overflow-y: hidden;
@@ -75,19 +81,15 @@
 }
 .categories-list {
 	display: flex;
-	// flex-flow: row wrap;
-	// justify-content: flex-start;
-	// align-items: flex-start;
+	padding: 0 24px;
 
 	$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest;
 
 	&__item {
 		display: block;
-		
-		&:not(:last-child) {
-			margin-right: 10px;
-		}
-		
+		// margin-right: 10px;
+		padding-left: 10px;
+				
 		@each $cat in $cat-list {
 			@include catColor($cat);
 		}
