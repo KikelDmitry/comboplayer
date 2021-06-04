@@ -85,6 +85,9 @@
 
 	$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest;
 
+	.owl-stage {
+		display: flex;
+	}
 	&__item {
 		display: block;
 		margin: 0 5px;
