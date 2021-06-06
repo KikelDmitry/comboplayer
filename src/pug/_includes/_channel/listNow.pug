@@ -5,7 +5,7 @@
 				li.programm-list__item.programm-list__item--on-air
 					.programm-list__time #{item.time}
 					.programm-list__link
-						.programm-list__title #{item.title}
+						a.programm-list__title(href="#programm-link") #{item.title}
 						.programm-list__descr
 							img.programm-list__descr-img(src="img/content/programms/preview/" + item.img alt=item.title + " preview")
 							span.programm-list__descr-text #{item.descr}
@@ -15,6 +15,6 @@
 			else
 				li.programm-list__item
 					.programm-list__time #{item.time}
-					.programm-list__link
+					a.programm-list__link(href="#programm-link")
 						.programm-list__title #{item.title}
 						.programm-list__descr #{item.descr}

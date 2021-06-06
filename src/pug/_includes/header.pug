@@ -17,32 +17,28 @@
 header.header
 	.container-xl
 		.row.flex-nowrap
-			.col-auto
-				a.header__logo(href="/")
-					h1.visually-hidden Comboplayer
-					img(src="/img/logo.svg" alt="comboplayer logo")
-			.col.ml-auto.pl-0.header__search
-				form.header__form
-					label.header__form-label
-						i.header__form-icon.icon-zoom
-						input.header__form-input(type="text" placeholder="Поиск" name="s")
-					button.header__form-reset(type="button" title="Закрыть")
+			.col-auto.col-lg-3
+				a.header__logo(href="/" title="На главную")
+					img.header__logo-img(src="/img/logo.svg" alt="comboplayer logo")
+			.col.ml-auto.p-0.header__center
+				.header__search
+					label.header__search-label
+						i.icon-zoom.header__search-icon
+						input.header__search-input(type="text" name="s" placeholder="Поиск")
+					button.header__search-close(type="button" title="Закрыть поиск")
 						i.icon-close
-					//- button.header__form-submit(type="submit")
-						span.visually-hidden Искать
-				include searchDropdown.pug
-
+					include searchDropdown.pug
 			.d-flex.col-auto.p-0.pr-xl-3.position-static.header__right-side
 				nav.header__menu
 					.header__menu-inner
-						// класс для активного пункта меню .header__menu-item - 'is-active'
+						// класс для активного пункта меню - .header__menu-item - 'is-active'
 						each item, idx in menu
 							a.header__menu-item(href=item.link) #{item.title}
 				// anonymus state
 				a.header__login(href="login.html" aria-label="Вход")
 						i.icon-login
 						span Вход
-				// logged state
+				// logged in state
 				// .header__dropdown.dropdown
 					button.header__login.header__login--dropdown.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
 							i.icon-user

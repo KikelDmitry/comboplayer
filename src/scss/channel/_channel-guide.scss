@@ -59,10 +59,17 @@
 						color: $color-white;
 					}
 					.programm-list__link {
+						position: relative;
 						border: 0;
 					}
 					.programm-list__title {
 						margin-bottom: 8px;
+
+						&::after {
+							content: '';
+							@include absoluteFull;
+							z-index: 20;
+						}
 					}
 					.programm-list__descr {
 						display: flex;

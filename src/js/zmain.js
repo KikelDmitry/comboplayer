@@ -96,9 +96,11 @@
 	}
 }
 // header search bar
+
+
 {
-	let searchInput = $('.header__form-input'),
-		searchForm = $('.header__form'),
+	let searchInput = $('.header__search-input'),
+		searchForm = $('.header__search'),
 		rightBar = $('.header__right-side'),
 		searchResults = $('.search-dropdown');
 
