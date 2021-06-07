@@ -139,6 +139,18 @@
 				color: $color-cobalt-2;
 			}
 		}
+		&.is-inactive {
+			.programm-list__time {
+				background-color: $color-steel-dull-9;
+				color: $color-steel-5;
+			}
+			.programm-list__title {
+				color: $color-steel-5;
+			}
+			.programm-list__descr {
+				color: $color-steel-6;
+			}
+		}
 	}
 	&__time {
 		flex: 0 0 auto;

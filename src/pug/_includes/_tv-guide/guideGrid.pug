@@ -30,15 +30,18 @@
 				{
 					title: 'Вести',
 					time: '15:15',
+					isPast: true,
 				},
 				{
 					title: 'Вести. Местное время',
 					time: '16:00',
+					isPast: true,
 				},
 				{
 					title: 'Жемчуга',
 					time: '17:00',
 					type: 'series',
+					isPast: true,
 				},
 				{
 					title: '60 минут',
@@ -163,7 +166,7 @@ section.guide-grid
 									i.icon-heart-solid
 						ul.guide-channel__list.programm-list
 							each programm in channel.list
-								li.programm-list__item
+								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : ''))
 									.programm-list__time(class=(programm.type ? 'programm-list__time--' + programm.type : '')) #{programm.time}
 									a.programm-list__link(href="#programm-page-link") 
 										span.programm-list__title #{programm.title}
