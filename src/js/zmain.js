@@ -207,8 +207,8 @@
 		timeline.owlCarousel(timelineConfig);
 		categories.owlCarousel(categoriesConfig);
 
-		$('.categories-list__input').each(function() {
-			$(this).change(function() {
+		$('.categories-list__input').each(function () {
+			$(this).change(function () {
 				categories.trigger('refresh.owl.carousel')
 			})
 		})
@@ -224,7 +224,6 @@
 // tv guide info
 {
 	let programmLink = $('.guide-channel__list > .programm-list__item'),
-		programmInfo = $('.programm-card'),
 		gridCol = $('.guide-grid__col'),
 		closeBtn = $('.programm-card__close');
 
@@ -240,6 +239,7 @@
 	}
 
 	programmLink.mouseover(function () {
+		let programmInfo = $(this).find('.programm-card');
 		let currentCol = $(this).closest(gridCol);
 		let prevCol = gridCol[currentCol.index() - 1];
 		let nextCol = gridCol[currentCol.index() + 1];
@@ -307,8 +307,8 @@
 		highlight: true,
 		minLength: 1
 	},
-	{
-		name: 'cities',
-		source: substringMatcher(citiesArr),
-	});
+		{
+			name: 'cities',
+			source: substringMatcher(citiesArr),
+		});
 }

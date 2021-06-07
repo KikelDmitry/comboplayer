@@ -43,3 +43,16 @@ mixin programmSlider(title, tabs, programms, categories)
 									a.programm-item__link(href="#programm-link" title=programm.title)
 										span.visually-hidden #{programm.title}
 		noscript.no-js-msg #{globalData.nojs}
+//- programm info
+mixin programmCard(title)
+	article.programm-card
+		header.programm-card__header
+			h3.programm-card__title #{title}
+			button.programm-card__close.d-flex.d-lg-none
+				i.icon-close
+		.programm-card__poster
+			img.programm-card__poster-img(src="/img/content/banners/programm-info0.png" alt=title = " постер")
+		.programm-card__descr Новости. Информация. Главные новости региона. Происшествия, политика, общественная жизнь, экономика, спрот, культура, прогноз погоды.
+		footer.programm-card__footer
+			.programm-card__info Инфо
+			.programm-card__rating 12+

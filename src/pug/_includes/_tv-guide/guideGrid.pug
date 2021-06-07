@@ -171,6 +171,7 @@ section.guide-grid
 									a.programm-list__link(href="#programm-page-link") 
 										span.programm-list__title #{programm.title}
 										span.programm-list__descr #{programm.descr}
+									+programmCard(programm.title)
+									//- include programmCard.pug
 		button.guide-grid__load-more(type="button") Загрузить ещё...
-		include programmCard.pug
 

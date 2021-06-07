@@ -19,6 +19,9 @@
 			color: $color-cobalt-2;
 		}
 	}
+	&__col {
+		position: static;
+	}
 }
 .guide-channel {
 	&__header {
