@@ -119,6 +119,9 @@
 			&.is-inactive {
 				color: #e79eaf;
 			}
+			&.is-active {
+				color: $color-white;
+			}
 		}
 	}
 }
