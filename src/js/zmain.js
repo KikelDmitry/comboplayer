@@ -249,16 +249,15 @@
 			width: offset(currentCol).width - 30,
 		})
 		programmInfo.addClass('is-visible');
-
 		if (nextCol == undefined || offset(nextCol).left < offset(currentCol).left) {
 			programmInfo.css({
 				left: offset(prevCol).left + 15,
-				top: offset(prevCol).top,
+				top: $(this).offset().top,
 			});
 		} else {
 			programmInfo.css({
 				left: offset(nextCol).left + 15,
-				top: offset(nextCol).top,
+				top: $(this).offset().top,
 			});
 		};
 		programmLink.mouseout(function () {
