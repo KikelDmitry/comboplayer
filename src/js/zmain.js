@@ -224,54 +224,33 @@
 // tv guide info
 {
 	$(document).ready(function () {
-		let programmLink = $('.guide-channel__list > .programm-list__item');
-		// let gridCol = $('.guide-grid__col');
-		// let programmInfo = programmLink.find('.programm-card');
-
-		// programmInfo.each(function () {
-		// 	let currentCol = $(this).closest(gridCol);
-		// 	let prevCol = $(gridCol[currentCol.index() - 1]);
-		// 	let nextCol = $(gridCol[currentCol.index() + 1]);
-		// 	$(this).css({
-		// 		width: currentCol.width(),
-		// 		top: currentCol.offset().top,
-		// 	});
-		// 	if (nextCol.offset() == undefined || nextCol.offset().left < currentCol.offset().left) {
-		// 		// to previous col
-		// 		$(this).css({
-		// 			left: prevCol.offset().left + 15,
-		// 		});
-		// 		// to next col
-		// 	} else {
-		// 		$(this).css({
-		// 			left: nextCol.offset().left + 15,
-		// 		});
-		// 	}
-		// })
-		$(window).resize(function() {
-			let item = $('.guide-channel__header');
-			console.log($(window).innerHeight() - $(window).scrollTop())
-		})
-		programmLink.mouseover(function() {
-			let programmInfo = $(this).find('.programm-card');
-			let tooCloseToRight = $(window).innerWidth() - ($(this).offset().left + $(this).innerWidth()) < programmInfo.innerWidth();
-			programmInfo.addClass('is-visible');
-			// console.log($(window).innerHeight() - $(window).scrollTop() - programmInfo.offset().top)
-			if(tooCloseToRight) {
-				programmInfo.css({
-					transform: 'translateX(-100%)',
-					bottom: 0,
-				})
-			} else {
-				programmInfo.css({
-					transform: 'translateX(100%)',
-				})
-			}
-		})
-		programmLink.mouseout(function() {
-			programmInfo = $(this).find('.programm-card');
-			programmInfo.removeClass('is-visible');
-		})
+		function isTouchDevice() {
+			return (('ontouchstart' in window) ||
+				(navigator.maxTouchPoints > 0) ||
+				(navigator.msMaxTouchPoints > 0));
+		}
+		if(!isTouchDevice()) {
+			let programmLink = $('.guide-channel__list > .programm-list__item');
+			
+			programmLink.mouseover(function() {
+				let programmInfo = $(this).find('.programm-card');
+				let tooCloseToRight = $(window).innerWidth() - ($(this).offset().left + $(this).innerWidth()) < programmInfo.innerWidth();
+				programmInfo.addClass('is-visible');
+				if(tooCloseToRight) {
+					programmInfo.css({
+						transform: 'translate(-50%, -50%)',
+					})
+				} else {
+					programmInfo.css({
+						transform: 'translate(50%, -50%)',
+					})
+				}
+			})
+			programmLink.mouseout(function() {
+				programmInfo = $(this).find('.programm-card');
+				programmInfo.removeClass('is-visible');
+			})
+		}
 	})
 
 }
