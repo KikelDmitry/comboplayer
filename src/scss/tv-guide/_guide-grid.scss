@@ -19,9 +19,9 @@
 			color: $color-cobalt-2;
 		}
 	}
-	&__col {
-		position: static;
-	}
+	// &__col {
+	// 	position: static;
+	// }
 }
 .guide-channel {
 	&__header {
@@ -132,6 +132,7 @@
 	&__item {
 		display: flex;
 		align-items: baseline;
+		position: relative;
 
 		&:hover {
 			.programm-list__time {

@@ -223,50 +223,57 @@
 }
 // tv guide info
 {
-	let programmLink = $('.guide-channel__list > .programm-list__item'),
-		gridCol = $('.guide-grid__col'),
-		closeBtn = $('.programm-card__close');
+	$(document).ready(function () {
+		let programmLink = $('.guide-channel__list > .programm-list__item');
+		// let gridCol = $('.guide-grid__col');
+		// let programmInfo = programmLink.find('.programm-card');
 
-	function offset(el) {
-		let rect = el.getBoundingClientRect(),
-			scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-			scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-		return {
-			top: rect.top + scrollTop,
-			left: rect.left + scrollLeft,
-			width: rect.width
-		}
-	}
-
-	programmLink.mouseover(function () {
-		let programmInfo = $(this).find('.programm-card');
-		let currentCol = $(this).closest(gridCol);
-		let prevCol = gridCol[currentCol.index() - 1];
-		let nextCol = gridCol[currentCol.index() + 1];
-		currentCol = currentCol[0];
-
-		programmInfo.css({
-			width: offset(currentCol).width - 30,
+		// programmInfo.each(function () {
+		// 	let currentCol = $(this).closest(gridCol);
+		// 	let prevCol = $(gridCol[currentCol.index() - 1]);
+		// 	let nextCol = $(gridCol[currentCol.index() + 1]);
+		// 	$(this).css({
+		// 		width: currentCol.width(),
+		// 		top: currentCol.offset().top,
+		// 	});
+		// 	if (nextCol.offset() == undefined || nextCol.offset().left < currentCol.offset().left) {
+		// 		// to previous col
+		// 		$(this).css({
+		// 			left: prevCol.offset().left + 15,
+		// 		});
+		// 		// to next col
+		// 	} else {
+		// 		$(this).css({
+		// 			left: nextCol.offset().left + 15,
+		// 		});
+		// 	}
+		// })
+		$(window).resize(function() {
+			let item = $('.guide-channel__header');
+			console.log($(window).innerHeight() - $(window).scrollTop())
 		})
-		programmInfo.addClass('is-visible');
-		if (nextCol == undefined || offset(nextCol).left < offset(currentCol).left) {
-			programmInfo.css({
-				left: offset(prevCol).left + 15,
-				top: $(this).offset().top,
-			});
-		} else {
-			programmInfo.css({
-				left: offset(nextCol).left + 15,
-				top: $(this).offset().top,
-			});
-		};
-		programmLink.mouseout(function () {
+		programmLink.mouseover(function() {
+			let programmInfo = $(this).find('.programm-card');
+			let tooCloseToRight = $(window).innerWidth() - ($(this).offset().left + $(this).innerWidth()) < programmInfo.innerWidth();
+			programmInfo.addClass('is-visible');
+			// console.log($(window).innerHeight() - $(window).scrollTop() - programmInfo.offset().top)
+			if(tooCloseToRight) {
+				programmInfo.css({
+					transform: 'translateX(-100%)',
+					bottom: 0,
+				})
+			} else {
+				programmInfo.css({
+					transform: 'translateX(100%)',
+				})
+			}
+		})
+		programmLink.mouseout(function() {
+			programmInfo = $(this).find('.programm-card');
 			programmInfo.removeClass('is-visible');
 		})
 	})
-	closeBtn.click(function () {
-		programmInfo.removeClass('is-active');
-	})
+
 }
 // cities dropdwon typehead.js
 {
