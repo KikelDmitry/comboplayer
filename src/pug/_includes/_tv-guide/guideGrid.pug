@@ -276,7 +276,7 @@ section.guide-grid
 									i.icon-heart-solid
 						ul.guide-channel__list.programm-list
 							each programm in channel.list
-								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', 'programm-list__item--' + programm.type))
+								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', programm.type ? 'programm-list__item--' + programm.type : ''))
 									.programm-list__time #{programm.time}
 									a.programm-list__link(href="#programm-page-link") 
 										span.programm-list__title #{programm.title}
