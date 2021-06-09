@@ -155,6 +155,9 @@
 				color: $color-steel-6;
 			}
 		}
+		@each $cat in $cat-list {
+			@include programmColor($cat);
+		}
 	}
 	&__time {
 		flex: 0 0 auto;
@@ -175,13 +178,6 @@
 
 		@include media-breakpoint-up(lg) {
 			font-size: 14px;
-		}
-
-		&--series {
-		}
-		&--culture {
-			background-color: map-get($color-cat, culture);
-			color: $color-white;
 		}
 	}
 	&__link {

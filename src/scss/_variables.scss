@@ -40,6 +40,14 @@
 		}
 	}
 }
+@mixin programmColor($cat) {
+	&--#{$cat} {
+		.programm-list__time {
+			background-color: map-get($color-cat, #{$cat});
+			color: $color-white;
+		}
+	}
+}
 //social icons color
 @mixin socialColors($social) {
 	&--#{$social} {
@@ -211,6 +219,8 @@ $green-grad-light: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(25
 $color-error: #e15b65;
 
 //category row colors (tv-guide)
+
+$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest;
 
 $color-cat: (
 	movie: #f73845,

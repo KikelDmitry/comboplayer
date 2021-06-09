@@ -254,6 +254,9 @@
 	})
 
 }
+//category colors
+{
+}
 // cities dropdwon typehead.js
 {
 	let substringMatcher = function (strs) {

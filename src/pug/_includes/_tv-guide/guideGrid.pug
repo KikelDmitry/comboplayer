@@ -16,6 +16,7 @@
 					title: 'Брат за брата',
 					time: '16:00',
 					descr: '1-ая серия “За основу взято”',
+					type: 'learning',
 				},
 				{
 					title: 'Вечерние новости',
@@ -209,6 +210,7 @@
 				{
 					title: 'Ржев',
 					time: '15:15',
+					type: 'sport',
 				},
 				{
 					title: 'Известия',
@@ -274,8 +276,8 @@ section.guide-grid
 									i.icon-heart-solid
 						ul.guide-channel__list.programm-list
 							each programm in channel.list
-								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : ''))
-									.programm-list__time(class=(programm.type ? 'programm-list__time--' + programm.type : '')) #{programm.time}
+								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', 'programm-list__item--' + programm.type))
+									.programm-list__time #{programm.time}
 									a.programm-list__link(href="#programm-page-link") 
 										span.programm-list__title #{programm.title}
 										span.programm-list__descr #{programm.descr}
