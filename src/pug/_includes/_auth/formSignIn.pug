@@ -1,6 +1,7 @@
 form.log-form
 	h3.log-form__title Войти с помощью соц.сетей
-	include socialList.pug
+	div uLogin block
+	//- include socialList.pug
 	h3.log-form__title или логина и пароля
 	.log-form__row
 		input.log-form__input(type="text" placeholder="Email или телефон" name="login_name")
@@ -20,6 +21,11 @@ form.log-form
 					i.icon-question-solid
 				a.log-form__forgot-link(href="#") Забыли пароль?
 		.col-sm-7
-			img(src="img/content/recaptcha.png" alt="временное отображение")
+			.text-muted.recaptcha-descr Этот сайт защищен reCaptcha от Google. Используются 
+				a(href="#") Политики конфиденциальности
+				|  и 
+				a(href="#") Правила использования.
+				
+			//- img(src="img/content/recaptcha.png" alt="временное отображение")
 	.log-form__row
 		button.log-form__submit.buy-btn(type="submit") Войти
