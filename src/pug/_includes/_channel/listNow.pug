@@ -2,7 +2,15 @@
 	ul.programm-list.channel-guide__now-list
 		each item, idx in data.nowList
 			if idx == 0
-				li.programm-list__item.programm-list__item--on-air
+				+programmItem(
+					'on-air',
+					'',
+					item.time,
+					item.title,
+					item.mainDescr,
+					''
+				)
+				//- li.programm-list__item.programm-list__item--on-air
 					.programm-list__time #{item.time}
 					.programm-list__link
 						a.programm-list__title(href="#programm-link") #{item.title}
@@ -13,8 +21,16 @@
 							.programm-list__progress-bar(style="width:" + item.progress + "%")
 
 			else
-				li.programm-list__item
+				+programmItem(
+					'future',
+					'',
+					item.time,
+					item.title,
+					item.mainDescr,
+					''
+				)
+				//- li.programm-list__item
 					.programm-list__time #{item.time}
-					a.programm-list__link(href="#programm-link")
-						.programm-list__title #{item.title}
+					.programm-list__link
+						a.programm-list__title(href="#programm-link") #{item.title}
 						.programm-list__descr #{item.descr}

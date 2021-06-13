@@ -276,10 +276,18 @@ section.guide-grid
 									i.icon-heart-solid
 						ul.guide-channel__list.programm-list
 							each programm in channel.list
-								li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', programm.type ? 'programm-list__item--' + programm.type : ''))
+								+programmItem(
+									'tv-guide',
+									programm.type,
+									programm.time,
+									programm.title,
+									'',
+									programm.descr
+								)
+								//- li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', programm.type ? 'programm-list__item--' + programm.type : ''))
 									.programm-list__time #{programm.time}
-									a.programm-list__link(href="#programm-page-link") 
-										span.programm-list__title #{programm.title}
+									.programm-list__link 
+										a.programm-list__title(href="#programm-page-link") #{programm.title}
 										span.programm-list__descr #{programm.descr}
 									+programmCard(programm.title)
 									//- include programmCard.pug

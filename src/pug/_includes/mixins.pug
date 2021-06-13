@@ -57,3 +57,39 @@ mixin programmCard(title)
 		footer.programm-card__footer
 			.programm-card__info Инфо
 			.programm-card__rating 12+
+
+//- teleguide row
+mixin programmItem(type, category, time, title, mainDescr, addDescr)
+	//- types: past, on-air, future, tv-guide 
+	-
+		function typeClass(type) {
+			switch(type) {
+				case 'on-air':
+				return 'is-on-air';
+				break;
+				case 'past':
+				return 'is-inactive';
+				break;
+				default:
+				return 'programm-list__item--' + category;
+			}
+		};
+	-
+		function test() {
+			return 'test';
+		}
+	li.programm-list__item(class=typeClass(type))
+		.programm-list__time #{time}
+		.programm-list__link 
+			a.programm-list__title(href="#programm-page-link") #{title}
+			.programm-list__descr
+				if type == 'on-air'
+					img.programm-list__descr-img(src="img/content/programms/preview/fashion.png" alt=title + " preview")
+				if type != 'past' && mainDescr
+					.programm-list__descr-main #{mainDescr}
+				.programm-list__descr-add #{addDescr}
+		if type == 'tv-guide'
+			+programmCard(title)
+		if type == 'now'
+			.programm-list__progress
+				.programm-list__progress-bar(style="width:60%")

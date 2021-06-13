@@ -37,8 +37,6 @@
 		}
 		// past programms list
 		&-list {
-			.programm-list__link {
-			}
 			.programm-list__title {
 				color: $color-steel-5;
 			}
@@ -48,88 +46,9 @@
 		}
 	}
 
+	// at now programms list
 	&__now {
-		// at now programms list
-		&-list {
-			// on air item
-			.programm-list__item {
-				&--on-air {
-					.programm-list__time {
-						background-color: $color-apple-5;
-						color: $color-white;
-					}
-					.programm-list__link {
-						position: relative;
-						border: 0;
-					}
-					.programm-list__title {
-						margin-bottom: 8px;
-
-						&::after {
-							content: '';
-							@include absoluteFull;
-							z-index: 20;
-						}
-					}
-					.programm-list__descr {
-						display: flex;
-						height: 50px;
-
-						&-img {
-							flex: 0 0 auto;
-							width: 89px;
-							height: 100%;
-							margin-right: 10px;
-							object-fit: cover;
-							border-radius: 6px;
-							
-							@include media-breakpoint-up(md) {
-								margin-right: 15px;
-							}
-						}
-						&-text {
-							position: relative;
-							color: $color-steel-4;
-							font-size: 13px;
-							line-height: calc(50px / 3);
-							overflow: hidden;
-
-							@include media-breakpoint-up(lg) {
-								font-size: 15px;
-							}
-
-							&::after {
-								content: "";
-								position: absolute;
-								bottom: 0;
-								left: 0;
-								width: 100%;
-								height: 20px;
-								background-image: linear-gradient(180deg, transparent, $color-white 100%);
-								pointer-events: none;
-							}
-						}
-					}
-					.programm-list__progress {
-						width: 100%;
-						height: 5px;
-						margin-top: 10px;
-						background-color: $color-steel-dull-9;
-						color: $color-apple-5;
-						border-radius: 5px;
-						overflow: hidden;
-						
-						&-bar {
-							height: 100%;
-							border-radius: inherit;
-							background-color: currentColor;
-						}
-					}
-				}
-			}
-		}
 	}
-
 	&__adv {
 		display: flex;
 		justify-content: center;

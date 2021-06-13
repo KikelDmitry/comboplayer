@@ -229,14 +229,14 @@
 				(navigator.maxTouchPoints > 0) ||
 				(navigator.msMaxTouchPoints > 0));
 		}
-		if(!isTouchDevice()) {
+		if (!isTouchDevice()) {
 			let programmLink = $('.guide-channel__list > .programm-list__item');
-			
-			programmLink.mouseover(function() {
+
+			programmLink.mouseover(function () {
 				let programmInfo = $(this).find('.programm-card');
 				let tooCloseToRight = $(window).innerWidth() - ($(this).offset().left + $(this).innerWidth()) < programmInfo.innerWidth();
 				programmInfo.addClass('is-visible');
-				if(tooCloseToRight) {
+				if (tooCloseToRight) {
 					programmInfo.css({
 						transform: 'translate(-50%, -50%)',
 					})
@@ -246,7 +246,7 @@
 					})
 				}
 			})
-			programmLink.mouseout(function() {
+			programmLink.mouseout(function () {
 				programmInfo = $(this).find('.programm-card');
 				programmInfo.removeClass('is-visible');
 			})
@@ -254,8 +254,22 @@
 	})
 
 }
-//category colors
+// channel page -> programm description expander
 {
+	$('.programm-list__descr-main').click(function () {
+		let fullHeight = $(this)[0].scrollHeight;
+		let initialHeight = $(this).innerHeight();
+		if(fullHeight >= initialHeight) {
+			$(this).toggleClass('expanded');
+			if ($(this).hasClass('expanded')) {
+				$(this).css('max-height', fullHeight + 'px')
+			} else {
+				$(this).css('max-height', '50px')
+			}
+		} else {
+			return
+		}
+	})
 }
 // cities dropdwon typehead.js
 {
