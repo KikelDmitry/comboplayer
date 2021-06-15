@@ -90,6 +90,6 @@ mixin programmItem(type, category, time, title, mainDescr, addDescr)
 				.programm-list__descr-add #{addDescr}
 		if type == 'tv-guide'
 			+programmCard(title)
-		if type == 'now'
+		if type == 'on-air'
 			.programm-list__progress
 				.programm-list__progress-bar(style="width:60%")
