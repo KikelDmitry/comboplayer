@@ -165,7 +165,7 @@
 				margin-bottom: 8px;
 			}
 			.programm-list__descr {
-				display: flex;
+				// display: flex;
 
 				&-main {
 					position: relative;
@@ -300,7 +300,8 @@
 		&-add {
 		}
 		&-img {
-			flex: 0 0 auto;
+			float: left;
+			// flex: 0 0 auto;
 			width: 89px;
 			height: 50px;
 			margin-right: 10px;
