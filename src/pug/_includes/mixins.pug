@@ -71,13 +71,9 @@ mixin programmItem(type, category, time, title, mainDescr, addDescr)
 				return 'is-inactive';
 				break;
 				default:
-				return 'programm-list__item--' + category;
+				return category ? 'programm-list__item--' + category : '';
 			}
 		};
-	-
-		function test() {
-			return 'test';
-		}
 	li.programm-list__item(class=typeClass(type))
 		.programm-list__time #{time}
 		.programm-list__link 
