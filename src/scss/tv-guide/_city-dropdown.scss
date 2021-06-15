@@ -90,13 +90,17 @@
 					--item-height: 45px;
 
 					.tt-suggestion {
-						height: var(--item-height);
+						display: flex;
+						min-height: var(--item-height);
 						padding: 0 15px;
 						color: $color-steel-2;
-						line-height: var(--item-height);
+						line-height: 1.5;
 						font-size: 14px;
 						cursor: pointer;
 
+						.tt-suggestion-name {
+							margin: auto 0;
+						}
 						&:not(:last-child) {
 							border-bottom: 1px solid #d3e8e1;
 						}
