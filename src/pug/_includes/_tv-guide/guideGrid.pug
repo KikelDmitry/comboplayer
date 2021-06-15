@@ -259,37 +259,9 @@
 
 section.guide-grid
 	.container-xl
-		.row
-			each channel in guide
-				.guide-grid__col.col-sm-6.col-md-4.col-xl-3
-					.guide-channel
-						header.guide-channel__header
-							.guide-channel__header-link
-								.guide-channel__logo
-									img.guide-channel__logo-img(src="/img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
-								a.guide-channel__title(href="channel.html") #{channel.title}
-							.guide-channel__control
-								.guide-channel__control-item.guide-channel__control-item--play
-									i.icon-play
-								button.guide-channel__control-item.guide-channel__control-item--fav.fav-btn(type="button" title="Добавить в избранное")
-									i.icon-heart-empty
-									i.icon-heart-solid
-						ul.guide-channel__list.programm-list
-							each programm in channel.list
-								+programmItem(
-									'tv-guide',
-									programm.type,
-									programm.time,
-									programm.title,
-									'',
-									programm.descr
-								)
-								//- li.programm-list__item(class=(programm.isPast ? 'is-inactive' : '', programm.type ? 'programm-list__item--' + programm.type : ''))
-									.programm-list__time #{programm.time}
-									.programm-list__link 
-										a.programm-list__title(href="#programm-page-link") #{programm.title}
-										span.programm-list__descr #{programm.descr}
-									+programmCard(programm.title)
-									//- include programmCard.pug
+		each channel, idx in guide
+			if idx % 4 == 0
+				.row
+			+channelCol(channel)
 		button.guide-grid__load-more(type="button") Загрузить ещё...
 
