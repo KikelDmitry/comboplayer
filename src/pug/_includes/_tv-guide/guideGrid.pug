@@ -259,9 +259,19 @@
 
 section.guide-grid
 	.container-xl
-		each channel, idx in guide
-			if idx % 4 == 0
-				.row
-			+channelCol(channel)
+		.row
+			+channelCol(guide[0])
+			+channelCol(guide[1])
+			+channelCol(guide[2])
+			+channelCol(guide[3])
+		
+		.page-banner.page-banner--tv-guide.temp-banner Banner
+		.row
+			+channelCol(guide[4])
+			+channelCol(guide[5])
+			//- each channel, idx in guide
+				+channelCol(channel)
+					if idx > 3
+						- return
 		button.guide-grid__load-more(type="button") Загрузить ещё...
 

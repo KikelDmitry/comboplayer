@@ -106,3 +106,9 @@ body {
 	text-align: center;
 	padding: 0 15px;
 }
+.page-banner {
+	&--tv-guide {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+}
