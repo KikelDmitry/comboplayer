@@ -2,10 +2,14 @@
 	padding: 17px 0;
 
 	&__lists {
+		.programm-list__item:not(:last-child) {
+			.programm-list__link {
+				border-bottom: 1px solid $color-steel-dull-85;
+			}
+		}
 		.programm-list__link {
 			margin-bottom: 0;
 			padding: 8px 0;
-			border-bottom: 1px solid $color-steel-dull-85;
 		}
 	}
 	&__past {
