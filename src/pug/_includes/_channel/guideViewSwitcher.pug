@@ -1,0 +1,7 @@
+.guide-view-switcher
+	if config.page.type == 'channel'
+		span.guide-view-switcher__link.is-inactive Сейчас
+		a.guide-view-switcher__link(href="#weekly-guide-page") Расписание на неделю
+	else
+		a.guide-view-switcher__link.is-inactive(href="#") Сейчас
+		span.guide-view-switcher__link Расписание на неделю

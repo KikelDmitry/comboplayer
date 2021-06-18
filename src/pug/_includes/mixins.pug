@@ -60,7 +60,7 @@ mixin programmCard(title)
 			.programm-card__rating 12+
 
 //- teleguide row
-mixin programmItem(type, category, time, title, mainDescr, addDescr)
+mixin programmItem(type, category, time, title, mainDescr, addDescr, series)
 	//- types: past, on-air, future, tv-guide 
 	-
 		function typeClass(type) {
@@ -79,9 +79,21 @@ mixin programmItem(type, category, time, title, mainDescr, addDescr)
 		.programm-list__time #{time}
 		.programm-list__link 
 			a.programm-list__title(href="#programm-page-link") #{title}
+			if type != 'tv-guide'
+				.programm-list__watch
+					i.programm-list__watch-icon.icon-play
+					a.programm-list__watch-link(href="#")
+						if type == 'past'
+							| Смотреть в записи
+						else
+							| Смотреть онлайн
 			.programm-list__descr
 				if type == 'on-air'
 					img.programm-list__descr-img(src="img/content/programms/preview/fashion.png" alt=title + " preview")
+				if series
+					ul.programm-list__descr-series
+						each serie in series
+							li.programm-list__descr-series-item #{serie}
 				if type != 'past' && mainDescr
 					.programm-list__descr-main #{mainDescr}
 				.programm-list__descr-add #{addDescr}
