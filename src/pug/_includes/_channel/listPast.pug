@@ -4,7 +4,7 @@
 		i.icon-caret-up
 	ul.channel-guide__past-list.programm-list.collapse.show#past-list
 		each item in data.pastList
-			+programmItem('past', false, item.time, item.title, item.mainDescr, item.addDescr)
+			+programmItem('past', false, item.time, item.title, item.mainDescr, item.series)
 			//- li.programm-list__item
 				.programm-list__time #{item.time}
 				.programm-list__link

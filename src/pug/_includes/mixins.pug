@@ -60,7 +60,7 @@ mixin programmCard(title)
 			.programm-card__rating 12+
 
 //- teleguide row
-mixin programmItem(type, category, time, title, mainDescr, addDescr, series)
+mixin programmItem(type, category, time, title, mainDescr, series)
 	//- types: past, on-air, future, tv-guide 
 	-
 		function typeClass(type) {
@@ -96,7 +96,6 @@ mixin programmItem(type, category, time, title, mainDescr, addDescr, series)
 							li.programm-list__descr-series-item #{serie}
 				if type != 'past' && mainDescr
 					.programm-list__descr-main #{mainDescr}
-				.programm-list__descr-add #{addDescr}
 		if type == 'tv-guide'
 			+programmCard(title)
 		if type == 'on-air'
