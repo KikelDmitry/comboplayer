@@ -14,13 +14,15 @@
 
 	&__link {
 		color: $color-apple-4;
-		padding: 4px 8px 5px;
+		padding: 0 7px;
 		border-radius: 3px;
 		font-size: 16px;
 		white-space: nowrap;
+		font-family: $addFont;
+		line-height: 24px;
 
 		@include media-breakpoint-up(lg) {
-			// font-size: 18px;
+			font-size: 18px;
 		}
 
 		&.is-inactive {

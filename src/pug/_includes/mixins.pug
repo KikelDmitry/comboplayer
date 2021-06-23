@@ -52,7 +52,7 @@ mixin programmCard(title)
 			//- button.programm-card__close.d-flex.d-lg-none
 				i.icon-close
 		.programm-card__poster
-			a.programm-card__link(href="#programm-page-link" title=title aria-label=title)
+			a.programm-card__link(href="programm.html" title=title aria-label=title)
 				img.programm-card__poster-img(src="/img/content/banners/programm-info0.png" alt=title = " постер")
 		.programm-card__descr Новости. Информация. Главные новости региона. Происшествия, политика, общественная жизнь, экономика, спрот, культура, прогноз погоды.
 		footer.programm-card__footer
@@ -78,7 +78,7 @@ mixin programmItem(type, category, time, title, mainDescr, series)
 	li.programm-list__item(class=typeClass(type))
 		.programm-list__time #{time}
 		.programm-list__link 
-			a.programm-list__title(href="#programm-page-link") #{title}
+			a.programm-list__title(href="programm.html") #{title}
 			if type != 'tv-guide'
 				.programm-list__watch
 					i.programm-list__watch-icon.icon-play
@@ -125,5 +125,5 @@ mixin channelCol(channel)
 						programm.time,
 						programm.title,
 						'',
-						programm.descr
+						programm.series
 					)

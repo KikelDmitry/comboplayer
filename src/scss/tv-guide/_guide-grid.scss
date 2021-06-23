@@ -46,7 +46,6 @@
 				}
 
 				+ .guide-channel__control {
-					
 					.guide-channel__control-item--play {
 						background-color: $color-cobalt-deep-4;
 						color: $color-white;
@@ -130,6 +129,21 @@
 	}
 	&__list {
 		margin-bottom: 30px;
+
+		.programm-list__time {
+			font-size: 13px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 14px;
+			}
+		}
+		.programm-list__title {
+			font-size: 14px;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 15px;
+			}
+		}
 	}
 	&:hover {
 		.guide-channel__control {

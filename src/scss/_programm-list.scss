@@ -126,21 +126,21 @@
 		}
 	}
 	&__watch {
-		position: relative;
 		$size: 24px;
+
+		width: 154px;
+		position: relative;
 		height: $size;
 		// margin-bottom: 4px;
 		display: flex;
 		align-items: center;
-		border-radius: 3px;
-		overflow: hidden;
 
 
 		&-icon {
 			flex: 0 0 auto;
 			width: $size;
 			height: $size;
-			border-radius: inherit;
+			border-radius: 3px;
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -149,9 +149,12 @@
 			font-size: 8px;
 		}
 		&-link {
-			padding: 5px 8px 5px 6px;
+			height: $size;
+			padding: 0 8px 0 6px;
 			color: $color-cobalt-3;
 			font-size: 13px;
+			line-height: $size;
+			border-radius: 0 3px 3px 0;
 
 			&::after {
 				content: "";
@@ -162,7 +165,7 @@
 			.programm-list__watch-icon {
 				background-color: $color-cobalt-deep-4;
 				color: $color-white;
-				border-radius: 0;
+				border-radius: 3px 0 0 3px;
 			}
 			.programm-list__watch-link {
 				background-color: $color-cobalt-4;

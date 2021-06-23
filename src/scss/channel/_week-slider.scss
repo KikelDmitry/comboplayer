@@ -1,0 +1,73 @@
+.week-slider {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 32px;
+	margin-bottom: 18px;
+	background-color: $color-steel-dull-95;
+	border-radius: 5px;
+	overflow: hidden;
+
+	&__nav {
+		height: 100%;
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $color-cobalt-2;
+		font-family: $addFont;
+		font-size: 18px;
+		white-space: nowrap;
+		
+		@include media-breakpoint-up(md) {
+			// flex-basis: 33.33%;
+		}
+		
+		&:first-child,
+		&:last-child {
+			width: 32px;
+			flex: 0 0 auto;
+			font-size: 0;
+			padding: 0 7px;
+
+			@include media-breakpoint-up(md) {
+				font-size: 18px;
+			}
+		}
+		&:first-child {
+			justify-content: flex-start;
+			
+			&::before {
+				content: "\e904";
+				font-family: "icomoon";
+				margin-right: 20px;
+				transform: rotateZ(-90deg);
+				font-size: 16px;
+			}
+		}
+		&:last-child {
+			justify-content: flex-end;
+			
+			&::after {
+				content: "\e904";
+				font-family: "icomoon";
+				margin-left: 20px;
+				transform: rotateZ(90deg);
+				font-size: 16px;
+			}
+		}
+		
+		&.is-active {
+			pointer-events: none;
+			color: $color-steel-5;
+		}
+		&:hover {
+			background-color: $color-steel-dull-9;
+			color: $color-cobalt-2;
+		}
+		&:active {
+			background-color: $color-cobalt-3;
+			color: $color-white;
+		}
+	}
+}

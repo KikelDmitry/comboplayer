@@ -1,0 +1,44 @@
+.channel-day {
+	padding-bottom: 20px;
+	
+	&:not(:last-child) {
+		border-bottom: 1px solid $color-steel-dull-85;
+	}
+	&__title {
+		margin-bottom: 14px;
+		color: $color-cobalt-1;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 48px;
+		letter-spacing: -0.01em;
+
+	}
+	&__list {
+		margin-bottom: 0;
+	}
+	.programm-list__item {
+		&:not(:last-child) {
+			.programm-list__link {
+				border: 0;
+			}
+		}
+	}
+	.programm-list__link {
+	}
+	.programm-list__time {
+		font-size: 13px;
+
+		@include media-breakpoint-up(md) {
+			font-size: 14px;
+		}
+	}
+	.programm-list__title {
+		font-size: 14px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 15px;
+		}
+	}
+	.programm-card {
+	}
+}

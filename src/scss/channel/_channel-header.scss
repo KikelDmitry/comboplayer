@@ -63,6 +63,7 @@
 		border-radius: 5px;
 		font-family: $addFont;
 		font-size: 18px;
+		white-space: nowrap;
 		
 		&-icon {
 			display: flex;
@@ -100,9 +101,16 @@
 		padding: 0 12px;
 		background-color: $color-steel-dull-95;
 		color: $color-cobalt-2;
-		font-size: 18px;
+		font-size: 14px;
 		border-radius: 5px;
-
+		white-space: nowrap;
+		
+		@include media-breakpoint-up(sm) {
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+		}
 		&:hover {
 			background-color: $color-cobalt-2;
 			color: $color-white;

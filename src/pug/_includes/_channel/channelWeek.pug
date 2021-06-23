@@ -1,0 +1,92 @@
+-
+	var list0 = [
+		{
+			title: 'Новости',
+			time: '07:00',
+		},
+		{
+			title: 'Давай поженимся или давай без давай',
+			time: '09:15',
+		},
+		{
+			title: 'Брат за брата',
+			time: '11:00',
+		},
+		{
+			title: 'Утренние новости',
+			time: '12:00',
+		},
+		{
+			title: 'Новости',
+			time: '13:00',
+		},
+		{
+			title: 'Новости',
+			time: '14:14',
+		},
+		{
+			title: 'Вести. Местное время',
+			time: '15:15',
+		},
+		{
+			title: 'Жемчуга',
+			time: '16:00',
+		},
+		{
+			title: '60 минут',
+			time: '17:00',
+		},
+		{
+			title: 'Все на Матч! Прямая трансляция',
+			time: '18:00',
+		},
+		{
+			title: 'Фитнес',
+			time: '19:00',
+		},
+		{
+			title: 'Новости',
+			time: '20:00',
+		},
+		{
+			title: 'Фитнес',
+			time: '21:00',
+		},
+	];
+section.channel-guide
+	.container-xl
+		.row
+			.col-lg-9
+				include weekSlider.pug
+				.channel-guide__lists
+					.channel-day
+						h2.channel-day__title.title-2 Понедельник, 21 июня
+						.row
+							- for(i=0; i<3; i++)
+								.col-12.col-md-4
+									ul.channel-day__list.programm-list.guide-channel__list
+										each item, idx in list0
+											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
+					.channel-day
+						h2.channel-day__title.title-2 Понедельник, 21 июня
+						.row
+							- for(i=0; i<3; i++)
+								.col-12.col-md-4
+									ul.channel-day__list.programm-list.guide-channel__list
+										each item, idx in list0
+											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
+					.channel-day
+						h2.channel-day__title.title-2 Понедельник, 21 июня
+						.row
+							- for(i=0; i<3; i++)
+								.col-12.col-md-4
+									ul.channel-day__list.programm-list.guide-channel__list
+										each item, idx in list0
+											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
+			.col-lg-3
+				include guideViewSwitcher.pug
+				.channel-guide__adv.d-none.d-lg-flex AD
+		.row
+			.col-lg-9
+				.channel-guide__about.about-channel
+					include aboutChannel.pug
