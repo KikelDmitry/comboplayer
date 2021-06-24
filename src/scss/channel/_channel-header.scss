@@ -28,9 +28,14 @@
 	}
 	&__controls {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		height: 100%;
 		padding: 8px 0;
+
+		@include media-breakpoint-up(sm) {
+			flex-wrap: nowrap;
+		}
 	}
 	&__favorite {
 		display: flex;
@@ -98,6 +103,7 @@
 		display: flex;
 		align-items: center;
 		height: 32px;
+		margin: 10px 0;
 		padding: 0 12px;
 		background-color: $color-steel-dull-95;
 		color: $color-cobalt-2;
@@ -106,6 +112,7 @@
 		white-space: nowrap;
 		
 		@include media-breakpoint-up(sm) {
+			margin: 0;
 			font-size: 16px;
 		}
 		@include media-breakpoint-up(md) {
