@@ -108,20 +108,10 @@
 		@include media-breakpoint-up(sm) {
 			width: 180px;
 			height: 180px;
-
-			//tmp
-			// margin-right: 12px;
 		}
 		@include media-breakpoint-up(lg) {
 			width: 200px;
 			height: 200px;
-
-			//tmp
-			// margin-right: 12px;
-		}
-		@include media-breakpoint-up(xl) {
-			//tmp
-			// margin-right: 30px;
 		}
 	}
 	&__poster {
@@ -192,8 +182,8 @@
 		position: absolute;
 		top: -3px;
 		left: -3px;
-		width: 51px;
-		height: 51px;
+		width: 54px;
+		height: 54px;
 		background-image: linear-gradient(180deg, rgba(73, 110, 127, 0.1) 64.58%, rgba(255, 255, 255, 0) 100%);
 		background-color: $color-white;
 		border: 3px solid $color-white;

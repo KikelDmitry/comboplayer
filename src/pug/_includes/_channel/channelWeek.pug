@@ -60,7 +60,8 @@ section.channel-guide
 				include weekSlider.pug
 				.channel-guide__lists
 					.channel-day
-						h2.channel-day__title.title-2 Понедельник, 21 июня
+						.channel-day__title.title-2 
+							a(href="#") Понедельник, 21 июня
 						.row
 							- for(i=0; i<3; i++)
 								.col-12.col-md-4
@@ -68,7 +69,8 @@ section.channel-guide
 										each item, idx in list0
 											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
 					.channel-day
-						h2.channel-day__title.title-2 Вторник, 22 июня
+						.channel-day__title.title-2
+							a(href="#") Вторник, 22 июня
 						.row
 							- for(i=0; i<3; i++)
 								.col-12.col-md-4
@@ -76,7 +78,8 @@ section.channel-guide
 										each item, idx in list0
 											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
 					.channel-day
-						h2.channel-day__title.title-2 Среда, 21 июня
+						.channel-day__title.title-2
+							a(href="#") Среда, 23 июня
 						.row
 							- for(i=0; i<3; i++)
 								.col-12.col-md-4

@@ -1,0 +1,9 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Сказочный патруль';
+	- config.page.description = 'Сказочный патруль page description';
+
+block content
+	include /_includes/_programm-guide/pageHeader.pug
+	include /_includes/_programm-guide/programmGuide.pug

@@ -1,0 +1,154 @@
+-
+	var programmChannels = [
+		{
+			channel: 'Карусель',
+			icon: 'channel_carousel.png',
+			days: [
+				{
+					title: 'Вчера, СР',
+					hours: [
+						{
+							time: '16:00',
+						},
+						{
+							time: '17:00',
+							series: [
+								'21-я серия - "Крыса"'
+							],
+							descr: 'Сотрудник уголовного розыска Андрей Фролов - белая ворона. Ему не нравятся методы работы коллег, он не желает участвовать в допросах, которые ведутся с применением насилия и давления. После того как Андрей обезвредил преступника',
+						},
+						{
+							time: '18:00',
+							series: [
+								'22-я серия - "Праздник"'
+							],
+							descr: 'Три подруги приезжают в заповедник сказок, город Мышкин, и знакомятся с местной девочкой Аленкой. Они подбирают на улице необычную милую зверушку Печальку, которая позже превращается в монстра Тоску',
+						}
+					]
+				},
+				{
+					title: '20 июня, ВС',
+					hours: [
+						{
+							time: '12:00',
+						},
+						{
+							time: '13:00',
+							series: [
+								'23-я серия - "Дурь"',
+							],
+						},
+					]
+				}
+			]
+		},
+		{
+			channel: 'Петербург-5',
+			icon: 'channel_ch-5.png',
+			days: [
+				{
+					title: 'Вчера, СР',
+					hours: [
+						{
+							time: '16:00',
+						},
+						{
+							time: '17:00',
+							series: [
+								'21-я серия - "Крыса"'
+							],
+							descr: 'Сотрудник уголовного розыска Андрей Фролов - белая ворона. Ему не нравятся методы работы коллег, он не желает участвовать в допросах, которые ведутся с применением насилия и давления. После того как Андрей обезвредил преступника',
+						},
+						{
+							time: '18:00',
+							series: [
+								'22-я серия - "Праздник"'
+							],
+							descr: 'Три подруги приезжают в заповедник сказок, город Мышкин, и знакомятся с местной девочкой Аленкой. Они подбирают на улице необычную милую зверушку Печальку, которая позже превращается в монстра Тоску',
+						}
+					]
+				},
+				{
+					title: '20 июня, ВС',
+					hours: [
+						{
+							time: '12:00',
+						},
+						{
+							time: '13:00',
+							series: [
+								'23-я серия - "Дурь"',
+							],
+						},
+					]
+				}
+			]
+		},
+		{
+			channel: 'Первый',
+			icon: 'channel_ch-1.png',
+			days: [
+				{
+					title: 'Сегодня',
+					hours: [
+						{
+							time: '16:00',
+							onAir: true,
+							progress: 60,
+						},
+						{
+							time: '17:00',
+							series: [
+								'21-я серия - "Крыса"'
+							],
+							descr: 'Сотрудник уголовного розыска Андрей Фролов - белая ворона. Ему не нравятся методы работы коллег, он не желает участвовать в допросах, которые ведутся с применением насилия и давления. После того как Андрей обезвредил преступника',
+						},
+						{
+							time: '18:00',
+							series: [
+								'22-я серия - "Праздник"'
+							],
+							descr: 'Три подруги приезжают в заповедник сказок, город Мышкин, и знакомятся с местной девочкой Аленкой. Они подбирают на улице необычную милую зверушку Печальку, которая позже превращается в монстра Тоску',
+						},
+					],
+				},
+			],
+		},
+	];
+
+section.programm-guide
+	.container-xl
+		.row
+			.col-lg-9
+				.programm-lists
+					each channel, idx in programmChannels
+						.programm-channel
+							.programm-channel__header(data-toggle="collapse" data-target="#programm-channel__body" + idx aria-expanded="false" aria-role="button" class=(idx != 0 ? 'collapsed' : ''))
+								.programm-channel__logo
+									img.programm-channel__logo-img(src="img/content/channels/" + channel.icon, alt=channel.channel + " logo")
+								.programm-channel__title #{channel.channel}
+								i.programm-channel__header-arrow.icon-caret-down
+							.programm-channel__body.collapse(id="programm-channel__body" + idx class=(idx == 0 ? 'show' : ''))
+								each day, idx in channel.days
+									.programm-day
+										.programm-day__title #{day.title}
+										ul.programm-day__list
+											each item in day.hours
+
+												+programmItem(
+													'future',
+													'',
+													item.time,
+													'Сказочный патруль',
+													item.descr,
+													item.series
+												)
+
+
+
+			.col-lg-3
+				.programm-guide__adv.channel-guide__adv.d-none.d-lg-flex AD
+		.row
+			.col-lg-9
+				.programm-guide__about.about-channel
+					include aboutProgramm.pug

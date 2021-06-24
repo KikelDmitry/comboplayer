@@ -1,0 +1,54 @@
+-
+	var tags = [
+		{
+			title: 'Детям',
+			class: 'kids',
+		},
+		{
+			title: 'Сериалы',
+			class: 'series',
+		},
+		//- {
+		//- 	title: 'Фильм',
+		//- 	class: 'movie',
+		//- },
+		//- {
+		//- 	title: 'Спорт',
+		//- 	class: 'sport',
+		//- },
+		//- {
+		//- 	title: 'Обучение',
+		//- 	class: 'learning',
+		//- },
+		//- {
+		//- 	title: 'Инфо',
+		//- 	class: 'info',
+		//- },
+		//- {
+		//- 	title: 'Новости',
+		//- 	class: 'news',
+		//- },
+		//- {
+		//- 	title: 'Развлечение',
+		//- 	class: 'entertain',
+		//- },
+		//- {
+		//- 	title: 'Культура',
+		//- 	class: 'culture',
+		//- },
+		//- {
+		//- 	title: 'Остальное',
+		//- 	class: 'rest',
+		//- },
+	]
+
+section.page-header
+	.container-xl
+		.row
+			.col-md-9
+				h1.page-header__title.title-1 #{config.page.title}
+			.col-md-3
+				.page-header__tags
+					each tag in tags
+						.programm-tag(class="programm-tag--" + tag.class)
+							span.programm-tag__title #{tag.title}

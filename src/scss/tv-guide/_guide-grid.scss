@@ -57,9 +57,10 @@
 
 	&__logo {
 		display: flex;
-		width: 51px;
-		height: 51px;
+		width: 54px;
+		height: 54px;
 		margin-right: 8px;
+		margin-left: -3px;
 		background-color: $color-white;
 		background-image: linear-gradient(180deg, rgba(73, 110, 127, 0.1) 64.58%, rgba(255, 255, 255, 0) 100%);
 		border: 3px solid $color-white;
