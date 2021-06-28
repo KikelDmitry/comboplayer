@@ -86,10 +86,12 @@ section.channel-guide
 									ul.channel-day__list.programm-list.guide-channel__list
 										each item, idx in list0
 											+programmItem('tv-guide', '', item.time, item.title, item.mainDescr, item.series)
+				+guideViewSwitcher('week', 'mobile')
+				.channel-guide__about.about-channel
+					include aboutChannel.pug
 			.col-lg-3
-				include guideViewSwitcher.pug
+				+guideViewSwitcher('week', 'desktop')
+				//- include guideViewSwitcher.pug
 				.channel-guide__adv.d-none.d-lg-flex AD
 		.row
 			.col-lg-9
-				.channel-guide__about.about-channel
-					include aboutChannel.pug

@@ -127,3 +127,13 @@ mixin channelCol(channel)
 						'',
 						programm.series
 					)
+
+//- guide view switcher
+mixin guideViewSwitcher(type, device)
+	.guide-view-switcher(class=(device == 'desktop' ? 'd-none d-lg-flex' : 'd-lg-none'))
+		if type == 'channel'
+			span.guide-view-switcher__link.is-inactive Сейчас
+			a.guide-view-switcher__link(href="channel-week.html") Расписание на неделю
+		else
+			a.guide-view-switcher__link(href="channel.html") Сейчас
+			span.guide-view-switcher__link.is-inactive Расписание на неделю

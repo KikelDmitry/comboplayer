@@ -56,11 +56,13 @@ section.channel-guide
 				.channel-guide__lists
 					include listPast.pug
 					include listNow.pug
+					+guideViewSwitcher('channel', 'mobile')
+					.channel-guide__about.about-channel
+						include aboutChannel.pug
 
 			.col-lg-3
-				include guideViewSwitcher.pug
+				+guideViewSwitcher('channel', 'desktop')
+				//- include guideViewSwitcher.pug
 				.channel-guide__adv.d-none.d-lg-flex AD
-		.row
+		//- .row
 			.col-lg-9
-				.channel-guide__about.about-channel
-					include aboutChannel.pug
