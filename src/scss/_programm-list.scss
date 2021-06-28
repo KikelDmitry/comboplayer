@@ -16,6 +16,13 @@
 			}
 			.programm-list__descr {
 				color: $color-steel-6;
+
+				&-series {
+					&-item {
+						color: $color-steel-5;
+
+					}
+				}
 			}
 			&:hover {
 				.programm-list__time {
