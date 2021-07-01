@@ -22,7 +22,7 @@
 		cursor: pointer;
 
 		&-arrow {
-			margin-left: auto;
+			margin-left: 15px;
 			margin-right: 25px;
 			color: $color-cobalt-2;
 			transition: transform 300ms;
@@ -63,7 +63,19 @@
 			font-size: 20px;
 		}
 	}
-	
+	&__fav {
+		position: relative;
+		width: 40px;
+		height: 40px;
+		margin-left: auto;
+		// background-color: $color-steel-9;
+		color: $color-steel-7;
+		border-radius: 5px;
+
+		&.is-active {
+			color: $color-apple-5;
+		}
+	}
 	&__body {
 
 	}

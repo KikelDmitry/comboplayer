@@ -217,7 +217,8 @@
 }
 // favorite btn
 {
-	$('.fav-btn').click(function () {
+	$('.fav-btn').click(function (e) {
+		e.stopPropagation();
 		$(this).toggleClass('is-active');
 	})
 }
