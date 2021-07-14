@@ -1,0 +1,16 @@
+.player-header {
+	&__left {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+	&__logo {
+	}
+	&__title {
+		color: $color-cobalt-1;
+
+		strong {
+			padding-left: 0.25em;
+		}
+	}
+}

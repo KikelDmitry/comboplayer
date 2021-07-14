@@ -1,0 +1,131 @@
+.player-subs {
+	$min-height: 220px;
+	
+	min-height: $min-height;
+	padding: 20px 0 30px;
+	background: linear-gradient(268.33deg, #0b825b 10.44%, rgba(19, 169, 121, 0) 91.27%), #1b3b77;
+	color: $color-white;
+	
+	&__title {
+		position: relative;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		min-height: 49px;
+		padding: 5px 30px;
+		font-family: $addFont;
+		background-image: linear-gradient(180deg, rgba(43, 107, 224, 0.2) 0%, rgba(43, 107, 224, 0) 100%);
+		background-color: $color-cobalt-1;
+		border-radius: 5px 5px 0px 0px;
+		font-size: 21px;
+		line-height: 125%;
+
+		@include media-breakpoint-up(md) {
+			min-height: $min-height;
+			height: 100%;
+			padding-top: 24px;
+			padding-right: 20px;
+			flex-direction: column;
+			align-items: flex-start;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 0;
+				transform: translate(100%, -50%);
+				width: 0;
+				height: 0;
+				margin: auto 0;
+				border-style: solid;
+				border-width: 21px 0 21px 22px;
+				border-color: transparent transparent transparent #284F97;
+			}
+		}
+		@include media-breakpoint-up(lg) {
+
+		}
+
+		span {
+			margin-right: 0.25em;
+		}
+		strong {
+			font-weight: 700;
+		}
+		
+	}
+	&__tariff {
+		padding: 10px 30px;
+
+		@include df(250)
+	}
+	&__on-air {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 0 30px;
+
+		&-now {
+			margin-bottom: 15px;
+			padding: 5px 12px;
+			font-size: 14px;
+			line-height: 100%;
+			background-color: rgba(37, 64, 76, 0.25);
+			border-radius: 4px;
+		}
+		&-title {
+			margin-bottom: 8px;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 19px;
+		}
+		&-descr {
+			color: $color-apple-8;
+		}
+	}
+}
+.player-tariff {
+	&__name {
+		margin-bottom: 4px;
+		font-family: $addFont;
+		font-size: 21px;
+		line-height: 49px;
+	}
+	&__channels {
+		display: flex;
+		align-items: baseline;
+		margin-bottom: 10px;
+
+		i {
+			margin-right: 7px;
+			color: $color-cyan-6;
+		}
+		span {
+			color: $color-steel-9;
+		}
+	}
+	&__descr {
+		color: $color-steel-8;
+	}
+	&__price {
+		font-size: 25px;
+		font-weight: 500;
+		line-height: 50px;
+		color: $color-steel-9;
+
+		@include media-breakpoint-up(xl) {
+			margin-bottom: 16px;
+		}
+		span {
+			color: $color-apple-5;
+		}
+	}
+	&__buy {
+		max-width: 233px;
+		height: 50px;
+		padding: 15px 20px;
+		font-weight: 500;
+		font-size: 20px;
+
+	}
+}
