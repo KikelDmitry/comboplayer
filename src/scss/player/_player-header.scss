@@ -8,9 +8,45 @@
 	}
 	&__title {
 		color: $color-cobalt-1;
-
+		
 		strong {
 			padding-left: 0.25em;
+		}
+	}
+	&__right {
+		
+	}
+	&__controls {
+		height: 100%;
+		border: 1px solid $color-steel-dull-85;
+		border-radius: 5px;
+	}
+	&__nav {
+		position: relative;
+		flex: 1 1 50%;
+		height: 32px;
+		display: flex;
+		
+		&-icon {
+			flex: 0 0 auto;
+		}
+		&-link {
+			flex: 1 1 auto;
+			color: $color-cobalt-1;
+			font-family: $addFont;
+			font-size: 17px;
+			
+			&::after {
+				content: '';
+				@include absoluteFull;
+			}
+		}
+		&:hover {
+			background-color: $color-steel-dull-9;
+			color: $color-cobalt-1;
+		}
+		&.active {
+
 		}
 	}
 }

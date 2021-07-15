@@ -1,0 +1,12 @@
+//tmp
+.player-window {
+	min-height: 480px;
+	background-color: $color-black;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 36px;
+	color: $color-white;
+	border-radius: 5px;
+}
