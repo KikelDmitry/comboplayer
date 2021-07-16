@@ -28,6 +28,10 @@
 				background-color: $color-steel-dull-3;
 				color: $color-steel-9;
 			}
+			&:active {
+				background-color: $color-cobalt-2;
+				color: $color-steel-9;
+			}
 		}
 	}
 }

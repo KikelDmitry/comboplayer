@@ -1,1 +1,381 @@
-div channels
+.player-channels__control
+	label.player-channels__control-label
+		i.icon-zoom.player-channels__control-icon
+		input.player-channels__control-input(type="text" placeholder="Поиск каналов...")
+	button.player-channels__control-btn.player-channels__control-btn--left(type="button" title="Предыдущий канал")
+		i.icon-arrow-prev
+		span.visually-hidden Предыдущий канал
+	button.player-channels__control-btn.player-channels__control-btn--right(type="button" title="Следующий канал")
+		i.icon-arrow-next
+		span.visually-hidden Следующий канал
+-
+	var channels = [
+		{
+			id: 'favorite',
+			title: 'Избранное',
+			icon: 'heart-solid',
+			list: [
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+					isActive: true,
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+			],
+		},
+		{
+			id: 'common',
+			title: 'Общероссийские',
+			icon: 'tv-cat_common',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'education',
+			title: 'Познавательные',
+			icon: 'tv-cat_learning',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'shop',
+			title: 'Телемагазин',
+			icon: 'tv-cat_shop',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'sport',
+			title: 'Спорт',
+			icon: 'tv-cat_sport',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'info',
+			title: 'Информация',
+			icon: 'tv-cat_info',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'entertain',
+			title: 'Развлечения',
+			icon: 'tv-cat_entertain',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'movies',
+			title: 'Фильмы и сериалы',
+			icon: 'tv-cat_movies',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'music',
+			title: 'Музыка',
+			icon: 'tv-cat_music',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'kids',
+			title: 'Детям',
+			icon: 'tv-cat_kids',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'other',
+			title: 'Другое',
+			icon: 'tv-cat_common',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'adult',
+			title: 'Каналы для взрослых',
+			icon: 'tv-cat_adult',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+		{
+			id: 'hobbies',
+			title: 'Увлечения',
+			icon: 'tv-cat_hobbies',
+			list: [
+				{
+					title: 'Россия 1',
+					logo: 'rus-1.png',
+				},
+				{
+					title: 'Первый канал',
+					logo: 'ch-1.png',
+				},
+				{
+					title: 'Пятница',
+					logo: 'friday.png',
+				},
+				{
+					title: 'Матч ТВ',
+					logo: 'match-tv.png',
+				},
+				{
+					title: 'НТВ',
+					logo: 'ntv.png',
+				},
+			],
+		},
+	];
+ul.player-channels__list.custom-scrollbar
+	each cat, idx in channels
+		li.player-channels__cat
+			button.player-channels__cat-header(data-toggle="collapse" data-target="#cat-" + cat.id aria-expanded=(idx == 0 ? 'true' : false) type="button")
+				i.player-channels__cat-icon(class="icon-" + cat.icon)
+				span.player-channels__cat-title #{cat.title}
+				i.player-channels__cat-caret.icon-caret-up
+			ul.player-channels__cat-body.collapse(id="cat-" + cat.id class=(idx == 0 ? 'show' : ''))
+				each channel in cat.list
+					li.player-channels__channel(class=(channel.isActive ? 'is-active' : false))
+						.player-channels__channel-logo
+							img(src="img/content/channels/channel_" + channel.logo, alt=channel.title + " лого")
+						a.player-channels__channel-link(href="#") #{channel.title}
+						button.player-channels__channel-fav.fav-btn(type="button")
+							i.icon-heart-empty
+							i.icon-heart-solid
