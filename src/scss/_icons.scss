@@ -21,6 +21,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-exclamation:before {
+  content: "\e931";
+}
 .icon-tv-cat_adult:before {
   content: "\e926";
 }

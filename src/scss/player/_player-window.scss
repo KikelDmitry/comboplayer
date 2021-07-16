@@ -1,6 +1,7 @@
 //tmp
 .player-window {
-	min-height: 480px;
+	position: relative;
+	height: 480px;
 	background-color: $color-black;
 
 	display: flex;
@@ -9,4 +10,40 @@
 	font-size: 36px;
 	color: $color-white;
 	border-radius: 5px;
+
+	&__info {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		max-width: 250px;	
+		display: flex;
+		align-items: center;
+		padding: 14px 20px;
+		font-size: 13px;
+		font-weight: 300;
+		background: rgba(0, 0, 0, 0.55);
+		border-radius: 5px;
+
+		i {
+			flex: 0 0 auto;
+			width: 42px;
+			height: 42px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 11px;
+			border-radius: 50%;
+			background-color: #1F2C33;
+			color: $color-cobalt-6;
+			font-size: 20px;
+		}
+		span {
+			line-height: 110%;
+		}
+		&--error {
+			i {
+				color: $color-red-dark;
+			}
+		}
+	}
 }

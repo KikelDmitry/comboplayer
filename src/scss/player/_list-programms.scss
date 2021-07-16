@@ -1,0 +1,106 @@
+.timeline {
+	&.player-programms__timeline {
+		margin-bottom: 16px;
+
+		.timeline__item {
+			color: $color-white;
+			margin: 0 2px;
+
+			&:hover {
+				background-color: $color-steel-dull-2;
+			}
+		}
+		.timeline__nav {
+			background-color: $color-steel-dull-2;
+			color: $color-steel-8;
+
+			&--left {
+				&::after {
+					background-image: linear-gradient(90deg, #2d3e46 20.83%, rgba(45, 61, 70, 0) 100%);
+				}
+			}
+			&--right {
+				&::after {
+					background-image: linear-gradient(270deg, #2d3e46 20.83%, rgba(45, 61, 70, 0) 100%);
+				}
+			}
+			&:hover {
+				background-color: $color-steel-dull-3;
+				color: $color-steel-9;
+			}
+		}
+	}
+}
+.player-programms {
+	&__list {
+		max-height: 440px;
+		overflow: auto;
+		border-radius: 5px;
+	}
+	&__item {
+		--height: 40px;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		height: var(--height);
+		font-size: 14px;
+		color: $color-steel-8;
+
+		&:nth-child(odd) {
+			.player-programms__time {
+				background-color: #30434E;
+			}
+			.player-programms__title {
+				background-color: #2D3D46;
+			}
+		}
+		&:nth-child(even) {
+			.player-programms__time {
+				background-color: #2D3D46;
+			}
+			.player-programms__title {
+				background-color: #30434E;
+			}
+		}
+		&.is-active {
+			color: $color-white;
+
+			.player-programms__time {
+				position: relative;
+				background-color: $color-cobalt-deep-3;
+				
+				&::after {
+					content: "";
+					width: 0;
+					height: 0;
+					position: absolute;
+					top: 50%;
+					right: 0;
+					transform: translate(100%, -50%);
+					border-style: solid;
+					border-width: 6px 0 6px 8px;
+					border-color: transparent transparent transparent $color-cobalt-deep-3;
+				}
+			}
+			.player-programms__title {
+				background-color: $color-cobalt-0;
+			}
+		}
+	}
+	&__time {
+		width: 50px;
+		height: 100%;
+		flex: 0 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__title {
+		flex: 1 1 auto;
+		height: 100%;
+		line-height: var(--height);
+		padding-left: 12px;
+		padding-right: 8px;
+		@include dottedEnd;
+	}
+}

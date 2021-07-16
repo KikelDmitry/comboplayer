@@ -14,39 +14,55 @@
 		}
 	}
 	&__right {
-		
+		height: 32px;
 	}
 	&__controls {
+		display: flex;
+		flex-wrap: nowrap;
 		height: 100%;
 		border: 1px solid $color-steel-dull-85;
 		border-radius: 5px;
+		overflow: hidden;
 	}
 	&__nav {
-		position: relative;
 		flex: 1 1 50%;
-		height: 32px;
+		height: 100%;
 		display: flex;
+		align-items: center;
+		padding: 0 11px;
+		transition-property: background-color;
+		transition-duration: 300ms;
 		
 		&-icon {
 			flex: 0 0 auto;
+			margin-right: 12px;
+			color: $color-apple-deep-4;
+			transition-property: color;
+			transition-duration: inherit;
+			
 		}
-		&-link {
+		&-title {
 			flex: 1 1 auto;
 			color: $color-cobalt-1;
 			font-family: $addFont;
 			font-size: 17px;
+			line-height: 1;
+			transition-property: color;
+			transition-duration: inherit;
 			
-			&::after {
-				content: '';
-				@include absoluteFull;
-			}
 		}
 		&:hover {
 			background-color: $color-steel-dull-9;
 			color: $color-cobalt-1;
 		}
 		&.active {
-
+			.player-header__nav-icon {
+				color: $color-apple-8;
+			}
+			.player-header__nav-title {
+				color: $color-white;
+			}
+			background-color: $color-apple-4;
 		}
 	}
 }

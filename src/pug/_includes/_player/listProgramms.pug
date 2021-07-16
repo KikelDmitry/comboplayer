@@ -1,0 +1,145 @@
+-
+	var dates = [
+		{
+			text: '26, ПН',
+		},
+		{
+			text: '27, ВТ',
+			type: 'is-active',
+		},
+		{
+			text: '28, СР',
+		},
+		{
+			text: '29, ЧТ',
+		},
+		{
+			text: '30, ПТ',
+		},
+		{
+			text: '01, СБ',
+		},
+		{
+			text: '02, ВС',
+		},
+		{
+			text: '03, ПН',
+		},
+		{
+			text: '04, ВТ',
+		},
+		{
+			text: '05, СР',
+		},
+		{
+			text: '06, ЧТ',
+		},
+		{
+			text: '07, ПТ',
+		},
+		{
+			text: '08, СБ',
+		},
+		{
+			text: '09, ВС',
+		},
+		{
+			text: '10, ПН',
+		},
+		{
+			text: '11, ВТ',
+		},
+		{
+			text: '12, СР',
+		},
+		{
+			text: '13, ЧТ',
+		},
+		{
+			text: '14, ПТ',
+		},
+		{
+			text: '15, СБ',
+		},
+	];
+-
+	var programms = [
+		{
+			time: '11:23',
+			title: 'Футбол. "Монако - Лилль"',
+			state: 'is-inactive'
+		},
+		{
+			time: '13:50',
+			title: 'Чемпионат мира по водным лыжам',
+			state: 'is-inactive'
+		},
+		{
+			time: '15:05',
+			title: 'Новости гребли',
+		},
+		{
+			time: '16:10',
+			title: 'Футбол. "Ювентус - Удинезе”',
+			state: 'is-active'
+		},
+		{
+			time: '16:25',
+			title: '"Боруссия" - "РБ Лейпциг"',
+		},
+		{
+			time: '17:10',
+			title: 'Вести гандбола',
+		},
+		{
+			time: '18:05',
+			title: 'Футбол. "Ювентус - Удинезе”',
+		},
+		{
+			time: '19:30',
+			title: 'Футбол. "Монако - Лилль"',
+		},
+		{
+			time: '20:43',
+			title: 'Вся правда о боулинге',
+		},
+		{
+			time: '22:21',
+			title: '"Боруссия" - "РБ Лейпциг"',
+		},
+		{
+			time: '16:25',
+			title: '"Боруссия" - "РБ Лейпциг"',
+		},
+		{
+			time: '17:10',
+			title: 'Вести гандбола',
+		},
+		{
+			time: '18:05',
+			title: 'Футбол. "Ювентус - Удинезе”',
+		},
+		{
+			time: '19:30',
+			title: 'Футбол. "Монако - Лилль"',
+		},
+		{
+			time: '20:43',
+			title: 'Вся правда о боулинге',
+		},
+		{
+			time: '22:21',
+			title: '"Боруссия" - "РБ Лейпциг"',
+		},
+	];
+
+
+.timeline.player-programms__timeline
+	.timeline__tape.owl-carousel
+		each date in dates
+			a.timeline__item(href="#" class=date.type) #{date.text}
+ul.player-programms__list.custom-scrollbar
+	each programm in programms
+		li.player-programms__item(class=(programm.state ? programm.state : ''))
+			.player-programms__time #{programm.time}
+			.player-programms__title #{programm.title}
