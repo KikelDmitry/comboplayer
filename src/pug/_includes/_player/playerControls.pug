@@ -1,3 +1,11 @@
+.d-lg-none
+	.player-header__controls.player-header__controls--md-control.nav
+		a.player-header__nav(data-toggle="tab" href="#programm-tab")
+			i.icon-calendar-solid.player-header__nav-icon
+			span.player-header__nav-title Программа
+		a.player-header__nav.active(data-toggle="tab" href="#channel-tab")
+			i.icon-tv-icon.player-header__nav-icon
+			span.player-header__nav-title Каналы
 .player-controls.tab-content
 	.tab-pane.fade#programm-tab
 		include listProgramms.pug

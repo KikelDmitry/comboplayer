@@ -2,6 +2,7 @@
 .player-window {
 	position: relative;
 	height: 480px;
+	margin-bottom: 15px;
 	background-color: $color-black;
 
 	display: flex;
@@ -11,6 +12,9 @@
 	color: $color-white;
 	border-radius: 5px;
 
+	@include media-breakpoint-up(lg) {
+		margin-bottom: 0;
+	}
 	&__info {
 		position: absolute;
 		top: 10px;
