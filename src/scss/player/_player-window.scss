@@ -1,53 +1,321 @@
-//tmp
 .player-window {
 	position: relative;
 	height: 480px;
 	margin-bottom: 15px;
 	background-color: $color-black;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 36px;
 	color: $color-white;
 	border-radius: 5px;
+	overflow: hidden;
 
 	@include media-breakpoint-up(lg) {
 		margin-bottom: 0;
 	}
-	&__info {
+}
+.player-title {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 40px;
+	padding: 0 15px;
+	background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 40px;
+	@include dottedEnd;
+}
+.player-controls {
+	&__play {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 64px;
+		height: 64px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 5px;
+		background-color: rgba(0, 0, 0, 0.55);
+		color: $color-steel-8;
+		font-size: 23px;
+		text-shadow: 0px 1px 15px rgba(191, 221, 235, 0.5);
+		transition: background-color 300ms, color 300ms;
+
+		i {
+			transition: transform 300ms;
+		}
+		&:hover {
+			color: $color-white;
+			background-color: rgba(0, 0, 0, 0.8);
+
+			i {
+				transform: scale(1.3);
+			}
+		}
+	}
+	&__mute {
+		position: absolute;
+		bottom: 53px;
+		right: 9px;
+		width: 42px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba(0, 0, 0, 0.55);
+		color: $color-steel-8;
+		font-size: 14px;
+		border-radius: 5px;
+		transition: background-color 300ms, color 300ms;
+
+		i {
+		}
+		&:hover {
+			color: $color-white;
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+	}
+	&__bar {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+.player-bar {
+	$size: 40px;
+
+	&__progress {
+		position: relative;
+		width: 100%;
+		height: 4px;
+		background-color: $color-steel-dull-3;
+		color: $color-apple-deep-5;
+		cursor: pointer;
+		transition: height 200ms;
+
+		&-bar {
+			height: 100%;
+			width: 0;
+			background-color: currentColor;
+		}
+		&-pointer {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			width: 12px;
+			height: 12px;
+			background-color: currentColor;
+			border-radius: 50%;
+			box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+			transform: translate(-50%, -50%) scale(0);
+			transition: transform 200ms;
+		}
+		&:hover {
+		}
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		background-color: rgba(0, 0, 0, 0.5);
+		color: $color-steel-8;
+	}
+	&__item {
+		flex: 0 0 auto;
+		height: $size;
+		background-color: rgba(0, 0, 0, 0.3);
+		transition: background-color 200ms;
+
+		&:hover {
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+	}
+	&__play {
+		width: $size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__volume {
+		display: flex;
+		align-items: center;
+		padding-right: 15px;
+
+		&-icon {
+			width: $size;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		&-control {
+			width: $size;
+			height: 5px;
+			border-radius: 3px;
+			background-color: $color-steel-dull-3;
+			color: $color-apple-deep-5;
+			cursor: pointer;
+
+			&-bar {
+				height: 100%;
+				width: 0;
+				background-color: currentColor;
+				border-radius: inherit;
+			}
+		}
+	}
+	&__on-air {
+		display: flex;
+		align-items: center;
+		padding: 0 12px;
+		margin-right: auto;
+
+		&-icon {
+			width: 10px;
+			height: 10px;
+			background-color: currentColor;
+			border-radius: 50%;
+		}
+		&-title {
+			display: none;
+			font-weight: 500;
+			font-size: 14px;
+			margin-left: 7px;
+
+			@include media-breakpoint-up(sm) {
+				display: block;
+			}
+		}
+		&.is-active {
+			.player-bar__on-air-icon {
+				background-color: $color-red-dark;
+			}
+		}
+	}
+	&__slide {
+		display: none;
+
+		@include media-breakpoint-up(md) {
+			display: flex;
+			align-items: center;
+			max-width: 260px;
+
+			&-btn {
+				width: $size;
+				height: 100%;
+				flex: 0 0 auto;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 12px;
+			}
+			&-title {
+				flex: 1 1 auto;
+				padding: 0 7px;
+				font-weight: 500;
+				font-size: 14px;
+				@include dottedEnd;
+			}
+		}
+	}
+	&__expand {
+		width: $size;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-left: auto;
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+	&:hover {
+		.player-bar__progress-pointer {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+}
+.player-messages {
+	&__item {
 		position: absolute;
 		top: 10px;
 		right: 10px;
-		max-width: 250px;	
+		max-width: 250px;
 		display: flex;
 		align-items: center;
 		padding: 14px 20px;
 		font-size: 13px;
 		font-weight: 300;
-		background: rgba(0, 0, 0, 0.55);
+		background-color: rgba(0, 0, 0, 0.55);
 		border-radius: 5px;
 
-		i {
-			flex: 0 0 auto;
-			width: 42px;
-			height: 42px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			margin-right: 11px;
-			border-radius: 50%;
-			background-color: #1F2C33;
-			color: $color-cobalt-6;
-			font-size: 20px;
-		}
-		span {
-			line-height: 110%;
-		}
 		&--error {
-			i {
+			.player-messages__icon {
 				color: $color-red-dark;
 			}
+		}
+		&--denied {
+			justify-content: center;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 10;
+			max-width: none;
+			background-blend-mode: normal, multiply;
+			backdrop-filter: blur(20px);
+		}
+	}
+	&__icon {
+		flex: 0 0 auto;
+		width: 42px;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-right: 11px;
+		border-radius: 50%;
+		background-color: #1f2c33;
+		color: $color-cobalt-6;
+		font-size: 20px;
+	}
+	&__text {
+		line-height: 110%;
+	}
+	.den-msg {
+		&__left {
+			display: none;
+			padding-right: 17px;
+			margin-bottom: 100px;
+
+			@include media-breakpoint-up(md) {
+				display: block;
+			}
+		}
+		&__icon {
+			// width: 77px;
+			// height: 83px;
+		}
+		&__right {
+			max-width: 450px;
+		}
+		&__title {
+			margin-bottom: 10px;
+			font-family: $addFont;
+			font-size: 22px;
+			line-height: 100%;
+			color: $color-white;
+		}
+		&__subtitle {
+			margin-bottom: 25px;
+			font-size: 16px;
+			line-height: 125%;
+			color: $color-steel-8;
+		}
+		&__subscribe {
+			width: 100%;
+			max-width: 260px;
+			height: 50px;
+			font-size: 20px;
+			font-weight: bold;
 		}
 	}
 }

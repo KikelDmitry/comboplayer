@@ -8,7 +8,7 @@
 	}
 	&__title {
 		color: $color-cobalt-1;
-		
+
 		strong {
 			padding-left: 0.25em;
 		}
@@ -23,6 +23,22 @@
 		border: 1px solid $color-steel-dull-85;
 		border-radius: 5px;
 		overflow: hidden;
+
+		&--md-control {
+			max-width: 294px;
+			height: 32px;
+			margin-bottom: 13px;
+			border-color: $color-steel-2;
+
+			.player-header__nav {
+				&-title {
+					color: $color-white;
+				}
+				&:not(.active):hover {
+					background-color: #2F4149;
+				}
+			}
+		}
 	}
 	&__nav {
 		flex: 1 1 50%;
@@ -32,14 +48,13 @@
 		padding: 0 11px;
 		transition-property: background-color;
 		transition-duration: 300ms;
-		
+
 		&-icon {
 			flex: 0 0 auto;
 			margin-right: 12px;
 			color: $color-apple-deep-4;
 			transition-property: color;
 			transition-duration: inherit;
-			
 		}
 		&-title {
 			flex: 1 1 auto;
@@ -49,7 +64,6 @@
 			line-height: 1;
 			transition-property: color;
 			transition-duration: inherit;
-			
 		}
 		&:hover {
 			background-color: $color-steel-dull-9;

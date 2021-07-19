@@ -1,9 +1,52 @@
-.player-window Embeded player
-	// demo message
-	.player-window__info
-		i.icon-tv-icon
-		span Вы смотрите эфир канала в демо-режиме
-	// error message
-	// .player-window__info.player-window__info--error
-		i.icon-exclamation
-		span Извините, возникла проблема при воспроизведении видео. Мы работаем над устранением ошибки.
+.player-window
+	.player-title Футбол. "Ювентус - Удинезе"
+	.player-controls
+		button.player-controls__play(type="button" aria-label="Воспроизвести")
+			i.icon-play
+		button.player-controls__mute(type="button" aria-label="Вкл/Выкл звук")
+			i.icon-mute
+		.player-controls__bar.player-bar
+			.player-bar__progress
+				.player-bar__progress-bar(style="width:60%")
+				.player-bar__progress-pointer(style="left:60%")
+			.player-bar__row
+				button.player-bar__play.player-bar__item(type="button" aria-label="Воспроизвести")
+					i.icon-play
+				.player-bar__volume.player-bar__item
+					button.player-bar__volume-icon(type="button" aria-label="Громкость")
+						i.icon-volume
+					.player-bar__volume-control
+						.player-bar__volume-control-bar(style="width:60%;")
+				.player-bar__on-air.is-active.player-bar__item
+					.player-bar__on-air-icon
+					.player-bar__on-air-title В эфире
+				.player-bar__slide.player-bar__item
+					button.player-bar__slide-btn(type="button" aria-label="Назад")
+						i.icon-rewind-left
+					.player-bar__slide-title Футбол. "Ювентус - Удинезе"
+					button.player-bar__slide-btn(type="button" aria-label="Вперед")
+						i.icon-rewind-right
+				button.player-bar__expand.player-bar__item(type="expand" aria-label="Развернуть")
+					i.icon-expand
+			
+	.player-messages
+		// demo message
+		.player-messages__item
+			i.player-messages__icon.icon-tv-icon
+			span.player-messages__text Вы смотрите эфир канала в демо-режиме
+		// error message
+		//.player-messages__item.player-messages__item--error
+			i.player-messages__icon.icon-exclamation
+			span.player-messages__text Извините, возникла проблема при воспроизведении видео. Мы работаем над устранением ошибки.
+		// subscribe message
+		//.player-messages__item.player-messages__item--denied.den-msg
+			.den-msg__left
+				img.den-msg__icon(src="img/subscribe-icon.png" alt="subscribe icon")
+			.den-msg__right
+				.den-msg__title Просмотр канала будет доступен после оформления подписки
+				.den-msg__subtitle Выберите подходящий для вас пакет каналов.
+				a.den-msg__subscribe.buy-btn(href="order.html") Оформить подписку 
+
+	// temporary image for test
+	.player-image(style="width:100%;height:100%;")
+		img(src="img/content/player/temp-player-bg.jpg", alt="temporary" style="width:100%;height:100%;object-fit:cover;")
