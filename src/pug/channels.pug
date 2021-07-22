@@ -1,0 +1,10 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'ТВ-Каналы';
+	- config.page.description = 'ТВ-Каналы description';
+
+block content
+	include /_includes/_channels/pageHeader.pug
+	include /_includes/_channels/channelsMasonry.pug
+

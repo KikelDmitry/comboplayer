@@ -1,0 +1,35 @@
+-
+	var channels = [
+		'Все каналы',
+		'Другое',
+		'Информация',
+		'Каналы для взрослых',
+		'Музыка',
+		'Детям',
+		'Познавательные',
+		'Развлечения',
+		'Спорт',
+		'Увлечения',
+		'Фильмы и сериалы',
+	];
+
+.post-header.channels-header
+	.container-xl
+		.row.justify-content-between.align-items-center
+			.col-auto
+				h1.post-header__title.title-1 ТВ-каналы
+			.col-auto
+				.post-header__controls
+					button.channel-favorite.fav-btn(type="button")
+						span.channel-favorite__icon
+							i.icon-heart-empty
+							i.icon-heart-solid
+						span.channel-favorite__title Избранное
+					.channels-dropdown.dropdown
+						button.channels-dropdown__btn.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							i.icon-tv-icon
+							span.channels-dropdown__btn-title Все каналы
+						ul.channels-dropdown__list.dropdown-menu
+							each channel in channels
+								li.channels-dropdown__item
+									a.channels-dropdown__link(href="#") #{channel}

@@ -1,0 +1,12 @@
+.post-header {
+	&.channels-header {
+		border-bottom: 1px solid $color-steel-dull-85;
+	}
+	&__title {
+		line-height: 69px;
+		color: $color-cobalt-1;
+	}
+	&__controls {
+		display: flex;
+	}
+}
