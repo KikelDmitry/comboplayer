@@ -1,36 +1,37 @@
+.movies-header {
+	padding-bottom: 12px;
+	border-bottom: 1px solid $color-steel-dull-85;
+}
 .items-sort {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 15px;
 
+	@include media-breakpoint-up(lg) {
+		display: block;
+		margin-top: 0;
+	}
 	&__title {
-
+		color: $color-steel-2;
+		font-size: 15px;
+		line-height: 110%;
+		line-height: 24px;
+		padding-right: 10px;
+		
+		@include media-breakpoint-up(sm) {
+			padding-right: 1em;
+			
+		}
 	}
 	&__body {
 		display: flex;
 		height: 36px;
+		max-width: 255px;
+		flex: 1 1 auto;
 	}
 	&__dropdown {
 		flex: 1 1 auto;
-		
-		&-title {
-			width: 100%;
-			height: 100%;
-			background-color: $color-steel-dull-95;
-		}
-		&.show {
-			.items-sort__list {
-				right: 0;
-			}
-		}
-	}
-	&__list {
-
-	}
-	&__item {
-
-	}
-	&__link {
-
 	}
 	&__dir {
 		flex: 0 0 auto;
@@ -42,6 +43,8 @@
 		background-color: $color-apple-4;
 		border-radius: 0 4px 4px 0;
 		color: $color-white;
+		border-left: 1px solid $color-steel-dull-95;
+
 		i {
 			display: block;
 			transition: transform 200ms;
@@ -50,6 +53,85 @@
 			i {
 				transform: rotateX(180deg);
 			}
+		}
+	}
+}
+.sort-dropdown {
+	&__title {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		height: 100%;
+		padding: 7px 15px;
+		background-color: $color-steel-dull-95;
+		color: $color-cobalt-2;
+		text-align: left;
+		border-radius: 4px 0 0 4px;
+		font-size: 15px;
+		transition: all 200ms;
+		
+		span {
+			flex: 1 1 auto;
+			@include dottedEnd;
+		}
+
+		@include media-breakpoint-up(md) {
+			font-size: 16px;
+		}
+		&::after {
+			margin-left: auto;
+			border-width: 0.4em;
+			color: $color-apple-4;
+		}
+		&[aria-expanded="true"] {
+			background-color: $color-apple-4;
+			color: $color-white;
+
+			&::after {
+				margin-left: auto;
+				border-width: 0.4em;
+				color: $color-white;
+			}
+		}
+	}
+	&__list {
+		max-height: 330px;
+		padding: 0;
+		background-color: $color-white;
+		border-radius: 5px;
+		box-shadow: $shadow-lg;
+		border: 0;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: 5px;
+
+			&-track {
+				background-color: $color-steel-dull-8;
+				border-radius: 5px;
+			}
+			&-thumb {
+				background-color: $color-apple-5;
+				border-radius: inherit;
+			}
+		}
+		&.show {
+			right: 0;
+		}
+	}
+	&__item {
+		&:not(:last-child) {
+			border-bottom: 1px solid $color-steel-dull-9;
+		}
+	}
+	&__link {
+		display: block;
+		padding: 2px 15px;
+		color: $color-steel-2;
+
+		&:hover {
+			background-color: $color-apple-9;
+			color: $color-apple-3;
 		}
 	}
 }

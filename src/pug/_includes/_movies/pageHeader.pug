@@ -49,11 +49,9 @@
 	]
 .post-header.movies-header
 	.container-xl
-		.row
-			.col-auto
-				h1.post-header__title.title-1 Смотреть фильмы онлайн
-		.row
+		.row.align-items-end
 			.col.col-lg-9
+				h1.post-header__title.title-1 Смотреть фильмы онлайн
 				.categories-list.owl-carousel
 					each cat in categories
 						.categories-list__item(class="categories-list__item--" + cat.id)
@@ -65,11 +63,11 @@
 				.items-sort
 					.items-sort__title Сортировать
 					.items-sort__body
-						.items-sort__dropdown.dropdown
-							button.items-sort__dropdown-title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") #{filters[0]}
-							ul.item-sort__list.dropdown-menu
+						.sort-dropdown.items-sort__dropdown.dropdown
+							button.sort-dropdown__title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") #{filters[0]}
+							ul.sort-dropdown__list.dropdown-menu
 								each filter in filters
-									li.item-sort__item
-										a.item-sort__link(href="#") #{filter} 
+									li.sort-dropdown__item
+										a.sort-dropdown__link(href="#") #{filter} 
 						button.items-sort__dir(type="button" aria-label="Направление сортировки")
 							i.icon-sort-dir

@@ -1,0 +1,78 @@
+-
+	var filters = [
+		{
+			title: 'Все типы',
+			icon: 'icon-table',
+			list: [
+			'Все типы',
+			'Бесплатные',
+			'Подписка',
+			'Покупка',
+
+			],
+		},
+		{
+			title: 'Жанр',
+			icon: 'icon-film',
+			list: [
+				'Все жанры',
+				'18+',
+				'Анимация',
+				'Аниме',
+				'Арт-хаус',
+				'Биография',
+				'Боевик',
+				'Вестерн',
+				'Военный',
+				'Детектив',
+				'Для взрослых',
+				'Все жанры',
+				'18+',
+				'Анимация',
+				'Аниме',
+				'Арт-хаус',
+				'Биография',
+				'Боевик',
+				'Вестерн',
+				'Военный',
+				'Детектив',
+				'Для взрослых',
+			]
+		},
+		{
+			title: 'Год выхода',
+			icon: 'icon-calendar-solid',
+			list: [
+				'Все года',
+				'2020',
+				'2010-2017',
+				'2000-е',
+				'1990-е',
+				'1980-е',
+			]
+		},
+		{
+			title: 'Страна',
+			icon: 'icon-globe',
+			list: [
+				'Все страны',
+				'Россия',
+				'Германия',
+				'США',
+			]
+		}
+	];
+
+.movie-filters
+	each filter in filters
+		.movie-filters__item.sort-dropdown.dropdown
+			button.sort-dropdown__title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+				i(class=filter.icon)
+				span #{filter.title}
+			ul.sort-dropdown__list.dropdown-menu
+				each item in filter.list
+					li.sort-dropdown__item
+						a.sort-dropdown__link(href="#") #{item} 
+	button.movie-filters__item.movie-filters__reset(type="button")
+		i.icon-redo 
+		span Сбросить фильтр

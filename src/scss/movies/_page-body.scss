@@ -1,0 +1,11 @@
+.movies-page-section {
+	padding-top: 15px;
+	padding-bottom: 20px;
+
+	@include media-breakpoint-up(lg) {
+		padding-top: 20px;
+	}
+	@include media-breakpoint-up(xl) {
+		padding-top: 30px;
+	}
+}
