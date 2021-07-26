@@ -1,0 +1,55 @@
+.items-sort {
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+
+	}
+	&__body {
+		display: flex;
+		height: 36px;
+	}
+	&__dropdown {
+		flex: 1 1 auto;
+		
+		&-title {
+			width: 100%;
+			height: 100%;
+			background-color: $color-steel-dull-95;
+		}
+		&.show {
+			.items-sort__list {
+				right: 0;
+			}
+		}
+	}
+	&__list {
+
+	}
+	&__item {
+
+	}
+	&__link {
+
+	}
+	&__dir {
+		flex: 0 0 auto;
+		height: 100%;
+		width: 36px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-apple-4;
+		border-radius: 0 4px 4px 0;
+		color: $color-white;
+		i {
+			display: block;
+			transition: transform 200ms;
+		}
+		&.reverse-dir {
+			i {
+				transform: rotateX(180deg);
+			}
+		}
+	}
+}

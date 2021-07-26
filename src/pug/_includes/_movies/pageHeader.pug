@@ -1,0 +1,75 @@
+-
+	var categories = [
+		{
+			title: 'Фильмы',
+			id: 'movie',
+		},
+		{
+			title: 'Сериалы',
+			id: 'series',
+		},
+		{
+			title: 'Спорт',
+			id: 'sport',
+		},
+		{
+			title: 'Познавательное',
+			id: 'learning',
+		},
+		{
+			title: 'Инфо',
+			id: 'info',
+		},
+		{
+			title: 'Новости',
+			id: 'news',
+		},
+		{
+			title: 'Культура',
+			id: 'culture',
+		},
+		{
+			title: 'Досуг',
+			id: 'entertain',
+		},
+		{
+			title: 'Детям',
+			id: 'kids',
+		},
+		{
+			title: 'Остальное',
+			id: 'rest',
+		},
+	]
+-
+	var filters = [
+		'по году выхода',
+		'по названию',
+		'еще как нибудь',
+	]
+.post-header.movies-header
+	.container-xl
+		.row
+			.col-auto
+				h1.post-header__title.title-1 Смотреть фильмы онлайн
+		.row
+			.col.col-lg-9
+				.categories-list.owl-carousel
+					each cat in categories
+						.categories-list__item(class="categories-list__item--" + cat.id)
+							label.categories-list__label
+								input.categories-list__input(type="checkbox" name=cat.id id=cat.id)
+								span.categories-list__view
+									span.categories-list__title #{cat.title}
+			.col.col-lg-3
+				.items-sort
+					.items-sort__title Сортировать
+					.items-sort__body
+						.items-sort__dropdown.dropdown
+							button.items-sort__dropdown-title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") #{filters[0]}
+							ul.item-sort__list.dropdown-menu
+								each filter in filters
+									li.item-sort__item
+										a.item-sort__link(href="#") #{filter} 
+						button.items-sort__dir(type="button" aria-label="Направление сортировки")
+							i.icon-sort-dir

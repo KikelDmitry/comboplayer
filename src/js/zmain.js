@@ -222,6 +222,13 @@
 		$(this).toggleClass('is-active');
 	})
 }
+// sort dir
+{
+	$('.items-sort__dir').click(function(e) {
+		e.stopPropagation();
+		$(this).toggleClass('reverse-dir')
+	})
+}
 // tv guide info
 {
 	$(document).ready(function () {
