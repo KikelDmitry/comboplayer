@@ -64,15 +64,19 @@
 	];
 
 .movie-filters
-	each filter in filters
-		.movie-filters__item.sort-dropdown.dropdown
-			button.sort-dropdown__title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
-				i(class=filter.icon)
-				span #{filter.title}
-			ul.sort-dropdown__list.dropdown-menu
-				each item in filter.list
-					li.sort-dropdown__item
-						a.sort-dropdown__link(href="#") #{item} 
-	button.movie-filters__item.movie-filters__reset(type="button")
-		i.icon-redo 
-		span Сбросить фильтр
+	.container-xl.p-lg-0
+		.row
+			each filter in filters
+				.col-12.col-sm-6.col-md-4.col-lg-12
+					.movie-filters__item.sort-dropdown.dropdown
+						button.sort-dropdown__title.dropdown-toggle(type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false")
+							i(class=filter.icon)
+							span #{filter.title}
+						ul.sort-dropdown__list.dropdown-menu
+							each item in filter.list
+								li.sort-dropdown__item
+									a.sort-dropdown__link(href="#") #{item}
+			.col-12.col-sm-6.col-md-4.col-lg-12
+				button.movie-filters__item.movie-filters__reset(type="button")
+					i.icon-redo 
+					span Сбросить фильтр

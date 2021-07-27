@@ -1,1 +1,118 @@
-div movies list
+-
+	var movies = [
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Реинкарнация',
+			poster: 'reincarnation.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Мавританец',
+			poster: 'mauritian.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Дочь волка',
+			poster: 'wolfs-daughter.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Гипсомния',
+			poster: 'hyposomny.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '7.0',
+			title: 'Станиславский. Жажда жизни',
+			poster: 'stanislavsky.png',
+		},
+		{
+			badges: [
+				'12+',
+			],
+			rating: '5.5',
+			title: 'Скайлайн 3',
+			poster: 'skyline.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '6.5',
+			title: 'Поли',
+			poster: 'poli.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '6.5',
+			title: 'Italian Best Shorts 4: Истории нашей жизни',
+			poster: 'italian-best-shorts.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '5.3',
+			title: 'Мой брат – супергерой',
+			poster: 'my-brother.png',
+		},
+		{
+			badges: [
+				'18+',
+			],
+			rating: '8.1',
+			title: 'Доктор Стрейнджлав, или Как я научился не волноваться и полюбил атомную бомбу',
+			poster: 'doctor-strangelove.jpg',
+		},
+	];
+
+
+section.movies-list
+	.container-xl
+		.row
+			each movie, idx in movies
+				.col-12.col-sm-6.col-md-4
+					.movie-item
+						.movie-item__inner
+							.movie-item__poster
+								img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+								.movie-item__overlay
+									.movie-item__overlay-play
+										i.icon-play
+								.movie-item__info
+									if idx % 2 == 0
+										.movie-item__info-item
+											i.icon-ruble
+											span Покупка
+									else
+										.movie-item__info-item
+											i.icon-play-plus
+											span Подписка
+								
+							.movie-item__badge 
+								each badge in movie.badges
+									span.movie-item__badge-item #{badge}
+							.movie-item__rating
+								.movie-item__rating-icon
+									i.icon-kinopoisk-logo
+								.movie-item__rating-value #{movie.rating}
+							.movie-item__title
+								h3.movie-item__title-text #{movie.title}
+							a.movie-item__link(href="#movie-link" title=movie.title)
+								span.visually-hidden #{movie.title}

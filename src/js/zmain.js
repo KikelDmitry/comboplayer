@@ -264,7 +264,7 @@
 }
 // channel page -> programm description expander
 {
-	$('.programm-list__descr-main').click(function () {
+	$('.expanded-text').click(function () {
 		let fullHeight = $(this)[0].scrollHeight;
 		let initialHeight = $(this).innerHeight();
 		if(fullHeight >= initialHeight) {

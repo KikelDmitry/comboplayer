@@ -95,7 +95,7 @@ mixin programmItem(type, category, time, title, mainDescr, series)
 						each serie in series
 							li.programm-list__descr-series-item #{serie}
 				if type != 'past' && mainDescr
-					.programm-list__descr-main #{mainDescr}
+					.programm-list__descr-main.expanded-text #{mainDescr}
 		if type == 'tv-guide'
 			+programmCard(title)
 		if type == 'on-air'

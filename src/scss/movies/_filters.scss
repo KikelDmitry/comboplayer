@@ -1,31 +1,21 @@
 .movie-filters {
 	
-	@include media-breakpoint-up(sm) {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		gap: 20px;
-	}
-	@include media-breakpoint-up(md) {
-		gap: 15px;
-	}
-	@include media-breakpoint-up(lg) {
-		display: block;
-	}
+	// @include media-breakpoint-up(sm) {
+	// 	display: flex;
+	// 	flex-wrap: wrap;
+	// 	justify-content: flex-start;
+	// 	gap: 10px 20px;
+	// }
+	// @include media-breakpoint-up(md) {
+	// 	gap: 15px;
+	// }
+	// @include media-breakpoint-up(lg) {
+	// 	display: block;
+	// }
 	
 	&__item {
 		margin-bottom: 10px;
-
-		@include media-breakpoint-up(sm) {
-			width: calc(50% - 10px);
-		}
-		@include media-breakpoint-up(md) {
-			width: calc(33.33% - 10px);
-		}
-		@include media-breakpoint-up(lg) {
-			width: 100%;
-		}
-
+		
 		.sort-dropdown__title {
 			display: flex;
 			align-items: center;
@@ -54,6 +44,7 @@
 		}
 	}
 	&__reset {
+		width: 100%;
 		display: flex;
 		align-items: center;
 		padding: 6px 15px;
