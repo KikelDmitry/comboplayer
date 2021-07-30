@@ -220,6 +220,10 @@
 			height: 40px;
 			margin-left: auto;
 			color: $color-steel-5;
+
+			+ * {
+				margin-left: 0;
+			}
 		}
 	}
 }
