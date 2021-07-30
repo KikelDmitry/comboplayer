@@ -35,6 +35,7 @@
 				{
 					title: 'Пятница',
 					logo: 'friday.png',
+					isBlocked: true,
 				},
 			],
 		},
@@ -372,10 +373,14 @@ ul.player-channels__list.custom-scrollbar
 				i.player-channels__cat-caret.icon-caret-up
 			ul.player-channels__cat-body.collapse(id="cat-" + cat.id class=(idx == 0 ? 'show' : ''))
 				each channel in cat.list
-					li.player-channels__channel(class=(channel.isActive ? 'is-active' : false))
+					li.player-channels__channel(class=(channel.isActive ? 'is-active' : '') class=(channel.isBlocked ? 'is-blocked' : ''))
 						.player-channels__channel-logo
 							img(src="img/content/channels/channel_" + channel.logo, alt=channel.title + " лого")
 						a.player-channels__channel-link(href="#") #{channel.title}
-						button.player-channels__channel-fav.fav-btn(type="button")
-							i.icon-heart-empty
-							i.icon-heart-solid
+
+						if channel.isBlocked
+							i.icon-lock.player-channels__channel-blocked
+						else
+							button.player-channels__channel-fav.fav-btn(type="button")
+								i.icon-heart-empty
+								i.icon-heart-solid
