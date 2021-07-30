@@ -84,11 +84,38 @@
 			line-height: 23px;
 			background-color: $color-steel-dull-9;
 			border-radius: 3px;
+
+			&:hover {
+				color: $color-steel-4;
+			}
 		}
 	}
 	.movies-slider {
 		min-height: auto;
 		background: none;
 		padding: 0;
+	}
+	.movie-item {
+		&__title {
+			&-text {
+				display: block;
+				white-space: nowrap;
+				margin-bottom: 0.3em;
+
+				@include media-breakpoint-up(sm) {
+					margin-bottom: 0.6em;
+				}
+			}
+			&-descr {
+				color: $color-steel-5;
+				font-size: 13px;
+				line-height: 100%;
+				@include dottedEnd;
+				
+				@include media-breakpoint-up(sm) {
+					font-size: 14px;
+				}
+			}
+		}
 	}
 }
