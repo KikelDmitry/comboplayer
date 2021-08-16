@@ -133,6 +133,7 @@
 	}
 	&__play {
 		width: $size;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -221,6 +222,7 @@
 	}
 	&__expand {
 		width: $size;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;

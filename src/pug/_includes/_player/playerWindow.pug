@@ -10,8 +10,9 @@
 				.player-bar__progress-bar(style="width:60%")
 				.player-bar__progress-pointer(style="left:60%")
 			.player-bar__row
-				button.player-bar__play.player-bar__item(type="button" aria-label="Воспроизвести")
-					i.icon-play
+				.player-bar__item
+					button.player-bar__play(type="button" aria-label="Воспроизвести")
+						i.icon-play
 				.player-bar__volume.player-bar__item
 					button.player-bar__volume-icon(type="button" aria-label="Громкость")
 						i.icon-volume
@@ -26,8 +27,9 @@
 					.player-bar__slide-title Футбол. "Ювентус - Удинезе"
 					button.player-bar__slide-btn(type="button" aria-label="Вперед")
 						i.icon-rewind-right
-				button.player-bar__expand.player-bar__item(type="expand" aria-label="Развернуть")
-					i.icon-expand
+				.player-bar__item
+					button.player-bar__expand(type="expand" aria-label="Развернуть")
+						i.icon-expand
 			
 	.player-messages
 		// demo message
