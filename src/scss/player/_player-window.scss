@@ -226,6 +226,14 @@
 			}
 		}
 	}
+	&__time {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: .2em 1em;
+		font-size: 13px;
+	}
 	&__expand {
 		width: $size;
 		height: 100%;
