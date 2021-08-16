@@ -1,8 +1,6 @@
 .player-window
 	.player-title Футбол. "Ювентус - Удинезе"
 	.player-controls
-		button.player-controls__play(type="button" aria-label="Воспроизвести")
-			i.icon-play
 		button.player-controls__mute(type="button" aria-label="Вкл/Выкл звук")
 			i.icon-mute
 		.player-controls__bar.player-bar
@@ -30,7 +28,8 @@
 				.player-bar__item
 					button.player-bar__expand(type="expand" aria-label="Развернуть")
 						i.icon-expand
-			
+	button.player-play(type="button" aria-label="Воспроизвести")
+		i.icon-play
 	.player-messages
 		// demo message
 		.player-messages__item
