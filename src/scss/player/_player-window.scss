@@ -60,8 +60,7 @@
 	@include dottedEnd;
 }
 .player-controls {
-	&__play {
-	}
+
 	&__mute {
 		position: absolute;
 		bottom: 53px;
@@ -77,8 +76,6 @@
 		border-radius: 5px;
 		transition: background-color 300ms, color 300ms;
 
-		i {
-		}
 		&:hover {
 			color: $color-white;
 			background-color: rgba(0, 0, 0, 0.8);
@@ -89,6 +86,7 @@
 		left: 0;
 		bottom: 0;
 		right: 0;
+		z-index: 20;
 	}
 }
 .player-bar {
