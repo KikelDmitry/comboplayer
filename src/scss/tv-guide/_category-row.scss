@@ -79,6 +79,7 @@
 .categories-list {
 	display: flex;
 	padding: 0 24px;
+	overflow: hidden;
 
 	.owl-stage {
 		display: flex;
