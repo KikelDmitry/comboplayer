@@ -1,0 +1,37 @@
+-
+	categories = [
+		{
+			title: 'Фильмы',
+			link: '#',
+			id: 'movie',
+		},
+		{
+			title: 'Сериалы',
+			link: '#',
+			id: 'series',
+		},
+		{
+			title: 'Мультфильмы',
+			link: '#',
+			id: 'kids',
+		},
+		{
+			title: 'Передачи',
+			link: '#',
+			id: 'news',
+		},
+		{
+			title: 'Подборки',
+			link: '#',
+			id: 'colections',
+
+		},
+	]
+
+.post-header.video-categories
+	.container-xl
+		.category-list
+			each cat in categories
+				a.categories-list__item(class="categories-list__item--" + cat.id href=cat.link) #{cat.title}
+					
+		h1.post-header__title.title-1 #{config.page.title}

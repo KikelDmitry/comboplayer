@@ -52,7 +52,7 @@
 @mixin socialColors($social) {
 	&--#{$social} {
 		.social-list__link {
-			background: map-get($color-social, #{$social} )
+			background: map-get($color-social, #{$social});
 		}
 	}
 }
@@ -220,7 +220,7 @@ $color-error: #e15b65;
 
 //category row colors (tv-guide)
 
-$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest;
+$cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest, collections;
 
 $color-cat: (
 	movie: #f73845,
@@ -233,6 +233,7 @@ $color-cat: (
 	culture: #29afce,
 	kids: #bf65c3,
 	rest: #9aafb7,
+	collections: #F73845,
 );
 
 //social media colors (login form)
@@ -244,7 +245,10 @@ $color-social: (
 	odnoklassniki: #f38231,
 	moi-mir: #228fdf,
 	yandex: #fc0d1b,
-	instagram: (linear-gradient(180deg, #BA3FA9 0%, #FD444D 100%), #FEC15D)
+	instagram: (
+		linear-gradient(180deg, #ba3fa9 0%, #fd444d 100%),
+		#fec15d,
+	),
 );
 
 // Effect styles

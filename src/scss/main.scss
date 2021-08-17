@@ -15,6 +15,7 @@
 // BASE
 @import "_common.scss";
 @import "_programm-list.scss";
+@import "_404.scss";
 
 // MAIN INCLUDES
 @import "_header.scss";
@@ -86,4 +87,6 @@
 @import "movies-cat/_page-header.scss";
 @import "movies-cat/_page-body.scss";
 
+// VIDEO BY CATEGORIES
+@import "movies-collection/_page-header.scss";
 // @import "_debug.scss";

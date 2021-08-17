@@ -1,0 +1,15 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Страница не найдена';
+
+block content
+	.page-header
+		.container-xl
+			h1.post-header__title.title-1 #{config.page.title}
+	section.error-404
+		.container-xl
+			.error-404__inner
+				img.error-404__img(src="img/404.svg" alt="Страница не найдена")
+				p.error-404__descr К сожалению, такой страницы не существует. Вероятно, она была удалена, либо её здесь никогда не было.
+				a.error-404__link(href="index.html") Перейти на главную страницу  

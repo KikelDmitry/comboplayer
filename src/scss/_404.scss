@@ -1,0 +1,33 @@
+.error-404 {
+	&__inner {
+		margin: 0 auto;
+		max-width: 380px;
+		padding: 0 10px 15px;
+	}
+	&__img {
+		margin-bottom: 30px;
+	}
+	&__descr {
+		color: $color-steel-1;
+		line-height: 110%;
+		margin-bottom: 30px;
+	}
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 244px;
+		min-height: 47px;
+		padding: 0.7em;
+		text-align: center;
+		background-color: $color-steel-dull-95;
+		color: $color-cobalt-3;
+		font-size: 15px;
+
+		&:hover {
+			background-color: darken($color-steel-dull-95, 5%);
+			color: lighten($color-cobalt-3, 15%)
+		}
+	}
+}
