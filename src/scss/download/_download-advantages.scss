@@ -1,0 +1,42 @@
+.download-advantages {
+	padding: 40px 0 10px;
+
+	&__item {
+		display: flex;
+		margin-bottom: 40px;
+	}
+	&__icon {
+		position: relative;
+		flex: 0 0 auto;
+		width: 32px;
+		height: 32px;
+		margin-top: 5px;
+		background-color: $color-steel-dull-95;
+		color: #12b580;
+		border-radius: 5px;
+
+		&-icon {
+			position: absolute;
+			top: -5px;
+			right: -5px;
+			font-size: 24px;
+		}
+	}
+	&__text {
+		padding-left: 15px;
+
+		&-head {
+			margin-bottom: 8px;
+			color: $color-cobalt-1;
+			font-weight: 500;
+			font-size: 17px;
+			letter-spacing: -0.01em;
+		}
+		&-body {
+			color: $color-steel-2;
+			font-size: 15px;
+			line-height: 125%;
+			letter-spacing: -0.01em;
+		}
+	}
+}

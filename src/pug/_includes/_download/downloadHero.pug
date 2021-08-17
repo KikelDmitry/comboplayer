@@ -1,0 +1,32 @@
+-
+	var advantages = [
+		'Просмотр ТВ каналов',
+		'Слушать музыку',
+		'Воспроизведение видеофайлов',
+		'Слушать радио',
+		'Виджет просмотра поверх всех окон',
+	]
+
+section.download-hero
+	.container-xl
+		.row
+			.col-12.col-md-4
+				.download-hero__shot
+					img.download-hero__shot-img(src="img/download-screenshot.png", alt="comboplayer screenshot")
+			.col-12.col-md-4
+				.download-hero__title
+					h2.download-hero__title-name Смотрите ТВ онлайн 
+						span бесплатно
+					p.download-hero__title-subtitle Преимущества плеера
+					ul.download-hero__title-list
+						each item in advantages
+							li.download-hero__title-list-item #{item}
+			.col-12.col-md-4
+				.download-hero__dl
+					a.download-hero__dl-btn.buy-btn(href="#" download) Скачать Comboplayer 
+					.download-hero__dl-version
+						span Версия: 
+						| 3.0.1
+					.download-hero__dl-req
+						.download-hero__dl-req-head Cистемные требования:
+						.download-hero__dl-req-body ОС Windows Vista и выше, 1024 Мб ОЗУ, 350 Мб свободного пространства HDD

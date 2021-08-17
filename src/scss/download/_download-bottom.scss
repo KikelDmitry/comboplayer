@@ -1,0 +1,30 @@
+.download-bottom {
+	min-height: 214px;
+	padding: 56px 0 48px;
+	background-color: $color-steel-2;
+	background-image: url("#{$img-path}download-bottom.svg");
+	background-size: cover;
+	background-position: center center;
+	color: $color-white;
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: 360px;
+		height: 70px;
+		margin: 0 auto 20px;
+		font-size: 22px;
+		font-weight: 700;
+
+		&:hover {
+			color: darken($color-white, 10%);
+		}
+	}
+	&__descr {
+		line-height: 125%;
+		text-align: center;
+		letter-spacing: -0.01em;
+	}
+}
