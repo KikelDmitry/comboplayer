@@ -1,0 +1,27 @@
+-
+	var menu = [
+		{
+			title: 'Лицензионное соглашение',
+			link: '#',
+		},
+		{
+			title: 'Политика обработки персональных данных',
+			link: '#',
+		},
+		{
+			title: 'Политики конфиденциальности',
+			link: '#',
+		},
+		{
+			title: 'Правила пользования',
+			link: '#',
+		},
+	];
+
+aside.article-sidebar
+	ul.article-sidebar__list
+		each item in menu
+			li.article-sidebar__item(class=(item.title == config.page.title ? 'is-active' : ''))
+				a.article-sidebar__link(href=item.link) #{item.title}
+
+	div(style="min-height:395px;display:flex;justify-content: center;align-items: center;font-size: 72px;background: #e0f3ff;") AD

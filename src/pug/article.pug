@@ -1,0 +1,16 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Политика обработки персональных данных';
+
+block content
+	include /_includes/article/articleHeader.pug
+	.article-page
+		.container-xl
+			.row
+				.col-9
+					.article-page__content
+						include /_includes/article/articleBody.pug
+				.col-3
+					aside.article-page__sidebar
+						include /_includes/article/sidebar.pug

@@ -1,0 +1,7 @@
+.article-header {
+	border-bottom: 1px solid $color-steel-dull-85;
+
+	.title-1 {
+		@include dottedEnd;
+	}
+}

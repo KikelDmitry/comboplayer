@@ -40,7 +40,7 @@ const config = {
 const globs = {
 	pug: [
 		config.src + 'pug/**/*.pug',
-		'!' + config.src + 'pug/**/_*/*.pug',
+		'!' + config.src + 'pug/**/_*/**/*.pug',
 	],
 	scss: config.src + 'scss/main.scss',
 	js: config.src + 'js/**/*.js',

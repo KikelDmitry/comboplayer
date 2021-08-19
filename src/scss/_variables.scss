@@ -215,11 +215,14 @@ $color-steel-dull-9: #e8eff2;
 $color-steel-dull-95: #f2f8fa;
 $green-grad: linear-gradient(180deg, #3abe93 0%, rgba(62, 195, 152, 0) 100%), #0ea675;
 $green-grad-light: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #00b87c;
-
 $color-error: #e15b65;
 
-//category row colors (tv-guide)
+//aditional
+$color-blue-10: #3191EF;
+$color-gray-0: #2F2F2F;
 
+
+//category row colors (tv-guide)
 $cat-list: movie, series, sport, learning, info, news, entertain, culture, kids, rest, collections;
 
 $color-cat: (

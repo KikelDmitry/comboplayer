@@ -1,0 +1,27 @@
+.article-sidebar {
+	&__list {
+		padding-top: 10px;
+		color: $color-apple-4;
+		font-family: $addFont;
+		font-size: 18px;
+	}
+	&__item {
+		margin: 10px 0;
+
+		&.is-active {
+			.article-sidebar__link {
+				color: $color-white;
+				background-color: $color-apple-4;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		padding: 8px 7px;
+		border-radius: 5px;
+		line-height: 91%;
+
+		&:hover {
+		}
+	}
+}
