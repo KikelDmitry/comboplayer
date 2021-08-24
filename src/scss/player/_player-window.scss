@@ -151,6 +151,21 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
+		.icon-play {
+			display: none;
+		}
+		.icon-pause {
+			display: block;
+		}
+		&.is-paused {
+			.icon-play {
+				display: block;
+			}
+			.icon-pause {
+				display: none;
+			}
+		}
 	}
 	&__volume {
 		display: flex;
@@ -250,6 +265,22 @@
 		align-items: center;
 		margin-left: auto;
 		background-color: rgba(0, 0, 0, 0.3);
+
+		.icon-expand {
+			display: block;
+		}
+		.icon-collapse {
+			display: none;
+		}
+		&.is-expanded {
+			.icon-expand {
+				display: none;
+			}
+			.icon-collapse {
+				display: block;
+			}
+
+		}
 	}
 	&:hover {
 		.player-bar__progress-pointer {

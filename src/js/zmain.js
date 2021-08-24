@@ -222,6 +222,18 @@
 		$(this).toggleClass('is-active');
 	})
 }
+// play btn 
+{
+	$('.player-bar__play').click(function() {
+		$(this).toggleClass('is-paused')
+	})
+}
+// expand btn 
+{
+	$('.player-bar__expand').click(function() {
+		$(this).toggleClass('is-expanded')
+	})
+}
 // sort dir
 {
 	$('.items-sort__dir').click(function(e) {

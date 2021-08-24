@@ -118,6 +118,12 @@
 			background-color: $color-steel-dull-1;
 			color: $color-apple-5;
 			border-radius: 3px;
+
+			&.icon-tv-cat_favorite {
+				&::before {
+					content: "\e922";
+				}
+			}
 		}
 		&-title {
 			color: $color-steel-8;
