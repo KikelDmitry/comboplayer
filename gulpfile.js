@@ -164,6 +164,7 @@ const watcher = () => {
 	watch(globs.js, scripts)
 	watch(globs.images, images)
 	watch(globs.sprite, svgsprite)
+	watch(globs.fonts, fonts)
 };
 
 
