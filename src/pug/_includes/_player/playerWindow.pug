@@ -9,7 +9,7 @@
 				.player-bar__progress-pointer(style="left:60%")
 			.player-bar__row
 				.player-bar__item
-					button.player-bar__play(type="button" aria-label="Воспроизвести")
+					button.player-bar__play.play-btn(type="button" aria-label="Воспроизвести")
 						i.icon-pause
 						i.icon-play
 				.player-bar__volume.player-bar__item
@@ -33,8 +33,9 @@
 						i.icon-expand
 						i.icon-collapse
 	.player-overlay
-		button.player-overlay__play(type="button" aria-label="Воспроизвести")
+		button.player-overlay__play.play-btn(type="button" aria-label="Воспроизвести")
 			i.icon-play
+			i.icon-pause
 	if withMsg
 		.player-messages
 			include _msg/demoMessage.pug

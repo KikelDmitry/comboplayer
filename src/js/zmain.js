@@ -224,7 +224,7 @@
 }
 // play btn 
 {
-	$('.player-bar__play').click(function() {
+	$('.play-btn').click(function() {
 		$(this).toggleClass('is-paused')
 	})
 }
