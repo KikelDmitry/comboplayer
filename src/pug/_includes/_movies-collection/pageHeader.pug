@@ -31,7 +31,7 @@
 .post-header.video-categories
 	.container-xl
 		.category-list
-			each cat in categories
-				a.categories-list__item(class="categories-list__item--" + cat.id href=cat.link) #{cat.title}
+			each cat, idx in categories
+				a.categories-list__item(class="categories-list__item--" + cat.id href=cat.link class=(idx == 2 ? 'is-active' : '')) #{cat.title}
 					
 		h1.post-header__title.title-1 #{config.page.title}

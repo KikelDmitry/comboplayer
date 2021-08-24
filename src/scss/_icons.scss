@@ -27,7 +27,7 @@
 .icon-tv-cat_adult:before {
   content: "\e926";
 }
-.icon-tv-cat_common:before {
+.icon-tv-cat_main:before {
   content: "\e927";
 }
 .icon-tv-cat_entertain:before {
@@ -165,7 +165,8 @@
 .icon-zoom:before {
   content: "\e921";
 }
-.icon-heart-solid:before {
+.icon-heart-solid:before,
+.icon-tv-cat_favorite:before {
   content: "\e922";
 }
 .icon-heart-empty:before {
