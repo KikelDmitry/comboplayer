@@ -1,5 +1,5 @@
 .page-header {
-	$height: 64px;
+	$height: 44px;
 
 	&__title {
 		display: flex;
@@ -19,6 +19,18 @@
 		
 		@include media-breakpoint-up(md) {
 			min-height: $height;
+		}
+	}
+}
+.programm-guide__cities {
+	margin-top: 15px;
+
+	.city-dropdown {
+		margin-left: 0;
+
+		&__menu {
+			left: 0 !important;
+			right: auto !important;
 		}
 	}
 }

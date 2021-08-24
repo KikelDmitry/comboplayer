@@ -127,7 +127,9 @@ section.programm-guide
 								.programm-channel__logo
 									img.programm-channel__logo-img(src="img/content/channels/" + channel.icon, alt=channel.channel + " logo")
 								.programm-channel__title #{channel.channel}
-								button.programm-channel__fav.fav-btn(type="button")
+								a.programm-channel__to-player(href="player.html" title="Перейти к каналу")
+									i.icon-play 
+								button.programm-channel__fav.fav-btn(type="button" title="Добавить в избранное")
 									i.icon-heart-empty
 									i.icon-heart-solid
 								i.programm-channel__header-arrow.icon-caret-down
