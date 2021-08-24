@@ -1,0 +1,14 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Плеер';
+	- config.page.description = 'Плеер description';
+	- var withMsg = true;
+
+block content
+	include /_includes/_player/playerHeader.pug
+
+	include /_includes/_player/playerSection.pug
+	include /_includes/_player/playerSubs.pug
+	include /_includes/_player/aboutChannel.pug
+	

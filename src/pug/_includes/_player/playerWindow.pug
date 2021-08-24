@@ -33,23 +33,11 @@
 	.player-overlay
 		button.player-overlay__play(type="button" aria-label="Воспроизвести")
 			i.icon-play
-	.player-messages
-		// demo message
-		.player-messages__item
-			i.player-messages__icon.icon-tv-icon
-			span.player-messages__text Вы смотрите эфир канала в демо-режиме
-		// error message
-		//.player-messages__item.player-messages__item--error
-			i.player-messages__icon.icon-exclamation
-			span.player-messages__text Извините, возникла проблема при воспроизведении видео. Мы работаем над устранением ошибки.
-		// subscribe message
-		//.player-messages__item.player-messages__item--denied.den-msg
-			.den-msg__left
-				img.den-msg__icon(src="img/subscribe-icon.png" alt="subscribe icon")
-			.den-msg__right
-				.den-msg__title Просмотр канала будет доступен после оформления подписки
-				.den-msg__subtitle Выберите подходящий для вас пакет каналов.
-				a.den-msg__subscribe.buy-btn(href="order.html") Оформить подписку 
+	if withMsg
+		.player-messages
+			include _msg/demoMessage.pug
+			include _msg/errorMessage.pug
+			include _msg/subscribeMessage.pug
 
 	// temporary image for test
 	.player-image(style="width:100%;height:100%;")
