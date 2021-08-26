@@ -1,0 +1,37 @@
+.form {
+	&__row-title {
+		margin-bottom: 8px;
+		padding: 6px 0;
+		font-family: $addFont;
+		font-weight: normal;
+		font-size: 20px;
+		line-height: 20px;
+		letter-spacing: -0.01em;
+		color: $color-steel-3;
+	}
+	&__text-input {
+		width: 100%;
+		height: 48px;
+		padding: 15px;
+		min-width: 0;
+		background: $color-steel-dull-95;
+		border: 1px solid $color-steel-dull-85;
+		border-radius: 5px;
+		color: $color-steel-1;
+
+		&::placeholder {
+			color: $color-steel-5;
+		}
+		&:focus {
+			outline: 0;
+			border-color: $color-steel-dull-5;
+		}
+	}
+	&__button {
+		width: 100%;
+		max-width: 264px;
+		min-height: 50px;
+		font-size: 20px;
+		font-weight: bold;
+	}
+}

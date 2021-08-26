@@ -1,0 +1,9 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Восстановление пароля';
+	- config.page.description = 'Восстановление пароля description';
+
+block content
+	include /_includes/_recovery/recoveryHeader.pug
+	include /_includes/_recovery/recoveryBody.pug

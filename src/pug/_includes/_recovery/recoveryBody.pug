@@ -1,0 +1,17 @@
+section.recovery-form
+	.container-xl
+		form.form
+			.row
+				.col
+					label.form__row-title(for="recovery-email") Укажите Email или Телефон учетной записи:
+			.row
+				.col-12.col-md-6
+					input.recovery-form__input.form__text-input(id="recovery-email" type="text" placeholder="mail@example.com или +71234567890")
+				.col-12.col-md-6
+					.recovery-form__recap-text Этот сайт защищён reCAPTCHA от Google. 
+						a(href="#") Используются Политики конфиденциальности
+						|  и 
+						a(href="#") Правила использования.
+			.row
+				.col
+					button.form__button.buy-btn(type="submit") Выслать инструкцию

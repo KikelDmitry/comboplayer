@@ -1,12 +1,14 @@
 section.player-header.channel-header
 	.container-xl
-		.row.align-items-center
-			.col-md-8.col-lg-9
+		.row.align-items-center.flex-nowrap
+			.col.col-md-8.col-lg-6
 				.player-header__left.channel-header__left
 					.player-header__logo.channel-header__logo
 						img(src="img/content/channels/channel_match-tv.png", alt="Матч ТВ лого")
 					h1.player-header__title.channel-header__title.title-1 Прямой эфир
 						strong Матч ТВ
+			.col-auto.col-md-3.ml-auto
+				include /_includes/_tv-guide/cityDropdown.pug
 			.d-none.d-lg-block.col-lg-3
 				.player-header__right
 					.player-header__controls.nav

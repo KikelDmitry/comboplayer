@@ -19,6 +19,7 @@
 
 // MAIN INCLUDES
 @import "_header.scss";
+@import "_forms.scss";
 @import "_sliders.scss";
 @import "_footer.scss";
 
@@ -99,6 +100,10 @@
 @import "article/_article-header.scss";
 @import "article/_article-body.scss";
 @import "article/_sidebar.scss";
+
+// RECOVERY PAGE
+@import "recovery/_recovery-header.scss";
+@import "recovery/_recovery-body.scss";
 
 
 // @import "_debug.scss";

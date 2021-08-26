@@ -1,5 +1,6 @@
 .city-dropdown {
 	margin-left: 10px;
+	max-width: 164px;
 
 	@include media-breakpoint-up(lg) {
 		margin-left: 15px;
@@ -8,12 +9,14 @@
 		margin-left: 10px;
 	}
 	&__btn {
+		max-width: 100%;
 		height: 36px;
 		display: flex;
 		align-items: center;
 		padding: 8px 12px;
 		border-radius: 4px;
 		background-color: $color-steel-dull-95;
+		@include dottedEnd;
 		transition: background-color 200ms;
 
 		&::after {
@@ -50,6 +53,7 @@
 		&-title {
 			color: $color-cobalt-2;
 			font-size: 14px;
+			@include dottedEnd;
 			transition: color 200ms;
 
 			@include media-breakpoint-up(lg) {
