@@ -87,8 +87,9 @@ section.movies-list
 	.container-xl
 		.row
 			each movie, idx in movies
-				.col-12.col-sm-6.col-md-4
-					.movie-item
+				.col-6.col-sm-6.col-md-4
+					+movieItem(movie, idx)
+					//- .movie-item
 						.movie-item__inner
 							.movie-item__poster
 								img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")

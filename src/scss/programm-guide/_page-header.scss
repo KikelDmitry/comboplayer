@@ -22,15 +22,42 @@
 		}
 	}
 }
-.programm-guide__cities {
-	margin-top: 15px;
-
-	.city-dropdown {
-		margin-left: 0;
-
-		&__menu {
-			left: 0 !important;
-			right: auto !important;
+.programm-guide {
+	&__cities {
+		margin-bottom: 10px;
+		margin-top: 10px;
+	
+		.city-dropdown {
+			margin-left: 0;
+	
+			&__menu {
+				left: 0 !important;
+				right: auto !important;
+			}
+		}
+	}
+	&__to-guide {
+		display: inline-flex;
+		align-items: center;
+		height: 32px;
+		margin: 10px 0;
+		padding: 0 12px;
+		background-color: $color-steel-dull-95;
+		color: $color-cobalt-2;
+		font-size: 14px;
+		border-radius: 5px;
+		white-space: nowrap;
+		
+		@include media-breakpoint-up(sm) {
+			margin: 0;
+			font-size: 16px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 18px;
+		}
+		&:hover {
+			background-color: $color-cobalt-2;
+			color: $color-white;
 		}
 	}
 }

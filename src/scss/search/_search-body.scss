@@ -1,0 +1,35 @@
+.search-results {
+	padding-top: 22px;
+
+	.channels-masonry,
+	.movies-list {
+		padding-top: 0;
+	}
+	.programm-list {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 20px;
+
+		@include media-breakpoint-up(sm) {
+			gap: 0;
+		}
+		.programm-item {
+			width: calc(50% - 20px);
+			padding: 0;
+			margin-bottom: 20px;
+
+			@include media-breakpoint-up(sm) {
+				width: 33.33%;
+			}
+			@include media-breakpoint-up(lg) {
+				width: 25%;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 20%;
+			}
+			&__inner {
+				max-width: 100%;
+			}
+		}
+	}
+}

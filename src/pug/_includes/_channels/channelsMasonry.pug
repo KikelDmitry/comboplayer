@@ -258,4 +258,5 @@ section.channels-masonry
 								.channel-card__on-air #{channel.onAir.title}
 							else
 								.channel-card__inactive Программа передач недоступна
-		button.channels-masonry__load-more(type="button") Загрузить ещё...
+		if config.page.type != 'search'
+			button.channels-masonry__load-more(type="button") Загрузить ещё...

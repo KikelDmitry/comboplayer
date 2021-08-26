@@ -7,6 +7,29 @@ mixin svg(classes, anchor, title, desc)
 		if desc
 			desc=desc
 
+//- programm square item
+mixin programmSquareItem(programm)
+	.programm-item
+		.programm-item__inner
+			.programm-item__poster
+				if programm.poster
+					img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title + " постер")
+				else
+					img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
+			.programm-item__overlay
+				.programm-item__overlay-dimmer
+				.programm-item__overlay-play
+					i.icon-play
+			.programm-item__channel
+				img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
+			.programm-item__footer
+				.programm-item__time #{programm.time}
+				h3.programm-item__title #{programm.title}
+			.programm-item__progress
+				.programm-item__progress-bar(style="width:" + programm.progress + "%")
+			a.programm-item__link(href="#programm-link" title=programm.title)
+				span.visually-hidden #{programm.title}
+
 //- tv slider
 mixin programmSlider(title, tabs, programms, categories)
 	.programm-slider
@@ -22,26 +45,8 @@ mixin programmSlider(title, tabs, programms, categories)
 				.tab-pane(class=(idx == 0 ? 'active' : 'fade') id=category.id)
 					.programm-slider__body.items-carousels.owl-carousel
 						each programm in programms
-							.programm-item
-								.programm-item__inner
-									.programm-item__poster
-										if programm.poster
-											img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title + " постер")
-										else
-											img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
-									.programm-item__overlay
-										.programm-item__overlay-dimmer
-										.programm-item__overlay-play
-											i.icon-play
-									.programm-item__channel
-										img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
-									.programm-item__footer
-										.programm-item__time #{programm.time}
-										h3.programm-item__title #{programm.title}
-									.programm-item__progress
-										.programm-item__progress-bar(style="width:" + programm.progress + "%")
-									a.programm-item__link(href="#programm-link" title=programm.title)
-										span.visually-hidden #{programm.title}
+							+programmSquareItem(programm)
+							
 		noscript.no-js-msg #{globalData.nojs}
 
 //- programm info
@@ -101,6 +106,37 @@ mixin programmItem(type, category, time, title, mainDescr, series)
 		if type == 'on-air'
 			.programm-list__progress
 				.programm-list__progress-bar(style="width:60%")
+
+//- movie item
+mixin movieItem(movie, idx)
+	.movie-item
+		.movie-item__inner
+			.movie-item__poster
+				img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+				.movie-item__overlay
+					.movie-item__overlay-play
+						i.icon-play
+				.movie-item__info
+					if idx % 2 == 0
+						.movie-item__info-item
+							i.icon-ruble
+							span Покупка
+					else
+						.movie-item__info-item
+							i.icon-play-plus
+							span Подписка
+				
+			.movie-item__badge 
+				each badge in movie.badges
+					span.movie-item__badge-item #{badge}
+			.movie-item__rating
+				.movie-item__rating-icon
+					i.icon-kinopoisk-logo
+				.movie-item__rating-value #{movie.rating}
+			.movie-item__title
+				h3.movie-item__title-text #{movie.title}
+			a.movie-item__link(href="#movie-link" title=movie.title)
+				span.visually-hidden #{movie.title}
 
 //- channel column
 mixin channelCol(channel)

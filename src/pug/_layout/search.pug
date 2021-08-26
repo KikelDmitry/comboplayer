@@ -1,0 +1,10 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Поиск';
+	- config.page.type = 'search';
+
+block content
+	include /_includes/_search/searchHeader.pug
+	section.search-results
+		block results

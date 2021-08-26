@@ -1,0 +1,25 @@
+-
+	var categories = [
+		{
+			title: 'ТВ-каналы',
+			link: 'search-channels.html',
+		},
+		{
+			title: 'Программы',
+			link: 'search-programms.html',
+		},
+		{
+			title: 'Фильмы',
+			link: 'search-movies.html',
+		},
+	]
+
+section.post-header.search-header
+	.container-xl
+		.row.align-items-center
+			.col-12.col-md-8
+				h1.post-header__title.title-1 #{config.page.title}
+			.col-12.col-md-4
+				.search-header__categories
+					each cat in categories
+						a.search-header__link(href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}

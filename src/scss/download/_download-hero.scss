@@ -68,48 +68,48 @@
 	}
 	&__dl {
 		padding-top: 18px;
-		
+
 		@include media-breakpoint-up(xl) {
 			padding-left: 44px;
 		}
+		&-thx {
+			margin-bottom: 15px;
+			padding: 8px 18px;
+			border: 1px solid $color-cobalt-deep-4;
+			border-radius: 5px;
+
+			&-head {
+				padding: 6px 0;
+				margin-bottom: 10px;
+				color: #6ff0d6;
+				font-weight: 500;
+				line-height: 125%;
+				letter-spacing: -0.01em;
+			}
+			&-body {
+				line-height: 20px;
+			}
+		}
 		&-btn {
 			max-width: 360px;
-			height: 70px;
-			margin: 0 auto 25px;
-			font-size: 22px;
+			height: 50px;
+			margin: 0 auto 11px;
+			font-size: 20px;
 			font-weight: 700;
 
 			&:hover {
 				color: darken($color-white, 10%);
 			}
 		}
-		&-version {
-			margin-bottom: 17px;
-			text-align: center;
-
-			@include media-breakpoint-up(md) {
-				text-align: left;
-			}
-			
-			span {
-				color: #6ff0d6;
-			}
-		}
 		&-req {
+			font-size: 14px;
 			line-height: 125%;
 			letter-spacing: -0.01em;
 			text-align: center;
-			
+
 			@include media-breakpoint-up(md) {
 				text-align: left;
 				max-width: 262px;
-			}
-
-			&-head {
-				font-weight: 500;
-				padding-bottom: 0.2em;
-			}
-			&-body {
 			}
 		}
 	}

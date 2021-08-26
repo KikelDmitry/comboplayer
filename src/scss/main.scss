@@ -94,7 +94,7 @@
 // DOWNLOAD PAGE
 @import "download/_download-hero.scss";
 @import "download/_download-advantages.scss";
-@import "download/_download-bottom.scss";
+// @import "download/_download-bottom.scss";
 
 // ARTICLE PAGE
 @import "article/_article-header.scss";
@@ -104,6 +104,10 @@
 // RECOVERY PAGE
 @import "recovery/_recovery-header.scss";
 @import "recovery/_recovery-body.scss";
+
+// SEARCH PAGES
+@import "search/_search-header.scss";
+@import "search/_search-body.scss";
 
 
 // @import "_debug.scss";
