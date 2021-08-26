@@ -225,7 +225,13 @@
 // play btn 
 {
 	$('.play-btn').click(function() {
-		$(this).toggleClass('is-paused')
+		if($(this).hasClass('is-paused')) {
+			$(this).removeClass('is-paused');
+			$(this).attr('aria-label', 'Остановить');
+		} else {
+			$(this).addClass('is-paused');
+			$(this).attr('aria-label', 'Воспроизвести');
+		}
 	})
 }
 // expand btn 
@@ -239,6 +245,28 @@
 	$('.items-sort__dir').click(function(e) {
 		e.stopPropagation();
 		$(this).toggleClass('reverse-dir')
+	})
+}
+{
+	// player tooltips
+	let hasTooltip = $('.has-tooltip'),
+		tooltip = $('.float-tooltip');
+	hasTooltip.mouseover(function() {
+		let tooltipText = $(this).attr('aria-label');
+		tooltip.text(tooltipText);
+		tooltip.addClass('is-visible');
+		let tooltipTop = $(this).offset().top - 30;
+		let tooltipLeft = ($(this).outerWidth() / 2) + $(this).offset().left
+		tooltip.css({
+			top: tooltipTop,
+			left: tooltipLeft
+		})
+			
+			$(this).offset()
+		// $(this).offset();
+	})
+	hasTooltip.mouseout(function() {
+		tooltip.removeClass('is-visible');
 	})
 }
 // tv guide info

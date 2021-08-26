@@ -15,6 +15,7 @@
 				title: 'Сейчас на ТВ',
 			},
 		],
+		withPlay: false,
 	};
 -
 	var programms = [
@@ -64,4 +65,4 @@
 
 section.tv-guide-slider
 	.container-xl
-		+programmSlider(data.title, data.buttons, programms, data.category)
+		+programmSlider(data.title, data.buttons, programms, data.category, false)

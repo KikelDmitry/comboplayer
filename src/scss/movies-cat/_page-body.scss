@@ -52,9 +52,10 @@
 }
 .movies-cat {
 	&__title {
-		display: flex;
-		align-items: center;
+		// display: flex;
+		// align-items: center;
 		min-height: 50px;
+		padding: 20px 0;
 		font-weight: normal;
 		font-size: 25px;
 		line-height: 100%;
@@ -63,7 +64,7 @@
 	&__link {
 		display: flex;
 		align-items: center;
-		min-height: 50px;
+		// min-height: 50px;
 		color: $color-cobalt-4;
 		font-size: 18px;
 		line-height: 91%;

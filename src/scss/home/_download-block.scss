@@ -3,7 +3,7 @@
 	padding: 40px 0;
 
 	@include media-breakpoint-up(xl) {
-		min-height: 363px; 
+		min-height: 363px;
 	}
 	&__pattern {
 		position: absolute;
@@ -11,16 +11,26 @@
 		left: -40px;
 		width: 300px;
 		height: 252px;
-		background-image: url('#{$img-path}download-block-back.svg');
+		background-image: url("#{$img-path}download-block-back.svg");
 		background-size: 100%;
 		background-position: center center;
 		pointer-events: none;
 
 		@include media-breakpoint-up(xl) {
-			width: 445px;
-			height: 362px;
+			width: 434px;
+			height: 336px;
 			top: -50px;
 			left: -114px;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 10px;
+				left: 0;
+				bottom: 0;
+				width: 20px;
+				background-image: linear-gradient(to right, #fff, transparent);
+			}
 		}
 	}
 	&__title {

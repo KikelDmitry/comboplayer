@@ -14,7 +14,8 @@
 				id: 'on-record',
 				title: 'Смотреть в записи',
 			},
-		]
+		],
+		withPlay: true,
 	};
 -
 	var programms = [
@@ -64,4 +65,4 @@
 
 section.tv-online-slider
 	.container-xl
-		+programmSlider(data.title, data.buttons, programms, data.category)
+		+programmSlider(data.title, data.buttons, programms, data.category, true)

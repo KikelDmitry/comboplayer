@@ -9,31 +9,32 @@
 				.player-bar__progress-pointer(style="left:60%")
 			.player-bar__row
 				.player-bar__item
-					button.player-bar__play.play-btn(type="button" aria-label="Воспроизвести")
+					button.player-bar__play.play-btn.has-tooltip(type="button" aria-label="Воспроизвести")
 						i.icon-pause
 						i.icon-play
-				.player-bar__volume.player-bar__item
+				.player-bar__volume.player-bar__item(aria-label="Громкость").has-tooltip
 					button.player-bar__volume-icon(type="button" aria-label="Громкость")
 						i.icon-volume
 					.player-bar__volume-control
 						.player-bar__volume-control-bar(style="width:60%;")
-				.player-bar__on-air.is-active.player-bar__item
+				.player-bar__on-air.is-active.player-bar__item.has-tooltip(aria-label="В прямом эфире")
 					.player-bar__on-air-icon
 					.player-bar__on-air-title В эфире
 				.player-bar__slide.player-bar__item
-					button.player-bar__slide-btn(type="button" aria-label="Назад")
+					button.player-bar__slide-btn.has-tooltip(type="button" aria-label="Назад")
 						i.icon-rewind-left
 					.player-bar__slide-title Футбол. "Ювентус - Удинезе"
-					button.player-bar__slide-btn(type="button" aria-label="Вперед")
+					button.player-bar__slide-btn.has-tooltip(type="button" aria-label="Вперед")
 						i.icon-rewind-right
 				.player-bar__item
 					.player-bar__time 12:34:56
 				.player-bar__item
-					button.player-bar__expand(type="expand" aria-label="Развернуть")
+					button.player-bar__expand.has-tooltip(type="expand" aria-label="Развернуть")
 						i.icon-expand
 						i.icon-collapse
+			.player-bar__tooltip.float-tooltip Tooltip
 	.player-overlay
-		button.player-overlay__play.play-btn(type="button" aria-label="Воспроизвести")
+		button.player-overlay__play.play-btn(type="button" aria-label="Остановить")
 			i.icon-play
 			i.icon-pause
 	if withMsg

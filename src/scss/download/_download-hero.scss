@@ -67,8 +67,6 @@
 		}
 	}
 	&__dl {
-		padding-top: 18px;
-
 		@include media-breakpoint-up(xl) {
 			padding-left: 44px;
 		}
@@ -80,20 +78,33 @@
 
 			&-head {
 				padding: 6px 0;
-				margin-bottom: 10px;
+				// margin-bottom: 10px;
 				color: #6ff0d6;
 				font-weight: 500;
 				line-height: 125%;
 				letter-spacing: -0.01em;
 			}
 			&-body {
+				margin-bottom: 6px;
 				line-height: 20px;
+
+				a {
+					text-decoration: underline;
+
+					&:hover {
+						text-decoration: none;
+					}
+				}
+			}
+			&-pad {
+				font-size: 14px;
+				color: $color-cobalt-deep-7;
 			}
 		}
 		&-btn {
 			max-width: 360px;
 			height: 50px;
-			margin: 0 auto 11px;
+			margin: 0 auto 7px;
 			font-size: 20px;
 			font-weight: 700;
 

@@ -8,7 +8,7 @@ mixin svg(classes, anchor, title, desc)
 			desc=desc
 
 //- programm square item
-mixin programmSquareItem(programm)
+mixin programmSquareItem(programm, play = true)
 	.programm-item
 		.programm-item__inner
 			.programm-item__poster
@@ -18,8 +18,9 @@ mixin programmSquareItem(programm)
 					img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
 			.programm-item__overlay
 				.programm-item__overlay-dimmer
-				.programm-item__overlay-play
-					i.icon-play
+				if play
+					.programm-item__overlay-play
+						i.icon-play
 			.programm-item__channel
 				img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
 			.programm-item__footer
@@ -31,7 +32,7 @@ mixin programmSquareItem(programm)
 				span.visually-hidden #{programm.title}
 
 //- tv slider
-mixin programmSlider(title, tabs, programms, categories)
+mixin programmSlider(title, tabs, programms, categories, play)
 	.programm-slider
 		.programm-slider__header
 			h2.programm-slider__title.title-1 #{title}
@@ -45,7 +46,7 @@ mixin programmSlider(title, tabs, programms, categories)
 				.tab-pane(class=(idx == 0 ? 'active' : 'fade') id=category.id)
 					.programm-slider__body.items-carousels.owl-carousel
 						each programm in programms
-							+programmSquareItem(programm)
+							+programmSquareItem(programm, play)
 							
 		noscript.no-js-msg #{globalData.nojs}
 
