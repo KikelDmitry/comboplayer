@@ -9,4 +9,15 @@
 			background-image: linear-gradient(270deg, #F0F8FA 2.5%, #F0F8FA 10.62%, rgba(240, 248, 250, 0) 100%);
 		}
 	}
+	.programm-item {
+		&__overlay {
+			&-play {
+				@include media-breakpoint-down(md) {
+					visibility: visible;
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+	}
 }
