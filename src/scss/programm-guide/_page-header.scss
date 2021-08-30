@@ -9,23 +9,16 @@
 		color: $color-cobalt-1;
 		line-height: 1.4;
 	}
-	&__tags {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: flex-start;
-		min-height: none;
-		padding: 5px 0;
-		
-		@include media-breakpoint-up(md) {
-			min-height: $height;
-		}
-	}
+
 }
 .programm-guide {
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
 	&__cities {
-		margin-bottom: 10px;
-		margin-top: 10px;
+		margin: 20px 10px 20px 0;
 	
 		.city-dropdown {
 			margin-left: 0;
@@ -61,37 +54,4 @@
 		}
 	}
 }
-.programm-tag {
-	flex: 0 0 auto;
-	height: 24px;
-	padding: 0 8px;
-	margin: 5px 10px 5px 0;
-	border-radius: 3px;
-	@include dottedEnd;
 
-	@each $cat in $cat-list {
-		&--#{$cat} {
-			background-color: map-get($color-cat, #{$cat});
-
-			.programm-tag__title {
-				&::before {
-					background-color: lighten(map-get($color-cat, #{$cat}), 20%);
-				}
-			}
-		}
-	}
-	&__title {
-		display: flex;
-		align-items: center;
-		color: $color-white;
-
-		&::before {
-			content: "";
-			flex: 0 0 auto;
-			width: 8px;
-			height: 8px;
-			border-radius: 50%;
-			margin-right: 4px;
-		}
-	}
-}

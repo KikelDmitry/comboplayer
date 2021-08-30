@@ -115,10 +115,53 @@
 			],
 		},
 	];
+-
+	var tags = [
+		{
+			title: 'Детям',
+			class: 'kids',
+		},
+		{
+			title: 'Сериалы',
+			class: 'series',
+		},
+		//- {
+		//- 	title: 'Фильм',
+		//- 	class: 'movie',
+		//- },
+		//- {
+		//- 	title: 'Спорт',
+		//- 	class: 'sport',
+		//- },
+		//- {
+		//- 	title: 'Обучение',
+		//- 	class: 'learning',
+		//- },
+		//- {
+		//- 	title: 'Инфо',
+		//- 	class: 'info',
+		//- },
+		//- {
+		//- 	title: 'Новости',
+		//- 	class: 'news',
+		//- },
+		//- {
+		//- 	title: 'Развлечение',
+		//- 	class: 'entertain',
+		//- },
+		//- {
+		//- 	title: 'Культура',
+		//- 	class: 'culture',
+		//- },
+		//- {
+		//- 	title: 'Остальное',
+		//- 	class: 'rest',
+		//- },
+	]
 
 section.programm-guide
 	.container-xl
-		.row
+		.row.flex-column-reverse.flex-lg-row
 			.col-lg-9
 				.programm-lists
 					each channel, idx in programmChannels
@@ -154,6 +197,10 @@ section.programm-guide
 				.programm-guide__about.about-channel
 					include aboutProgramm.pug
 			.col-lg-3
+				.programm-guide__tags
+					each tag in tags
+						.programm-tag(class="programm-tag--" + tag.class)
+							span.programm-tag__title #{tag.title}
 				.programm-guide__adv.channel-guide__adv.d-none.d-lg-flex AD
 		.row
 			.col-lg-9

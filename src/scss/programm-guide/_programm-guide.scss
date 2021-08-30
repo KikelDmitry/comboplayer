@@ -5,9 +5,53 @@
 	&__about {
 		padding-left: 0;
 	}
+	&__tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0 0 5px;
+
+		// @include media-breakpoint-up(md) {
+		// 	min-height: $height;
+		// }
+	}
+}
+.programm-tag {
+	flex: 0 0 auto;
+	height: 24px;
+	padding: 0 8px;
+	margin: 0 10px 5px 0;
+	border-radius: 3px;
+	@include dottedEnd;
+
+	@each $cat in $cat-list {
+		&--#{$cat} {
+			background-color: map-get($color-cat, #{$cat});
+
+			.programm-tag__title {
+				&::before {
+					background-color: lighten(map-get($color-cat, #{$cat}), 20%);
+				}
+			}
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		color: $color-white;
+
+		&::before {
+			content: "";
+			flex: 0 0 auto;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			margin-right: 4px;
+		}
+	}
 }
 .programm-lists {
-
 }
 .programm-channel {
 	margin-bottom: 10px;
@@ -63,7 +107,7 @@
 		color: $color-cobalt-1;
 		font-size: 18px;
 		font-family: $addFont;
-		
+
 		@include media-breakpoint-up(md) {
 			font-size: 20px;
 		}
@@ -94,9 +138,7 @@
 		}
 	}
 	&__body {
-
 	}
-
 }
 .programm-day {
 	display: flex;
