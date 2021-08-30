@@ -2,15 +2,15 @@
 	var categories = [
 		{
 			title: 'ТВ-каналы',
-			link: 'search-channels.html',
+			link: '#channels-results',
 		},
 		{
 			title: 'Программы',
-			link: 'search-programms.html',
+			link: '#programms-results',
 		},
 		{
 			title: 'Фильмы',
-			link: 'search-movies.html',
+			link: '#movies-results',
 		},
 	]
 
@@ -20,6 +20,6 @@ section.post-header.search-header
 			.col-12.col-md-8
 				h1.post-header__title.title-1 #{config.page.title}
 			.col-12.col-md-4
-				.search-header__categories
-					each cat in categories
-						a.search-header__link(href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}
+				.search-header__categories.nav
+					each cat, idx in categories
+						a.search-header__link(href=cat.link data-toggle="tab" class=(idx == 0 ? 'active': '')) #{cat.title}
