@@ -1,0 +1,74 @@
+-
+	var categories = [
+		{
+			title: 'Фильмы с Тилем Швайгером',
+			img: 'schwiger.png',
+		},
+		{
+			title: 'Фильмы про акул',
+			descr: 'Самые интересные фильмы про акул',
+			img: 'sharks.png',
+		},
+		{
+			title: 'Фильмы про вампиров',
+			descr: 'Коллекция лучших фильмов про вампиров и оборотней',
+			img: 'vampires.png',
+		},
+		{
+			title: 'Женские фильмы',
+			descr: 'Великолепное кино для женской аудитории',
+			img: 'female.png',
+		},
+		{
+			title: 'Французские фильмы',
+			descr: 'Для любителей хорошего французского кино',
+			img: 'french.png',
+		},
+		{
+			title: 'Фильмы про войну',
+			descr: 'Военные фильмы разных поколений',
+			img: 'war.png',
+		},
+		{
+			title: 'Фильмы про космос',
+			descr: 'Кино в котором есть космос',
+			img: 'cosmos.png',
+		},
+		{
+			title: 'Фильмы про деревню',
+			img: 'village.png',
+		},
+		{
+			title: 'Фильмы катастрофы',
+			img: 'disasters.png',
+		},
+		{
+			title: 'Фильмы про ведьм',
+			descr: 'Мистические фильмы',
+			img: 'witches.png',
+		},
+		{
+			title: 'Фильмы про любовь',
+			descr: 'Лучшая подборка кино о любви',
+			img: 'love.png',
+		},
+		{
+			title: 'Фильмы про зомби',
+			descr: 'Лучшие кино-истории о зомби и живых мертвецах',
+			img: 'zombie.png',
+		},
+	]
+
+section.movies-collections
+	.container-xl
+		.row
+			each cat in categories
+				.col-6.col-md-4.col-xl-3.mb-4
+					.movies-collections__item
+						.movies-collections__img
+							img(src="img/content/collections/" + cat.img alt=cat.title + " постер")
+						.movies-collections__text
+							h2.movies-collections__title
+								a.movies-collections__link(href="#") #{cat.title}
+							if cat.descr
+								.movies-collections__descr #{cat.descr}

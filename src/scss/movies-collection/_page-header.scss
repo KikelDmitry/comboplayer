@@ -1,10 +1,58 @@
-.video-categories {
-	.category-list {
-		display: flex;
-		font-family: $addFont;
-		
-		&__item {
+$cat-list: movie, series, news, kids, collections;
 
+.video-categories {
+	border-bottom: 1px solid $color-steel-dull-85;
+
+	.category-list {
+		padding: 10px 0;
+		padding-bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		font-family: $addFont;
+
+		&__item {
+			display: flex;
+			align-items: center;
+			margin-left: 0;
+			margin-right: 10px;
+			margin-bottom: 10px;
+			padding: 3px 8px 5px;
+			background-color: $color-steel-dull-9;
+			border-radius: 3px;
+			color: $color-steel-2;
+			font-size: 18px;
+			line-height: 91%;
+
+			&:hover {
+				background-color: $color-steel-dull-85;
+			}
+			@each $cat in $cat-list {
+				&--#{$cat} {
+					&.is-active {
+						background-color: map-get($color-cat, #{$cat});
+						
+						&::before {
+							background-color: lighten(map-get($color-cat, #{$cat}), 20%);
+						}
+					}
+				}
+			}
+			&.is-active {
+				color: $color-white;
+
+				&::before {
+					content: "";
+					flex: 0 0 auto;
+					width: 8px;
+					height: 8px;
+					border-radius: 50%;
+					margin-right: 4px;
+				}
+			}
 		}
+	}
+	.post-header__title {
+		padding: 18px 0;
+		padding-top: 8px;
 	}
 }

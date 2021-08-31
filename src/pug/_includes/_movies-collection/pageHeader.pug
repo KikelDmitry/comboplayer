@@ -13,17 +13,17 @@
 		{
 			title: 'Мультфильмы',
 			link: '#',
-			id: 'kids',
+			id: 'news',
 		},
 		{
 			title: 'Передачи',
 			link: '#',
-			id: 'news',
+			id: '',
 		},
 		{
 			title: 'Подборки',
 			link: '#',
-			id: 'colections',
+			id: 'collections',
 
 		},
 	]
@@ -32,6 +32,6 @@
 	.container-xl
 		.category-list
 			each cat, idx in categories
-				a.categories-list__item(class="categories-list__item--" + cat.id href=cat.link class=(idx == 2 ? 'is-active' : '')) #{cat.title}
+				a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(idx == 4 ? 'is-active' : '')) #{cat.title}
 					
 		h1.post-header__title.title-1 #{config.page.title}
