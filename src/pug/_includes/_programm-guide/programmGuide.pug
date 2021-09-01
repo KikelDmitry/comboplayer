@@ -169,7 +169,7 @@ section.programm-guide
 							.programm-channel__header(data-toggle="collapse" data-target="#programm-channel__body" + idx aria-expanded="false" aria-role="button" class=(idx != 0 ? 'collapsed' : ''))
 								.programm-channel__logo
 									img.programm-channel__logo-img(src="img/content/channels/" + channel.icon, alt=channel.channel + " logo")
-								.programm-channel__title #{channel.channel}
+								a.programm-channel__title(href="#") #{channel.channel}
 								a.programm-channel__to-player(href="player.html" title="Перейти к каналу")
 									i.icon-play 
 								button.programm-channel__fav.fav-btn(type="button" title="Добавить в избранное")

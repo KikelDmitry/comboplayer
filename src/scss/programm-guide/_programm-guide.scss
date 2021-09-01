@@ -107,9 +107,13 @@
 		color: $color-cobalt-1;
 		font-size: 18px;
 		font-family: $addFont;
+		margin-right: auto;
 
 		@include media-breakpoint-up(md) {
 			font-size: 20px;
+		}
+		&:hover {
+			color: $color-cobalt-3;
 		}
 	}
 	&__to-player {
@@ -118,7 +122,7 @@
 		align-items: center;
 		width: 24px;
 		height: 24px;
-		margin-left: auto;
+		// margin-left: auto;
 		border-radius: 5px;
 		font-size: 12px;
 		background-color: $color-cobalt-deep-9;
