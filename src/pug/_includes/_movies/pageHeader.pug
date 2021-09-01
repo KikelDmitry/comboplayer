@@ -2,57 +2,46 @@
 	var categories = [
 		{
 			title: 'Фильмы',
+			link: '#',
 			id: 'movie',
 		},
 		{
 			title: 'Сериалы',
+			link: '#',
 			id: 'series',
 		},
 		{
-			title: 'Спорт',
-			id: 'sport',
-		},
-		{
-			title: 'Познавательное',
-			id: 'learning',
-		},
-		{
-			title: 'Инфо',
-			id: 'info',
-		},
-		{
-			title: 'Новости',
+			title: 'Мультфильмы',
+			link: '#',
 			id: 'news',
 		},
 		{
-			title: 'Культура',
-			id: 'culture',
+			title: 'Передачи',
+			link: '#',
+			id: '',
 		},
 		{
-			title: 'Досуг',
-			id: 'entertain',
-		},
-		{
-			title: 'Детям',
-			id: 'kids',
-		},
-		{
-			title: 'Остальное',
-			id: 'rest',
+			title: 'Подборки',
+			link: '#',
+			id: 'collections',
+
 		},
 	]
 -
 	var filters = [
 		'по году выхода',
 		'по названию',
-		'еще как нибудь',
+		'еще как-нибудь',
 	]
-.post-header.movies-header
+.post-header.movies-header.video-categories
 	.container-xl
 		.row.align-items-end
 			.col.col-lg-9
+				.category-list
+					each cat, idx in categories
+						a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}
 				h1.post-header__title.title-1 Смотреть фильмы онлайн
-				.categories-list.owl-carousel
+				//- .categories-list.owl-carousel
 					each cat in categories
 						.categories-list__item(class="categories-list__item--" + cat.id)
 							label.categories-list__label
