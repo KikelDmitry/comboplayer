@@ -1,0 +1,43 @@
+.movie-info {
+	&__field {
+		margin-bottom: 8px;
+	}
+	&__key {
+		font-weight: 300;
+		font-size: 15px;
+		line-height: 125%;
+		color: $color-steel-2;
+	}
+	&__val {
+		font-weight: normal;
+		font-size: 15px;
+		line-height: 125%;
+	}
+	&__link {
+		// padding-right: .25em;
+		color: $color-cobalt-3;
+
+		&:not(:last-child) {
+			&::after {
+				content: ', ';
+			}
+		}
+		&:hover {
+			color: $color-cobalt-1;
+		}
+	}
+	&__text {
+		color: $color-steel-2;
+	}
+	&__icon {
+		color: $color-cobalt-4;
+		padding-right: .25em;
+	}
+	&--aside {
+	}
+	&--add {
+		margin: 0 -15px;
+		padding: 15px 30px 22px;
+		background-color: $color-steel-dull-95;
+	}
+}

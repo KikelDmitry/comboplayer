@@ -32,6 +32,15 @@
 	.container-xl
 		.category-list
 			each cat, idx in categories
-				a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(idx == 4 ? 'is-active' : '')) #{cat.title}
-					
-		h1.post-header__title.title-1 #{config.page.title}
+				a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}
+		if activeCat == 'Подборки'		
+			h1.post-header__title.title-1 #{config.page.title}
+		else
+			.row.align-items-end
+				.col-12.col-lg-8.col-xl-9
+					h1.post-header__title.title-1 !{config.page.title}
+					p.post-header__subtitle
+						strong “Cage Dive” 
+						| 2017, Австралия
+				.col-12.col-lg-4.col-xl-3.d-lg-flex.justify-content-end
+					include /_includes/_movie/rating.pug

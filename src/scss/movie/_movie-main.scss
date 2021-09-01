@@ -1,0 +1,9 @@
+.movie-main {
+	&__sep {
+		width: 100%;
+		height: 1px;
+		margin: 20px 0;
+		border: 0;
+		background-color: $color-steel-dull-85;
+	}
+}

@@ -1,0 +1,22 @@
+.movie-staff {
+	&__field {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+	&__key {
+		padding: 6px 0;
+		color: $color-steel-2;
+		font-weight: bold;
+		line-height: 125%;
+	}
+	&__val {
+		color: $color-steel-0;
+		font-weight: 300;
+		line-height: 125%;
+
+		&.expanded-text {
+			padding-right: 15px;
+		}
+	}
+}
