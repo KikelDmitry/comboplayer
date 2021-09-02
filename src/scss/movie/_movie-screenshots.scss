@@ -1,5 +1,61 @@
 .movie-screenshots {
-	//tmp
-	min-height: 300px;
-	background-color: $color-steel-9;
+	display: flex;
+	overflow: hidden;
+	border-radius: 5px;
+	
+	&__item {
+		position: relative;
+		flex: 1 0 auto;
+		height: 140px;
+		width: 256px;
+		border-radius: inherit;
+
+		@include media-breakpoint-up(lg) {
+			width: 777px;
+			height: 200px;
+		}
+		@include media-breakpoint-up(lg) {
+			width: 633px;
+		}
+		&:not(:last-child) {
+			margin-right: 15px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: inherit;
+		}
+	}
+	&__counter {
+		display: none;
+
+		@include media-breakpoint-up(lg) {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: $color-white;
+			font-family: $addFont;
+			font-size: 25px;
+			line-height: 100%;
+			pointer-events: none;
+			text-shadow: 0 0 1px #000;
+		}
+	}
+}
+.movie-modal {
+	max-width: 768px;
+	margin: auto;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%) !important;
+
+	.modal-body {
+		padding: 0;
+	}
 }

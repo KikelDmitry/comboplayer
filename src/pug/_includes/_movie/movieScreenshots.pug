@@ -1,1 +1,13 @@
-.movie-screenshots screenshots slider
+-
+	var screens = [
+		'movie0.jpg',
+		'movie1.png',
+		'movie2.png',
+	];
+
+.movie-screenshots
+	each scr, idx in screens
+		a.movie-screenshots__item(href="#" data-toggle="modal" data-target="#modal-gallery")
+			img(src="img/content/screenshots/" + scr, alt="movie screenshot")
+			if idx == 1
+				.movie-screenshots__counter +#{screens.length - 1}

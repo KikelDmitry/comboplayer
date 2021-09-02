@@ -1,0 +1,18 @@
+.modal.fade#modal-gallery(tabindex="-1")
+	.modal-dialog.movie-modal
+		.modal-content
+			.modal-body
+				.carousel.slide#movie-carousel
+					.carousel-inner
+						.carousel-item.active
+							img(src="img/content/screenshots/movie0.jpg" alt="movie screenshot")
+						.carousel-item
+							img(src="img/content/screenshots/movie1.png" alt="movie screenshot")
+						.carousel-item
+							img(src="img/content/screenshots/movie2.png" alt="movie screenshot")
+					a.carousel-control-prev(href="#movie-carousel" role="button" data-slide="prev")
+						span.carousel-control-prev-icon(aria-hidden="true")
+						span.sr-only Previous
+					a.carousel-control-next(href="#movie-carousel" role="button" data-slide="next")
+						span.carousel-control-next-icon(aria-hidden="true")
+						span.sr-only Next

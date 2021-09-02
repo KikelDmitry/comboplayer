@@ -96,8 +96,6 @@
 	}
 }
 // header search bar
-
-
 {
 	let searchInput = $('.header__search-input'),
 		searchForm = $('.header__search'),
@@ -134,6 +132,18 @@
 		}
 	}
 	burger.addEventListener('click', mobileMenuOpen);
+}
+// movie screenshots carousel
+{
+	$('.movie-screenshots__item').click(function() {
+		let index = $(this).index();
+		let modalSlides = $('.movie-modal .carousel-item');
+		modalSlides.each(function() {
+			$(this).removeClass('active');
+		})
+		console.log(modalSlides.index(index))
+		modalSlides[index].classList.add('active')
+	})
 }
 // owl carousel
 {
