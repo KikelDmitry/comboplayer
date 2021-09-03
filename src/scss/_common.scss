@@ -186,3 +186,22 @@ body {
 		}
 	}
 }
+.aside-ad {
+	display: none;
+
+	@include media-breakpoint-up(lg) {
+		display: block;
+		position: sticky;
+		top: 15px;
+	}
+	//tmp
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-height: 380px;
+		background-color: $color-steel-9;
+		font-size: 72px;
+	}
+}

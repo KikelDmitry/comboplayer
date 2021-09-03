@@ -54,16 +54,7 @@
 	// at now programms list
 	&__now {
 	}
-	&__adv {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 100%;
-		min-height: 380px;
-		background-color: $color-steel-9;
-		font-size: 72px;
-
-		position: sticky;
+	&__ad {
 		top: 70px;
 	}
 }

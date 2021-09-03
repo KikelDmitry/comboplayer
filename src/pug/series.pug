@@ -1,0 +1,12 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Фильм Над глубиной: Хроника выживания смотреть онлайн';
+	- var activeCat = 'Мультфильмы';
+
+block content
+	include /_includes/_movies-collection/pageHeader.pug
+	include /_includes/_movie/pageBody.pug
+
+block modal
+	include /_includes/_movie/modalSlider.pug
