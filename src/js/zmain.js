@@ -135,13 +135,24 @@
 }
 // movie screenshots carousel
 {
-	$('.movie-screenshots__item').click(function() {
+	let slides;
+	if($(window).width() < 990) {
+		$('.movie-screenshots').owlCarousel({
+			autoWidth: true,
+			margin: 10,
+		});
+		slides = $('.movie-screenshots .owl-item');
+	} else {
+		$('.movie-screenshots').trigger('destroy.owl.carousel');
+		$('.movie-screenshots').removeClass('owl-carousel');
+		slides = $('.movie-screenshots__item');
+	}
+	slides.click(function() {
 		let index = $(this).index();
 		let modalSlides = $('.movie-modal .carousel-item');
 		modalSlides.each(function() {
 			$(this).removeClass('active');
 		})
-		console.log(modalSlides.index(index))
 		modalSlides[index].classList.add('active')
 	})
 }

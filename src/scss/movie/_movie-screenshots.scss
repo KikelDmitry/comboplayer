@@ -1,20 +1,23 @@
 .movie-screenshots {
-	display: flex;
-	overflow: hidden;
 	border-radius: 5px;
 	
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		overflow: hidden;
+	}
 	&__item {
-		position: relative;
-		flex: 1 0 auto;
+		display: block;
 		height: 140px;
 		width: 256px;
 		border-radius: inherit;
-
+		
 		@include media-breakpoint-up(lg) {
+			position: relative;
+			flex: 1 0 auto;
 			width: 777px;
 			height: 200px;
 		}
-		@include media-breakpoint-up(lg) {
+		@include media-breakpoint-up(xl) {
 			width: 633px;
 		}
 		&:not(:last-child) {

@@ -99,6 +99,14 @@
 			}
 		}
 	}
+	.city-dropdown {
+		margin: 0;
+		margin-right: 10px;
+		
+		&__btn {
+			height: 32px;
+		}
+	}
 	&__to-guide {
 		display: flex;
 		align-items: center;
