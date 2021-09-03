@@ -8,7 +8,12 @@
 	];
 
 .seasons-switcher
-	.seasons-switcher__controls
+	.seasons-switcher__controls.seasons-control
+		a.seasons-control__back(href="#")
+			i.icon-caret-down
+			span Назад
+		.seasons-control__slider
+			.seasons-control__slider-title Сезон 1: Список серий
 	.seasons-switcher__tape.owl-carousel
 		each item, idx in episodes
 			.seasons-switcher__item(class=(idx == 2 ? 'is-active' : ''))

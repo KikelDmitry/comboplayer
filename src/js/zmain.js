@@ -133,7 +133,7 @@
 	}
 	burger.addEventListener('click', mobileMenuOpen);
 }
-// movie screenshots carousel
+// movie screenshots modal carousel
 {
 	let slides;
 	if($(window).width() < 990) {
@@ -156,6 +156,8 @@
 		modalSlides[index].classList.add('active')
 	})
 }
+// series carousel
+
 // owl carousel
 {
 	let bannerSlider = $('.top-slider__container'),
@@ -233,8 +235,15 @@
 				categories.trigger('refresh.owl.carousel')
 			})
 		})
+		$('.seasons-switcher__tape').owlCarousel({
+			autoWidth: true,
+			margin: 15,
+			nav: true,
+			navContainer: '.seasons-control__slider',
+			navClass: ['slider-nav slider-nav--left', 'slider-nav slider-nav--right'],
+			navText: ['<span class="visually-hidden">Назад</span><i class="icon-caret-down"></i>', '<span class="visually-hidden">Вперед</span><i class="icon-caret-down"></i>'],
+		})
 	})
-
 }
 // favorite btn
 {
