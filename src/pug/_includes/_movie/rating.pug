@@ -14,7 +14,8 @@
 		},
 	]
 .movie-rating
-	.movie-rating__age(aria-label="Возрастное ограничение") 18+
+	if activeCat == 'Фильмы'
+		.movie-rating__age(aria-label="Возрастное ограничение") 18+
 	each rating in ratings
 		a.movie-rating__item(href="#" class="movie-rating__item--" + rating.alias title="Страница на " + rating.title aria-label="Перейти на " + rating.title target="_blank")
 			span.movie-rating__icon(class="movie-rating__icon--" + rating.alias)

@@ -6,13 +6,16 @@
 	.movie-player__body.tab-content
 		.movie-player__container.tab-pane.fade.active.show#movie-trailer
 			// temporary image
-			img(src="img/content/player/movie-preview.jpg" alt="" style="width:100%;min-height:inherit;object-fit:cover")
+			img(src=(activeCat == 'Фильмы' ? "img/content/player/movie-preview.jpg" : "img/content/player/series-preview.jpg") alt="" style="width:100%;min-height:inherit;object-fit:cover")
 			.movie-player__overlay
 				button.movie-player__play(type="button" aria-label="Воспроизвести")
 					i.icon-play
 		.movie-player__container.tab-pane.fade#movie-player
 			// temporary image
-			img(src="img/content/player/movie-preview.jpg" alt="" style="width:100%;min-height:inherit;object-fit:cover")
+			img(src=(activeCat == 'Фильмы' ? "img/content/player/movie-preview.jpg" : "img/content/player/series-preview.jpg") alt="" style="width:100%;min-height:inherit;object-fit:cover")
 			.movie-player__overlay
 				button.movie-player__play(type="button" aria-label="Воспроизвести")
 					i.icon-play
+	if activeCat == 'Мультфильмы'
+		.movie-player__seasons
+			include /_includes/_series/seasonSwitcher.pug

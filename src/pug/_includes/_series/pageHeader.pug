@@ -1,0 +1,45 @@
+-
+	var categories = [
+		{
+			title: 'Фильмы',
+			link: '#',
+			id: 'movie',
+		},
+		{
+			title: 'Сериалы',
+			link: '#',
+			id: 'series',
+		},
+		{
+			title: 'Мультфильмы',
+			link: '#',
+			id: 'news',
+		},
+		{
+			title: 'Передачи',
+			link: '#',
+			id: '',
+		},
+		{
+			title: 'Подборки',
+			link: '#',
+			id: 'collections',
+
+		},
+	]
+
+.post-header.video-categories
+	.container-xl
+		.category-list
+			each cat, idx in categories
+				a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}
+		.row.align-items-end
+			.col-12.col-lg-8.col-xl-9
+				h1.post-header__title.title-1 Мультфильм 
+					strong Фиксики
+					|  смотреть онлайн
+				p.post-header__subtitle
+					strong “Fixes” 
+					| 2010, Россия
+			.col-12.col-lg-4.col-xl-3.d-lg-flex.justify-content-end
+				include /_includes/_movie/rating.pug

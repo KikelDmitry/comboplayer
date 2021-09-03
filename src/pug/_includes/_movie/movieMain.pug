@@ -5,6 +5,7 @@ main.movie-main
 	include movieDescr.pug
 	include movieScreenshots.pug
 	include movieTags.pug
-	include movieQuotes.pug
-	hr.movie-main__sep
-	include movieStaff.pug
+	if activeCat == 'Фильмы'
+		include movieQuotes.pug
+		hr.movie-main__sep
+		include movieStaff.pug
