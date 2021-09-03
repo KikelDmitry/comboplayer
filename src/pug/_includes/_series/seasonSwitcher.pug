@@ -1,1 +1,16 @@
-.seasons-switcher Seasons switcher
+-
+	var episodes = [
+		'Серии 1 - 20',
+		'Серии 21- 40',
+		'Серии 41 - 60',
+		'Серии 61 - 80',
+		'Серии 81 - 100',
+	];
+
+.seasons-switcher
+	.seasons-switcher__controls
+	.seasons-switcher__tape.owl-carousel
+		each item, idx in episodes
+			.seasons-switcher__item(class=(idx == 2 ? 'is-active' : ''))
+				img.seasons-switcher__img(src="img/content/series/img" + idx + ".png", alt="series item")
+				a.seasons-switcher__caption(href="#") #{item}

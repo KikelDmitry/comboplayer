@@ -1,0 +1,23 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Popups page';
+
+block content
+	.popup-layer
+		.popup-item.popup-item--down
+			.popup-item__icon
+				i.icon-arrow-down
+			.popup-item__text
+				p После загрузки кликните дважды по названию файла.
+				p Запустите установку программы.
+			button.popup-item__close(type="button" aria-label="Закрыть")
+				i.icon-close
+		.popup-item.popup-item--up
+			.popup-item__icon.popup-item__icon--transformed
+				i.icon-arrow-down
+			.popup-item__text
+				p После загрузки кликните дважды по названию файла.
+				p Запустите установку программы.
+			button.popup-item__close(type="button" aria-label="Закрыть")
+				i.icon-close

@@ -14,6 +14,10 @@
 
 		padding: 10px 0;
 	}
+	&__title {
+		padding-top: 0.4em;
+		color: $color-cobalt-1;
+	}
 	.owl-nav {
 		position: absolute;
 		top: 0;
@@ -67,17 +71,17 @@
 	}
 	&.grad-gray {
 		.top-slide__title {
-			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #949DB5;;
+			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #949db5;
 		}
 	}
 	&.grad-brown {
 		.top-slide__title {
-			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #AE6209;;
+			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #ae6209;
 		}
 	}
 	&.grad-black {
 		.top-slide__title {
-			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #1A292E;;
+			background: linear-gradient(231.13deg, rgba(255, 255, 255, 0.15) 0%, rgba(0, 0, 0, 0.15) 72.31%), #1a292e;
 		}
 	}
 	&__inner {
