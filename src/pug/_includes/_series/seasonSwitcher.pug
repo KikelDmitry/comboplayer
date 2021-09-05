@@ -1,21 +1,60 @@
 -
-	var episodes = [
+	var episodesDec = [
 		'Серии 1 - 20',
-		'Серии 21- 40',
+		'Серии 21 - 40',
 		'Серии 41 - 60',
 		'Серии 61 - 80',
 		'Серии 81 - 100',
 	];
-
+-
+	var episodes = [
+		'Серии 1',
+		'Серии 2',
+		'Серии 3',
+		'Серии 4',
+		'Серии 5',
+	];
+-
+	var seasons = [
+		'Сезон 1',
+		'Сезон 2',
+		'Сезон 3',
+		'Сезон 4',
+		'Сезон 5',
+	];
+.seasons-switcher
+	.seasons-switcher__controls.seasons-control
+		.seasons-control__slider#seasons-slider-0
+			.seasons-control__slider-title Сезоны
+	.seasons-switcher__tape.owl-carousel
+		each item, idx in seasons
+			.seasons-switcher__item(class=(idx == 2 ? 'is-active' : ''))
+				img.seasons-switcher__img(src="img/content/series/img" + idx + ".png", alt="series item")
+				a.seasons-switcher__caption(href="#") #{item}
+br
 .seasons-switcher
 	.seasons-switcher__controls.seasons-control
 		a.seasons-control__back(href="#")
 			i.icon-caret-down
 			span Назад
-		.seasons-control__slider
+		.seasons-control__slider#seasons-slider-1
 			.seasons-control__slider-title Сезон 1: Список серий
+	.seasons-switcher__tape.owl-carousel
+		each item, idx in episodesDec
+			.seasons-switcher__item(class=(idx == 2 ? 'is-active' : ''))
+				img.seasons-switcher__img(src="img/content/series/img" + idx + ".png", alt="series item")
+				a.seasons-switcher__caption(href="#") #{item}
+br
+.seasons-switcher
+	.seasons-switcher__controls.seasons-control
+		a.seasons-control__back(href="#")
+			i.icon-caret-down
+			span Назад
+		.seasons-control__slider#seasons-slider-2
+			.seasons-control__slider-title Серии 1 - 20
 	.seasons-switcher__tape.owl-carousel
 		each item, idx in episodes
 			.seasons-switcher__item(class=(idx == 2 ? 'is-active' : ''))
 				img.seasons-switcher__img(src="img/content/series/img" + idx + ".png", alt="series item")
 				a.seasons-switcher__caption(href="#") #{item}
+
