@@ -1,6 +1,11 @@
 -
 	var channels = [
 		{
+			title: 'Безымянный канал',
+			progress: 99,
+			subscribe: false,
+		},
+		{
 			title: 'Первый канал',
 			logo: 'channel_ch-1.png',
 			progress: 60,
@@ -241,12 +246,14 @@ section.channels-masonry
 								i.channel-card__subs-icon.icon-play-plus
 								a.channel-card__subs-link(href="order.html") Подписка
 						.channel-card__row
-							.channel-card__logo
+							if channel.logo
+								.channel-card__logo
 									img(src="img/content/channels/" + channel.logo alt=channel.title + ' лого')
+							else
+								.channel-card__logo
+									img(src="img/tv-dummy.png" alt="Канал без лого")
 							a.channel-card__title(href="#") #{channel.title}
 							.channel-card__controls.guide-channel__control
-								//- a.guide-channel__control-item.guide-channel__control-item--play(href="#" aria-label="Перейти к каналу")
-									i.icon-play
 								button.guide-channel__control-item.guide-channel__control-item--fav.fav-btn(type="button" title="Добавить в избранное")
 									i.icon-heart-empty
 									i.icon-heart-solid

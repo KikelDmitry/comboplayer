@@ -21,8 +21,12 @@ mixin programmSquareItem(programm, play = true)
 				if play
 					.programm-item__overlay-play
 						i.icon-play
-			.programm-item__channel
-				img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
+			if programm.channel
+				.programm-item__channel
+					img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
+			else
+				.programm-item__channel
+					img.programm-item__channel-img(src="/img/tv-dummy.png" alt="Канал без лого")
 			.programm-item__footer
 				.programm-item__time #{programm.time}
 				h3.programm-item__title #{programm.title}
@@ -113,7 +117,10 @@ mixin movieItem(movie, idx)
 	.movie-item
 		.movie-item__inner
 			.movie-item__poster
-				img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+				if movie.poster
+					img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+				else
+					img.movie-item__poster-img(src="/img/movie-dummy.png" alt="Фильм без постера")
 				.movie-item__overlay
 					.movie-item__overlay-play
 						i.icon-play

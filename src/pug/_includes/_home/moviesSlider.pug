@@ -12,6 +12,13 @@
 			badges: [
 				'18+',
 			],
+			rating: '9.9',
+			title: 'Фильм без постера',
+		},
+		{
+			badges: [
+				'18+',
+			],
 			rating: '7.0',
 			title: 'Реинкарнация',
 			poster: 'reincarnation.png',
@@ -95,30 +102,5 @@ section.movies-slider
 		.movies-slider__inner
 			h2.movies-slider__title.title-1 #{data.title}
 			.movies-slider__body.items-carousels.owl-carousel
-				each movie in movies
-					.movie-item
-						.movie-item__inner
-							.movie-item__poster
-								img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
-								.movie-item__overlay
-									.movie-item__overlay-play
-										i.icon-play
-								.movie-item__info
-									//- a.movie-item__info-item(href="#buy-link")
-										i.icon-ruble
-										span #{data.info.buy}
-									.movie-item__info-item
-										i.icon-play-plus
-										span #{data.info.subs}
-								
-							.movie-item__badge 
-								each badge in movie.badges
-									span.movie-item__badge-item #{badge}
-							.movie-item__rating
-								.movie-item__rating-icon
-									i.icon-kinopoisk-logo
-								.movie-item__rating-value #{movie.rating}
-							.movie-item__title
-								h3.movie-item__title-text #{movie.title}
-							a.movie-item__link(href="#movie-link" title=movie.title)
-								span.visually-hidden #{movie.title}
+				each movie, idx in movies
+					+movieItem(movie, idx)

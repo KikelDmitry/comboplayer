@@ -156,8 +156,6 @@
 		modalSlides[index].classList.add('active')
 	})
 }
-// series carousel
-
 // owl carousel
 {
 	let bannerSlider = $('.top-slider__container'),
