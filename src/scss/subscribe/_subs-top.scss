@@ -1,0 +1,47 @@
+.subscribe-top {
+	text-align: center;
+
+	&__title {
+		padding: 20px 0;
+		margin-bottom: 24px;
+		color: $color-cobalt-1;
+	}
+	&__box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100px;
+		padding: 20px;
+		position: relative;
+		border: 1px solid $color-steel-8;
+		border-radius: 4px;
+	}
+	&__icon {
+		position: absolute;
+		top: -5px;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #e9f1f3;
+	}
+	&__text {
+		max-width: 300px;
+		color: $color-steel-3;
+		font-family: $addFont;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 120%;
+
+		a {
+			color: $color-cobalt-4;
+
+			&:hover {
+				color: $color-cobalt-6;
+			}
+		}
+	}
+}

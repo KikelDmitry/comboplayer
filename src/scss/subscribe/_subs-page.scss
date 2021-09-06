@@ -1,0 +1,19 @@
+.subscribe-page {
+	flex: 1 1 auto;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, #dfebef 36.98%), #dfeaee;
+
+	&__contacts {
+		font-size: 15px;
+		line-height: 125%;
+		letter-spacing: -0.01em;
+		color: $color-steel-3;
+
+		a {
+			color: $color-cobalt-4;
+
+			&:hover {
+				color: $color-cobalt-6;
+			}
+		}
+	}
+}

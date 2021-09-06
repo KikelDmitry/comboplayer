@@ -1,0 +1,14 @@
+extends /_layout/base.pug
+
+block meta
+	- config.page.title = 'Подписка активирована';
+
+block content
+	section.subscribe-page
+		.container-xl
+			.row.justify-content-center
+				.col-12.col-md-6
+					include /_includes/_subscribe/subsTop.pug
+					include /_includes/_subscribe/subsForm.pug
+					.subscribe-page__contacts Если у вас остались вопросы, свяжитесь с нами по телефону или по адресу электронной почты 
+						a(href="mailto:info@comboplayer.ru") info@comboplayer.ru

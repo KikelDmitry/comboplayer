@@ -1,0 +1,34 @@
+-
+	var fields = [
+		{
+			type: 'text',
+			icon: 'user-solid',
+			placeholder: 'Ваше имя',
+		},
+		{
+			type: 'email',
+			icon: 'mail-solid',
+			placeholder: 'Ваш e-mail',
+		},
+		{
+			type: 'tel',
+			icon: 'phone-solid',
+			placeholder: 'Телефон',
+		},
+	]
+
+.subscribe-form
+	form.form
+		.row
+			.col
+				.form__row-title Дозаполните свой профиль (необязательно)
+		each field in fields
+			.row
+				.col
+					label.form__iconed-input
+						span.sr-only #{field.placeholder}
+						input.form__text-input(type=field.type placeholder=field.placeholder)
+						i(class="icon-" + field.icon)
+		.row
+			.col
+				button.form__button.buy-btn(type="submit") Сохранить

@@ -69,6 +69,12 @@
 		}
 	}
 }
+// forms styles
+{
+	$('.form__iconed-input').find('.form__text-input').focus(function () {
+
+	})
+}
 // sticky panel
 {
 	let header = $('.header'),
@@ -136,7 +142,7 @@
 // movie screenshots modal carousel
 {
 	let slides;
-	if($(window).width() < 990) {
+	if ($(window).width() < 990) {
 		$('.movie-screenshots').owlCarousel({
 			autoWidth: true,
 			margin: 10,
@@ -147,10 +153,10 @@
 		$('.movie-screenshots').removeClass('owl-carousel');
 		slides = $('.movie-screenshots__item');
 	}
-	slides.click(function() {
+	slides.click(function () {
 		let index = $(this).index();
 		let modalSlides = $('.movie-modal .carousel-item');
-		modalSlides.each(function() {
+		modalSlides.each(function () {
 			$(this).removeClass('active');
 		})
 		modalSlides[index].classList.add('active')
@@ -233,7 +239,7 @@
 				categories.trigger('refresh.owl.carousel')
 			})
 		})
-		$('.seasons-switcher__tape').each(function(idx) {
+		$('.seasons-switcher__tape').each(function (idx) {
 			$(this).owlCarousel({
 				autoWidth: true,
 				margin: 15,
@@ -254,8 +260,8 @@
 }
 // play btn 
 {
-	$('.play-btn').click(function() {
-		if($(this).hasClass('is-paused')) {
+	$('.play-btn').click(function () {
+		if ($(this).hasClass('is-paused')) {
 			$(this).removeClass('is-paused');
 			$(this).attr('aria-label', 'Остановить');
 		} else {
@@ -266,13 +272,13 @@
 }
 // expand btn 
 {
-	$('.player-bar__expand').click(function() {
+	$('.player-bar__expand').click(function () {
 		$(this).toggleClass('is-expanded')
 	})
 }
 // sort dir
 {
-	$('.items-sort__dir').click(function(e) {
+	$('.items-sort__dir').click(function (e) {
 		e.stopPropagation();
 		$(this).toggleClass('reverse-dir')
 	})
@@ -281,7 +287,7 @@
 	// player tooltips
 	let hasTooltip = $('.has-tooltip'),
 		tooltip = $('.float-tooltip');
-	hasTooltip.mouseover(function() {
+	hasTooltip.mouseover(function () {
 		let tooltipText = $(this).attr('aria-label');
 		tooltip.text(tooltipText);
 		tooltip.addClass('is-visible');
@@ -291,11 +297,11 @@
 			top: tooltipTop,
 			left: tooltipLeft
 		})
-			
-			$(this).offset()
+
+		$(this).offset()
 		// $(this).offset();
 	})
-	hasTooltip.mouseout(function() {
+	hasTooltip.mouseout(function () {
 		tooltip.removeClass('is-visible');
 	})
 }
@@ -337,7 +343,7 @@
 	$('.expanded-text').click(function () {
 		let fullHeight = $(this)[0].scrollHeight;
 		let initialHeight = $(this).innerHeight();
-		if(fullHeight >= initialHeight) {
+		if (fullHeight >= initialHeight) {
 			$(this).toggleClass('expanded');
 			if ($(this).hasClass('expanded')) {
 				$(this).css('max-height', fullHeight + 'px')
