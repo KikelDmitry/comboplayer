@@ -8,6 +8,7 @@
 	border-bottom: $header-border;
 	font-family: $addFont;
 	// overflow: hidden;
+	position: relative;
 
 	@include media-breakpoint-up(sm) {
 		--height: 52px;
