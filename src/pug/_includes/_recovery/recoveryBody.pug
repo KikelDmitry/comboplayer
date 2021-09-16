@@ -8,6 +8,18 @@ section.recovery-form
 				.col-12.col-md-6
 					input.recovery-form__input.form__text-input(id="recovery-email" type="text" placeholder="mail@example.com или +71234567890" name="email-or-phone")
 				.col-12.col-md-6
+					.recovery-form__messages
+						.form__msg.form__msg--err
+							.form__msg-header
+								.form__msg-icon.form__msg-icon--err
+									i.icon-exclamation-triangle-solid
+								.form__msg-title Произошла ошибка.
+							.form__msg-body Детали произошедшей ошибки.
+						.form__msg.form__msg--ok
+							.form__msg-header
+								.form__msg-icon.form__msg-icon--ok
+									i.icon-check-circle
+								.form__msg-title Успешный успех!
 					.recovery-form__recap-text Этот сайт защищён reCAPTCHA от Google. 
 						a(href="#") Используются Политики конфиденциальности
 						|  и 

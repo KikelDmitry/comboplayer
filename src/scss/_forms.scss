@@ -72,4 +72,43 @@
 		font-size: 20px;
 		font-weight: bold;
 	}
+	&__msg {
+		$color-succes: #00bf81;
+		$color-err: #ff4f58;
+
+		margin-bottom: 15px;
+		padding: 15px;
+		border: 1px solid $color-steel-1;
+		border-radius: 5px;
+
+		&-header {
+			display: flex;
+		}
+		&-icon {
+			margin-right: 10px;
+			color: $color-steel-1;
+
+			&--err {
+				color: $color-err;
+			}
+			&--ok {
+				color: $color-succes;
+			}
+		}
+		&-title {
+			color: $color-steel-3;
+			font-size: 15px;
+			line-height: 125%;
+		}
+		&-body {
+			color: $color-steel-5;
+			font-size: 13px;
+		}
+		&--err {
+			border-color: $color-err;
+		}
+		&--ok {
+			border-color: $color-succes;
+		}
+	}
 }
