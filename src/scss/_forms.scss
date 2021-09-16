@@ -87,7 +87,10 @@
 		&-icon {
 			margin-right: 10px;
 			color: $color-steel-1;
-
+			
+			i {
+				display: block;
+			}
 			&--err {
 				color: $color-err;
 			}
