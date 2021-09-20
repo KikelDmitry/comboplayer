@@ -1,4 +1,6 @@
 .movies-list {
+	padding: 10px 0;
+	
 	.movie-item {
 		padding: 12px 0;
 		
@@ -16,7 +18,7 @@
 			height: 194px;
 			
 			@include media-breakpoint-up(sm) {
-				height: auto;
+				height: 320px;
 			}
 		}
 		&__title {

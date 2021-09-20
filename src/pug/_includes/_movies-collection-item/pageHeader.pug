@@ -1,0 +1,37 @@
+-
+	var categories = [
+		{
+			title: 'Фильмы',
+			link: '#',
+			id: 'movie',
+		},
+		{
+			title: 'Сериалы',
+			link: '#',
+			id: 'series',
+		},
+		{
+			title: 'Мультфильмы',
+			link: '#',
+			id: 'news',
+		},
+		{
+			title: 'Передачи',
+			link: '#',
+			id: '',
+		},
+		{
+			title: 'Подборки',
+			link: '#',
+			id: 'collections',
+
+		},
+	]
+.post-header.movies-header.video-categories
+	.container-xl
+		.row.align-items-end
+			.col
+				.category-list
+					each cat, idx in categories
+						a.category-list__item(class="category-list__item--" + cat.id href=cat.link class=(cat.title == activeCat ? 'is-active' : '')) #{cat.title}
+				h1.post-header__title.title-1 Подборка фильмов про Водку
