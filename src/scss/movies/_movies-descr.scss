@@ -7,8 +7,20 @@
 	font-weight: 300;
 	font-size: 16px;
 	line-height: 110%;
-
+	
 	&::before {
 		right: 15px;
+	}
+}
+// full width mode
+.movies-description {
+	padding: 10px 0;
+
+	.movies-descr {
+		padding-left: 0;
+		
+		&::before {
+			right: 0;
+		}
 	}
 }
