@@ -254,18 +254,8 @@
 			font-size: 20px;
 		}
 	}
-}
-.recaptcha-descr {
-	margin-bottom: 10px;
-	font-size: 15px;
-	// line-height: 1.2;
-
-	a {
-		text-decoration: underline;
-
-		&:hover {
-			text-decoration: none;
-		}
+	&__recaptcha {
+		margin-bottom: 10px;
 	}
 }
 // .social-list {
