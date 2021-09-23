@@ -38,8 +38,10 @@
 
 		a {
 			color: $color-cobalt-4;
+			border-bottom: 1px solid currentColor;
 
 			&:hover {
+				border-color: transparent;
 				color: $color-cobalt-6;
 			}
 		}
