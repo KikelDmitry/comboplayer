@@ -79,7 +79,7 @@
 {
 	let header = $('.header'),
 		postHeader = $('.post-header'),
-		offset = (header.outerHeight() + postHeader.outerHeight() || header.outerHeight()),
+		offset = (header.outerHeight() + postHeader.outerHeight() || header.outerHeight()) + header.offset().top,
 		sticky = $('.sticky-header');
 
 	if (sticky.length !== 0) {
