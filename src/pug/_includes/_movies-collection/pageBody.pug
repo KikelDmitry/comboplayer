@@ -10,6 +10,9 @@
 			img: 'sharks.png',
 		},
 		{
+			title: 'Подборка без постера',
+		},
+		{
 			title: 'Фильмы про вампиров',
 			descr: 'Коллекция лучших фильмов про вампиров и оборотней',
 			img: 'vampires.png',
@@ -66,7 +69,10 @@ section.movies-collections
 				.col-6.col-md-4.col-xl-3.mb-4
 					.movies-collections__item
 						.movies-collections__img
-							img(src="img/content/collections/" + cat.img alt=cat.title + " постер")
+							if cat.img
+								img(src="img/content/collections/" + cat.img alt=cat.title + " постер" width=255 height=255)
+							else
+								img(src="img/movie-dummy.svg" alt="Нет постера" width=255 height=255)
 						.movies-collections__text
 							h2.movies-collections__title
 								a.movies-collections__link(href="#") #{cat.title}

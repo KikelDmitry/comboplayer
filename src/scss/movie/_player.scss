@@ -54,6 +54,9 @@
 		@include media-breakpoint-up(md) {
 			min-height: 400px;
 		}
+		iframe {
+			display: block;
+		}
 	}
 	&__container {
 		min-height: inherit;
