@@ -102,25 +102,25 @@
 	}
 }
 // header search bar
-{
-	let searchInput = $('.header__search-input'),
-		searchForm = $('.header__search'),
-		rightBar = $('.header__right-side'),
-		searchResults = $('.search-dropdown');
+// {
+// 	let searchInput = $('.header__search-input'),
+// 		searchForm = $('.header__search'),
+// 		rightBar = $('.header__right-side'),
+// 		searchResults = $('.search-dropdown');
 
-	searchInput.focus(function () {
-		searchForm.addClass('is-focused');
-		rightBar.addClass('d-none');
-		rightBar.removeClass('d-flex');
-		searchResults.addClass('is-active');
-	});
-	searchInput.blur(function () {
-		searchForm.removeClass('is-focused');
-		rightBar.addClass('d-flex');
-		rightBar.removeClass('d-none');
-		searchResults.removeClass('is-active');
-	});
-}
+// 	searchInput.focus(function () {
+// 		searchForm.addClass('is-focused');
+// 		rightBar.addClass('d-none');
+// 		rightBar.removeClass('d-flex');
+// 		searchResults.addClass('is-active');
+// 	});
+// 	searchInput.blur(function () {
+// 		searchForm.removeClass('is-focused');
+// 		rightBar.addClass('d-flex');
+// 		rightBar.removeClass('d-none');
+// 		searchResults.removeClass('is-active');
+// 	});
+// }
 // mobile menu
 {
 	let burger = document.querySelector('.header__burger-btn');
