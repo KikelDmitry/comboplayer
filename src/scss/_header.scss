@@ -41,6 +41,9 @@
 			position: relative;
 		}
 		&:focus-within {
+			background-color: $color-steel-dull-95;
+			margin-right: 1rem;
+
 			& + .header__right-side {
 				display: none !important;
 			}
