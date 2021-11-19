@@ -330,7 +330,7 @@ main.order-main
 								ul.channels-list.channels-list--main
 									each channel in tariff.channels()
 										li.channels-list__item
-											img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+											img.channels-list__icon(src="img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
 
 							if tariff.additional.length > 0
 								.tariff-item__add-title
@@ -361,7 +361,7 @@ main.order-main
 												ul.channels-list.channels-list--add
 													each channel in add.channels()
 														li.channels-list__item
-															img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+															img.channels-list__icon(src="img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
 			.tariffs__right.col-12.col-md-6
 				.tariffs__not-chosen.d-none
 					.tariffs__not-chosen-content Для просмотра информации выберите пакет из списка
@@ -372,12 +372,12 @@ main.order-main
 					ul.channels-list.channels-list--main
 						each channel in tariffs[0].channels()
 							li.channels-list__item
-								img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+								img.channels-list__icon(src="img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
 					h3.tariffs__title.tariffs__title--add Дополнительные каналы 
 					ul.channels-list.channels-list--add
 						each channel in tariffs[0].additional[0].channels()
 							li.channels-list__item
-								img.channels-list__icon(src="/img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
+								img.channels-list__icon(src="img/content/channels/channel_" + channel.icon, alt=channel.title + " logo.")
 				.tariffs__submit.tariff-submit
 					button.tariff-submit__btn.buy-btn(type="submit") Оформить подписку
 					.tariff-submit__price

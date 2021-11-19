@@ -1,0 +1,34 @@
+-
+	var pages = [
+		'404.html',
+		'article.html',
+		'channel-week.html',
+		'channel.html',
+		'channels.html',
+		'cities.html',
+		'download.html',
+		'index.html',
+		'login.html',
+		'movie.html',
+		'movies-cat.html',
+		'movies-collection-item.html',
+		'movies-collection.html',
+		'movies.html',
+		'order.html',
+		'player-msg.html',
+		'player.html',
+		'popups.html',
+		'programm-guide.html',
+		'recovery.html',
+		'search.html',
+		'series.html',
+		'subscribe.html',
+		'tv-guide.html',
+	]
+.pages-list#pages-list
+	.pages-list__inner
+		.pages-list__title Pages list
+		ul.page-list__list
+			each page in pages
+				li.pages-list__item
+					a.pages-list__link(href=page) #{page}

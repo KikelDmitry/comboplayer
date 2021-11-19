@@ -1,21 +1,12 @@
-//- svg sprite insert
-mixin svg(classes, anchor, title, desc)
-	svg(class=classes)
-		use(href="/img/svg/sprite.svg#" + anchor)
-		if title
-			title=title
-		if desc
-			desc=desc
-
 //- programm square item
 mixin programmSquareItem(programm, play = true)
 	.programm-item
 		.programm-item__inner
 			.programm-item__poster
 				if programm.poster
-					img.programm-item__poster-img(src="/img/content/programms/" + programm.poster alt=programm.title + " постер")
+					img.programm-item__poster-img(src="img/content/programms/" + programm.poster alt=programm.title + " постер")
 				else
-					img.programm-item__poster-img(src="/img/tv-dummy.png" alt=programm.title)
+					img.programm-item__poster-img(src="img/tv-dummy.png" alt=programm.title)
 			.programm-item__overlay
 				.programm-item__overlay-dimmer
 				if play
@@ -23,10 +14,10 @@ mixin programmSquareItem(programm, play = true)
 						i.icon-play
 			if programm.channel
 				.programm-item__channel
-					img.programm-item__channel-img(src="/img/content/channels/" + programm.channel alt="Название канала")
+					img.programm-item__channel-img(src="img/content/channels/" + programm.channel alt="Название канала")
 			else
 				.programm-item__channel
-					img.programm-item__channel-img(src="/img/tv-dummy.png" alt="Канал без лого")
+					img.programm-item__channel-img(src="img/tv-dummy.png" alt="Канал без лого")
 			.programm-item__footer
 				.programm-item__time #{programm.time}
 				h3.programm-item__title #{programm.title}
@@ -63,7 +54,7 @@ mixin programmCard(title)
 				i.icon-close
 		.programm-card__poster
 			a.programm-card__link(href="programm.html" title=title aria-label=title)
-				img.programm-card__poster-img(src="/img/content/banners/programm-info0.png" alt=title = " постер")
+				img.programm-card__poster-img(src="img/content/banners/programm-info0.png" alt=title = " постер")
 		.programm-card__descr Новости. Информация. Главные новости региона. Происшествия, политика, общественная жизнь, экономика, спрот, культура, прогноз погоды.
 		footer.programm-card__footer
 			.programm-card__info Инфо
@@ -118,9 +109,9 @@ mixin movieItem(movie, idx)
 		.movie-item__inner
 			.movie-item__poster
 				if movie.poster
-					img.movie-item__poster-img(src="/img/content/movies/" + movie.poster alt=movie.title + " постер")
+					img.movie-item__poster-img(src="img/content/movies/" + movie.poster alt=movie.title + " постер")
 				else
-					img.movie-item__poster-img(src="/img/movie-dummy.png" alt="Фильм без постера")
+					img.movie-item__poster-img(src="img/movie-dummy.png" alt="Фильм без постера")
 				.movie-item__overlay
 					.movie-item__overlay-play
 						i.icon-play
@@ -153,7 +144,7 @@ mixin channelCol(channel)
 			header.guide-channel__header
 				.guide-channel__header-link
 					.guide-channel__logo
-						img.guide-channel__logo-img(src="/img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
+						img.guide-channel__logo-img(src="img/content/channels/" + channel.logo, alt=channel.title + " лого" width="32" height="32")
 					a.guide-channel__title(href="channel.html") #{channel.title}
 				.guide-channel__control
 					.guide-channel__control-item.guide-channel__control-item--play

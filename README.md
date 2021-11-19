@@ -1,4 +1,17 @@
-# Comboplayer new layout
+# ComboPlayer for Rostpay LCC
 
-1. **Build project:** npm run build
-2. **Run dev server:** npm run dev
+## dev server:
+
+```
+npm run dev
+```
+
+## build:
+
+```
+npm run build
+```
+
+## live:
+
+https://kikel.net/projects/comboplayer/
